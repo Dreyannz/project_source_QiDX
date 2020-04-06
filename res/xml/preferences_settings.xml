@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preference_advanced_settings">
+        <SwitchPreference android:title="ADRT" android:key="use_adrt" android:summary="@string/pref_use_adrt" android:defaultValue="true" />
+        <SwitchPreference android:title="TODO: Implement this method" android:key="use_todo" android:summary="@string/pref_use_todo" android:defaultValue="false" />
+        <SwitchPreference android:title="AndroidX" android:key="use_gradle" android:summary="@string/pref_use_gradle" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

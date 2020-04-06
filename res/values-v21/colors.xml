@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="header">#ff222222</color>
+    <color name="header_separator">#ff55a5c4</color>
+    <color name="header_separator_light">#ff888888</color>
+    <color name="notification_action_color_filter">@color/secondary_text_default_material_light</color>
+    <color name="popup_border_light">#ffbbbbbb</color>
+    <color name="selected_list_item">#ff333333</color>
+    <color name="selected_list_item_light">#ffeeeeee</color>
+    <color name="split_separator">#ff5eb7d9</color>
+    <color name="split_separator_light">#ff5eb7d9</color>
+    <color name="accent_material">#ff5eb7d9</color>
+    <color name="accent_material_light">#ff5eb7d9</color>
+    <color name="editor_selection_material">#ff444444</color>
+    <color name="editor_selection_material_light">#ff999999</color>
+    <color name="primary_dark_material">#ff5eb7d9</color>
+    <color name="primary_dark_material_light">#ff5eb7d9</color>
+    <color name="primary_material">#ff222222</color>
+    <color name="primary_material_light">#ffffffff</color>
+    <color name="quickkey_light">#ff37474f</color>
+    <color name="trainer_box">#ff5eb7d9</color>
+</resources>

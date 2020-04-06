@@ -1,0 +1,45 @@
+.class Lcom/qidx/common/i$1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/qidx/common/i;-><init>(Landroid/content/Context;Landroid/view/View;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic j6:Lcom/qidx/common/i;
+
+
+# direct methods
+.method constructor <init>(Lcom/qidx/common/i;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/qidx/common/i$1;->j6:Lcom/qidx/common/i;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onClick(Landroid/view/View;)V
+    .locals 0
+
+    iget-object p1, p0, Lcom/qidx/common/i$1;->j6:Lcom/qidx/common/i;
+
+    invoke-virtual {p1}, Lcom/qidx/common/i;->j6()V
+
+    return-void
+.end method

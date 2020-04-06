@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference android:title="Auto-sync" android:key="auto_sync_dropbox" android:summary="Sincronize automaticamente com o seu Dropbox ao abrir arquivos ou projetos." android:defaultValue="true" />
+</PreferenceScreen>

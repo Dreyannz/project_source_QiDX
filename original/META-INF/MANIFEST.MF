@@ -1,0 +1,3410 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (QiDX)
+
+Name: qidxisbestlol/0n.aac
+SHA1-Digest: cdANCbmQA547JTFXo/6ZAsMdx4w=
+
+
+Name: qidxisbestlol/1O.aac
+SHA1-Digest: IoI5sl0CxUhEdH5/sUGnW+vBauc=
+
+
+Name: qidxisbestlol/20.aac
+SHA1-Digest: PMvj3Rq7oWtqZV8jvtUlhS5O5V8=
+
+
+Name: kotlin/time/AbstractDoubleClock.kotlin_metadata
+SHA1-Digest: 6Me7TO1ZNiRKEuW6Uw2rsTIlqrI=
+
+
+Name: assets/x86/aidl
+SHA1-Digest: 1S8/cb8UHd9rqnyPhEb+D265x50=
+
+
+Name: qidxisbestlol/2j.aac
+SHA1-Digest: hAtIPuzEXAvyG4117VJdwONwDII=
+
+
+Name: qidxisbestlol/3K.aac
+SHA1-Digest: nMVBDwLTSbultJoYcciQ4bN8x8o=
+
+
+Name: qidxisbestlol/i.xml
+SHA1-Digest: y/zNbDoUXvMFUWmqxv5m443OinI=
+
+
+Name: qidxisbestlol/0Q.aac
+SHA1-Digest: R4ZaDnwPm1oX148S7yInIc5PX5Q=
+
+
+Name: qidxisbestlol/12.aac
+SHA1-Digest: poSX50nlXGr0veO1PGK5acixRXE=
+
+
+Name: assets/JavaScriptAPI.js
+SHA1-Digest: k8dF8TPp2VqrmWRQ4ybMjhTGZ+c=
+
+
+Name: qidxisbestlol/1l.aac
+SHA1-Digest: hx2zX4qGq+5QfUO/iD+9O0uxWxY=
+
+
+Name: qidxisbestlol/2M.aac
+SHA1-Digest: AKb8F+hQE+1g3XTz2I53bcu/d+k=
+
+
+Name: qidxisbestlol/0B.xml
+SHA1-Digest: N57Dt35Xi8WXYuF/Q8AkBb6pt2E=
+
+
+Name: qidxisbestlol/L.aac
+SHA1-Digest: 58BeVrWmam0XTYtOcBJSh3YmiJQ=
+
+
+Name: qidxisbestlol/i.aac
+SHA1-Digest: OsZ6gGuytVYQYPfT0yRsAO3lsdI=
+
+
+Name: qidxisbestlol/x.aac
+SHA1-Digest: PT+tW51GaN2ufdaSowvERo/K3DA=
+
+
+Name: assets/x86-pie/aidl
+SHA1-Digest: TPfSgUSQF5SPFUwGeGdVmJppFa4=
+
+
+Name: assets/templates/WebsiteBootstrap.zip
+SHA1-Digest: 2y4MXX0IyQgdNb5lUHVdZopcKtw=
+
+
+Name: qidxisbestlol/1l.xml
+SHA1-Digest: 6ZeLZWiCA0y2wvYxsJXz7dk5L8Q=
+
+
+Name: qidxisbestlol/0Q.xml
+SHA1-Digest: Rm0lRcDN/UMW+wYSPjn9lGVPSnw=
+
+
+Name: qidxisbestlol/12.xml
+SHA1-Digest: ybWUwuVU70WswnkkETT8BqDo7v8=
+
+
+Name: kotlin/coroutines/experimental/Continuation.kotlin_metadata
+SHA1-Digest: pTaSG+eKwbfFLC8dh0rEqcjhM5I=
+
+
+Name: qidxisbestlol/04.aac
+SHA1-Digest: GJNkMmxvJjCbHxNusBBi2f0TtMs=
+
+
+Name: assets/templates/CppHelloWorld.zip
+SHA1-Digest: /U1Vpzh85YdvonspFFbezPutsos=
+
+
+Name: qidxisbestlol/w.xml
+SHA1-Digest: NdIrCofKRrdM7qU+XyuBpQYddbw=
+
+
+Name: kotlin/jvm/JvmSynthetic.kotlin_metadata
+SHA1-Digest: 8n+NWDmfpDpetXVtKAv1BF4qa6A=
+
+
+Name: kotlin/UByteKt.kotlin_metadata
+SHA1-Digest: uRmexzKgIlQuy+S8hq1e+Dyjk7w=
+
+
+Name: qidxisbestlol/Z.xml
+SHA1-Digest: /BzUwzTOsC1ZmRqfN5UFAhuvYnA=
+
+
+Name: qidxisbestlol/2y.aac
+SHA1-Digest: 9MYmMKRnfwttaoRGc1WDg0jzgyY=
+
+
+Name: qidxisbestlol/1z.aac
+SHA1-Digest: 5VV9xbpfbQxMgCMYXZrMGz8GOuA=
+
+
+Name: kotlin/collections/IndexedValue.kotlin_metadata
+SHA1-Digest: JApww/AF/y7FXz7muTSiHP/850Y=
+
+
+Name: qidxisbestlol/0C.aac
+SHA1-Digest: A6/3tKXv3azrtmClOXZ35KCuPRo=
+
+
+Name: assets/templates/GradleLibrary.zip
+SHA1-Digest: TR1yiLng8L/F+JlIK2sby1Rp8KI=
+
+
+Name: qidxisbestlol/Z.aac
+SHA1-Digest: 1u3Bhh9Mr7MIKMoI+nkgIbrTcVk=
+
+
+Name: qidxisbestlol/0n.xml
+SHA1-Digest: tUTSXS+hwIkW29UAuqpYFIMFtls=
+
+
+Name: qidxisbestlol/1O.xml
+SHA1-Digest: USDLAar7g0yP1RNwIkrLPkwvaFw=
+
+
+Name: qidxisbestlol/L.xml
+SHA1-Digest: W2uxQ/uql4uMsVhtlevyGgYtWMc=
+
+
+Name: qidxisbestlol/03.xml
+SHA1-Digest: JImTMZELDnb9uT9c30cdULVgpXI=
+
+
+Name: qidxisbestlol/1m.aac
+SHA1-Digest: hQsO+/4UyNMuj21ncHd7Q+jGKpI=
+
+
+Name: qidxisbestlol/2N.aac
+SHA1-Digest: TlmNOfmMMcFAaruE6VnBoixzLTo=
+
+
+Name: kotlin/UseExperimental.kotlin_metadata
+SHA1-Digest: Ksp1JWIp7VdeoZbGLQfOaejM8qU=
+
+
+Name: qidxisbestlol/0C.xml
+SHA1-Digest: QpHY2Z9FyRaqz3a7yWjf7MCrPYQ=
+
+
+Name: qidxisbestlol/03.aac
+SHA1-Digest: 0pB1N/qe55F1nfRDsyBBInwUfNk=
+
+
+Name: qidxisbestlol/1A.xml
+SHA1-Digest: KEeRQ8uBH8gEJKPo/BHKMFF8Vk0=
+
+
+Name: assets/templates/GradleApp.zip
+SHA1-Digest: rir7X2ImMC89ORRFoKd3ZfQgeno=
+
+
+Name: qidxisbestlol/0m.aac
+SHA1-Digest: xAHJysC28cnGjylRjqYmxDxksaE=
+
+
+Name: qidxisbestlol/1N.aac
+SHA1-Digest: +iWSQusWcC2dofV/nRHEgfiv44A=
+
+
+Name: kotlin/reflect/KMutableProperty2.kotlin_metadata
+SHA1-Digest: kCYk8oV83HYXI/2y2ucH+/lEkns=
+
+
+Name: qidxisbestlol/2k.aac
+SHA1-Digest: Tl/s2DFa9olOK4o9FZi+QAb+xZg=
+
+
+Name: qidxisbestlol/3L.aac
+SHA1-Digest: SnPGdnIDgCp0sOBibA6ZKWY6cxI=
+
+
+Name: assets/dtds/HTMLspecial.ent
+SHA1-Digest: NkMzraRRReWVpMeso6acvEAqKHY=
+
+
+Name: qidxisbestlol/h.xml
+SHA1-Digest: akrOsSi3VJPB4uGriavN8+h2neE=
+
+
+Name: assets/whatsnew/aide-phonegap-whatsnew.txt
+SHA1-Digest: ahr5+Q9n3BSBfBtvm1vakZytdRw=
+
+
+Name: kotlin/ranges/UIntProgressionIterator.kotlin_metadata
+SHA1-Digest: pL/rQImDmn/znOS3SkfZb1+RbJY=
+
+
+Name: README.txt
+SHA1-Digest: OwT3sTkoA7eH6235Q8b4nQD+zDk=
+
+
+Name: kotlin/internal/OnlyInputTypes.kotlin_metadata
+SHA1-Digest: G14H5ZwqbkI8/jlJpQ4aZwkYuK8=
+
+
+Name: qidxisbestlol/w.aac
+SHA1-Digest: tl8GBIG0E2TOOXY+CxG79QvecQE=
+
+
+Name: kotlin/jvm/JvmOverloads.kotlin_metadata
+SHA1-Digest: bsZSbd0q0Grys8b5dYRo97TtTH8=
+
+
+Name: qidxisbestlol/M.aac
+SHA1-Digest: tAT5+D6ppljq1Hh3BguPDzdx3SU=
+
+
+Name: qidxisbestlol/h.aac
+SHA1-Digest: G9dD1b+2DZsYX7oipSQZ0sRJj3c=
+
+
+Name: kotlin/collections/State.kotlin_metadata
+SHA1-Digest: hbrnHj9j0yvd4WYxmxPdZ5dnxSs=
+
+
+Name: qidxisbestlol/1m.xml
+SHA1-Digest: CEksTGE+B8dkQkY4YaF/Kc01Mg8=
+
+
+Name: kotlin/jvm/JvmField.kotlin_metadata
+SHA1-Digest: XTu/C3uClFbuotO/42TaKQ+u64Q=
+
+
+Name: kotlin/coroutines/Continuation.kotlin_metadata
+SHA1-Digest: 8fd6AbUEUafJz48RpfNQ+CYAGv4=
+
+
+Name: kotlin/properties/ObservableProperty.kotlin_metadata
+SHA1-Digest: +JywfCbOJBqQbizuAVC61w420lQ=
+
+
+Name: kotlin/text/MatchNamedGroupCollection.kotlin_metadata
+SHA1-Digest: jkGR72WMRFlHr6GkrOUYz8A7/gk=
+
+
+Name: kotlin/properties/Delegates.kotlin_metadata
+SHA1-Digest: h1HcyoikvT6IErek+TQggVnRgOU=
+
+
+Name: qidxisbestlol/0R.xml
+SHA1-Digest: 1adp+la3elaWOpLGS/EonqnPS+w=
+
+
+Name: qidxisbestlol/13.xml
+SHA1-Digest: bBvgXQLsb8qseD079B2r1jFiVwI=
+
+
+Name: qidxisbestlol/1A.aac
+SHA1-Digest: Ny9YkjYWvyIKTl0MG8cYeG3l4eE=
+
+
+Name: kotlin/LazyKt.kotlin_metadata
+SHA1-Digest: uKG9cB9KikLhcqKu5PeBCk+rQ0E=
+
+
+Name: kotlin/internal/HidesMembers.kotlin_metadata
+SHA1-Digest: r8VzECodEHT4DVgZLgsYhEQmtds=
+
+
+Name: qidxisbestlol/v.xml
+SHA1-Digest: jFzpDHP8YV0M0wSyaIuup1fotWk=
+
+
+Name: kotlin/sequences/DropWhileSequence.kotlin_metadata
+SHA1-Digest: Hoz1nztjtT+Jc798LE0QzAdKL3o=
+
+
+Name: kotlin/contracts/InvocationKind.kotlin_metadata
+SHA1-Digest: JBdIDUNoKrGhDczfD0FmmoVqlEY=
+
+
+Name: qidxisbestlol/2x.aac
+SHA1-Digest: YWT3Hu0c24Wx6GE5EQWO6lX0T2A=
+
+
+Name: qidxisbestlol/3Y.aac
+SHA1-Digest: T1+YbS//jumvIxEhn25Y5ypQJKY=
+
+
+Name: assets/whatsnew/aide-phonegap-changes.txt
+SHA1-Digest: JHcVzbvVEfsbPKyQ/d45j7ynJNM=
+
+
+Name: kotlin/text/StringBuilderKt.kotlin_metadata
+SHA1-Digest: mQV9cTUki6TGfhM3MvRoKU3nUvg=
+
+
+Name: kotlin/collections/LinkedHashMap.kotlin_metadata
+SHA1-Digest: 8B1sWJwlpKqGbiJ7wwFrfR+OCmQ=
+
+
+Name: kotlin/time/ExperimentalTime.kotlin_metadata
+SHA1-Digest: wkqjnZwUM4Q+jOfG/NIO4IzsQ8M=
+
+
+Name: qidxisbestlol/0m.xml
+SHA1-Digest: LnOBVbInsLvipSuNNYrcBATM6rw=
+
+
+Name: qidxisbestlol/1N.xml
+SHA1-Digest: yyZtMxIVUTICYPlxhJXa/94abAc=
+
+
+Name: kotlin/time/MonoClock.kotlin_metadata
+SHA1-Digest: ZAa3i+L7g35jwmu0hEZVeLLA2UY=
+
+
+Name: assets/templates/GradleFlavor.zip
+SHA1-Digest: 4w5/NWNAUCUNL9KgAXFaLXIPChY=
+
+
+Name: qidxisbestlol/M.xml
+SHA1-Digest: ndauYQYDqYmf1vyq7LAKQJeT56M=
+
+
+Name: kotlin/coroutines/RestrictsSuspension.kotlin_metadata
+SHA1-Digest: Yy1bYIWYD+Vu7IAJE4PHy5tfPP0=
+
+
+Name: kotlin/ULongKt.kotlin_metadata
+SHA1-Digest: oh9CfM3vP516GT5AaXcabYg34ck=
+
+
+Name: qidxisbestlol/02.xml
+SHA1-Digest: X/2lbNGq0JibUjvbG4PEFXV7qxM=
+
+
+Name: assets/templates/LibGdxApp.zip
+SHA1-Digest: RjaBfZlXJLJfMrFIbjVhDy/l8Z8=
+
+
+Name: kotlin/collections/AbstractIterator.kotlin_metadata
+SHA1-Digest: vExjFiRmWNvJkKkxJaTgjn4e0Ic=
+
+
+Name: kotlin/text/DelimitedRangesSequence.kotlin_metadata
+SHA1-Digest: py/5VSZDpmUJulZsJpTYz77fTzY=
+
+
+Name: kotlin/UnsafeLazyImpl.kotlin_metadata
+SHA1-Digest: kDMJMFa1X6h4K6mTw/vlZ99eYDc=
+
+
+Name: qidxisbestlol/0R.aac
+SHA1-Digest: 2wrA6S2ru4++hNZtYIPzb78FEFY=
+
+
+Name: qidxisbestlol/13.aac
+SHA1-Digest: 5o68zhNArBXfXEMNmoU0gAGu8Y4=
+
+
+Name: qidxisbestlol/1.aac
+SHA1-Digest: AZixHYDkOYNQNZ7rV9yWRLpbUG8=
+
+
+Name: kotlin/collections/SlidingWindowKt.kotlin_metadata
+SHA1-Digest: 0jQaFSVMWKeadXBNMLFuFq5layg=
+
+
+Name: kotlin/time/TestClock.kotlin_metadata
+SHA1-Digest: krfeK7eHjAUrnS9pYLH/7cla6wQ=
+
+
+Name: qidxisbestlol/1j.xml
+SHA1-Digest: Yv3InuL+sbbk7g5HqLaD2BRE644=
+
+
+Name: qidxisbestlol/g.xml
+SHA1-Digest: m4ePfdczdbCKSoLwqdZuB5CvQ1s=
+
+
+Name: qidxisbestlol/02.aac
+SHA1-Digest: OLao3SvoCe897jVELhIqfVLD/84=
+
+
+Name: qidxisbestlol/J.xml
+SHA1-Digest: 2ZffBGsA7145DnVvLffb8y5RFR0=
+
+
+Name: kotlin/collections/IndexingIterator.kotlin_metadata
+SHA1-Digest: XlMbsRGeKUcvbMGvCWr6HtjhoQQ=
+
+
+Name: kotlin/coroutines/experimental/CoroutinesLibraryKt.kotlin_metada
+ ta
+SHA1-Digest: nvMPsiOmLO4NUweqJEgJ5qkTdLk=
+
+
+Name: qidxisbestlol/1j.aac
+SHA1-Digest: 8DnS2LSZTsLRq0XFdqnSmYAIHEU=
+
+
+Name: qidxisbestlol/2K.aac
+SHA1-Digest: 3jz8A2BKQsENF5GVxlTaa1LNxwI=
+
+
+Name: kotlin/collections/EmptyList.kotlin_metadata
+SHA1-Digest: rnl3d4mF5fx/W0fYj4uEEi69FlU=
+
+
+Name: qidxisbestlol/0D.aac
+SHA1-Digest: qdBpmhrC3GwelEZ/4TYQUiuByB0=
+
+
+Name: kotlin/BuilderInference.kotlin_metadata
+SHA1-Digest: tuaSV0eQKlhIbRLUXUCCoPLuCvk=
+
+
+Name: assets/templates/HelloWorld.zip
+SHA1-Digest: lwJp4l2MVt0Xs5K0Tl8rEZpDUQU=
+
+
+Name: org/eclipse/jgit/storage/dfs/DfsText.properties
+SHA1-Digest: F08aHeQYy66LVVULDMs+jN5nnmM=
+
+
+Name: kotlin/WasExperimental.kotlin_metadata
+SHA1-Digest: f3R9a1AD7kcTjAKxY0HfR80IijA=
+
+
+Name: qidxisbestlol/0p.aac
+SHA1-Digest: afAcgQdIQI53SCFu3OoTNjEvoxc=
+
+
+Name: qidxisbestlol/1Q.aac
+SHA1-Digest: hZ/NrYEGnvS2w52f7PW0sUegbig=
+
+
+Name: qidxisbestlol/22.aac
+SHA1-Digest: 0wpXtY2tMS+kkIgqKqGQGnm8xAk=
+
+
+Name: kotlin/collections/EmptyIterator.kotlin_metadata
+SHA1-Digest: jdcWaYxf/+pz6M/3j5i99f0GvFQ=
+
+
+Name: kotlin/collections/UShortIterator.kotlin_metadata
+SHA1-Digest: i4nLza4xNaHZ1+1A7qSxUg8NFqY=
+
+
+Name: kotlin/collections/MapWithDefaultKt.kotlin_metadata
+SHA1-Digest: lgOxe6/usrWTyJDHoI5bzTi31bQ=
+
+
+Name: qidxisbestlol/g.aac
+SHA1-Digest: czP6CGNKOYsVNqo0n5KJQWw6OPo=
+
+
+Name: kotlin/sequences/SubSequence.kotlin_metadata
+SHA1-Digest: 1ARiE8RJWKcjRlq19t9VfdY4W/c=
+
+
+Name: qidxisbestlol/z.aac
+SHA1-Digest: uxLHLlFzXjFpc9GmeW4TIPkEK/M=
+
+
+Name: kotlin/text/Regex.kotlin_metadata
+SHA1-Digest: kVBrx4MyXLY70c7ea7aXnfQu1+0=
+
+
+Name: qidxisbestlol/0p.xml
+SHA1-Digest: C5/XUZySzGFe7am0qKiIImjZnP0=
+
+
+Name: qidxisbestlol/1Q.xml
+SHA1-Digest: n5kL1J73W0Uc37hUacxlkaEMNb0=
+
+
+Name: kotlin/collections/IndexingIterable.kotlin_metadata
+SHA1-Digest: cxsqOUrESHVDTYS1Qml8eTX8bN0=
+
+
+Name: assets/whatsnew/aide-web-whatsnew.txt
+SHA1-Digest: odFr9nCT9ro4gH4Hvbtb2MHJQuw=
+
+
+Name: kotlin/time/MeasureTimeKt.kotlin_metadata
+SHA1-Digest: Pe/RihIHR373M1Nt3pjoWohK/+U=
+
+
+Name: kotlin/UShortArray.kotlin_metadata
+SHA1-Digest: /Tki9gpO9UCjWhzY3gB1DSaPn0Y=
+
+
+Name: kotlin/ExperimentalUnsignedTypes.kotlin_metadata
+SHA1-Digest: KUbIBJ38z2T/mmOXhb3kb5wikAE=
+
+
+Name: qidxisbestlol/0S.xml
+SHA1-Digest: SzZv756K8W7PFWl27kzXQZDGdJs=
+
+
+Name: qidxisbestlol/14.xml
+SHA1-Digest: EhkWdFpoea1DvgEToCb+AabTtRQ=
+
+
+Name: kotlin/KotlinVersion.kotlin_metadata
+SHA1-Digest: w0XwrwrB1s34oN5TFQ06ghQDAvc=
+
+
+Name: kotlin/UShort.kotlin_metadata
+SHA1-Digest: OUzlWhss6lUBAYCApTRwypLDabw=
+
+
+Name: qidxisbestlol/1.xml
+SHA1-Digest: l9UN4f8x2ljmvwdWXvsReX1EmjU=
+
+
+Name: assets/dtds/xhtml1-frameset.dtd
+SHA1-Digest: ScNwnxc+0aPtav+Strmxj5WrvzU=
+
+
+Name: kotlin/experimental/ExperimentalTypeInference.kotlin_metadata
+SHA1-Digest: hpEgHHOKdz9819znVUYzh9GMI0M=
+
+
+Name: proguard/proguard-android-optimize.txt
+SHA1-Digest: 6u5xoa7aIu2PQpBDnQkmTqwGrcU=
+
+
+Name: qidxisbestlol/y.xml
+SHA1-Digest: NdIrCofKRrdM7qU+XyuBpQYddbw=
+
+
+Name: kotlin/coroutines/experimental/CombinedContext.kotlin_metadata
+SHA1-Digest: QX0j3zcQV/Ogee4RDikXgojd+WU=
+
+
+Name: assets/armeabi/aidl
+SHA1-Digest: U6JBWRVF6XylPutJuAQ3lpfBUPg=
+
+
+Name: qidxisbestlol/0S.aac
+SHA1-Digest: k+K1xw8JE6nFVW+5f6bNierVR4w=
+
+
+Name: qidxisbestlol/14.aac
+SHA1-Digest: yVjyQi9u62yyFxBoH3fTYUgh/jM=
+
+
+Name: assets/whatsnew/qidx-whatsnew.txt
+SHA1-Digest: ylSXZyoPpt/B9FiMZXQLWYLNzeo=
+
+
+Name: assets/merger.zip
+SHA1-Digest: RbngwWmzjPd+LNiPNJw06FnCWdQ=
+
+
+Name: qidxisbestlol/J.aac
+SHA1-Digest: qf8Bo3OrZFOkS8OQT2FTwy3VSA8=
+
+
+Name: qidxisbestlol/2i.aac
+SHA1-Digest: cKWKk2DHGtJepXySesNcPlY9wG4=
+
+
+Name: qidxisbestlol/3J.aac
+SHA1-Digest: 3kAOCvPKDybNG1/Fr21Y+cg522o=
+
+
+Name: qidxisbestlol/0A.aac
+SHA1-Digest: Zu2hrups9Vmnjqd813C1z3x6mEo=
+
+
+Name: qidxisbestlol/K.xml
+SHA1-Digest: ntwjlVFfogzYSU7sk2APh+FmxLA=
+
+
+Name: kotlin/collections/ReversedListReadOnly.kotlin_metadata
+SHA1-Digest: xF6k+TC/tjijklLon8DzxYYdCQM=
+
+
+Name: kotlin/contracts/Returns.kotlin_metadata
+SHA1-Digest: vI6+rlG9Itl5+IwtePKK8Bxjr3w=
+
+
+Name: kotlin/SuccessOrFailureKt.kotlin_metadata
+SHA1-Digest: l5lKBgHv8QTucaUiLhWOOnCvHmc=
+
+
+Name: lib/armeabi/liblink.so
+SHA1-Digest: kVLHDH2TrbRBnRb+AIRxlYSFbWg=
+
+
+Name: assets/templates/GradleApp2.zip
+SHA1-Digest: GzSeD/2FU23K8KkQlOU1P2hUeso=
+
+
+Name: lib/x86/liblink.so
+SHA1-Digest: gtxEJ70/9EVWXzAio51x7uaiWeo=
+
+
+Name: assets/adrt/ADRTThreadLocal.class
+SHA1-Digest: /enPhJtGD+p5z6bhfuCgfAREJq4=
+
+
+Name: kotlin/jvm/JvmName.kotlin_metadata
+SHA1-Digest: Rp6j3O8+iNoJ+Bw0KFwdIvaep4E=
+
+
+Name: qidxisbestlol/1k.xml
+SHA1-Digest: fjBIxInupjOdFPCincESukjdHJc=
+
+
+Name: qidxisbestlol/0.xml
+SHA1-Digest: MSDYrbmMVU5P3zOYFTdJ4n4UIFQ=
+
+
+Name: qidxisbestlol/0A.xml
+SHA1-Digest: BkODLKUjCmN90sb8PoS/XgLX7yQ=
+
+
+Name: kotlin/contracts/ExperimentalContracts.kotlin_metadata
+SHA1-Digest: Sq1TslQQ9g1cPuWVh64N/AaPmH0=
+
+
+Name: kotlin/coroutines/CombinedContext.kotlin_metadata
+SHA1-Digest: 7FROJe5G98vHYqba7rMhyDNXBBc=
+
+
+Name: kotlin/sequences/Sequence.kotlin_metadata
+SHA1-Digest: DkXIMWJ9zo7PVzA5yvV8BxnrZCA=
+
+
+Name: assets/trainer/course_web_en.xml
+SHA1-Digest: MmqXrQ2/y8PjGOaXVJaM7C1epMY=
+
+
+Name: assets/adrt/ADRTReflector.class
+SHA1-Digest: iBKiiG37INQouYNNJkJyOEkP3lo=
+
+
+Name: keys/testkey.pk8
+SHA1-Digest: kt4FLLgE3qdfmBWmbX0/b5Ec22M=
+
+
+Name: assets/adrt/ADRT.class
+SHA1-Digest: uiSvvkpv9ryknb8Ep6zw7/1m/F8=
+
+
+Name: qidxisbestlol/1k.aac
+SHA1-Digest: UvSG/LhRzKFauxTA1ETJF2TuwEA=
+
+
+Name: qidxisbestlol/2L.aac
+SHA1-Digest: LjrABPHCm2EJMTOU1VWteIyCCUI=
+
+
+Name: qidxisbestlol/y.aac
+SHA1-Digest: WRhkZczBj7YY1mg78m+yqkB8AbE=
+
+
+Name: qidxisbestlol/0o.aac
+SHA1-Digest: P9Q6IyLBm7DmmvAV8AlcvLB0gJc=
+
+
+Name: qidxisbestlol/1P.aac
+SHA1-Digest: n+Aot0n09sXN4EFQLbxxC8iM9Hg=
+
+
+Name: qidxisbestlol/21.aac
+SHA1-Digest: O/OrhP2hGs8dHLBW32NDZlj4cqw=
+
+
+Name: kotlin/collections/MutableMapWithDefaultImpl.kotlin_metadata
+SHA1-Digest: 92shsIAkJM5SPxvYtIHbURUGUb4=
+
+
+Name: kotlin/collections/ArraysKt.kotlin_metadata
+SHA1-Digest: bYLFRvELTd9htnaRQcyBqkZ57tE=
+
+
+Name: qidxisbestlol/0B.aac
+SHA1-Digest: 4Z8XA/FQfO0H9KFjF1A0BmE2njs=
+
+
+Name: qidxisbestlol/0o.xml
+SHA1-Digest: bSHSf7QSyqzrvxHSFyYE6nxP25U=
+
+
+Name: qidxisbestlol/1P.xml
+SHA1-Digest: xHwGvqUsiT3YvC9Et+8ydIoSggU=
+
+
+Name: kotlin/collections/EmptySet.kotlin_metadata
+SHA1-Digest: ovibGKpUnUMNyb1OpBe/R93vW90=
+
+
+Name: qidxisbestlol/f.aac
+SHA1-Digest: jfhFvT2RfKQWR2iql6NK/Kr/g2E=
+
+
+Name: kotlin/ClassCastException.kotlin_metadata
+SHA1-Digest: KvJ1VjvCt/ZeiMM3e8t3P78oRcg=
+
+
+Name: kotlin/UByteArray.kotlin_metadata
+SHA1-Digest: NoRyxw6dvVbG2N9om556N1HEjpI=
+
+
+Name: qidxisbestlol/x.xml
+SHA1-Digest: ByaLUwZYtLQ9CGPd3BpOYm4yDAc=
+
+
+Name: kotlin/collections/AbstractList.kotlin_metadata
+SHA1-Digest: blqmAxpns1u/9BT/e5vpJbM6KlM=
+
+
+Name: qidxisbestlol/K.aac
+SHA1-Digest: Wl4jBkhtPS9E+JkWaS0GOyoMbuw=
+
+
+Name: kotlin/sequences/DistinctSequence.kotlin_metadata
+SHA1-Digest: WnKTC3DJmsQPn6Q0pJFoSSKmGs8=
+
+
+Name: qidxisbestlol/0T.aac
+SHA1-Digest: 2X8YOUdYTSYPWbSGmA+ofUnmV84=
+
+
+Name: qidxisbestlol/15.aac
+SHA1-Digest: e4P5KhqyT9zUrZk+U572w7jgldU=
+
+
+Name: assets/dtds/xhtml-special.ent
+SHA1-Digest: YiKShuA+w1ySLIp/nzu2hBKnilU=
+
+
+Name: kotlin/sequences/_SequencesKt.kotlin_metadata
+SHA1-Digest: /UeKg36spWfI2WgSHdqz+w9u2sE=
+
+
+Name: kotlin/sequences/SequenceBuilderIterator.kotlin_metadata
+SHA1-Digest: rt6cD2cZ5pQG2g2h8/NcvmBmsFI=
+
+
+Name: kotlin/comparisons/ComparisonsKt.kotlin_metadata
+SHA1-Digest: Q1SeOpjstO78eEKIiTj4Zmmwrc0=
+
+
+Name: qidxisbestlol/0T.xml
+SHA1-Digest: ieEeepvu+mVdpuypRyjhhMUXXs4=
+
+
+Name: qidxisbestlol/15.xml
+SHA1-Digest: iJJ9TNLnvXUpUUd0d/SMGrTjp/k=
+
+
+Name: qidxisbestlol/2h.aac
+SHA1-Digest: hxaNd0AXhXUj0uZmYlYeJ88PY4I=
+
+
+Name: qidxisbestlol/3I.aac
+SHA1-Digest: jY/h4EQMAYFOCU5GfwcvwBd52hg=
+
+
+Name: kotlin/ranges/ULongProgressionIterator.kotlin_metadata
+SHA1-Digest: BFhVgOPeIUvy5beHRSpyijzx7CM=
+
+
+Name: kotlin/ULongArrayKt.kotlin_metadata
+SHA1-Digest: Ml9GoK2Ejz009bHHnZ4k6GYEJSk=
+
+
+Name: qidxisbestlol/2z.aac
+SHA1-Digest: eDEv0/H5H+qqc28Qi2s85+/aPLA=
+
+
+Name: assets/templates/JavaConsole.zip
+SHA1-Digest: bk2b9rO7eT1yu3WaencLfPjgwy8=
+
+
+Name: assets/adrt/ADRTReceiver.class
+SHA1-Digest: cMrfFI6rZKo3PmvcamRZpCNVrzk=
+
+
+Name: qidxisbestlol/0.aac
+SHA1-Digest: xcvBCzQNtg0b2Rhj+DlQdB/m6iw=
+
+
+Name: qidxisbestlol/f.xml
+SHA1-Digest: JU9CSpLLwudbUj0JZC44YxQuYDg=
+
+
+Name: kotlin/reflect/KMutableProperty.kotlin_metadata
+SHA1-Digest: 8naXxLBgtYcVZNGeBi2lmF3bcis=
+
+
+Name: kotlin/internal/InlineOnly.kotlin_metadata
+SHA1-Digest: Lo3zf9OzSIRCwEv6BW2hYkfEtSE=
+
+
+Name: qidxisbestlol/0M.xml
+SHA1-Digest: c/aDdxHVVpKBf0IhPi7I3aOJU7c=
+
+
+Name: kotlin/text/UStringsKt.kotlin_metadata
+SHA1-Digest: vgt5/Z5+4biTogme4Rb/hJMvLdE=
+
+
+Name: kotlin/collections/AbstractMutableList.kotlin_metadata
+SHA1-Digest: Npmkpi/yeqNnun/paUnfH48SWmE=
+
+
+Name: kotlin/collections/Grouping.kotlin_metadata
+SHA1-Digest: e4wYCeVwGlFuosTT/Mf3H5kDzUc=
+
+
+Name: qidxisbestlol/m.aac
+SHA1-Digest: OUYDzQRCvkyRg0IRGLeIPYAXJHY=
+
+
+Name: qidxisbestlol/W.xml
+SHA1-Digest: YsIvjBlawarU1VE3e7cDllC4ZNM=
+
+
+Name: kotlin/UIntKt.kotlin_metadata
+SHA1-Digest: oZNcRTYlALOpD2DxNlm3qIA7lFs=
+
+
+Name: assets/templates/GradleApp3.zip
+SHA1-Digest: Y1JrgGgJ7iW7jvzeeP6IDbL62SY=
+
+
+Name: qidxisbestlol/0c.xml
+SHA1-Digest: xSrC5k7tvDVgyZv0Ak6pzjQppAI=
+
+
+Name: qidxisbestlol/1D.xml
+SHA1-Digest: qwwzRah4vbfI9MS3SDHJjSDlE6M=
+
+
+Name: qidxisbestlol/3.aac
+SHA1-Digest: 5CWlD5q+tH49Tj+tjwR6y+Z/ZsU=
+
+
+Name: qidxisbestlol/2n.aac
+SHA1-Digest: J2tEKMoemLSO6zs+C0OVm7WXgfs=
+
+
+Name: qidxisbestlol/3O.aac
+SHA1-Digest: kieZ6iZ6OFU4p859oJQYCADvVuA=
+
+
+Name: qidxisbestlol/W.aac
+SHA1-Digest: FjQBQCOWduDWDT80TAZ7QSRL60U=
+
+
+Name: qidxisbestlol/0M.aac
+SHA1-Digest: s4jJG3BBZmFc6v9xigmPSDJNXug=
+
+
+Name: assets/templates/JniHelloWorld.zip
+SHA1-Digest: BafixyqmQSb5WhZQ7ja4Bxs/NP8=
+
+
+Name: kotlin/sequences/FlatteningSequence.kotlin_metadata
+SHA1-Digest: zPpP7Isltfms3cSzZ1L0cD8a8L4=
+
+
+Name: qidxisbestlol/H.xml
+SHA1-Digest: pAvi5mP7OZV22zIJrghRRmg9U4Q=
+
+
+Name: kotlin/native/concurrent/SharedImmutable.kotlin_metadata
+SHA1-Digest: uswhWOO7I8qVFHBYNSghbmn+NIs=
+
+
+Name: assets/dtds/xhtml1-transitional.dtd
+SHA1-Digest: WtBTsxB0N2apzzv25wkMl9a9+2Y=
+
+
+Name: kotlin/coroutines/coroutines.kotlin_builtins
+SHA1-Digest: +vIhfyors/P2TaFVQ0vfQnZK1ik=
+
+
+Name: AndroidManifest.xml
+SHA1-Digest: sUOvoLkumZ0VNzjaibsim0oA6No=
+
+
+Name: kotlin/comparisons/NaturalOrderComparator.kotlin_metadata
+SHA1-Digest: vZOdhd/ZBtJOCG4yFNWnKJGY37U=
+
+
+Name: kotlin/js/JsName.kotlin_metadata
+SHA1-Digest: W/tTWPR17QHlweo8Lwm061UekWs=
+
+
+Name: qidxisbestlol/l.xml
+SHA1-Digest: phphFzySW+oA0IEet0eWVHqHrHw=
+
+
+Name: qidxisbestlol/H.aac
+SHA1-Digest: 3ozNgkiqLCoFbPsy3EEf2brdff8=
+
+
+Name: assets/templates/HelloJavaScript.zip
+SHA1-Digest: BYH+QVJMlR2LHLA03i731Pr+KF4=
+
+
+Name: kotlin/IllegalArgumentException.kotlin_metadata
+SHA1-Digest: TtqQlxT8mrmouwdpQrQO2EUPrDQ=
+
+
+Name: assets/trainer/course_game_en.xml
+SHA1-Digest: smHHKfsi1G9ZVrT5scuL4Lo+ksU=
+
+
+Name: qidxisbestlol/1h.aac
+SHA1-Digest: /YU4Y9HY/QrdOT06zidas2NxdWI=
+
+
+Name: qidxisbestlol/2I.aac
+SHA1-Digest: rl06h4lTIvxKI59xi2C+JizpHnw=
+
+
+Name: kotlin/internal/ContractsDsl.kotlin_metadata
+SHA1-Digest: RjY/iWaCssPmMCaOsrwK1GzCU98=
+
+
+Name: kotlin/time/DurationUnitKt.kotlin_metadata
+SHA1-Digest: hHPPXM7jwwURBwZsoCwIYlO3JD0=
+
+
+Name: qidxisbestlol/1h.xml
+SHA1-Digest: uDs+gvYTrTw3THxYwixwARGognA=
+
+
+Name: qidxisbestlol/0c.aac
+SHA1-Digest: K3F7F8UOfzGt15xeBV1PObgpqik=
+
+
+Name: qidxisbestlol/1D.aac
+SHA1-Digest: qpiGk962xe3yM0J6zsbXNVJwWKQ=
+
+
+Name: qidxisbestlol/3.xml
+SHA1-Digest: B6UJTHcdQc2C2c9YaMHJxdIxnSo=
+
+
+Name: qidxisbestlol/1i.xml
+SHA1-Digest: RkqeZmoGvIXaTvkmSfQ4v9g4R9A=
+
+
+Name: assets/whatsnew/aide-premiumkey-changes.txt
+SHA1-Digest: NdgM7VJTBsm2x7Yml7uQsvygQkY=
+
+
+Name: qidxisbestlol/1v.aac
+SHA1-Digest: CsjNvDGcFOVLpnOK8eRk3au4Xc0=
+
+
+Name: qidxisbestlol/2W.aac
+SHA1-Digest: hGq/ze0nEDwZeOcz5dRgL11l/pI=
+
+
+Name: qidxisbestlol/38.aac
+SHA1-Digest: cuJ+cwlm5QO6frAFAjbS9w6zhJ4=
+
+
+Name: kotlin/sequences/_USequencesKt.kotlin_metadata
+SHA1-Digest: EnDGYn/VEX3ZhMVL2p5KmoCnMn0=
+
+
+Name: kotlin/time/DurationUnit.kotlin_metadata
+SHA1-Digest: EFJBqWAoX9/0A1pL9/qtDTqM+/A=
+
+
+Name: qidxisbestlol/0d.aac
+SHA1-Digest: W+t+cNsZtEIoS4rSEA0ftb2qA64=
+
+
+Name: qidxisbestlol/1E.aac
+SHA1-Digest: damXv5i/wVVEGhsVcSeC0DVkuw0=
+
+
+Name: kotlin/LazyThreadSafetyMode.kotlin_metadata
+SHA1-Digest: wtg4L4U2jAZpJcZA7ryMEqGQuTU=
+
+
+Name: qidxisbestlol/2.aac
+SHA1-Digest: F2vDCtEt42w0rPKSsyR4aYiSWsI=
+
+
+Name: kotlin/NoSuchElementException.kotlin_metadata
+SHA1-Digest: OrF5JEc4zOAjMuPgOCcwNyMBmLM=
+
+
+Name: qidxisbestlol/0N.xml
+SHA1-Digest: Ri2QuibEgV/p5ihOK25QbbNVahw=
+
+
+Name: kotlin/sequences/DropTakeSequence.kotlin_metadata
+SHA1-Digest: hEIjjiGM75pOYjV+fwRg79rGYo0=
+
+
+Name: qidxisbestlol/0r.xml
+SHA1-Digest: f0FXfBp5MvWGexHi+qqKZ4QDI/Q=
+
+
+Name: qidxisbestlol/1S.xml
+SHA1-Digest: /Mh6X0RoyK94mR7ewIQ20UfzmLg=
+
+
+Name: qidxisbestlol/n.aac
+SHA1-Digest: DscjP95TsZ1rsYIEk9ajrhds8zw=
+
+
+Name: kotlin/time/ClockMark.kotlin_metadata
+SHA1-Digest: eOCZTwy41aOaw1/OsliYLCLS4Ok=
+
+
+Name: qidxisbestlol/0q.aac
+SHA1-Digest: xGxBGda24nfIgrPHMPIDCBgBsbs=
+
+
+Name: qidxisbestlol/1R.aac
+SHA1-Digest: sthT6WYaht+hAZqGX2iEpRZtCAU=
+
+
+Name: qidxisbestlol/23.aac
+SHA1-Digest: 8oNkN1kgoQy2wNMIkQc+4MRf9dE=
+
+
+Name: qidxisbestlol/I.xml
+SHA1-Digest: 3oUBEyVazmhVtbw7KfzcroGAy8E=
+
+
+Name: qidxisbestlol/1i.aac
+SHA1-Digest: SDCeidxkUuWpBt7Iol9SNyiuBMM=
+
+
+Name: qidxisbestlol/2J.aac
+SHA1-Digest: HYrAAC0LfTKCNZOUv9bzp26/d/Q=
+
+
+Name: assets/trainer/course_cpp_en.xml
+SHA1-Digest: VdpiaJsrZe7heZaKHR1bIr9xuic=
+
+
+Name: qidxisbestlol/z.xml
+SHA1-Digest: rJ/tJVz5FwwzY80YKVSJ0SmwBgM=
+
+
+Name: qidxisbestlol/1v.xml
+SHA1-Digest: jC71MorzYvFJN6Z3XKcrHDixxtg=
+
+
+Name: kotlin/AssertionError.kotlin_metadata
+SHA1-Digest: mjTkjikDg8LDsBcHG+FdU3AppD4=
+
+
+Name: qidxisbestlol/V.aac
+SHA1-Digest: j6zyHZ0g7oHWdR6v1kst6eGr6S8=
+
+
+Name: kotlin/text/Typography.kotlin_metadata
+SHA1-Digest: 4u3ZnHMPlMiqz816SxUWWNemu+U=
+
+
+Name: qidxisbestlol/0N.aac
+SHA1-Digest: dWQweYlT4qQYy/409fa7LpOQPPs=
+
+
+Name: qidxisbestlol/m.xml
+SHA1-Digest: 1QnuksDMFWxv+3rdiOkIghRaj9g=
+
+
+Name: qidxisbestlol/I.aac
+SHA1-Digest: cz2cTpSbxUR34pkCMo3M7a+mSXk=
+
+
+Name: qidxisbestlol/1w.xml
+SHA1-Digest: c7l2I69mdhvNdzzcHAIzGnzDFDQ=
+
+
+Name: assets/trainer/course_javascript_en.xml
+SHA1-Digest: uDHd46jfJsAZGgYi8UJPAcmVVh8=
+
+
+Name: qidxisbestlol/2.xml
+SHA1-Digest: BSfGOU4pTgKvwTidrnDU7po40y0=
+
+
+Name: kotlin/jvm/Volatile.kotlin_metadata
+SHA1-Digest: GhHF1yRfHOiPqwX30H6fEuC91U4=
+
+
+Name: kotlin/coroutines/experimental/SequenceBuilder.kotlin_metadata
+SHA1-Digest: mMVABI/XXUwzLFpYJczzhC2HDQg=
+
+
+Name: qidxisbestlol/0q.xml
+SHA1-Digest: eoYFRxZk5oGOkkZWDSMR7JgzEDQ=
+
+
+Name: qidxisbestlol/1R.xml
+SHA1-Digest: iPMmRg78CTHEhwSc1OEWKfU/1tA=
+
+
+Name: qidxisbestlol/2o.aac
+SHA1-Digest: 1eWl0kIiC3mj6N8is5Uk44jyABY=
+
+
+Name: qidxisbestlol/3P.aac
+SHA1-Digest: kJWGBYkmpyPo8tZlRKh0fttExxk=
+
+
+Name: kotlin/collections/AbstractMutableCollection.kotlin_metadata
+SHA1-Digest: 8GWBp3FD9HkSX95+g7ROp6Y2FnU=
+
+
+Name: kotlin/text/StringBuilder.kotlin_metadata
+SHA1-Digest: 68aSwM/4JoeTXkmdLMvZ7rKBwj8=
+
+
+Name: qidxisbestlol/0d.xml
+SHA1-Digest: cNtcKHGXE8VLVlKI31XTz9vZb/g=
+
+
+Name: qidxisbestlol/1E.xml
+SHA1-Digest: FI2sL+7V7Ymh6RD6d1kSkphce4E=
+
+
+Name: qidxisbestlol/0r.aac
+SHA1-Digest: zWXW2bEWt4BITPAcwKyFQZhQ14c=
+
+
+Name: qidxisbestlol/1S.aac
+SHA1-Digest: q1QGZP1ka3spzU6bk9DysJvLHKk=
+
+
+Name: qidxisbestlol/24.aac
+SHA1-Digest: s44v0q7kfN3xZ2NNwTLH0xCMpAI=
+
+
+Name: kotlin/text/CharKt.kotlin_metadata
+SHA1-Digest: VBZ6KSw7C/+alP/y3LykjePWXsA=
+
+
+Name: kotlin/UnsupportedOperationException.kotlin_metadata
+SHA1-Digest: 1Owhb3rg9EdKGaZked/ES4QmQv4=
+
+
+Name: qidxisbestlol/V.xml
+SHA1-Digest: Kna99LxKAMw2FhpaqKC4T9FKHto=
+
+
+Name: kotlin/coroutines/experimental/EmptyCoroutineContext.kotlin_meta
+ data
+SHA1-Digest: zvOqSYbT68TGccWTOnPdg53OtOQ=
+
+
+Name: kotlin/ranges/_RangesKt.kotlin_metadata
+SHA1-Digest: 0xBHf7Y6cnDki23W6pRugt1tf6U=
+
+
+Name: qidxisbestlol/1w.aac
+SHA1-Digest: BSIzRU5HIHsqf4SL676X1M+YGyw=
+
+
+Name: qidxisbestlol/2X.aac
+SHA1-Digest: PfeyU+TAoSqWU0cVYxcnbt/uZKg=
+
+
+Name: qidxisbestlol/39.aac
+SHA1-Digest: L11lHK2mmgu/o18gIGjz6Dil0fo=
+
+
+Name: qidxisbestlol/0a.xml
+SHA1-Digest: k4tzyli6FdIP2FKSV1VQJdgdFd8=
+
+
+Name: qidxisbestlol/1B.xml
+SHA1-Digest: jTx7+NXkYm+2T/P14muRLbeJMjY=
+
+
+Name: keys/testkey.sbt
+SHA1-Digest: dAVFaPm/JcI+WUmNNFjk2Y+7S18=
+
+
+Name: kotlin/text/MatchResult.kotlin_metadata
+SHA1-Digest: IU69QXjGLzBsZsDAqlu4G6lodio=
+
+
+Name: assets/whatsnew/aide-web-changes.txt
+SHA1-Digest: bR1jXIYPNOMKsMnFTi5yuVvyZ3M=
+
+
+Name: assets/dtds/xhtml-lat1.ent
+SHA1-Digest: LF0p6imBzHWcxfWyfPfFNtTqk4Q=
+
+
+Name: kotlin/collections/AbstractMutableMap.kotlin_metadata
+SHA1-Digest: lwU5paQNwHVl54HxkT3BGH/tqB8=
+
+
+Name: qidxisbestlol/Y.aac
+SHA1-Digest: fJdveIxVlcjo2G2s0Owux/T/7zc=
+
+
+Name: qidxisbestlol/0O.xml
+SHA1-Digest: +TXMTDmIJDM+l9PIhVRoM4wtoW8=
+
+
+Name: qidxisbestlol/10.xml
+SHA1-Digest: XzxaR+KITx02dCqvIWimtiIFxis=
+
+
+Name: kotlin/collections/AbstractCollection.kotlin_metadata
+SHA1-Digest: rUM9HbCdm6nCtWTVlrl+lTJ38cA=
+
+
+Name: kotlin/jvm/Synchronized.kotlin_metadata
+SHA1-Digest: RmxJKMabgE0Lly9SMUhVjn2JCME=
+
+
+Name: qidxisbestlol/G.aac
+SHA1-Digest: fawvk1zUT5YBNa71biEx4R7WtUg=
+
+
+Name: kotlin/coroutines/experimental/intrinsics/IntrinsicsKt.kotlin_me
+ tadata
+SHA1-Digest: yfp22TIGcXsCgXS8ctRVexUi98U=
+
+
+Name: kotlin/time/Duration.kotlin_metadata
+SHA1-Digest: R/CHplkllTtWivOpBTFdjRpBNOc=
+
+
+Name: kotlin/collections/_UArraysKt.kotlin_metadata
+SHA1-Digest: xIbBOymknQsoNKVaynbjNx+0Ogg=
+
+
+Name: qidxisbestlol/0O.aac
+SHA1-Digest: p2MlG7ZAY0eQm42ryddBq1k8PlI=
+
+
+Name: qidxisbestlol/10.aac
+SHA1-Digest: 9Kfl6I322/yPMqPS0Sf5AWu+W1w=
+
+
+Name: qidxisbestlol/1f.xml
+SHA1-Digest: ZvTMJsDKJ/tOWU5pgYS5kuXlyG4=
+
+
+Name: qidxisbestlol/k.xml
+SHA1-Digest: xSTtiIbx4Sd5T5bECQCfbmRDDRw=
+
+
+Name: kotlin/sequences/TakeWhileSequence.kotlin_metadata
+SHA1-Digest: NddC5XilvVUyBnAyGdjDn9tDEOI=
+
+
+Name: qidxisbestlol/2l.aac
+SHA1-Digest: rmeEY7LgEJqWKDj6l482FFshER8=
+
+
+Name: qidxisbestlol/3M.aac
+SHA1-Digest: LcDBi5iSYKm/8eQ6ToXypziIvp8=
+
+
+Name: assets/license.html
+SHA1-Digest: +LUtDCbQJ76N16nnRvieJ9QxGrQ=
+
+
+Name: qidxisbestlol/0s.xml
+SHA1-Digest: cpQSIP531skvsGnaaXJHtAW181I=
+
+
+Name: qidxisbestlol/1T.xml
+SHA1-Digest: xU08klhU2x00cRlmmoTbLCFkv7U=
+
+
+Name: qidxisbestlol/5.aac
+SHA1-Digest: THPxgVWQlMDvb4WAIxTSuUGeKvc=
+
+
+Name: assets/adrt/ADRTLongMap.class
+SHA1-Digest: H4qg1wi6pVh32kO/FfTm8zEJqQ0=
+
+
+Name: qidxisbestlol/Y.xml
+SHA1-Digest: jpyQwCpoCrfwrpTJ6bo37YHlZYY=
+
+
+Name: kotlin/contracts/ContractBuilderKt.kotlin_metadata
+SHA1-Digest: eC/gDU7RCzqAJO7s9Deya13aJN8=
+
+
+Name: kotlin/kotlin.kotlin_builtins
+SHA1-Digest: 1q9C2/Xioja6xCzasyrJNc7oors=
+
+
+Name: kotlin/text/_StringsKt.kotlin_metadata
+SHA1-Digest: UdqJ+WMN766bh9UFU1Cve2A6VnA=
+
+
+Name: qidxisbestlol/0s.aac
+SHA1-Digest: Gml3YTTqW3k0Ej4ZRll4Zr6oykk=
+
+
+Name: qidxisbestlol/1T.aac
+SHA1-Digest: 1cOaAGTL4TuH6UozeyX93Nln8MQ=
+
+
+Name: qidxisbestlol/25.aac
+SHA1-Digest: 60j07JS2oGZQURs/6pMBbpzGKvA=
+
+
+Name: kotlin/random/URandomKt.kotlin_metadata
+SHA1-Digest: 56/TUvQ5t8u672EUvaIJmpfqbjg=
+
+
+Name: assets/whatsnew/aide-changes.txt
+SHA1-Digest: XYi1U52KCgzsa24MINQ5B8aDT98=
+
+
+Name: qidxisbestlol/G.xml
+SHA1-Digest: n+TLO7ug+Di6DZqCSazhk5GUh4w=
+
+
+Name: kotlin/Error.kotlin_metadata
+SHA1-Digest: ctKHP/BNBDJEa9nT1wsXkzSa8uA=
+
+
+Name: qidxisbestlol/0a.aac
+SHA1-Digest: +s1eX4D2qxinS3IFQ9KvUOHkDNs=
+
+
+Name: qidxisbestlol/1B.aac
+SHA1-Digest: GIcWAZJ08HnFfbZQc9dEh1tYq2I=
+
+
+Name: qidxisbestlol/5.xml
+SHA1-Digest: PfvVwuPOmbkgXYsF7kqRT0yO6cg=
+
+
+Name: kotlin/HashCodeKt.kotlin_metadata
+SHA1-Digest: 2YTZ9xo1iUglGk18J3/psH2PkoQ=
+
+
+Name: qidxisbestlol/1x.aac
+SHA1-Digest: hlnt60Dfc5NtZRHLV02uDuNyNhk=
+
+
+Name: qidxisbestlol/2Y.aac
+SHA1-Digest: /ipWP5u3nnt4ffB1qWIWl3g1jm0=
+
+
+Name: kotlin/sequences/TransformingSequence.kotlin_metadata
+SHA1-Digest: JVebTIXXTJ+hBmVCirOKnf2PiCg=
+
+
+Name: kotlin/UByte.kotlin_metadata
+SHA1-Digest: GavRVNzwJJV2CpLWbsoxSdEHy2I=
+
+
+Name: kotlin/collections/_SetsKt.kotlin_metadata
+SHA1-Digest: 1yFbDV1rWv4+mP0+VNySoYlEgwE=
+
+
+Name: kotlin/reflect/KClass.kotlin_metadata
+SHA1-Digest: CqhibykU6JKXlY7JzXtz6i+5onE=
+
+
+Name: kotlin/sequences/DistinctIterator.kotlin_metadata
+SHA1-Digest: om2ldpg0J+L3c5zSNxgihoYYtWc=
+
+
+Name: qidxisbestlol/1f.aac
+SHA1-Digest: NdePajxUXQP3D3S4CjLXYqjvfEA=
+
+
+Name: qidxisbestlol/2G.aac
+SHA1-Digest: Y8/14tO/5BTS+t3/W4IBMStpBu4=
+
+
+Name: qidxisbestlol/X.aac
+SHA1-Digest: UGCC5467Yf2QBO2/NArm8tRejlo=
+
+
+Name: kotlin/collections/_MapsKt.kotlin_metadata
+SHA1-Digest: XEHzXzaGoHLGQA7dQ6TW8tyer2I=
+
+
+Name: qidxisbestlol/l.aac
+SHA1-Digest: oCVEaZIXvw0so0g47qrlvy/kTmI=
+
+
+Name: qidxisbestlol/0t.xml
+SHA1-Digest: WHE+JBJY3ZY84NuEgn899PxUAbI=
+
+
+Name: qidxisbestlol/1U.xml
+SHA1-Digest: 21Bn+B+14vEWpxZq6GBGDvKZWEI=
+
+
+Name: kotlin/UByteArrayKt.kotlin_metadata
+SHA1-Digest: 4dOsvLE5n7SFkqiqF65ivCywKkc=
+
+
+Name: kotlin/time/AbstractLongClock.kotlin_metadata
+SHA1-Digest: 12JxWQT23gZasuJ+i7dSQ7+X41c=
+
+
+Name: qidxisbestlol/j.aac
+SHA1-Digest: 9jb/dW+SDgMWFak7D9JJ6j4GS6U=
+
+
+Name: qidxisbestlol/1g.xml
+SHA1-Digest: p3fioNiuU5t6G0GjYfmdjTTxPwc=
+
+
+Name: qidxisbestlol/0P.aac
+SHA1-Digest: GNaMR/OeoanE7bRgYP6NJUr3yzI=
+
+
+Name: qidxisbestlol/11.aac
+SHA1-Digest: ptGuNoHYmyOcFY8sFwy5A4ffst8=
+
+
+Name: assets/adrt/ADRTThread.class
+SHA1-Digest: UaeWcquCR6qa3Lvo+SA89oxu/Ss=
+
+
+Name: kotlin/contracts/ConditionalEffect.kotlin_metadata
+SHA1-Digest: IdvjkJKXgOgpv3ZtjuNtUMd72M0=
+
+
+Name: qidxisbestlol/0P.xml
+SHA1-Digest: Kk2VC/M1yw3RYmaXtR7vdiW7vOY=
+
+
+Name: qidxisbestlol/11.xml
+SHA1-Digest: iYd1HicQ/E3XfWHwM0KIEoP7ud4=
+
+
+Name: kotlin/coroutines/experimental/SafeContinuation.kotlin_metadata
+SHA1-Digest: WuIzQ8YtPh2TZ5Zer8QYVSNp9Jw=
+
+
+Name: assets/armeabi-pie/aidl
+SHA1-Digest: Vde3BkRaWB/T2UuWHL/uo5jvT1Q=
+
+
+Name: qidxisbestlol/X.xml
+SHA1-Digest: 3rADt/m61YKsx2+Oc9+jA/+kKhg=
+
+
+Name: qidxisbestlol/0b.xml
+SHA1-Digest: frotZ2GDlI0OuJ3EwrACpH45lt4=
+
+
+Name: qidxisbestlol/1C.xml
+SHA1-Digest: bmWsTA2lnRIp+iUnQT0+nJ+RZpA=
+
+
+Name: qidxisbestlol/F.aac
+SHA1-Digest: RRxOSvpmhVfCwiprVV/wZlaqQpw=
+
+
+Name: qidxisbestlol/4.aac
+SHA1-Digest: NjOmUMOUeXSQHhs0M4jEkB3aE1g=
+
+
+Name: qidxisbestlol/j.xml
+SHA1-Digest: m/Y8KVxMzw9eKc3fyxRU+t1bV8A=
+
+
+Name: kotlin/InitializedLazyImpl.kotlin_metadata
+SHA1-Digest: v2fvH0FR9OSPZ68SskmAH+Y0hY4=
+
+
+Name: qidxisbestlol/2m.aac
+SHA1-Digest: 6XHY8e2uDAS22RGnN1ce5lIaLaw=
+
+
+Name: qidxisbestlol/3N.aac
+SHA1-Digest: RlPW6jCnschy4omXYTHKRQ4HSDY=
+
+
+Name: qidxisbestlol/F.xml
+SHA1-Digest: mIOH46NFVEc944VOCMkC8oWwROg=
+
+
+Name: kotlin/NotImplementedError.kotlin_metadata
+SHA1-Digest: qmFbt2MMH/XeDYOYAiOST58qxFs=
+
+
+Name: kotlin/UIntArray.kotlin_metadata
+SHA1-Digest: gcpPP9R08dxv0j0IQzaK3sUkOjU=
+
+
+Name: kotlin/reflect/KProperty2.kotlin_metadata
+SHA1-Digest: T4+tTVeGzOvz+1iKvkgCxvPLSGc=
+
+
+Name: qidxisbestlol/1g.aac
+SHA1-Digest: zzAxIlbVWmPG1vaQGxRYnQAB+s8=
+
+
+Name: qidxisbestlol/2H.aac
+SHA1-Digest: JhNUpPWtEUujOSjekm2M+rBZouw=
+
+
+Name: assets/trainer/course_wear_en.xml
+SHA1-Digest: 7FIW9KRHVYHq5TSNGy6tK9ApeWQ=
+
+
+Name: kotlin/collections/AbstractSet.kotlin_metadata
+SHA1-Digest: q0FJ+GfHsfRhUYAtxbR0kApBMag=
+
+
+Name: qidxisbestlol/1y.aac
+SHA1-Digest: 3ICyaggGwQ+wY44mQKRAs8hkHlU=
+
+
+Name: qidxisbestlol/2Z.aac
+SHA1-Digest: qvhj0e/yByPccBlFm5pK6q5jQq8=
+
+
+Name: kotlin/comparisons/_UComparisonsKt.kotlin_metadata
+SHA1-Digest: BCHduONZ+1yjCmzg9X/Fi2rdQRg=
+
+
+Name: assets/adrt/ADRTLongSet.class
+SHA1-Digest: bZ1AAdytmpkkBqdVLI9Rm034DUQ=
+
+
+Name: assets/android.jar
+SHA1-Digest: UtOXQt22Gm4KTQxeFwGqYrPF59k=
+
+
+Name: kotlin/collections/MovingSubList.kotlin_metadata
+SHA1-Digest: 2QpepUV6LJzcwma6CQK1qP3IOtw=
+
+
+Name: kotlin/internal/AccessibleLateinitPropertyLiteral.kotlin_metadat
+ a
+SHA1-Digest: nvap2bNmO8DBUMScbM7k3JDl4jo=
+
+
+Name: kotlin/text/RegexOption.kotlin_metadata
+SHA1-Digest: KEVZt6mI3NHGuO+RJmbyuZRU4kM=
+
+
+Name: qidxisbestlol/4.xml
+SHA1-Digest: +1ErpYtUKWYolcYUfC8DtC1/Ssk=
+
+
+Name: qidxisbestlol/0b.aac
+SHA1-Digest: arLwZ/Lvu4+vTAmRkJfayh8fTSs=
+
+
+Name: qidxisbestlol/1C.aac
+SHA1-Digest: ralFi/xjLzZzimSmlAGCFAUgfbE=
+
+
+Name: kotlin/SuspendKt.kotlin_metadata
+SHA1-Digest: yVXJ01rm6hPptmKjvqDDIszji18=
+
+
+Name: kotlin/sequences/ConstrainedOnceSequence.kotlin_metadata
+SHA1-Digest: a8r46/KQe7lnXGBiojJPn/w5+Tk=
+
+
+Name: qidxisbestlol/k.aac
+SHA1-Digest: MQdgLGbifIVryBAX2hHLd2BtuDc=
+
+
+Name: classes.dex
+SHA1-Digest: WjBZi08C3ZJsd4iwyEakc+pANmY=
+
+
+Name: qidxisbestlol/0t.aac
+SHA1-Digest: LEqhulQlfdA4EwIqTlfkBmPPph0=
+
+
+Name: qidxisbestlol/1U.aac
+SHA1-Digest: zsMCIa2/NNsE1KY/ZMtH/S3fuj4=
+
+
+Name: qidxisbestlol/26.aac
+SHA1-Digest: jMA3AOSwEdD0qU0OUbt+PFvXWuY=
+
+
+Name: kotlin/collections/MapWithDefault.kotlin_metadata
+SHA1-Digest: o/wBAOb4QwLdMWchEJSeqLiPfiI=
+
+
+Name: kotlin/coroutines/intrinsics/CoroutinesIntrinsicsHKt.kotlin_meta
+ data
+SHA1-Digest: HyyP+pIRC/2Zz/+nnootVn1px68=
+
+
+Name: qidxisbestlol/1s.xml
+SHA1-Digest: 180o1VUNn9P2TaZPC4928io5wMc=
+
+
+Name: assets/dtds/xhtml-symbol.ent
+SHA1-Digest: 53SfmZieyKlgj2z71BpeXd3Biuw=
+
+
+Name: kotlin/ResultKt.kotlin_metadata
+SHA1-Digest: /MzylK+Co3Pxc9i7AvNUL45tlBM=
+
+
+Name: qidxisbestlol/0X.xml
+SHA1-Digest: Clr+cDzrTkEp4UQb5i7zVnP5rzs=
+
+
+Name: qidxisbestlol/19.xml
+SHA1-Digest: 4MUPgykaWNfD74SylIwgOeL48XU=
+
+
+Name: qidxisbestlol/b.aac
+SHA1-Digest: CENVT2kPo7wokS8WH7X7H+K/RfY=
+
+
+Name: kotlin/native/concurrent/ThreadLocal.kotlin_metadata
+SHA1-Digest: 6obtCzZl5nKrrJUvl4FbHlYHfb8=
+
+
+Name: qidxisbestlol/6.xml
+SHA1-Digest: xgOuD+BThZqdMKR3J+5Ad7/8Ass=
+
+
+Name: kotlin/reflect/reflect.kotlin_builtins
+SHA1-Digest: l6f8dPGlWhhg7zs+V6/uTMWKa3I=
+
+
+Name: kotlin/sequences/FilteringSequence.kotlin_metadata
+SHA1-Digest: ZIz4HdB8XgUcPqsIRKXx3zKUNLg=
+
+
+Name: okhttp3/internal/publicsuffix/NOTICE
+SHA1-Digest: 3oKFcA96KjXP/A8/xWEyiDcuplM=
+
+
+Name: kotlin/text/RegexExtensionsKt.kotlin_metadata
+SHA1-Digest: mORwR2z7Mfsh3D9MeJeGKXR+FXM=
+
+
+Name: qidxisbestlol/S.xml
+SHA1-Digest: kIJT7C+2QApMtTez2kiCeljxcKw=
+
+
+Name: qidxisbestlol/0u.xml
+SHA1-Digest: pjtCHROGpzYcutd/xn2mBWfJYFM=
+
+
+Name: qidxisbestlol/1V.xml
+SHA1-Digest: 7J+NgA3jPxOxtQ3/ustuVATNj2g=
+
+
+Name: qidxisbestlol/0X.aac
+SHA1-Digest: sLZZ5NHe0KZOJau1YXWEy56BFjc=
+
+
+Name: qidxisbestlol/19.aac
+SHA1-Digest: NP77wvGcwseigxPz8Z8jideVqXk=
+
+
+Name: qidxisbestlol/0g.aac
+SHA1-Digest: xlZXxRdIfy4q7pIHcz4ffbyVy28=
+
+
+Name: qidxisbestlol/1H.aac
+SHA1-Digest: 9dbIlv7Vs7VeBmFYMfWqd3bh0YY=
+
+
+Name: keys/testkey.x509.pem
+SHA1-Digest: 71Q6Rn2DDZl1zPDVaaeEHItd+Yg=
+
+
+Name: assets/armeabi-pie/aapt
+SHA1-Digest: fgaVskkqMjLdCUHtU6ZBDXuazmo=
+
+
+Name: qidxisbestlol/2c.aac
+SHA1-Digest: Xu/vb2avz7RRuCeMEpG0r934+10=
+
+
+Name: qidxisbestlol/3D.aac
+SHA1-Digest: KbAZDQ5/9OSlU8uomvJhsdhiCmI=
+
+
+Name: kotlin/collections/_CollectionsKt.kotlin_metadata
+SHA1-Digest: V1qrUwxzgqSIUoioJecZ68qg0Qk=
+
+
+Name: kotlin/PreconditionsKt.kotlin_metadata
+SHA1-Digest: thuutnrqBhRGrBvrQj8quOTtDi8=
+
+
+Name: qidxisbestlol/b.xml
+SHA1-Digest: yTuFzkCLU3rWMHemvsciBTHCdW8=
+
+
+Name: kotlin/KotlinHKt.kotlin_metadata
+SHA1-Digest: sPFiJoyb8Zwx+XlsjDTaiA1kMd8=
+
+
+Name: resources.arsc
+SHA1-Digest: b4DlClpVUEIkd/91xfqWQDWWafU=
+
+
+Name: qidxisbestlol/1s.aac
+SHA1-Digest: mtCBCIz8YbPEzo/qidnpQQZLiuw=
+
+
+Name: qidxisbestlol/2T.aac
+SHA1-Digest: W0KaIG56uYQ+ElMkQaol99nIKu8=
+
+
+Name: qidxisbestlol/35.aac
+SHA1-Digest: utDk0NKN3CklXyoNTkzpahPy7Aw=
+
+
+Name: qidxisbestlol/E.aac
+SHA1-Digest: tA1Zrbl7FxLpwYDQ9Sv1bxdk+w0=
+
+
+Name: kotlin/collections/ULongIterator.kotlin_metadata
+SHA1-Digest: rrxqCMTNfP0pxatBd6siEXSXOYk=
+
+
+Name: kotlin/collections/CollectionsKt.kotlin_metadata
+SHA1-Digest: 5VUECHFmM4tAs/c+N85l0tnRk4M=
+
+
+Name: kotlin/RuntimeException.kotlin_metadata
+SHA1-Digest: 1WTVpA6DveCQJR2UQ0IFvHYWLu4=
+
+
+Name: assets/dtds/HTMLsymbol.ent
+SHA1-Digest: wXq8RV+A2OIgeYK8GoEgeHaiyhk=
+
+
+Name: assets/adrt/ADRTSender.class
+SHA1-Digest: V/qYKH+AmNRS2L9TTxhQU1QvFzk=
+
+
+Name: kotlin/ranges/ULongRange.kotlin_metadata
+SHA1-Digest: 5PbD0QQLaZT0+JJunmZSE6JCtM4=
+
+
+Name: qidxisbestlol/6.aac
+SHA1-Digest: IkrmrmmuVz06NVl7Nv+YYaK9HSU=
+
+
+Name: kotlin/coroutines/experimental/intrinsics/CoroutinesIntrinsicsEx
+ perimentalHKt.kotlin_metadata
+SHA1-Digest: VJeXZ9QrcuAfIGInXqOqOnJjvn0=
+
+
+Name: qidxisbestlol/q.aac
+SHA1-Digest: 6j4MeAcy1RTbADfMr27n3ikNaA8=
+
+
+Name: kotlin/reflect/KProperty.kotlin_metadata
+SHA1-Digest: PQHBKMxXwPU9evP/SDjCaSoPeow=
+
+
+Name: kotlin/StandardKt.kotlin_metadata
+SHA1-Digest: +YlXb+MrbjhpIpbXX8C+/9tMoGA=
+
+
+Name: qidxisbestlol/S.aac
+SHA1-Digest: CENVT2kPo7wokS8WH7X7H+K/RfY=
+
+
+Name: qidxisbestlol/E.xml
+SHA1-Digest: AL8GXEjiWU934NGy19HGPdfPns0=
+
+
+Name: qidxisbestlol/0g.xml
+SHA1-Digest: r+azuKR4OQ5VlsRdxCW4DcA7uZs=
+
+
+Name: qidxisbestlol/1H.xml
+SHA1-Digest: smBz7BqR3p8DO1mDJuFd07O4PUU=
+
+
+Name: qidxisbestlol/0J.xml
+SHA1-Digest: jyfetJP+IyZToNNdXZm+HFBmWPQ=
+
+
+Name: kotlin/NumbersKt.kotlin_metadata
+SHA1-Digest: jQzlg2p507kikkCWYOKIGun9YEY=
+
+
+Name: kotlin/text/CharacterCodingException.kotlin_metadata
+SHA1-Digest: IMhQS+RpIdjUiO4pPC7b5jFyKQc=
+
+
+Name: assets/whatsnew/java-trainer-changes.txt
+SHA1-Digest: NdgM7VJTBsm2x7Yml7uQsvygQkY=
+
+
+Name: kotlin/text/IndentKt.kotlin_metadata
+SHA1-Digest: lzTLQa+erZTI3T1dqyJhgQnGFBE=
+
+
+Name: qidxisbestlol/2r.aac
+SHA1-Digest: kkgipFHX1J2Tt0FEbrABRc3EetA=
+
+
+Name: qidxisbestlol/3S.aac
+SHA1-Digest: 1pCO3OWsnvNY7qvReFXD+68EYTM=
+
+
+Name: kotlin/sequences/GeneratorSequence.kotlin_metadata
+SHA1-Digest: B6BEga3dshRp1rK38HjfujARjQM=
+
+
+Name: qidxisbestlol/p.xml
+SHA1-Digest: ekFeSX/5P1Qy/7zeRdLTImBJ6TE=
+
+
+Name: kotlin/Result.kotlin_metadata
+SHA1-Digest: Ha0etScIIPmkx6o6ajM6VXkePTE=
+
+
+Name: qidxisbestlol/0u.aac
+SHA1-Digest: WBJbpemeOLdSA26mr4wBS0xR+48=
+
+
+Name: qidxisbestlol/1V.aac
+SHA1-Digest: T48ufp12RjScPksFqOZaCl2bbXc=
+
+
+Name: qidxisbestlol/27.aac
+SHA1-Digest: tmOi4IGHpFEk6elIUyrtM6lkjJY=
+
+
+Name: kotlin/ranges/RangesKt.kotlin_metadata
+SHA1-Digest: NNcnaWVaOPcoT1kRDj2TtvQOQSI=
+
+
+Name: qidxisbestlol/0J.aac
+SHA1-Digest: LdCx4/ga/2rWOeIWab4XmP9EE3E=
+
+
+Name: kotlin/collections/MapsKt.kotlin_metadata
+SHA1-Digest: DILKag/qFdG36SkNaURgIDqH9Fs=
+
+
+Name: kotlin/experimental/BitwiseOperationsKt.kotlin_metadata
+SHA1-Digest: aut9f11SQyVMjboWjpfqOcZ87yA=
+
+
+Name: kotlin/random/XorWowRandom.kotlin_metadata
+SHA1-Digest: lxGIwhu1SeYK9oKe6R5qT+jhlDo=
+
+
+Name: kotlin/ArithmeticException.kotlin_metadata
+SHA1-Digest: BihgNx0ZzfX2T2eU8UKnxGl98K0=
+
+
+Name: qidxisbestlol/1r.xml
+SHA1-Digest: PGyiIfGWR/Dv69dymeU4N23dyNI=
+
+
+Name: kotlin/ExperimentalMultiplatform.kotlin_metadata
+SHA1-Digest: XCvYyXwyjO2q1JNAHFmplKG5gYY=
+
+
+Name: kotlin/coroutines/experimental/SequenceBuilderKt.kotlin_metadata
+SHA1-Digest: fPhqRM72wXOhosRda3a1cnoSYGw=
+
+
+Name: qidxisbestlol/D.aac
+SHA1-Digest: MGA87YfiomuNCzYa+XKeVCPnoZ0=
+
+
+Name: assets/x86/aapt
+SHA1-Digest: 0MY+YQe33X6N+7D5K6cvt/Xjo8U=
+
+
+Name: qidxisbestlol/1d.aac
+SHA1-Digest: wZUFMiq0h5WOpLN6G69XN6jgUx8=
+
+
+Name: qidxisbestlol/2E.aac
+SHA1-Digest: jAImNmVG0BhC5i1JBvW5Q/Bwefo=
+
+
+Name: qidxisbestlol/2b.aac
+SHA1-Digest: oq7YYqwYaTTP5b847OHU06mSxgA=
+
+
+Name: qidxisbestlol/3C.aac
+SHA1-Digest: PIph7M4ZHhY/AYP5Y1gUzmtpP60=
+
+
+Name: qidxisbestlol/q.xml
+SHA1-Digest: A21p6NdiMmMqkGLOm95H4UGcbTM=
+
+
+Name: qidxisbestlol/0v.aac
+SHA1-Digest: BP8LDR16fXAcdB0JVz1Q/OjjiYU=
+
+
+Name: qidxisbestlol/1W.aac
+SHA1-Digest: CdvFa9sFxZF+J0hB8C4vtoz54/Q=
+
+
+Name: qidxisbestlol/28.aac
+SHA1-Digest: hXPLCzPCiFUJnlxr911HWdu+OyM=
+
+
+Name: qidxisbestlol/0W.xml
+SHA1-Digest: RubmSkU8t03POQzq50K4PFhtVnE=
+
+
+Name: qidxisbestlol/18.xml
+SHA1-Digest: h39WJB+EOZMFZ+ajU4KQles3yC8=
+
+
+Name: kotlin/contracts/ContractBuilder.kotlin_metadata
+SHA1-Digest: fUhGsfXV8U6LPfKTGF/GZyb76+A=
+
+
+Name: qidxisbestlol/R.xml
+SHA1-Digest: QF6JaNKWrHXnLYyo7B62rMOe37U=
+
+
+Name: kotlin/sequences/SequenceScope.kotlin_metadata
+SHA1-Digest: OEmETTzmSduv16d877OfEucq2mU=
+
+
+Name: kotlin/collections/collections.kotlin_builtins
+SHA1-Digest: OhB+GKvj+kfdxJRhT0ndJbHJ4L8=
+
+
+Name: kotlin/coroutines/experimental/AbstractCoroutineContextElement.k
+ otlin_metadata
+SHA1-Digest: EUimNTaYPwRp3qUvil62cKgeOuU=
+
+
+Name: qidxisbestlol/0W.aac
+SHA1-Digest: G6I71vuW/yC9jbFfaKVvg6fiToY=
+
+
+Name: qidxisbestlol/18.aac
+SHA1-Digest: py4+JJQi+GXjs/8uBj/QfpJvNNE=
+
+
+Name: qidxisbestlol/0h.aac
+SHA1-Digest: fr3pCTm8Ran92WHk5ezZPG6qzqY=
+
+
+Name: qidxisbestlol/1I.aac
+SHA1-Digest: SgeBA4x9uJaSDL7GjJBbol1BYHI=
+
+
+Name: qidxisbestlol/1e.xml
+SHA1-Digest: aK+GdsFWEBvt1MltMpnqvH65zxI=
+
+
+Name: kotlin/ConcurrentModificationException.kotlin_metadata
+SHA1-Digest: rmt/HHjHoOJO40fhCfv/UrrTAk8=
+
+
+Name: assets/x86-pie/aapt
+SHA1-Digest: 35r+Vf5ixVn8c7Ik5CkMf9i50OE=
+
+
+Name: assets/whatsnew/ui-designer-changes.txt
+SHA1-Digest: NdgM7VJTBsm2x7Yml7uQsvygQkY=
+
+
+Name: kotlin/collections/ArrayAsCollection.kotlin_metadata
+SHA1-Digest: AcSJm5/MAg4L8cyDok6u2hj1G9M=
+
+
+Name: qidxisbestlol/7.xml
+SHA1-Digest: BPi19oAq5B71fqdG7s6YCWcbjR8=
+
+
+Name: kotlin/UInt.kotlin_metadata
+SHA1-Digest: kOVLeXkno3qWz6v/g+UhhImfKp4=
+
+
+Name: assets/trainer/course_java_en.xml
+SHA1-Digest: tYOw7vlz+NbeDZK9K25vXHQkWfE=
+
+
+Name: kotlin/sequences/SequencesKt.kotlin_metadata
+SHA1-Digest: oeiKnEAOaarITFiNiq32XvKCjVA=
+
+
+Name: org/eclipse/jgit/JGitText.properties
+SHA1-Digest: NrtIcYEJ0siTVTNNg/9OBeGtz8M=
+
+
+Name: kotlin/collections/_UCollectionsKt.kotlin_metadata
+SHA1-Digest: DwmozEgbvC7IRUnbtDjsDuMMVU8=
+
+
+Name: qidxisbestlol/1d.xml
+SHA1-Digest: zz5AAW5dYqoxIJBq+eEG9PgfMw0=
+
+
+Name: qidxisbestlol/1r.aac
+SHA1-Digest: l57t7geE1DLS1rqwMPaYR+Ckh1c=
+
+
+Name: qidxisbestlol/2S.aac
+SHA1-Digest: pEb+ltwrlegnt4E1x497FklbYno=
+
+
+Name: qidxisbestlol/34.aac
+SHA1-Digest: a0nTqSvSyGbogT/IXKgL122IvOQ=
+
+
+Name: kotlin/collections/SetsKt.kotlin_metadata
+SHA1-Digest: gFNIHuWZskTirq946ElEgyvKrwk=
+
+
+Name: qidxisbestlol/0I.xml
+SHA1-Digest: esBH96wz3UOsauA7+XTzDuSer5Q=
+
+
+Name: kotlin/collections/CollectionsHKt.kotlin_metadata
+SHA1-Digest: cg3PH7EGQTJxESK7LiH9ARjGrGM=
+
+
+Name: qidxisbestlol/7.aac
+SHA1-Digest: lsouxmAGMtgpxcM717+WfL7G8Nk=
+
+
+Name: kotlin/collections/LinkedHashSet.kotlin_metadata
+SHA1-Digest: ei2T03Kvsqv6x+uUiSG9UI3XmjA=
+
+
+Name: qidxisbestlol/r.aac
+SHA1-Digest: iOFmQOWw3J148L+ZyfexzGsrlkE=
+
+
+Name: qidxisbestlol/0h.xml
+SHA1-Digest: 3hPs4uUU7ysoTfm43sFX3llL7qk=
+
+
+Name: qidxisbestlol/1I.xml
+SHA1-Digest: 6HfrYlV4ZXpsRHx0qcnKbzwjb9o=
+
+
+Name: qidxisbestlol/1e.aac
+SHA1-Digest: /Fvm443uU9iu6j9Xs264+xfqauA=
+
+
+Name: qidxisbestlol/2F.aac
+SHA1-Digest: ovUZYkDdFuFQjJj5GX3vyn+lLjI=
+
+
+Name: kotlin/contracts/Effect.kotlin_metadata
+SHA1-Digest: tnFHs4HoSGcdVW4IgCAwVQSNm/0=
+
+
+Name: qidxisbestlol/0I.aac
+SHA1-Digest: FN0BuhGavbKXGoaGBCUVbYSs3aU=
+
+
+Name: assets/dtds/frameset.dtd
+SHA1-Digest: ClvEmk0UnX+iWPZN9nRIVQP5HGQ=
+
+
+Name: kotlin/collections/ArrayList.kotlin_metadata
+SHA1-Digest: AdRBRJR2r2YlKe08WTETUPFwjmQ=
+
+
+Name: qidxisbestlol/0v.xml
+SHA1-Digest: XmIWKrywp9puc5zCTlraltV9FoQ=
+
+
+Name: qidxisbestlol/1W.xml
+SHA1-Digest: jetbiDNXSlHuynckdF73zK/xs0o=
+
+
+Name: kotlin/ranges/ULongProgression.kotlin_metadata
+SHA1-Digest: LoBDyC9iHExQ2vhqBMrEmR+B32M=
+
+
+Name: kotlin/collections/ReversedList.kotlin_metadata
+SHA1-Digest: xZhJsDEoRGuoy2taYNDLzauVDfg=
+
+
+Name: kotlin/random/RandomKt.kotlin_metadata
+SHA1-Digest: b1U5lVY/V3T34WVglTacR4jvdK8=
+
+
+Name: qidxisbestlol/D.xml
+SHA1-Digest: 0Ht+5ibgXM4Bj3mQC58Hj+RRu+E=
+
+
+Name: kotlin/contracts/ReturnsNotNull.kotlin_metadata
+SHA1-Digest: c0OXZslYLGvPnap+3bCaXatQBXs=
+
+
+Name: qidxisbestlol/R.aac
+SHA1-Digest: e6O7fjXRDiSyJrJXj2DFRlZbLFs=
+
+
+Name: qidxisbestlol/2a.aac
+SHA1-Digest: XlTn9UjN7fyb158Ldut/tfOqSEk=
+
+
+Name: qidxisbestlol/3B.aac
+SHA1-Digest: L82dtnjaxAKKnU+JTig2xAvc5rA=
+
+
+Name: kotlin/collections/HashSet.kotlin_metadata
+SHA1-Digest: PxQZPo7j4UcR2rbH4Bv8mgmdSWo=
+
+
+Name: kotlin/collections/UByteIterator.kotlin_metadata
+SHA1-Digest: ET0j6jh6t5vOYFDSChVDndhlS30=
+
+
+Name: kotlin/collections/UArraySortingKt.kotlin_metadata
+SHA1-Digest: knbr0gBaN8WaNMmmHQcYqKFyf80=
+
+
+Name: kotlin/sequences/EmptySequence.kotlin_metadata
+SHA1-Digest: vDccOqof89UX/mpmrahOLzbX0mQ=
+
+
+Name: qidxisbestlol/8.xml
+SHA1-Digest: KvQ2D+LvSOr3CkdHXqZYlE8GyhE=
+
+
+Name: assets/templates/Website.zip
+SHA1-Digest: G7C/2Q+wplIsjRhF9oPQkSCut2M=
+
+
+Name: kotlin/ranges/ComparableRange.kotlin_metadata
+SHA1-Digest: 9XncYkS0bAE/cZzZL7cx3Od/7oY=
+
+
+Name: qidxisbestlol/1c.aac
+SHA1-Digest: Li9q3ytmdTNpi5hUxg+WD9a6itY=
+
+
+Name: qidxisbestlol/2D.aac
+SHA1-Digest: V9EP8qUqLM2RZKJurMZodjCcpoQ=
+
+
+Name: qidxisbestlol/0w.aac
+SHA1-Digest: zXegTOzmxmu9STq0cly4QeD3qC0=
+
+
+Name: qidxisbestlol/1X.aac
+SHA1-Digest: 3VtQDY0DXgSOnYZ+4MFVaNK/bs8=
+
+
+Name: qidxisbestlol/29.aac
+SHA1-Digest: bTUivRjDgkrj/3V0fvCyw9tAx8o=
+
+
+Name: qidxisbestlol/0V.xml
+SHA1-Digest: YsAVh238xFKv8RUGF+5r1eNQ4ok=
+
+
+Name: qidxisbestlol/17.xml
+SHA1-Digest: c742sT3CkJgMLaN3kdjNNikPpgY=
+
+
+Name: kotlin/TuplesKt.kotlin_metadata
+SHA1-Digest: P02zBUd6C2HYuCWTGtfS6ylm1ac=
+
+
+Name: qidxisbestlol/1u.aac
+SHA1-Digest: hwlKhqSE2JghMpJ+D1/iwHnKYE0=
+
+
+Name: qidxisbestlol/2V.aac
+SHA1-Digest: XSrqwY8OwAOyxZn8kC0rC/a6GO4=
+
+
+Name: qidxisbestlol/37.aac
+SHA1-Digest: pKx1OGtq1gxl2ZDCx4b1MQMRwDo=
+
+
+Name: qidxisbestlol/2s.aac
+SHA1-Digest: 9pzVgGrh4ZNiJ9EDDNvxfS+uMrM=
+
+
+Name: qidxisbestlol/3T.aac
+SHA1-Digest: 73kS2jAkpSDhY/Vm/SYWfU/J+us=
+
+
+Name: qidxisbestlol/0e.aac
+SHA1-Digest: eNLHkKDL9o/3eM4xqXu5r9lsNdM=
+
+
+Name: qidxisbestlol/1F.aac
+SHA1-Digest: 4j+L3Jzr2U70TU9dUenWhtYe/lU=
+
+
+Name: qidxisbestlol/09.xml
+SHA1-Digest: lolSynnMAcU74M88zh25r8RET/Y=
+
+
+Name: kotlin/time/TimedValue.kotlin_metadata
+SHA1-Digest: O6f4asiV3GneHgVjetRopa761dg=
+
+
+Name: qidxisbestlol/C.aac
+SHA1-Digest: 4XdSvwMhRzeEglqrttvffLx3DVQ=
+
+
+Name: kotlin/coroutines/AbstractCoroutineContextElement.kotlin_metadat
+ a
+SHA1-Digest: KE82nXVHrupVV6QgoVR95wJmylg=
+
+
+Name: kotlin/io/Serializable.kotlin_metadata
+SHA1-Digest: kKdiK+lMRIAvd7s6NptvXt+iN7A=
+
+
+Name: kotlin/reflect/KProperty1.kotlin_metadata
+SHA1-Digest: O6gFPdiWX7UwQP92gTx0j3sj12g=
+
+
+Name: qidxisbestlol/1u.xml
+SHA1-Digest: h0cnoFEqy+pvhUSrENLbs/pUM8E=
+
+
+Name: qidxisbestlol/U.aac
+SHA1-Digest: KuhRmrNCSiTFSpps5QANKfBe2xw=
+
+
+Name: kotlin/ULongArray.kotlin_metadata
+SHA1-Digest: RU5qsBNz/E3ipVJVIO3HYsDFbV4=
+
+
+Name: kotlin/UninitializedPropertyAccessException.kotlin_metadata
+SHA1-Digest: SMnVtVOjNDm0bW/ZysKX2EpmXQI=
+
+
+Name: kotlin/coroutines/experimental/RestrictsSuspension.kotlin_metada
+ ta
+SHA1-Digest: NcmQ01O7KzwIEppe03zJ2BVq+YA=
+
+
+Name: kotlin/sequences/TransformingIndexedSequence.kotlin_metadata
+SHA1-Digest: IUkRTDSghgrPrvMBy70xEF+8ndk=
+
+
+Name: qidxisbestlol/o.aac
+SHA1-Digest: rP3QGbrTbAgY8hRubj9CIsFInzQ=
+
+
+Name: kotlin/coroutines/ContinuationKt.kotlin_metadata
+SHA1-Digest: eNhuOARJlRtjfKWN9Fd2Umhy3JQ=
+
+
+Name: kotlin/ranges/ClosedFloatingPointRange.kotlin_metadata
+SHA1-Digest: N7unlZ4WBsClw5ZfTNbflDIlaz0=
+
+
+Name: qidxisbestlol/0V.aac
+SHA1-Digest: 1/Dxn9uUKdZlvpYQ+ur3dBboX3M=
+
+
+Name: qidxisbestlol/17.aac
+SHA1-Digest: D2PhKM51tYZo8a79riJ3XiUD2nc=
+
+
+Name: qidxisbestlol/0L.aac
+SHA1-Digest: pfcqZiNhrJGiRXaCMHDi7/3YGws=
+
+
+Name: qidxisbestlol/0e.xml
+SHA1-Digest: 0eSbQzx8cxUI1w0auH8cW8d/LIk=
+
+
+Name: qidxisbestlol/1F.xml
+SHA1-Digest: bmWsTA2lnRIp+iUnQT0+nJ+RZpA=
+
+
+Name: kotlin/contracts/SimpleEffect.kotlin_metadata
+SHA1-Digest: PO/8hqRT0TwHGTbwU+LXk5R5J9s=
+
+
+Name: qidxisbestlol/2p.aac
+SHA1-Digest: ZtyPiL9ejdJLdrXmaej59RkiknA=
+
+
+Name: qidxisbestlol/3Q.aac
+SHA1-Digest: 2ez3rOC9VLZAZUiysctG1izzkrk=
+
+
+Name: kotlin/collections/IterablesKt.kotlin_metadata
+SHA1-Digest: PQk3wr/O3hHuCc/gQPYIgxJauT4=
+
+
+Name: kotlin/ULong.kotlin_metadata
+SHA1-Digest: 3DrEsWdKS61RWf6k00YW/J4zlTk=
+
+
+Name: kotlin/collections/GroupingKt.kotlin_metadata
+SHA1-Digest: niqMAjTf9d1RF0DI8ZpQ/r900SA=
+
+
+Name: qidxisbestlol/1c.xml
+SHA1-Digest: FEs4QsABedCGeZRtzDj8sXihVFc=
+
+
+Name: kotlin/UShortKt.kotlin_metadata
+SHA1-Digest: pIQX0rZI1wWsV4vh5A7+2uj+r8k=
+
+
+Name: qidxisbestlol/0w.xml
+SHA1-Digest: UfTEsITeNrqRDuxgQhAwWxC6+DA=
+
+
+Name: qidxisbestlol/1X.xml
+SHA1-Digest: 97fuL/5eK8jxZFNzdRVqUfbWjQg=
+
+
+Name: kotlin/IllegalStateException.kotlin_metadata
+SHA1-Digest: 5PRHmWY3nAjuh12NKKX6brDbTwk=
+
+
+Name: kotlin/coroutines/SafeContinuation.kotlin_metadata
+SHA1-Digest: rZU4JyYec9sg1E4nJtp6sO0nGs4=
+
+
+Name: kotlin/math/UMathKt.kotlin_metadata
+SHA1-Digest: 8GNewviGLTlOGxQuj6rIEKMsmwc=
+
+
+Name: qidxisbestlol/8.aac
+SHA1-Digest: 7u5dUsSsSCnEjN/mff3Hnwdu2sI=
+
+
+Name: qidxisbestlol/C.xml
+SHA1-Digest: DJTgj1kbGUs6eLLt0O9h4/KwJu4=
+
+
+Name: kotlin/internal/Exact.kotlin_metadata
+SHA1-Digest: wTyaSwdNb1g88SStqr4M15p3Pb4=
+
+
+Name: kotlin/ExperimentalStdlibApi.kotlin_metadata
+SHA1-Digest: aTfVBQOTwcHsBNxvSE0JSKRqr2o=
+
+
+Name: kotlin/UIntArrayKt.kotlin_metadata
+SHA1-Digest: kjU1QbYV6hbZLDE/vTWbj5rwTik=
+
+
+Name: qidxisbestlol/n.xml
+SHA1-Digest: h0x4eQHGc7V9a4TR3cEEUO3NLeA=
+
+
+Name: qidxisbestlol/0L.xml
+SHA1-Digest: TKbPYk55wYLqE/FPWZQcAgcbQJY=
+
+
+Name: assets/dtds/xhtml1-strict.dtd
+SHA1-Digest: tM7oRR9zvQkgPQ4bs/QEaPU/rLc=
+
+
+Name: qidxisbestlol/U.xml
+SHA1-Digest: AOfgPXHneGZclkxB7Ynxc94P4QM=
+
+
+Name: kotlin/properties/ReadWriteProperty.kotlin_metadata
+SHA1-Digest: 9BA07KXV96f4ZwaGrlyX+SgkzDo=
+
+
+Name: assets/framework.aidl
+SHA1-Digest: onof3CvJLUqaB6q8YuxrN2KZiW4=
+
+
+Name: qidxisbestlol/0x.aac
+SHA1-Digest: hLBssTpBCaGT/jYnfmao3Y+RCLA=
+
+
+Name: qidxisbestlol/1Y.aac
+SHA1-Digest: qMUm/GJ7TSkmTCRuFfS6nVLdxZI=
+
+
+Name: kotlin/UShortArrayKt.kotlin_metadata
+SHA1-Digest: O9GjliuRLC7pYUzL6Yr9T5r5O5A=
+
+
+Name: qidxisbestlol/T.xml
+SHA1-Digest: /T0LR9xxDUMWOXZMWP3xX3Dt1AI=
+
+
+Name: kotlin/NullPointerException.kotlin_metadata
+SHA1-Digest: zuRskMXGayzmNj/xJYLr5r6GvMM=
+
+
+Name: qidxisbestlol/1t.xml
+SHA1-Digest: FX1opxorX980ptRfyZ3uVFJErIs=
+
+
+Name: qidxisbestlol/9.xml
+SHA1-Digest: ThQAfsXF833hShBia5cqIjwEvwk=
+
+
+Name: kotlin/comparisons/_ComparisonsKt.kotlin_metadata
+SHA1-Digest: AfwfSGdVvUS0d3lZvUHS164Tj/I=
+
+
+Name: kotlin/coroutines/experimental/SequenceBuilderIterator.kotlin_me
+ tadata
+SHA1-Digest: jgjQmyl8mpmzSMvY76IS+tLUopk=
+
+
+Name: qidxisbestlol/B.xml
+SHA1-Digest: MG2XNlrWRIcce3mcJ5qGNEu690E=
+
+
+Name: kotlin/NumberFormatException.kotlin_metadata
+SHA1-Digest: d3pSNt9rmRX+MgRJcuyfd1JNZY8=
+
+
+Name: qidxisbestlol/1t.aac
+SHA1-Digest: FeAurMe3wqXIrSUKp1Ky8+TbqAc=
+
+
+Name: qidxisbestlol/2U.aac
+SHA1-Digest: lcT76NVpQberq1Tn4POYZNueqLg=
+
+
+Name: qidxisbestlol/36.aac
+SHA1-Digest: iJFesSsAAmE1zFB9XbiCZW1cKKU=
+
+
+Name: qidxisbestlol/0f.aac
+SHA1-Digest: c72MwRY5M62KC488iYQoRfzSV58=
+
+
+Name: qidxisbestlol/1G.aac
+SHA1-Digest: rWsfnuxZ95KVJGCZBfJUPu5zPI0=
+
+
+Name: qidxisbestlol/08.xml
+SHA1-Digest: AjTekJ6vLi0sQIWxlGhiLHkOx1A=
+
+
+Name: assets/trainer/course_android_en.xml
+SHA1-Digest: UEmdG/mFWXzEsOoXcraoHdSb+CY=
+
+
+Name: kotlin/UnsignedUtilsKt.kotlin_metadata
+SHA1-Digest: ZLIdpYVi7FWdqCD7Vq+sAAH/Q6I=
+
+
+Name: qidxisbestlol/1b.aac
+SHA1-Digest: mcmQ9+wLxCvxLaYqkf7Ha1AuiTg=
+
+
+Name: qidxisbestlol/2C.aac
+SHA1-Digest: kA5yw/IKsStQKODxVJNjggOB6ig=
+
+
+Name: kotlin/reflect/KMutableProperty0.kotlin_metadata
+SHA1-Digest: UrW5FkuUQGGu3AwKKtbOZHKsfkQ=
+
+
+Name: kotlin/jvm/JvmSuppressWildcards.kotlin_metadata
+SHA1-Digest: vcyc7WFAdSWXLG+OV1yz2u+2034=
+
+
+Name: qidxisbestlol/p.aac
+SHA1-Digest: LBiCKklkwQ5hmXVVP3pmXMh/D5Q=
+
+
+Name: kotlin/annotation/annotation.kotlin_builtins
+SHA1-Digest: BNKjaAG8N9m1TLFvNXuaHR9y8Eo=
+
+
+Name: kotlin/collections/AbstractMap.kotlin_metadata
+SHA1-Digest: NGVdCuu4X5oTXAhlygHdoLGZl3M=
+
+
+Name: qidxisbestlol/0K.aac
+SHA1-Digest: Om9DvhB399Z3pJSjjaAI95PENXg=
+
+
+Name: qidxisbestlol/T.aac
+SHA1-Digest: zLiEc0ldSc0fYDCevQ77FKufR1c=
+
+
+Name: kotlin/time/DurationKt.kotlin_metadata
+SHA1-Digest: rrNcNKQTXDVVM7x6Zl/LjZQM/yo=
+
+
+Name: assets/armeabi/aapt
+SHA1-Digest: vJZIOIIoSMip1jutABMeuuWna5I=
+
+
+Name: qidxisbestlol/0K.xml
+SHA1-Digest: ga28+RllCYLg5urHKA22awJuvhI=
+
+
+Name: qidxisbestlol/B.aac
+SHA1-Digest: eO64ioeDmzXkMKcH42Nz5y8GMM4=
+
+
+Name: qidxisbestlol/1b.xml
+SHA1-Digest: xeyoilki27IJfvY740/joKFT6PY=
+
+
+Name: kotlin/collections/AbstractMutableSet.kotlin_metadata
+SHA1-Digest: k5npuhwUc0oSvByLW9LoNg/9Z0c=
+
+
+Name: qidx/drawable-hdpi-v4/ic_l_play_light.png
+SHA1-Digest: rE6S1ttnpZEmlcGzq/2qhrn1Jlw=
+
+
+Name: qidxisbestlol/o.xml
+SHA1-Digest: pFY0/0+YGVkhghb8OGm70bPEcwM=
+
+
+Name: kotlin/ranges/ClosedDoubleRange.kotlin_metadata
+SHA1-Digest: x7p/gQmb4GECGtS2TrG9wIVyrms=
+
+
+Name: kotlin/internal/NoInfer.kotlin_metadata
+SHA1-Digest: 1T2u89fJOLGTOksfX26P1vXLrPw=
+
+
+Name: qidxisbestlol/0
+SHA1-Digest: YZ38RHm4EkSP4QRd/BmsTFbn6pw=
+
+
+Name: qidxisbestlol/0x.xml
+SHA1-Digest: XPcYY9EuXUZ/7xUn6ZVV9sYk2mc=
+
+
+Name: qidxisbestlol/1Y.xml
+SHA1-Digest: eECtZiIPQoXZ4xbLbgjOyD0mFdU=
+
+
+Name: qidxisbestlol/2q.aac
+SHA1-Digest: VWNIwEHpudBWJHrFhkVtPkesYDs=
+
+
+Name: qidxisbestlol/3R.aac
+SHA1-Digest: Mp14FgGLVMAFx4aJz9gLqSo67Ns=
+
+
+Name: qidxisbestlol/09.aac
+SHA1-Digest: PO+FcUw8v6AARSGgankkXFPCUEQ=
+
+
+Name: qidxisbestlol/9.aac
+SHA1-Digest: 7S9TcXc89Lj6FlK/Rtfvh5fIwLQ=
+
+
+Name: okhttp3/internal/publicsuffix/publicsuffixes.gz
+SHA1-Digest: +QqeTwqURoLn4OqOtrLaxJgxh4c=
+
+
+Name: qidxisbestlol/00.aac
+SHA1-Digest: usxxESUTF1aA7p9d1NGe3oubLkk=
+
+
+Name: qidxisbestlol/0f.xml
+SHA1-Digest: caHMIw/ZQczxtTbZoEOX8fU62qI=
+
+
+Name: qidxisbestlol/1G.xml
+SHA1-Digest: 92HLuOk5w78gwIIXjGELmyWpgts=
+
+
+Name: kotlin/reflect/KCallable.kotlin_metadata
+SHA1-Digest: ZJv9SSyFi3QQ+5SnJlxnpLkdfAE=
+
+
+Name: qidxisbestlol/00.xml
+SHA1-Digest: 8uWjYW87BGYBAamx2aBfFBuv32o=
+
+
+Name: qidxisbestlol/A.xml
+SHA1-Digest: 9d85kd+Pz/SSZhLE0IFDajjLI+g=
+
+
+Name: qidxisbestlol/2u.aac
+SHA1-Digest: V3s/YlawQ26DKo0P2hxPmefwmP4=
+
+
+Name: qidxisbestlol/3V.aac
+SHA1-Digest: ZDrVkBGr815pz/sogbU2R5un6xg=
+
+
+Name: proguard/proguard-android.txt
+SHA1-Digest: 4le0tdfphjVIhHNwxNHBKcFh72E=
+
+
+Name: assets/trainer/course_ndk_en.xml
+SHA1-Digest: jgDpLotyyYAQ2fYQ+5gWrbr4f7E=
+
+
+Name: kotlin/collections/RandomAccess.kotlin_metadata
+SHA1-Digest: kgSee0NjXWWJPVmrBS/KKp6OySw=
+
+
+Name: qidxisbestlol/P.aac
+SHA1-Digest: Ak0fOOOxtQuE+qYk7MjHgxsvV5c=
+
+
+Name: kotlin/math/MathHKt.kotlin_metadata
+SHA1-Digest: tCts7XhWd5wJt6Q4z64ywa2HEeY=
+
+
+Name: qidxisbestlol/t.xml
+SHA1-Digest: bMg/chda0gHYmJo/QWqGTTeJrj8=
+
+
+Name: kotlin/collections/UIntIterator.kotlin_metadata
+SHA1-Digest: lKNSzqEjEQSLVoHzWknOIMaiMaE=
+
+
+Name: qidxisbestlol/0y.aac
+SHA1-Digest: 9RWdNNyzhydurZJDDk40irOcnsc=
+
+
+Name: qidxisbestlol/1Z.aac
+SHA1-Digest: 0Qh0miYy/j6VAeBGvfPT7DUgLro=
+
+
+Name: qidxisbestlol/0F.aac
+SHA1-Digest: BJJVgylQV5V45T2SFJKmQ/a2K9w=
+
+
+Name: qidxisbestlol/1a.aac
+SHA1-Digest: s7GAeyrdJ10WEdOTT0zPrIvVFT4=
+
+
+Name: qidxisbestlol/2B.aac
+SHA1-Digest: 6dBAYWiUpSBlPam85CPnzvfo3No=
+
+
+Name: kotlin/comparisons/ReversedComparator.kotlin_metadata
+SHA1-Digest: XTHmwJaGl46QsAGNfk/YqntbCOw=
+
+
+Name: qidxisbestlol/0j.xml
+SHA1-Digest: 095LZOx2NedUaBcFLu86IOTJ8fU=
+
+
+Name: qidxisbestlol/1K.xml
+SHA1-Digest: +KzLmIUjTemRQOO84w5PafVJuWg=
+
+
+Name: qidxisbestlol/07.xml
+SHA1-Digest: de6Rmba998Brn9E1eKXSIw53eJk=
+
+
+Name: kotlin/collections/EmptyMap.kotlin_metadata
+SHA1-Digest: GfYE/dJTmsi2+cfEev0Xm4aUbhc=
+
+
+Name: qidxisbestlol/08.aac
+SHA1-Digest: 91IwkISD66/S+0ll21k83TvZ/Ww=
+
+
+Name: qidxisbestlol/P.xml
+SHA1-Digest: Bk33D0Ivm1l9Ak9qucPu5WsnNAI=
+
+
+Name: qidxisbestlol/0U.aac
+SHA1-Digest: 3TAOe89lOONzcF/ak6iROovsqV4=
+
+
+Name: qidxisbestlol/16.aac
+SHA1-Digest: wegpoR7WGdjQm1R6aFxnGoVaEXc=
+
+
+Name: kotlin/internal/DynamicExtension.kotlin_metadata
+SHA1-Digest: RycKFtQEhibvPdYaDaO31i7KnBo=
+
+
+Name: qidxisbestlol/1o.xml
+SHA1-Digest: 5oel1khCd9MkhcdQxGoa54a7rYs=
+
+
+Name: qidxisbestlol/2g.aac
+SHA1-Digest: 0QnKpY7JWBVOyzNyRsn0cTixA7Y=
+
+
+Name: qidxisbestlol/3H.aac
+SHA1-Digest: GVIfdEOBv4gEny2T1jDhGGsZOBo=
+
+
+Name: qidxisbestlol/0j.aac
+SHA1-Digest: LCe3vk9rvA1IlJsBfIWjBGp1jtw=
+
+
+Name: qidxisbestlol/1K.aac
+SHA1-Digest: inKyhhyZgO65645KR/OH06l6dAc=
+
+
+Name: qidxisbestlol/e.aac
+SHA1-Digest: G5jkjCHMaPRbixufSBlFvZ4vDK0=
+
+
+Name: assets/dtds/strict.dtd
+SHA1-Digest: G1Icc3Tr7HoKYi9hfvfMPcQlYyY=
+
+
+Name: qidxisbestlol/0y.xml
+SHA1-Digest: j9WOiX7wI2DBHFv8NxJURX/c0Pk=
+
+
+Name: qidxisbestlol/1Z.xml
+SHA1-Digest: XR1toUZZGkShmhelxeQYHcyM4W4=
+
+
+Name: qidxisbestlol/01.aac
+SHA1-Digest: WjKUx5rB16pBouqUjIVYodMkF6I=
+
+
+Name: kotlin/coroutines/experimental/ContinuationInterceptor.kotlin_me
+ tadata
+SHA1-Digest: n61qfcDkFHhZw+RdBUEBKLZdUjw=
+
+
+Name: qidxisbestlol/1o.aac
+SHA1-Digest: 3FPWWsJiS2Pn6GpcjLoC9e18zzw=
+
+
+Name: qidxisbestlol/2P.aac
+SHA1-Digest: ckFNvD4r6rIdZRlTGt35mjWCVO0=
+
+
+Name: qidxisbestlol/31.aac
+SHA1-Digest: URz3Lz/tIjMAtXfNHimWcDQLTtQ=
+
+
+Name: qidxisbestlol/1a.xml
+SHA1-Digest: SrDVrhMq+xv7d+2dI79I0vlOSpU=
+
+
+Name: kotlin/jvm/JvmMultifileClass.kotlin_metadata
+SHA1-Digest: Zlu79oXKcCGvK06x7HrQEd1zIJU=
+
+
+Name: qidxisbestlol/e.xml
+SHA1-Digest: p2plAcKM5eM6C5b1S6Upb8g0Q9E=
+
+
+Name: kotlin/time/AdjustedClockMark.kotlin_metadata
+SHA1-Digest: aIvaoY7Uma4PkA6clM5LzkomKXY=
+
+
+Name: kotlin/properties/ReadOnlyProperty.kotlin_metadata
+SHA1-Digest: vK/4DaEkmHj2D6dzDjm/EuoFd1o=
+
+
+Name: qidxisbestlol/0E.xml
+SHA1-Digest: FV6lUU0heDxBjl7gPSfsAAKRZXA=
+
+
+Name: kotlin/reflect/KMutableProperty1.kotlin_metadata
+SHA1-Digest: uCNhxo6GeyOWulXAUrkSq7MqCps=
+
+
+Name: qidxisbestlol/3A.aac
+SHA1-Digest: dnObiFrk1DvtR5VGgJWQwE6oNeo=
+
+
+Name: kotlin/collections/MapWithDefaultImpl.kotlin_metadata
+SHA1-Digest: 66q6u9KB4kGWhseBOzs0rKAgehY=
+
+
+Name: kotlin/OptionalExpectation.kotlin_metadata
+SHA1-Digest: dGvZtA4CNnGWDAIvNu5ydsY/E7A=
+
+
+Name: kotlin/Pair.kotlin_metadata
+SHA1-Digest: S8moU3R/AVyynxgK68ges4GbDME=
+
+
+Name: kotlin/coroutines/intrinsics/CoroutineSingletons.kotlin_metadata
+SHA1-Digest: y0tE1UOhukrEWdtuiERGcKKW0y4=
+
+
+Name: qidxisbestlol/0U.xml
+SHA1-Digest: 1scY30vK6xFRax6Vy0f3mh4tBUI=
+
+
+Name: qidxisbestlol/16.xml
+SHA1-Digest: h39WJB+EOZMFZ+ajU4KQles3yC8=
+
+
+Name: qidxisbestlol/A.aac
+SHA1-Digest: cNUdijE95lHbP1Db15SXYf0Kwsk=
+
+
+Name: assets/utils.jar
+SHA1-Digest: V0NsZwvm+QMvRVqFpeb3s1YKXvI=
+
+
+Name: kotlin/collections/_ArraysKt.kotlin_metadata
+SHA1-Digest: XkJvZmrwz4VBcNp6NWlJlGVWKTI=
+
+
+Name: kotlin/coroutines/CoroutineContext.kotlin_metadata
+SHA1-Digest: K+8+XunITIZWNeP6jzBdSBjeWd8=
+
+
+Name: kotlin/reflect/KProperty0.kotlin_metadata
+SHA1-Digest: 8mrYcfMPEIurGewN4hx6+RGFhic=
+
+
+Name: qidxisbestlol/2t.aac
+SHA1-Digest: 4kpYNnDkQ3gDoqyzSLeByh1zPOc=
+
+
+Name: qidxisbestlol/3U.aac
+SHA1-Digest: UeOh+HJRiySoixJQcw9pSx76zas=
+
+
+Name: kotlin/Exception.kotlin_metadata
+SHA1-Digest: +W1wJt/ImxXNiyDC5IiccqPbSio=
+
+
+Name: kotlin/ranges/UIntProgression.kotlin_metadata
+SHA1-Digest: Rie5UvGKtasE4tQun92u+H/J95Y=
+
+
+Name: qidxisbestlol/01.xml
+SHA1-Digest: irE4n+eIjqVpDQHjtM9+U8pMn8Q=
+
+
+Name: assets/dtds/html5.dtd
+SHA1-Digest: Di3hAKizherMnZx/Y1f7W6dnP64=
+
+
+Name: kotlin/sequences/SequenceBuilderKt.kotlin_metadata
+SHA1-Digest: Ob+7LiqA8fxUwljmdWhrFlO8pe0=
+
+
+Name: qidxisbestlol/0z.aac
+SHA1-Digest: O+HRpSY6Ilv4NPa5CFRQ2xoAc+8=
+
+
+Name: qidxisbestlol/2A.aac
+SHA1-Digest: 3+dIFdcnQE4AIivcjJtF7IEMhf4=
+
+
+Name: assets/adrt/ADRTLogCatReader.class
+SHA1-Digest: jtMdHzsLIh01FWIjhOYWZFHXhfE=
+
+
+Name: kotlin/coroutines/EmptyCoroutineContext.kotlin_metadata
+SHA1-Digest: 4Zz8Fy7GvzV6lldNfz1BqBBDMM4=
+
+
+Name: kotlin/text/StringNumberConversionsKt.kotlin_metadata
+SHA1-Digest: pAwEuwGf4cDdJ9QB2+0sFAlxoTA=
+
+
+Name: kotlin/text/StringsKt.kotlin_metadata
+SHA1-Digest: R4Izs8CU0avgjDkS7tTfpitZccQ=
+
+
+Name: qidxisbestlol/0i.xml
+SHA1-Digest: tbJ9D2+g8mogKON9khMfu3lhcCI=
+
+
+Name: qidxisbestlol/1J.xml
+SHA1-Digest: Mp8Jr5d5ETxhiPwdje+R/4B89js=
+
+
+Name: kotlin/IndexOutOfBoundsException.kotlin_metadata
+SHA1-Digest: BQ1w3xlarbGuIxwi/ONup7mhdUE=
+
+
+Name: kotlin/text/Appendable.kotlin_metadata
+SHA1-Digest: KmrtcLJVeu8Sj+sIvSGG7XJAxj8=
+
+
+Name: kotlin/random/Random.kotlin_metadata
+SHA1-Digest: wOmFvjeo8n75fqhZi5FX3llf7f8=
+
+
+Name: qidxisbestlol/0E.aac
+SHA1-Digest: B6Kbqs4B08EnMU+UoDkyNIKEBXU=
+
+
+Name: kotlin/text/MatchGroupCollection.kotlin_metadata
+SHA1-Digest: OdW5rG9Ef0cVKjd0RleyKeCtHhQ=
+
+
+Name: qidxisbestlol/1n.xml
+SHA1-Digest: wJJ1VNtOnTnxpPq6CSrmceyR9hQ=
+
+
+Name: qidxisbestlol/0i.aac
+SHA1-Digest: moSKrzr47EfTQRuPINS1dJWwLxI=
+
+
+Name: qidxisbestlol/1J.aac
+SHA1-Digest: qlbvaZIXz4ZqmWNF6bI7VZbJmII=
+
+
+Name: qidxisbestlol/2f.aac
+SHA1-Digest: YIyMjdV/JL7CMwBWlj84QLMq6Dc=
+
+
+Name: qidxisbestlol/3G.aac
+SHA1-Digest: 0MQiHg1CxcKmt4QaTV/4TOJGHSw=
+
+
+Name: kotlin/ranges/UIntRange.kotlin_metadata
+SHA1-Digest: Jso50Cj7i20w7OkP6ruuSvS6Uos=
+
+
+Name: qidxisbestlol/0z.xml
+SHA1-Digest: o0G5IQ1KA/DjHhU66PMIHTDLLbc=
+
+
+Name: kotlin/io/IoHKt.kotlin_metadata
+SHA1-Digest: GZpqMkJpLW3Y+OtebRkilWY7IuA=
+
+
+Name: kotlin/sequences/MergingSequence.kotlin_metadata
+SHA1-Digest: 4/Ar2y/gTG+V2EUdXGQ2V+tVE5o=
+
+
+Name: kotlin/UNINITIALIZED_VALUE.kotlin_metadata
+SHA1-Digest: MkQvP0VtLg0sViSSb4HDO7bjSU0=
+
+
+Name: qidxisbestlol/06.xml
+SHA1-Digest: 48GJ/Xahngy8Uutdu4mwBIwSo60=
+
+
+Name: qidx/drawable-hdpi-v4/ic_l_play_dark.png
+SHA1-Digest: nPuvqyM2dXk3ZH6mufvzXilHYhI=
+
+
+Name: qidxisbestlol/07.aac
+SHA1-Digest: rsSopOABFPr96EBVk2qK0nIM/IE=
+
+
+Name: kotlin/coroutines/ContinuationInterceptor.kotlin_metadata
+SHA1-Digest: kLUafWO5y8L34dJoTQ4RSzhjW8A=
+
+
+Name: qidxisbestlol/d.xml
+SHA1-Digest: rL8gRtGZzYZ8Vob/+51Gvb/ln98=
+
+
+Name: kotlin/jvm/JvmWildcard.kotlin_metadata
+SHA1-Digest: lqG9KOqpjjatxoaNnItGPWwpyig=
+
+
+Name: kotlin/jvm/Transient.kotlin_metadata
+SHA1-Digest: mfelF22qSLohiBdkjLMx93JgcGU=
+
+
+Name: kotlin/Lazy.kotlin_metadata
+SHA1-Digest: xsw1uT1778H4GtcLBwSqgdukKFI=
+
+
+Name: qidxisbestlol/d.aac
+SHA1-Digest: ZF/yxZ0bbv5gyuQxpKeUC0naqTI=
+
+
+Name: qidxisbestlol/1n.aac
+SHA1-Digest: XQeDG8zuOwksVxJjBnS68dQklyk=
+
+
+Name: qidxisbestlol/2O.aac
+SHA1-Digest: VQ/4sysLEL9re3f97J9aZGfLm58=
+
+
+Name: qidxisbestlol/30.aac
+SHA1-Digest: HP+31ii3IcHx4ttOhH81nkSK1a8=
+
+
+Name: kotlin/internal/UProgressionUtilKt.kotlin_metadata
+SHA1-Digest: yboENmuRUMEjWhimXRf390gMD+Q=
+
+
+Name: kotlin/coroutines/intrinsics/IntrinsicsKt.kotlin_metadata
+SHA1-Digest: lrHdONw6W9gdL1HdaVrYqHt8XhU=
+
+
+Name: kotlin/contracts/CallsInPlace.kotlin_metadata
+SHA1-Digest: c9q4t9v4K/Sm5F7/s6zPD/1uUw4=
+
+
+Name: kotlin/properties/NotNullVar.kotlin_metadata
+SHA1-Digest: X6gp0zYwZ8oJ20XPepAalvIz/mg=
+
+
+Name: kotlin/reflect/TypeOfKt.kotlin_metadata
+SHA1-Digest: r1jSZTwU35Pe37t9BRRxeQFJWFs=
+
+
+Name: kotlin/collections/ReversedViewsKt.kotlin_metadata
+SHA1-Digest: ab0GfXertIBgLC3fuph0jQO2YkQ=
+
+
+Name: qidxisbestlol/0D.xml
+SHA1-Digest: A2uH9kL6rvw5Csqg1e12njtbs4E=
+
+
+Name: qidxisbestlol/r.xml
+SHA1-Digest: ozwEH85yXkmXc2x7FEIGfqaUITY=
+
+
+Name: qidxisbestlol/0Z.aac
+SHA1-Digest: +s1eX4D2qxinS3IFQ9KvUOHkDNs=
+
+
+Name: kotlin/internal/internal.kotlin_builtins
+SHA1-Digest: nAaCYLgP/HasFILGljnGXTzS36w=
+
+
+Name: qidxisbestlol/0l.xml
+SHA1-Digest: B6wRHk1F/nmjdps5fcuE2zFgDz0=
+
+
+Name: qidxisbestlol/1M.xml
+SHA1-Digest: QXnfHKtbLM1CZi7haCuzS8H1uPc=
+
+
+Name: kotlin/collections/MutableMapWithDefault.kotlin_metadata
+SHA1-Digest: nsF7fHYEmDZFhX3OPHWuc9p2F2U=
+
+
+Name: qidxisbestlol/0H.aac
+SHA1-Digest: 5eTHDIWMuZLtZB749pH0rZa5oyQ=
+
+
+Name: kotlin/Comparator.kotlin_metadata
+SHA1-Digest: 79eXdr9D+HP1NCgXEISqhEbHnx0=
+
+
+Name: qidxisbestlol/v.aac
+SHA1-Digest: CRPuMITw1VWFH0nBBEhtBWkRfFk=
+
+
+Name: kotlin/text/TextHKt.kotlin_metadata
+SHA1-Digest: ryEUsYLdfIpBeqYG4Xfrq9tRPiA=
+
+
+Name: kotlin/collections/HashMap.kotlin_metadata
+SHA1-Digest: xnrcf09GfF3vqArjETD6BLg0S4Y=
+
+
+Name: qidxisbestlol/2w.aac
+SHA1-Digest: oG28imh5mSUcrEhZVNlh6ZOlm7E=
+
+
+Name: qidxisbestlol/3X.aac
+SHA1-Digest: k/QG+Me72et1emSE2D0DuBgEY0E=
+
+
+Name: kotlin/sequences/TakeSequence.kotlin_metadata
+SHA1-Digest: SmBRQk8hUnQcCW3TqxYrtDAiBO8=
+
+
+Name: classes2.dex
+SHA1-Digest: UkXiWubZhfyRU2Tj/1k61nD9a8E=
+
+
+Name: kotlin/collections/MapAccessorsKt.kotlin_metadata
+SHA1-Digest: ZU7scBQhQ2GKfibSqcNvo1WhdSQ=
+
+
+Name: qidxisbestlol/06.aac
+SHA1-Digest: bAKRLXcEJjXE+oavPCq/loUM3Xw=
+
+
+Name: qidxisbestlol/0Z.xml
+SHA1-Digest: JBkRalMuNIr8o+6qcHFRMgyerms=
+
+
+Name: kotlin/internal/RequireKotlinVersionKind.kotlin_metadata
+SHA1-Digest: KIHa5jp+Y9d7+7p9muWMuVYBpNI=
+
+
+Name: qidxisbestlol/Q.xml
+SHA1-Digest: dasUrgEgS/Ag23NlyNRTfyqAxMI=
+
+
+Name: qidxisbestlol/2e.aac
+SHA1-Digest: KsN0PG2Qf5PorAHZPtgSnMLC2vE=
+
+
+Name: qidxisbestlol/3F.aac
+SHA1-Digest: mcH6JjgYZ35ZqVRbvP6L2daZ3iY=
+
+
+Name: qidxisbestlol/0H.xml
+SHA1-Digest: m3z9xnarnQEurLhENOeEU944K+M=
+
+
+Name: qidxisbestlol/N.aac
+SHA1-Digest: sUXBSDmIwrVhXMAYtsmpMAdZsVM=
+
+
+Name: kotlin/LateinitKt.kotlin_metadata
+SHA1-Digest: mupDru3xLGLWlbekkxZpG9nCgC8=
+
+
+Name: kotlin/sequences/DropSequence.kotlin_metadata
+SHA1-Digest: xu7mLohrR6AIOZ2VmaxolgaX/hI=
+
+
+Name: qidxisbestlol/05.xml
+SHA1-Digest: cdOdIvMn97pTpQEsUMHNCgLcr/U=
+
+
+Name: kotlin/NoWhenBranchMatchedException.kotlin_metadata
+SHA1-Digest: 012geU7n+N6xDhqNawr7PQ1qtZo=
+
+
+Name: qidxisbestlol/1q.aac
+SHA1-Digest: riP/ck7bEnqiwwnwB394B2AoufI=
+
+
+Name: qidxisbestlol/2R.aac
+SHA1-Digest: QdT7LRU/QVaM6xk1CJYUpTyDM98=
+
+
+Name: qidxisbestlol/33.aac
+SHA1-Digest: +FkHrHxnSvah0UByBO1C3FVtHic=
+
+
+Name: qidxisbestlol/c.xml
+SHA1-Digest: GJGh6hmhEfBsv8Xg00iX/Dx0ups=
+
+
+Name: assets/dtds/HTMLlat1.ent
+SHA1-Digest: ZP+tr+ZIZU/2QXCvsGEKxhVFEQ0=
+
+
+Name: kotlin/time/Clock.kotlin_metadata
+SHA1-Digest: B0sZI/sk/sYqfJ6eKJx596hOWec=
+
+
+Name: qidxisbestlol/u.xml
+SHA1-Digest: 5+ExqcUX/6mwYQq0GzoWcI4fQG4=
+
+
+Name: qidxisbestlol/s.aac
+SHA1-Digest: +8tbmBdvXco7xmL50wl1CdPZvKg=
+
+
+Name: lib/arm64-v8a/liblink.so
+SHA1-Digest: 4FRntwI5da0XfFCP/pUaQJCRQJM=
+
+
+Name: qidxisbestlol/0l.aac
+SHA1-Digest: WRS3pCNpdhWTSqg/Oz6RcvYBrwA=
+
+
+Name: qidxisbestlol/1M.aac
+SHA1-Digest: IoI5sl0CxUhEdH5/sUGnW+vBauc=
+
+
+Name: qidxisbestlol/N.xml
+SHA1-Digest: +VogO+u7Cc1j/+k2+C5Xo4VVkmk=
+
+
+Name: qidxisbestlol/Q.aac
+SHA1-Digest: s3aBDLWV3OKiZ7JT8oW0NHss2VQ=
+
+
+Name: kotlin/comparisons/ReverseOrderComparator.kotlin_metadata
+SHA1-Digest: hudla4a4E96xWiZg6EaadHFyy+Y=
+
+
+Name: kotlin/collections/IteratorsKt.kotlin_metadata
+SHA1-Digest: GL09FYOi/BpOrg502Vsr+uuDI1c=
+
+
+Name: kotlin/internal/RequireKotlin.kotlin_metadata
+SHA1-Digest: Tkr9NxxdbhtNDDg6zs13XtNUyzM=
+
+
+Name: qidxisbestlol/1q.xml
+SHA1-Digest: X9IR5sTHBOYH2NLIhkyRWLHWLPI=
+
+
+Name: kotlin/ranges/ranges.kotlin_builtins
+SHA1-Digest: cZsLFkzGQfMKVV+cwGttW95Sji4=
+
+
+Name: kotlin/ranges/_URangesKt.kotlin_metadata
+SHA1-Digest: rjnrC2mYvduK7xAEs8DrKaup0BY=
+
+
+Name: qidxisbestlol/c.aac
+SHA1-Digest: Ch6B7svi1NnFjSbOLK62aq+8Rd4=
+
+
+Name: qidxisbestlol/0G.aac
+SHA1-Digest: Fe/u8OJgYovfmrBz9bk5mC+xQNQ=
+
+
+Name: kotlin/jvm/JvmPackageName.kotlin_metadata
+SHA1-Digest: Rmc9YJ09qxi143nAqdimdYgewIA=
+
+
+Name: qidxisbestlol/O.aac
+SHA1-Digest: xbF+SZykyRNRzf+6iWguubOdFuM=
+
+
+Name: qidxisbestlol/0k.xml
+SHA1-Digest: X8wKohuxefp5FEe/zPvJfjgpm9g=
+
+
+Name: qidxisbestlol/1L.xml
+SHA1-Digest: yfUdoieITHdWJLVnAiQ/WhKo94Q=
+
+
+Name: qidxisbestlol/u.aac
+SHA1-Digest: TEGqLFszxFBboyRwdvZ6VGvSpk4=
+
+
+Name: qidxisbestlol/0Y.aac
+SHA1-Digest: 8FII3OLxiLDZ5dQUeAR0MEyXIwE=
+
+
+Name: kotlin/jvm/JvmStatic.kotlin_metadata
+SHA1-Digest: w73Xj0chMK6ArMoNsIigS1ME2/Y=
+
+
+Name: kotlin/text/MatchGroup.kotlin_metadata
+SHA1-Digest: sfFfIytA+ONYqkwJ10FIJi6cfNE=
+
+
+Name: qidxisbestlol/a.aac
+SHA1-Digest: 1yuVuHKAurds+3jT5yL5JRXMMAQ=
+
+
+Name: assets/crashlytics-build.properties
+SHA1-Digest: TPSOOq/8rSmPQXcD/rnMZWlauLM=
+
+
+Name: qidxisbestlol/a.xml
+SHA1-Digest: 7tLY3eAzZugs4fTjIoAlLvYXkLA=
+
+
+Name: qidxisbestlol/2d.aac
+SHA1-Digest: +GthBr/hGI+Eq2WIwhs5T4cCa4M=
+
+
+Name: qidxisbestlol/3E.aac
+SHA1-Digest: AfPh3OJoypH966MludSW6f1RHg4=
+
+
+Name: classes3.dex
+SHA1-Digest: 3VgF5m06nOrMD6kmZHJplT3Xqck=
+
+
+Name: qidxisbestlol/0G.xml
+SHA1-Digest: DrYfs3Qs439kWsTfUu5OGMd4vzo=
+
+
+Name: kotlin/Experimental.kotlin_metadata
+SHA1-Digest: 2uzE4arBBJu3RGzBDIgtxaQxU2g=
+
+
+Name: qidxisbestlol/2v.aac
+SHA1-Digest: yD9oZ20JeI0KgCsh9WHkjjufTLU=
+
+
+Name: qidxisbestlol/3W.aac
+SHA1-Digest: 0b0Smvt+aDKL2VKs72MMKB0M8hc=
+
+
+Name: qidxisbestlol/05.aac
+SHA1-Digest: zNcRugKsIzeSHm+ra31L2GNu+MQ=
+
+
+Name: qidxisbestlol/s.xml
+SHA1-Digest: i+XZS+ynpgVnK3ldlu8+hJ44060=
+
+
+Name: qidxisbestlol/0Y.xml
+SHA1-Digest: uMqCUr2D8GnxPLN1ikf20+MgnQs=
+
+
+Name: kotlin/coroutines/experimental/CoroutineContext.kotlin_metadata
+SHA1-Digest: DlWawxiO3e/3t91ZxvdVXs3CmqQ=
+
+
+Name: kotlin/UNumbersKt.kotlin_metadata
+SHA1-Digest: e49aFmV0XCo3pkz7epiyUZjl0JQ=
+
+
+Name: qidxisbestlol/04.xml
+SHA1-Digest: MhNINGVxpKcaGQ1edoPnfUH0ZLY=
+
+
+Name: kotlin/collections/RingBuffer.kotlin_metadata
+SHA1-Digest: IeAS5d8puuwlb3Xb0CxMFPeiNn8=
+
+
+Name: kotlin/sequences/IndexingSequence.kotlin_metadata
+SHA1-Digest: Glz6xtGPSqQoPQl/rIi9GYoN12M=
+
+
+Name: qidxisbestlol/O.xml
+SHA1-Digest: bXsoU69Ww3N/j+CmDjEx0XqIPP0=
+
+
+Name: qidxisbestlol/1p.aac
+SHA1-Digest: Nq8q3HeTluE5JNCBpVvNy3BXtJI=
+
+
+Name: qidxisbestlol/2Q.aac
+SHA1-Digest: OIttFYX7y3e0Co4VvMqau0tTM0s=
+
+
+Name: qidxisbestlol/32.aac
+SHA1-Digest: V5BgoOMFP6SkB/Rq1phUjJUqsSo=
+
+
+Name: kotlin/jvm/Strictfp.kotlin_metadata
+SHA1-Digest: Mef1Kf9L9Ra13X/xVjC/VLjeXeI=
+
+
+Name: kotlin/Triple.kotlin_metadata
+SHA1-Digest: JUtEhBZp/sREBHoERDmM03jhWPY=
+
+
+Name: qidxisbestlol/0F.xml
+SHA1-Digest: OZHWLqAkFv0Jp8b2+nhw7dbrGAk=
+
+
+Name: kotlin/internal/LowPriorityInOverloadResolution.kotlin_metadata
+SHA1-Digest: 7usXkLsF/nLOE4VHojVoU5lLFt4=
+
+
+Name: qidxisbestlol/1p.xml
+SHA1-Digest: 6hzc49BRzIADPLhNtBwNPUjUiHw=
+
+
+Name: qidxisbestlol/0k.aac
+SHA1-Digest: MyhylE34G/SFfL4erXzGIuGOvG0=
+
+
+Name: qidxisbestlol/1L.aac
+SHA1-Digest: 2V+GCbdND0H2odoV2YyqA0XeNbQ=
+
+
+Name: kotlin/time/ClockKt.kotlin_metadata
+SHA1-Digest: GzpeUsnDIRGL98Y62ArNQt2zdFU=
+
+
+Name: kotlin/collections/MutableCollectionsKt.kotlin_metadata
+SHA1-Digest: 0k6K3ZFa2YZGlEEDRvI3n9m3yX4=
+
+
+Name: assets/dtds/loose.dtd
+SHA1-Digest: IjlSu4HSU89M2sGOiLVRPqFP6CQ=
+
+
+Name: qidxisbestlol/t.aac
+SHA1-Digest: 6lUdArZPnAPkWY4nq5T6CCBgHoM=
+
+

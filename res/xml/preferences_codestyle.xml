@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Tamanho de indentation/recuo para XML">
+        <com.qidx.ui.preferences.PremiumEditTextPreference android:title="Indentation/recuo do XML" android:key="xml_indentation_size" android:summary="Especifique o número de espaços a serem indentados/recuados." android:defaultValue="4" android:dialogTitle="Número de espaços a serem indentados/recuados:" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Tamanho de indentation/recuo para HTML">
+        <com.qidx.ui.preferences.PremiumEditTextPreference android:title="HTML indentation" android:key="html_indentation_size" android:summary="Especifique o número de espaços a serem identados/recuados." android:defaultValue="2" android:dialogTitle="Número de espaços a serem indentados/recuados:" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Tamanho de indentation/recuo para CSS">
+        <com.qidx.ui.preferences.PremiumEditTextPreference android:title="CSS indentation" android:key="css_indentation_size" android:summary="Especifique o número de espaços a serem identados/recuados." android:defaultValue="2" android:dialogTitle="Número de espaços a serem indentados/recuados:" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Tamanho de indentation/recuo para Java">
+        <com.qidx.ui.preferences.PremiumEditTextPreference android:title="Java indentation" android:key="java_indentation_size" android:summary="Especifique o número de espaços a serem identados/recuados." android:defaultValue="4" android:dialogTitle="Número de espaços a serem indentados/recuados:" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Tamanho de indentation/recuo para JavaScript">
+        <com.qidx.ui.preferences.PremiumEditTextPreference android:title="JavaScript indentation" android:key="js_indentation_size" android:summary="Especifique o número de espaços a serem identados/recuados." android:defaultValue="4" android:dialogTitle="Número de espaços a serem indentados/recuados:" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Tamanho de indentation/recuo para C++">
+        <com.qidx.ui.preferences.PremiumEditTextPreference android:title="C++ indentation" android:key="cpp_indentation_size" android:summary="Especifique o número de espaços a serem identados/recuados." android:defaultValue="4" android:dialogTitle="Número de espaços a serem indentados/recuados:" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Opções para importações do Java">
+        <com.qidx.ui.preferences.PremiumEditTextPreference android:title="Opções de importações do tipo solo (único)" android:key="max_single_imports" android:summary="Especifique o número de importações de tipo único." android:defaultValue="100" android:dialogTitle="Número de importações de tipo único:" />
+    </PreferenceCategory>
+</PreferenceScreen>
