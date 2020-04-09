@@ -1,10 +1,28 @@
-.class public final Lqidxisbestlol/nu;
+.class public abstract Lqidxisbestlol/nu;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Lqidxisbestlol/nv;
+
+
 # direct methods
-.method private constructor <init>()V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lqidxisbestlol/nv;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lqidxisbestlol/nv;-><init>(Lqidxisbestlol/ig;)V
+
+    sput-object v0, Lqidxisbestlol/nu;->b:Lqidxisbestlol/nv;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -12,44 +30,46 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ig;)V
-    .locals 0
+.method public static final a(Lqidxisbestlol/nl;Ljava/lang/String;)Lqidxisbestlol/nu;
+    .locals 1
 
-    invoke-direct {p0}, Lqidxisbestlol/nu;-><init>()V
+    sget-object v0, Lqidxisbestlol/nu;->b:Lqidxisbestlol/nv;
 
-    return-void
+    invoke-virtual {v0, p0, p1}, Lqidxisbestlol/nv;->a(Lqidxisbestlol/nl;Ljava/lang/String;)Lqidxisbestlol/nu;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Lqidxisbestlol/nn;Lqidxisbestlol/nv;Z)Lqidxisbestlol/ns;
-    .locals 3
+.method public abstract a()Lqidxisbestlol/nl;
+.end method
 
-    const-string v0, "client"
+.method public abstract a(Lqidxisbestlol/vf;)V
+.end method
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+.method public b()J
+    .locals 2
 
-    const-string v0, "originalRequest"
+    const-wide/16 v0, -0x1
 
-    invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    return-wide v0
+.end method
 
-    new-instance v1, Lqidxisbestlol/ns;
+.method public c()Z
+    .locals 1
 
     const/4 v0, 0x0
 
-    invoke-direct {v1, p1, p2, p3, v0}, Lqidxisbestlol/ns;-><init>(Lqidxisbestlol/nn;Lqidxisbestlol/nv;ZLqidxisbestlol/ig;)V
+    return v0
+.end method
 
-    new-instance v2, Lqidxisbestlol/qe;
+.method public d()Z
+    .locals 1
 
-    move-object v0, v1
+    const/4 v0, 0x0
 
-    check-cast v0, Lqidxisbestlol/ls;
-
-    invoke-direct {v2, p1, v0}, Lqidxisbestlol/qe;-><init>(Lqidxisbestlol/nn;Lqidxisbestlol/ls;)V
-
-    invoke-static {v1, v2}, Lqidxisbestlol/ns;->a(Lqidxisbestlol/ns;Lqidxisbestlol/qe;)V
-
-    nop
-
-    return-object v1
+    return v0
 .end method

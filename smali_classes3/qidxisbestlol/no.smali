@@ -8,6 +8,8 @@
 
 .field private B:I
 
+.field private C:Lqidxisbestlol/pz;
+
 .field private a:Lqidxisbestlol/mm;
 
 .field private b:Lqidxisbestlol/md;
@@ -101,7 +103,7 @@
 
     sget-object v0, Lqidxisbestlol/mq;->a:Lqidxisbestlol/mq;
 
-    invoke-static {v0}, Lqidxisbestlol/oj;->a(Lqidxisbestlol/mq;)Lqidxisbestlol/mt;
+    invoke-static {v0}, Lqidxisbestlol/og;->a(Lqidxisbestlol/mq;)Lqidxisbestlol/mt;
 
     move-result-object v0
 
@@ -192,7 +194,15 @@
     return v0
 .end method
 
-.method public final C()Lqidxisbestlol/nn;
+.method public final C()Lqidxisbestlol/pz;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/no;->C:Lqidxisbestlol/pz;
+
+    return-object v0
+.end method
+
+.method public final D()Lqidxisbestlol/nn;
     .locals 1
 
     new-instance v0, Lqidxisbestlol/nn;
@@ -223,7 +233,7 @@
 
     const-string v1, "timeout"
 
-    invoke-static {v1, p1, p2, p3}, Lqidxisbestlol/oj;->a(Ljava/lang/String;JLjava/util/concurrent/TimeUnit;)I
+    invoke-static {v1, p1, p2, p3}, Lqidxisbestlol/og;->a(Ljava/lang/String;JLjava/util/concurrent/TimeUnit;)I
 
     move-result v1
 
@@ -237,7 +247,7 @@
 .end method
 
 .method public final a(Ljavax/net/ssl/HostnameVerifier;)Lqidxisbestlol/no;
-    .locals 1
+    .locals 2
 
     const-string v0, "hostnameVerifier"
 
@@ -247,6 +257,23 @@
 
     check-cast v0, Lqidxisbestlol/no;
 
+    iget-object v1, v0, Lqidxisbestlol/no;->u:Ljavax/net/ssl/HostnameVerifier;
+
+    invoke-static {p1, v1}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    xor-int/lit8 v1, v1, 0x1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    check-cast v1, Lqidxisbestlol/pz;
+
+    iput-object v1, v0, Lqidxisbestlol/no;->C:Lqidxisbestlol/pz;
+
+    :cond_0
     iput-object p1, v0, Lqidxisbestlol/no;->u:Ljavax/net/ssl/HostnameVerifier;
 
     nop
@@ -271,6 +298,34 @@
 
     check-cast v0, Lqidxisbestlol/no;
 
+    iget-object v1, v0, Lqidxisbestlol/no;->q:Ljavax/net/ssl/SSLSocketFactory;
+
+    invoke-static {p1, v1}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    xor-int/lit8 v1, v1, 0x1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, v0, Lqidxisbestlol/no;->r:Ljavax/net/ssl/X509TrustManager;
+
+    invoke-static {p2, v1}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    xor-int/lit8 v1, v1, 0x1
+
+    if-eqz v1, :cond_1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    check-cast v1, Lqidxisbestlol/pz;
+
+    iput-object v1, v0, Lqidxisbestlol/no;->C:Lqidxisbestlol/pz;
+
+    :cond_1
     iput-object p1, v0, Lqidxisbestlol/no;->q:Ljavax/net/ssl/SSLSocketFactory;
 
     sget-object v1, Lqidxisbestlol/uq;->b:Lqidxisbestlol/ur;
@@ -311,7 +366,7 @@
 
     const-string v1, "timeout"
 
-    invoke-static {v1, p1, p2, p3}, Lqidxisbestlol/oj;->a(Ljava/lang/String;JLjava/util/concurrent/TimeUnit;)I
+    invoke-static {v1, p1, p2, p3}, Lqidxisbestlol/og;->a(Ljava/lang/String;JLjava/util/concurrent/TimeUnit;)I
 
     move-result v1
 
@@ -345,7 +400,7 @@
 
     const-string v1, "timeout"
 
-    invoke-static {v1, p1, p2, p3}, Lqidxisbestlol/oj;->a(Ljava/lang/String;JLjava/util/concurrent/TimeUnit;)I
+    invoke-static {v1, p1, p2, p3}, Lqidxisbestlol/og;->a(Ljava/lang/String;JLjava/util/concurrent/TimeUnit;)I
 
     move-result v1
 

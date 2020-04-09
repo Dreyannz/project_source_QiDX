@@ -97,7 +97,7 @@
 .method public final a()Ljava/util/List;
     .locals 1
 
-    invoke-static {}, Lqidxisbestlol/nn;->A()Ljava/util/List;
+    invoke-static {}, Lqidxisbestlol/nn;->B()Ljava/util/List;
 
     move-result-object v0
 
@@ -107,7 +107,7 @@
 .method public final b()Ljava/util/List;
     .locals 1
 
-    invoke-static {}, Lqidxisbestlol/nn;->B()Ljava/util/List;
+    invoke-static {}, Lqidxisbestlol/nn;->C()Ljava/util/List;
 
     move-result-object v0
 

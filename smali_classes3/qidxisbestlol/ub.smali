@@ -228,9 +228,9 @@
 .method public a()Z
     .locals 1
 
-    sget-object v0, Lqidxisbestlol/tg;->a:Lqidxisbestlol/th;
+    sget-object v0, Lqidxisbestlol/te;->a:Lqidxisbestlol/tf;
 
-    invoke-virtual {v0}, Lqidxisbestlol/th;->b()Z
+    invoke-virtual {v0}, Lqidxisbestlol/tf;->b()Z
 
     move-result v0
 

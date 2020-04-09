@@ -26,7 +26,7 @@
 
 
 # virtual methods
-.method public final declared-synchronized a(Lqidxisbestlol/of;)V
+.method public final declared-synchronized a(Lqidxisbestlol/oc;)V
     .locals 1
 
     monitor-enter p0
@@ -54,7 +54,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized b(Lqidxisbestlol/of;)V
+.method public final declared-synchronized b(Lqidxisbestlol/oc;)V
     .locals 1
 
     monitor-enter p0
@@ -82,7 +82,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized c(Lqidxisbestlol/of;)Z
+.method public final declared-synchronized c(Lqidxisbestlol/oc;)Z
     .locals 1
 
     monitor-enter p0

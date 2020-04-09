@@ -1,5 +1,5 @@
 .class public final Lqidxisbestlol/mu;
-.super Lqidxisbestlol/nx;
+.super Lqidxisbestlol/nu;
 .source "SourceFile"
 
 
@@ -51,15 +51,15 @@
 
     invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lqidxisbestlol/nx;-><init>()V
+    invoke-direct {p0}, Lqidxisbestlol/nu;-><init>()V
 
-    invoke-static {p1}, Lqidxisbestlol/oj;->b(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p1}, Lqidxisbestlol/og;->b(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lqidxisbestlol/mu;->c:Ljava/util/List;
 
-    invoke-static {p2}, Lqidxisbestlol/oj;->b(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p2}, Lqidxisbestlol/og;->b(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 

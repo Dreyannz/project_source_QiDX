@@ -106,13 +106,13 @@
 
     iput-object v0, p0, Lqidxisbestlol/ld;->a:Lqidxisbestlol/ne;
 
-    invoke-static {p10}, Lqidxisbestlol/oj;->b(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p10}, Lqidxisbestlol/og;->b(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lqidxisbestlol/ld;->b:Ljava/util/List;
 
-    invoke-static {p11}, Lqidxisbestlol/oj;->b(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p11}, Lqidxisbestlol/og;->b(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 

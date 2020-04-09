@@ -222,7 +222,7 @@
     return-void
 .end method
 
-.method public a(Lqidxisbestlol/ls;Lqidxisbestlol/nv;)V
+.method public a(Lqidxisbestlol/ls;Lqidxisbestlol/ns;)V
     .locals 1
 
     const-string v0, "call"
@@ -236,7 +236,7 @@
     return-void
 .end method
 
-.method public a(Lqidxisbestlol/ls;Lqidxisbestlol/oa;)V
+.method public a(Lqidxisbestlol/ls;Lqidxisbestlol/nx;)V
     .locals 1
 
     const-string v0, "call"
@@ -353,6 +353,16 @@
 .end method
 
 .method public g(Lqidxisbestlol/ls;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public h(Lqidxisbestlol/ls;)V
     .locals 1
 
     const-string v0, "call"

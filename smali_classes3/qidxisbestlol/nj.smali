@@ -4,17 +4,8 @@
 
 
 # virtual methods
-.method public abstract a()Lqidxisbestlol/nv;
+.method public abstract a()Lqidxisbestlol/ns;
 .end method
 
-.method public abstract a(Lqidxisbestlol/nv;)Lqidxisbestlol/oa;
-.end method
-
-.method public abstract b()I
-.end method
-
-.method public abstract c()I
-.end method
-
-.method public abstract d()I
+.method public abstract a(Lqidxisbestlol/ns;)Lqidxisbestlol/nx;
 .end method

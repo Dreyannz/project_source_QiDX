@@ -34,5 +34,5 @@
 
 
 # virtual methods
-.method public abstract a(Lqidxisbestlol/of;Lqidxisbestlol/oa;)Lqidxisbestlol/nv;
+.method public abstract a(Lqidxisbestlol/oc;Lqidxisbestlol/nx;)Lqidxisbestlol/ns;
 .end method

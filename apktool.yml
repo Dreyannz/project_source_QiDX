@@ -41,13 +41,11 @@ packageInfo:
   forcedPackageId: '127'
   renameManifestPackage: null
 sdkInfo:
-  minSdkVersion: '21'
+  minSdkVersion: '14'
   targetSdkVersion: '27'
 sharedLibrary: false
 sparseResources: false
 unknownFiles:
-  Manifest.xml: '8'
-  README.txt: '8'
   keys/testkey.sbt: '8'
   keys/testkey.x509.pem: '8'
   keys/testkey.pk8: '8'
@@ -63,5 +61,5 @@ usesFramework:
   tag: null
 version: 2.4.0-Black
 versionInfo:
-  versionCode: '1905140001'
-  versionName: QCS083.230320.R01
+  versionCode: '5090420'
+  versionName: QBSF100.090420.R01

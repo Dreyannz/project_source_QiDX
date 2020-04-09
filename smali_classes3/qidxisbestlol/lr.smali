@@ -356,7 +356,7 @@
 
     move-object/from16 v0, v16
 
-    invoke-static {v0, v3}, Lqidxisbestlol/oj;->a(Ljava/lang/String;I)I
+    invoke-static {v0, v3}, Lqidxisbestlol/og;->a(Ljava/lang/String;I)I
 
     move-result v5
 
@@ -518,7 +518,7 @@
 
     const/4 v5, -0x1
 
-    invoke-static {v3, v5}, Lqidxisbestlol/oj;->b(Ljava/lang/String;I)I
+    invoke-static {v3, v5}, Lqidxisbestlol/og;->b(Ljava/lang/String;I)I
 
     move-result v22
 
@@ -549,7 +549,7 @@
 
     const/4 v5, -0x1
 
-    invoke-static {v3, v5}, Lqidxisbestlol/oj;->b(Ljava/lang/String;I)I
+    invoke-static {v3, v5}, Lqidxisbestlol/og;->b(Ljava/lang/String;I)I
 
     move-result v21
 
@@ -661,7 +661,7 @@
 
     const v5, 0x7fffffff
 
-    invoke-static {v3, v5}, Lqidxisbestlol/oj;->b(Ljava/lang/String;I)I
+    invoke-static {v3, v5}, Lqidxisbestlol/og;->b(Ljava/lang/String;I)I
 
     move-result v11
 
@@ -692,7 +692,7 @@
 
     const/4 v5, -0x1
 
-    invoke-static {v3, v5}, Lqidxisbestlol/oj;->b(Ljava/lang/String;I)I
+    invoke-static {v3, v5}, Lqidxisbestlol/og;->b(Ljava/lang/String;I)I
 
     move-result v12
 

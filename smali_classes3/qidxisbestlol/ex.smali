@@ -18,20 +18,26 @@
 # instance fields
 .field private f:Landroid/app/Activity;
 
+.field private g:Ljava/io/File;
+
+.field private h:Ljava/lang/String;
+
+.field private i:Ljava/lang/String;
+
 
 # direct methods
 .method static final constructor <clinit>()V
     .locals 4
 
-    const-string v0, "3"
+    const-string v0, "5"
 
     sput-object v0, Lqidxisbestlol/ex;->b:Ljava/lang/String;
 
-    const-string v0, "25"
+    const-string v0, "24"
 
     sput-object v0, Lqidxisbestlol/ex;->c:Ljava/lang/String;
 
-    const-string v0, "02"
+    const-string v0, "03"
 
     sput-object v0, Lqidxisbestlol/ex;->d:Ljava/lang/String;
 
@@ -104,6 +110,20 @@
     .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lqidxisbestlol/ex;->g:Ljava/io/File;
+
+    const-string v0, "/data/data/com.qidx.ui/files/bin/downloaded"
+
+    iput-object v0, p0, Lqidxisbestlol/ex;->h:Ljava/lang/String;
+
+    const-string v0, "app.apk"
+
+    iput-object v0, p0, Lqidxisbestlol/ex;->i:Ljava/lang/String;
 
     iput-object p1, p0, Lqidxisbestlol/ex;->f:Landroid/app/Activity;
 

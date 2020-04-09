@@ -54,7 +54,7 @@
     return-void
 .end method
 
-.method private final a(Ljava/lang/String;)Lqidxisbestlol/nt;
+.method private final a(Ljava/lang/String;)Lqidxisbestlol/po;
     .locals 3
 
     iget-object v0, p0, Lqidxisbestlol/mm;->f:Ljava/util/ArrayDeque;
@@ -74,9 +74,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lqidxisbestlol/nt;
+    check-cast v0, Lqidxisbestlol/po;
 
-    invoke-virtual {v0}, Lqidxisbestlol/nt;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lqidxisbestlol/po;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -107,9 +107,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lqidxisbestlol/nt;
+    check-cast v0, Lqidxisbestlol/po;
 
-    invoke-virtual {v0}, Lqidxisbestlol/nt;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lqidxisbestlol/po;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -189,7 +189,7 @@
 
     const/4 v2, 0x0
 
-    sget-boolean v0, Lqidxisbestlol/oj;->f:Z
+    sget-boolean v0, Lqidxisbestlol/og;->f:Z
 
     if-eqz v0, :cond_0
 
@@ -283,7 +283,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lqidxisbestlol/nt;
+    check-cast v1, Lqidxisbestlol/po;
 
     iget-object v4, p0, Lqidxisbestlol/mm;->f:Ljava/util/ArrayDeque;
 
@@ -326,13 +326,13 @@
 
     move-result-object v1
 
-    check-cast v1, Lqidxisbestlol/nt;
+    check-cast v1, Lqidxisbestlol/po;
 
     invoke-virtual {p0}, Lqidxisbestlol/mm;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v5
 
-    invoke-virtual {v1, v5}, Lqidxisbestlol/nt;->a(Ljava/util/concurrent/ExecutorService;)V
+    invoke-virtual {v1, v5}, Lqidxisbestlol/po;->a(Ljava/util/concurrent/ExecutorService;)V
 
     add-int/lit8 v1, v2, 0x1
 
@@ -342,7 +342,7 @@
 
     :cond_3
     :try_start_1
-    invoke-virtual {v1}, Lqidxisbestlol/nt;->a()Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-virtual {v1}, Lqidxisbestlol/po;->a()Ljava/util/concurrent/atomic/AtomicInteger;
 
     move-result-object v4
 
@@ -356,7 +356,7 @@
 
     invoke-interface {v3}, Ljava/util/Iterator;->remove()V
 
-    invoke-virtual {v1}, Lqidxisbestlol/nt;->a()Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-virtual {v1}, Lqidxisbestlol/po;->a()Ljava/util/concurrent/atomic/AtomicInteger;
 
     move-result-object v4
 
@@ -420,11 +420,29 @@
 
     check-cast v7, Ljava/util/concurrent/BlockingQueue;
 
-    const-string v0, "OkHttp Dispatcher"
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v8, Lqidxisbestlol/og;->g:Ljava/lang/String;
+
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v8, " Dispatcher"
+
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     const/4 v8, 0x0
 
-    invoke-static {v0, v8}, Lqidxisbestlol/oj;->a(Ljava/lang/String;Z)Ljava/util/concurrent/ThreadFactory;
+    invoke-static {v0, v8}, Lqidxisbestlol/og;->a(Ljava/lang/String;Z)Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v8
 
@@ -456,7 +474,7 @@
     throw v0
 .end method
 
-.method public final a(Lqidxisbestlol/nt;)V
+.method public final a(Lqidxisbestlol/po;)V
     .locals 1
 
     const-string v0, "call"
@@ -472,27 +490,27 @@
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Lqidxisbestlol/nt;->c()Lqidxisbestlol/ns;
+    invoke-virtual {p1}, Lqidxisbestlol/po;->c()Lqidxisbestlol/pn;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lqidxisbestlol/ns;->i()Z
+    invoke-virtual {v0}, Lqidxisbestlol/pn;->m()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p1}, Lqidxisbestlol/nt;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lqidxisbestlol/po;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lqidxisbestlol/mm;->a(Ljava/lang/String;)Lqidxisbestlol/nt;
+    invoke-direct {p0, v0}, Lqidxisbestlol/mm;->a(Ljava/lang/String;)Lqidxisbestlol/po;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Lqidxisbestlol/nt;->a(Lqidxisbestlol/nt;)V
+    invoke-virtual {p1, v0}, Lqidxisbestlol/po;->a(Lqidxisbestlol/po;)V
 
     :cond_0
     nop
@@ -549,14 +567,14 @@
     throw v0
 .end method
 
-.method public final b(Lqidxisbestlol/nt;)V
+.method public final b(Lqidxisbestlol/po;)V
     .locals 1
 
     const-string v0, "call"
 
     invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lqidxisbestlol/nt;->a()Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-virtual {p1}, Lqidxisbestlol/po;->a()Ljava/util/concurrent/atomic/AtomicInteger;
 
     move-result-object v0
 

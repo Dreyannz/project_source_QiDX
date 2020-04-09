@@ -138,13 +138,30 @@
 
     const/4 v2, -0x1
 
+    if-ne v1, v2, :cond_4
+
+    iget v1, v0, Lqidxisbestlol/vv;->b:I
+
+    iget v2, v0, Lqidxisbestlol/vv;->c:I
+
     if-ne v1, v2, :cond_3
 
+    invoke-virtual {v0}, Lqidxisbestlol/vv;->b()Lqidxisbestlol/vv;
+
+    move-result-object v1
+
+    iput-object v1, p1, Lqidxisbestlol/vd;->a:Lqidxisbestlol/vv;
+
+    sget-object v1, Lqidxisbestlol/vx;->a:Lqidxisbestlol/vx;
+
+    invoke-virtual {v1, v0}, Lqidxisbestlol/vx;->a(Lqidxisbestlol/vv;)V
+
+    :cond_3
     const-wide/16 v0, -0x1
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     iget v2, v0, Lqidxisbestlol/vv;->c:I
 
     add-int/2addr v2, v1
@@ -174,7 +191,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     new-instance v1, Ljava/io/IOException;
 
@@ -188,7 +205,7 @@
 
     throw v0
 
-    :cond_4
+    :cond_5
     check-cast v0, Ljava/lang/Throwable;
 
     throw v0

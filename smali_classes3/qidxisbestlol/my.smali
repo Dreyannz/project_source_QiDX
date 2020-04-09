@@ -33,7 +33,7 @@
 
     check-cast v0, [Ljava/security/cert/Certificate;
 
-    invoke-static {v0}, Lqidxisbestlol/oj;->a([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Lqidxisbestlol/og;->a([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
@@ -178,9 +178,9 @@
     throw v1
 
     :cond_3
-    sget-object v2, Lqidxisbestlol/og;->f:Lqidxisbestlol/oh;
+    sget-object v2, Lqidxisbestlol/od;->f:Lqidxisbestlol/oe;
 
-    invoke-virtual {v2, v1}, Lqidxisbestlol/oh;->a(Ljava/lang/String;)Lqidxisbestlol/og;
+    invoke-virtual {v2, v1}, Lqidxisbestlol/oe;->a(Ljava/lang/String;)Lqidxisbestlol/od;
 
     move-result-object v4
 
@@ -224,7 +224,7 @@
 
     check-cast v1, Lqidxisbestlol/hw;
 
-    invoke-direct {v5, v4, v3, v6, v1}, Lqidxisbestlol/mx;-><init>(Lqidxisbestlol/og;Lqidxisbestlol/lz;Ljava/util/List;Lqidxisbestlol/hw;)V
+    invoke-direct {v5, v4, v3, v6, v1}, Lqidxisbestlol/mx;-><init>(Lqidxisbestlol/od;Lqidxisbestlol/lz;Ljava/util/List;Lqidxisbestlol/hw;)V
 
     return-object v5
 
@@ -246,7 +246,7 @@
     .end sparse-switch
 .end method
 
-.method public final a(Lqidxisbestlol/og;Lqidxisbestlol/lz;Ljava/util/List;Ljava/util/List;)Lqidxisbestlol/mx;
+.method public final a(Lqidxisbestlol/od;Lqidxisbestlol/lz;Ljava/util/List;Ljava/util/List;)Lqidxisbestlol/mx;
     .locals 4
 
     const-string v0, "tlsVersion"
@@ -265,13 +265,13 @@
 
     invoke-static {p4, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p3}, Lqidxisbestlol/oj;->b(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p3}, Lqidxisbestlol/og;->b(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
 
     new-instance v2, Lqidxisbestlol/mx;
 
-    invoke-static {p4}, Lqidxisbestlol/oj;->b(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p4}, Lqidxisbestlol/og;->b(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v3
 
@@ -281,7 +281,7 @@
 
     check-cast v0, Lqidxisbestlol/hw;
 
-    invoke-direct {v2, p1, p2, v3, v0}, Lqidxisbestlol/mx;-><init>(Lqidxisbestlol/og;Lqidxisbestlol/lz;Ljava/util/List;Lqidxisbestlol/hw;)V
+    invoke-direct {v2, p1, p2, v3, v0}, Lqidxisbestlol/mx;-><init>(Lqidxisbestlol/od;Lqidxisbestlol/lz;Ljava/util/List;Lqidxisbestlol/hw;)V
 
     return-object v2
 .end method

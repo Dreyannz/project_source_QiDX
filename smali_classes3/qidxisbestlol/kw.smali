@@ -1545,6 +1545,55 @@
     goto :goto_2
 .end method
 
+.method public static final b(Ljava/lang/String;Ljava/lang/CharSequence;)Ljava/lang/String;
+    .locals 4
+
+    const/4 v3, 0x0
+
+    const-string v0, "$this$removeSuffix"
+
+    invoke-static {p0, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "suffix"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    move-object v0, p0
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, p1, v3, v1, v2}, Lqidxisbestlol/kl;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    invoke-virtual {p0, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
+
+    invoke-static {p0, v0}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :cond_0
+    return-object p0
+.end method
+
 .method public static final b(Ljava/lang/CharSequence;[CZI)Ljava/util/List;
     .locals 7
 
@@ -1974,6 +2023,111 @@
 .end method
 
 .method public static final b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    .locals 6
+
+    const/4 v3, 0x0
+
+    const-string v0, "$this$endsWith"
+
+    invoke-static {p0, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "suffix"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-nez p2, :cond_0
+
+    instance-of v0, p0, Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    instance-of v0, p1, Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Ljava/lang/String;
+
+    check-cast p1, Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, p1, v3, v0, v1}, Lqidxisbestlol/kl;->b(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    sub-int v1, v0, v1
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v4
+
+    move-object v0, p0
+
+    move-object v2, p1
+
+    move v5, p2
+
+    invoke-static/range {v0 .. v5}, Lqidxisbestlol/kl;->a(Ljava/lang/CharSequence;ILjava/lang/CharSequence;IIZ)Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public static synthetic b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
+    .locals 1
+
+    and-int/lit8 v0, p3, 0x2
+
+    if-eqz v0, :cond_0
+
+    const/4 p2, 0x0
+
+    :cond_0
+    invoke-static {p0, p1, p2}, Lqidxisbestlol/kl;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static final c(Ljava/lang/CharSequence;)Lqidxisbestlol/jc;
+    .locals 3
+
+    const-string v0, "$this$indices"
+
+    invoke-static {p0, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    new-instance v1, Lqidxisbestlol/jc;
+
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, -0x1
+
+    invoke-direct {v1, v0, v2}, Lqidxisbestlol/jc;-><init>(II)V
+
+    return-object v1
+.end method
+
+.method public static final c(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
     .locals 8
 
     const-string v0, "$this$contains"
@@ -2053,7 +2207,7 @@
     goto :goto_0
 .end method
 
-.method public static synthetic b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
+.method public static synthetic c(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
     .locals 1
 
     and-int/lit8 v0, p3, 0x2
@@ -2063,33 +2217,11 @@
     const/4 p2, 0x0
 
     :cond_0
-    invoke-static {p0, p1, p2}, Lqidxisbestlol/kl;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    invoke-static {p0, p1, p2}, Lqidxisbestlol/kl;->c(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 
     move-result v0
 
     return v0
-.end method
-
-.method public static final c(Ljava/lang/CharSequence;)Lqidxisbestlol/jc;
-    .locals 3
-
-    const-string v0, "$this$indices"
-
-    invoke-static {p0, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    new-instance v1, Lqidxisbestlol/jc;
-
-    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-direct {v1, v0, v2}, Lqidxisbestlol/jc;-><init>(II)V
-
-    return-object v1
 .end method
 
 .method public static final d(Ljava/lang/CharSequence;)I

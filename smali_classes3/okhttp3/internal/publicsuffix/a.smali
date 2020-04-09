@@ -118,7 +118,7 @@
 
     const/16 v12, 0xff
 
-    invoke-static {v8, v12}, Lqidxisbestlol/oj;->a(BI)I
+    invoke-static {v8, v12}, Lqidxisbestlol/og;->a(BI)I
 
     move-result v8
 
@@ -151,7 +151,7 @@
 
     const/16 v8, 0xff
 
-    invoke-static {v1, v8}, Lqidxisbestlol/oj;->a(BI)I
+    invoke-static {v1, v8}, Lqidxisbestlol/og;->a(BI)I
 
     move-result v1
 

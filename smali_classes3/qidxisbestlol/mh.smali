@@ -266,7 +266,7 @@
 
     invoke-direct {v2, v4, v5}, Ljava/util/Date;-><init>(J)V
 
-    invoke-static {v2}, Lqidxisbestlol/qj;->a(Ljava/util/Date;)Ljava/lang/String;
+    invoke-static {v2}, Lqidxisbestlol/qh;->a(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v2
 

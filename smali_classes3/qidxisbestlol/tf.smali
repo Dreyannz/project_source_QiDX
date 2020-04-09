@@ -32,12 +32,22 @@
     return v0
 .end method
 
-.method public final b()Lqidxisbestlol/tt;
+.method public final b()Z
+    .locals 1
+
+    invoke-static {}, Lqidxisbestlol/te;->b()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c()Lqidxisbestlol/tt;
     .locals 1
 
     check-cast p0, Lqidxisbestlol/tf;
 
-    invoke-virtual {p0}, Lqidxisbestlol/tf;->a()Z
+    invoke-virtual {p0}, Lqidxisbestlol/tf;->b()Z
 
     move-result v0
 

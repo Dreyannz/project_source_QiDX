@@ -525,7 +525,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lqidxisbestlol/oj;->a(C)I
+    invoke-static {v1}, Lqidxisbestlol/og;->a(C)I
 
     move-result v1
 
@@ -535,7 +535,7 @@
 
     move-result v2
 
-    invoke-static {v2}, Lqidxisbestlol/oj;->a(C)I
+    invoke-static {v2}, Lqidxisbestlol/og;->a(C)I
 
     move-result v2
 
@@ -612,7 +612,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lqidxisbestlol/oj;->a(C)I
+    invoke-static {v0}, Lqidxisbestlol/og;->a(C)I
 
     move-result v0
 
@@ -624,7 +624,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lqidxisbestlol/oj;->a(C)I
+    invoke-static {v0}, Lqidxisbestlol/og;->a(C)I
 
     move-result v0
 

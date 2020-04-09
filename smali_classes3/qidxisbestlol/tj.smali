@@ -54,6 +54,7 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lqidxisbestlol/tk;->a(III)Z
     :try_end_0
+    .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
@@ -61,7 +62,10 @@
     if-eqz v2, :cond_0
 
     :goto_0
-    sput-boolean v0, Lqidxisbestlol/tj;->d:Z
+    move v1, v0
+
+    :goto_1
+    sput-boolean v1, Lqidxisbestlol/tj;->d:Z
 
     return-void
 
@@ -73,9 +77,12 @@
     :catch_0
     move-exception v0
 
-    move v0, v1
+    goto :goto_1
 
-    goto :goto_0
+    :catch_1
+    move-exception v0
+
+    goto :goto_1
 .end method
 
 .method private constructor <init>()V

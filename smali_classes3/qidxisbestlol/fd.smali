@@ -53,16 +53,16 @@
     return-void
 .end method
 
-.method public a(Lqidxisbestlol/ls;Lqidxisbestlol/oa;)V
+.method public a(Lqidxisbestlol/ls;Lqidxisbestlol/nx;)V
     .locals 4
     .annotation runtime Ljava/lang/Override;
     .end annotation
 
-    invoke-virtual {p2}, Lqidxisbestlol/oa;->i()Lqidxisbestlol/oc;
+    invoke-virtual {p2}, Lqidxisbestlol/nx;->i()Lqidxisbestlol/nz;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lqidxisbestlol/oc;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lqidxisbestlol/nz;->e()Ljava/lang/String;
 
     move-result-object v0
 

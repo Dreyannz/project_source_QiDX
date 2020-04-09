@@ -1,259 +1,35 @@
-.class public final enum Lqidxisbestlol/rf;
-.super Ljava/lang/Enum;
+.class public final Lqidxisbestlol/rf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:Lqidxisbestlol/rf;
+.field public static final d:Lqidxisbestlol/vh;
 
-.field public static final enum b:Lqidxisbestlol/rf;
+.field public static final e:Lqidxisbestlol/vh;
 
-.field public static final enum c:Lqidxisbestlol/rf;
+.field public static final f:Lqidxisbestlol/vh;
 
-.field public static final enum d:Lqidxisbestlol/rf;
+.field public static final g:Lqidxisbestlol/vh;
 
-.field public static final enum e:Lqidxisbestlol/rf;
+.field public static final h:Lqidxisbestlol/vh;
 
-.field public static final enum f:Lqidxisbestlol/rf;
+.field public static final i:Lqidxisbestlol/vh;
 
-.field public static final enum g:Lqidxisbestlol/rf;
-
-.field public static final enum h:Lqidxisbestlol/rf;
-
-.field public static final enum i:Lqidxisbestlol/rf;
-
-.field public static final enum j:Lqidxisbestlol/rf;
-
-.field public static final enum k:Lqidxisbestlol/rf;
-
-.field public static final enum l:Lqidxisbestlol/rf;
-
-.field public static final enum m:Lqidxisbestlol/rf;
-
-.field public static final enum n:Lqidxisbestlol/rf;
-
-.field public static final o:Lqidxisbestlol/rg;
-
-.field private static final synthetic p:[Lqidxisbestlol/rf;
+.field public static final j:Lqidxisbestlol/rg;
 
 
 # instance fields
-.field private final q:I
+.field public final a:I
+
+.field public final b:Lqidxisbestlol/vh;
+
+.field public final c:Lqidxisbestlol/vh;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
-
-    const/4 v7, 0x4
-
-    const/4 v6, 0x3
-
-    const/4 v5, 0x2
-
-    const/4 v4, 0x1
-
-    const/4 v3, 0x0
-
-    const/16 v0, 0xe
-
-    new-array v0, v0, [Lqidxisbestlol/rf;
-
-    new-instance v1, Lqidxisbestlol/rf;
-
-    const-string v2, "NO_ERROR"
-
-    invoke-direct {v1, v2, v3, v3}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lqidxisbestlol/rf;->a:Lqidxisbestlol/rf;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lqidxisbestlol/rf;
-
-    const-string v2, "PROTOCOL_ERROR"
-
-    invoke-direct {v1, v2, v4, v4}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lqidxisbestlol/rf;->b:Lqidxisbestlol/rf;
-
-    aput-object v1, v0, v4
-
-    new-instance v1, Lqidxisbestlol/rf;
-
-    const-string v2, "INTERNAL_ERROR"
-
-    invoke-direct {v1, v2, v5, v5}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lqidxisbestlol/rf;->c:Lqidxisbestlol/rf;
-
-    aput-object v1, v0, v5
-
-    new-instance v1, Lqidxisbestlol/rf;
-
-    const-string v2, "FLOW_CONTROL_ERROR"
-
-    invoke-direct {v1, v2, v6, v6}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lqidxisbestlol/rf;->d:Lqidxisbestlol/rf;
-
-    aput-object v1, v0, v6
-
-    new-instance v1, Lqidxisbestlol/rf;
-
-    const-string v2, "SETTINGS_TIMEOUT"
-
-    invoke-direct {v1, v2, v7, v7}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lqidxisbestlol/rf;->e:Lqidxisbestlol/rf;
-
-    aput-object v1, v0, v7
-
-    const/4 v1, 0x5
-
-    new-instance v2, Lqidxisbestlol/rf;
-
-    const-string v3, "STREAM_CLOSED"
-
-    const/4 v4, 0x5
-
-    const/4 v5, 0x5
-
-    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lqidxisbestlol/rf;->f:Lqidxisbestlol/rf;
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x6
-
-    new-instance v2, Lqidxisbestlol/rf;
-
-    const-string v3, "FRAME_SIZE_ERROR"
-
-    const/4 v4, 0x6
-
-    const/4 v5, 0x6
-
-    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lqidxisbestlol/rf;->g:Lqidxisbestlol/rf;
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x7
-
-    new-instance v2, Lqidxisbestlol/rf;
-
-    const-string v3, "REFUSED_STREAM"
-
-    const/4 v4, 0x7
-
-    const/4 v5, 0x7
-
-    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lqidxisbestlol/rf;->h:Lqidxisbestlol/rf;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x8
-
-    new-instance v2, Lqidxisbestlol/rf;
-
-    const-string v3, "CANCEL"
-
-    const/16 v4, 0x8
-
-    const/16 v5, 0x8
-
-    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lqidxisbestlol/rf;->i:Lqidxisbestlol/rf;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x9
-
-    new-instance v2, Lqidxisbestlol/rf;
-
-    const-string v3, "COMPRESSION_ERROR"
-
-    const/16 v4, 0x9
-
-    const/16 v5, 0x9
-
-    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lqidxisbestlol/rf;->j:Lqidxisbestlol/rf;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xa
-
-    new-instance v2, Lqidxisbestlol/rf;
-
-    const-string v3, "CONNECT_ERROR"
-
-    const/16 v4, 0xa
-
-    const/16 v5, 0xa
-
-    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lqidxisbestlol/rf;->k:Lqidxisbestlol/rf;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xb
-
-    new-instance v2, Lqidxisbestlol/rf;
-
-    const-string v3, "ENHANCE_YOUR_CALM"
-
-    const/16 v4, 0xb
-
-    const/16 v5, 0xb
-
-    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lqidxisbestlol/rf;->l:Lqidxisbestlol/rf;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xc
-
-    new-instance v2, Lqidxisbestlol/rf;
-
-    const-string v3, "INADEQUATE_SECURITY"
-
-    const/16 v4, 0xc
-
-    const/16 v5, 0xc
-
-    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lqidxisbestlol/rf;->m:Lqidxisbestlol/rf;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xd
-
-    new-instance v2, Lqidxisbestlol/rf;
-
-    const-string v3, "HTTP_1_1_REQUIRED"
-
-    const/16 v4, 0xd
-
-    const/16 v5, 0xd
-
-    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lqidxisbestlol/rf;->n:Lqidxisbestlol/rf;
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lqidxisbestlol/rf;->p:[Lqidxisbestlol/rf;
+    .locals 2
 
     new-instance v0, Lqidxisbestlol/rg;
 
@@ -261,55 +37,291 @@
 
     invoke-direct {v0, v1}, Lqidxisbestlol/rg;-><init>(Lqidxisbestlol/ig;)V
 
-    sput-object v0, Lqidxisbestlol/rf;->o:Lqidxisbestlol/rg;
+    sput-object v0, Lqidxisbestlol/rf;->j:Lqidxisbestlol/rg;
+
+    sget-object v0, Lqidxisbestlol/vh;->b:Lqidxisbestlol/vi;
+
+    const-string v1, ":"
+
+    invoke-virtual {v0, v1}, Lqidxisbestlol/vi;->a(Ljava/lang/String;)Lqidxisbestlol/vh;
+
+    move-result-object v0
+
+    sput-object v0, Lqidxisbestlol/rf;->d:Lqidxisbestlol/vh;
+
+    sget-object v0, Lqidxisbestlol/vh;->b:Lqidxisbestlol/vi;
+
+    const-string v1, ":status"
+
+    invoke-virtual {v0, v1}, Lqidxisbestlol/vi;->a(Ljava/lang/String;)Lqidxisbestlol/vh;
+
+    move-result-object v0
+
+    sput-object v0, Lqidxisbestlol/rf;->e:Lqidxisbestlol/vh;
+
+    sget-object v0, Lqidxisbestlol/vh;->b:Lqidxisbestlol/vi;
+
+    const-string v1, ":method"
+
+    invoke-virtual {v0, v1}, Lqidxisbestlol/vi;->a(Ljava/lang/String;)Lqidxisbestlol/vh;
+
+    move-result-object v0
+
+    sput-object v0, Lqidxisbestlol/rf;->f:Lqidxisbestlol/vh;
+
+    sget-object v0, Lqidxisbestlol/vh;->b:Lqidxisbestlol/vi;
+
+    const-string v1, ":path"
+
+    invoke-virtual {v0, v1}, Lqidxisbestlol/vi;->a(Ljava/lang/String;)Lqidxisbestlol/vh;
+
+    move-result-object v0
+
+    sput-object v0, Lqidxisbestlol/rf;->g:Lqidxisbestlol/vh;
+
+    sget-object v0, Lqidxisbestlol/vh;->b:Lqidxisbestlol/vi;
+
+    const-string v1, ":scheme"
+
+    invoke-virtual {v0, v1}, Lqidxisbestlol/vi;->a(Ljava/lang/String;)Lqidxisbestlol/vh;
+
+    move-result-object v0
+
+    sput-object v0, Lqidxisbestlol/rf;->h:Lqidxisbestlol/vh;
+
+    sget-object v0, Lqidxisbestlol/vh;->b:Lqidxisbestlol/vi;
+
+    const-string v1, ":authority"
+
+    invoke-virtual {v0, v1}, Lqidxisbestlol/vi;->a(Ljava/lang/String;)Lqidxisbestlol/vh;
+
+    move-result-object v0
+
+    sput-object v0, Lqidxisbestlol/rf;->i:Lqidxisbestlol/vh;
 
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v0, "name"
 
-    iput p3, p0, Lqidxisbestlol/rf;->q:I
+    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "value"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v0, Lqidxisbestlol/vh;->b:Lqidxisbestlol/vi;
+
+    invoke-virtual {v0, p1}, Lqidxisbestlol/vi;->a(Ljava/lang/String;)Lqidxisbestlol/vh;
+
+    move-result-object v0
+
+    sget-object v1, Lqidxisbestlol/vh;->b:Lqidxisbestlol/vi;
+
+    invoke-virtual {v1, p2}, Lqidxisbestlol/vi;->a(Ljava/lang/String;)Lqidxisbestlol/vh;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lqidxisbestlol/rf;-><init>(Lqidxisbestlol/vh;Lqidxisbestlol/vh;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lqidxisbestlol/rf;
+.method public constructor <init>(Lqidxisbestlol/vh;Ljava/lang/String;)V
     .locals 1
 
-    const-class v0, Lqidxisbestlol/rf;
+    const-string v0, "name"
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "value"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v0, Lqidxisbestlol/vh;->b:Lqidxisbestlol/vi;
+
+    invoke-virtual {v0, p2}, Lqidxisbestlol/vi;->a(Ljava/lang/String;)Lqidxisbestlol/vh;
 
     move-result-object v0
 
-    check-cast v0, Lqidxisbestlol/rf;
+    invoke-direct {p0, p1, v0}, Lqidxisbestlol/rf;-><init>(Lqidxisbestlol/vh;Lqidxisbestlol/vh;)V
 
-    return-object v0
+    return-void
 .end method
 
-.method public static values()[Lqidxisbestlol/rf;
-    .locals 1
+.method public constructor <init>(Lqidxisbestlol/vh;Lqidxisbestlol/vh;)V
+    .locals 2
 
-    sget-object v0, Lqidxisbestlol/rf;->p:[Lqidxisbestlol/rf;
+    const-string v0, "name"
 
-    invoke-virtual {v0}, [Lqidxisbestlol/rf;->clone()Ljava/lang/Object;
+    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v0
+    const-string v0, "value"
 
-    check-cast v0, [Lqidxisbestlol/rf;
+    invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqidxisbestlol/rf;->b:Lqidxisbestlol/vh;
+
+    iput-object p2, p0, Lqidxisbestlol/rf;->c:Lqidxisbestlol/vh;
+
+    iget-object v0, p0, Lqidxisbestlol/rf;->b:Lqidxisbestlol/vh;
+
+    invoke-virtual {v0}, Lqidxisbestlol/vh;->j()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x20
+
+    iget-object v1, p0, Lqidxisbestlol/rf;->c:Lqidxisbestlol/vh;
+
+    invoke-virtual {v1}, Lqidxisbestlol/vh;->j()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lqidxisbestlol/rf;->a:I
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final a()Lqidxisbestlol/vh;
     .locals 1
 
-    iget v0, p0, Lqidxisbestlol/rf;->q:I
+    iget-object v0, p0, Lqidxisbestlol/rf;->b:Lqidxisbestlol/vh;
+
+    return-object v0
+.end method
+
+.method public final b()Lqidxisbestlol/vh;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/rf;->c:Lqidxisbestlol/vh;
+
+    return-object v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-eq p0, p1, :cond_0
+
+    instance-of v0, p1, Lqidxisbestlol/rf;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lqidxisbestlol/rf;
+
+    iget-object v0, p0, Lqidxisbestlol/rf;->b:Lqidxisbestlol/vh;
+
+    iget-object v1, p1, Lqidxisbestlol/rf;->b:Lqidxisbestlol/vh;
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lqidxisbestlol/rf;->c:Lqidxisbestlol/vh;
+
+    iget-object v1, p1, Lqidxisbestlol/rf;->c:Lqidxisbestlol/vh;
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public hashCode()I
+    .locals 3
+
+    const/4 v1, 0x0
+
+    iget-object v0, p0, Lqidxisbestlol/rf;->b:Lqidxisbestlol/vh;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lqidxisbestlol/rf;->c:Lqidxisbestlol/vh;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :cond_0
+    add-int/2addr v0, v1
 
     return v0
+
+    :cond_1
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lqidxisbestlol/rf;->b:Lqidxisbestlol/vh;
+
+    invoke-virtual {v1}, Lqidxisbestlol/vh;->c()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ": "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lqidxisbestlol/rf;->c:Lqidxisbestlol/vh;
+
+    invoke-virtual {v1}, Lqidxisbestlol/vh;->c()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

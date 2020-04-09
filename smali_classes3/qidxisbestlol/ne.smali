@@ -347,7 +347,7 @@
 
     move-result v3
 
-    invoke-static {v1, v2, v0, v3}, Lqidxisbestlol/oj;->a(Ljava/lang/String;Ljava/lang/String;II)I
+    invoke-static {v1, v2, v0, v3}, Lqidxisbestlol/og;->a(Ljava/lang/String;Ljava/lang/String;II)I
 
     move-result v1
 
@@ -505,7 +505,7 @@
 
     move-result v3
 
-    invoke-static {v1, v2, v0, v3}, Lqidxisbestlol/oj;->a(Ljava/lang/String;Ljava/lang/String;II)I
+    invoke-static {v1, v2, v0, v3}, Lqidxisbestlol/og;->a(Ljava/lang/String;Ljava/lang/String;II)I
 
     move-result v1
 
@@ -600,7 +600,7 @@
 
     move-result v4
 
-    invoke-static {v0, v3, v2, v4}, Lqidxisbestlol/oj;->a(Ljava/lang/String;Ljava/lang/String;II)I
+    invoke-static {v0, v3, v2, v4}, Lqidxisbestlol/og;->a(Ljava/lang/String;Ljava/lang/String;II)I
 
     move-result v3
 
@@ -617,7 +617,7 @@
 
     iget-object v2, p0, Lqidxisbestlol/ne;->k:Ljava/lang/String;
 
-    invoke-static {v2, v1, v4, v3}, Lqidxisbestlol/oj;->a(Ljava/lang/String;CII)I
+    invoke-static {v2, v1, v4, v3}, Lqidxisbestlol/og;->a(Ljava/lang/String;CII)I
 
     move-result v2
 
@@ -691,7 +691,7 @@
 
     move-result v3
 
-    invoke-static {v1, v2, v0, v3}, Lqidxisbestlol/oj;->a(Ljava/lang/String;CII)I
+    invoke-static {v1, v2, v0, v3}, Lqidxisbestlol/og;->a(Ljava/lang/String;CII)I
 
     move-result v1
 

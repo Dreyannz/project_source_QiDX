@@ -23,7 +23,7 @@
 .method public static final synthetic a(Lqidxisbestlol/tu;)Lqidxisbestlol/tt;
     .locals 1
 
-    invoke-direct {p0}, Lqidxisbestlol/tu;->d()Lqidxisbestlol/tt;
+    invoke-direct {p0}, Lqidxisbestlol/tu;->e()Lqidxisbestlol/tt;
 
     move-result-object v0
 
@@ -86,12 +86,30 @@
     return v0
 .end method
 
-.method private final d()Lqidxisbestlol/tt;
+.method private final d()Z
+    .locals 2
+
+    const-string v0, "okhttp.platform"
+
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "bouncycastle"
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method private final e()Lqidxisbestlol/tt;
     .locals 1
 
-    sget-object v0, Lqidxisbestlol/te;->a:Lqidxisbestlol/tf;
+    sget-object v0, Lqidxisbestlol/tc;->a:Lqidxisbestlol/td;
 
-    invoke-virtual {v0}, Lqidxisbestlol/tf;->b()Lqidxisbestlol/tt;
+    invoke-virtual {v0}, Lqidxisbestlol/td;->b()Lqidxisbestlol/tt;
 
     move-result-object v0
 
@@ -102,9 +120,9 @@
     return-object v0
 
     :cond_1
-    sget-object v0, Lqidxisbestlol/tg;->a:Lqidxisbestlol/th;
+    sget-object v0, Lqidxisbestlol/te;->a:Lqidxisbestlol/tf;
 
-    invoke-virtual {v0}, Lqidxisbestlol/th;->c()Lqidxisbestlol/tt;
+    invoke-virtual {v0}, Lqidxisbestlol/tf;->c()Lqidxisbestlol/tt;
 
     move-result-object v0
 
@@ -133,17 +151,19 @@
     goto :goto_0
 
     :cond_2
-    check-cast p0, Lqidxisbestlol/tu;
+    move-object v0, p0
 
-    invoke-direct {p0}, Lqidxisbestlol/tu;->c()Z
+    check-cast v0, Lqidxisbestlol/tu;
+
+    invoke-direct {v0}, Lqidxisbestlol/tu;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    sget-object v0, Lqidxisbestlol/tr;->a:Lqidxisbestlol/ts;
+    sget-object v0, Lqidxisbestlol/th;->a:Lqidxisbestlol/ti;
 
-    invoke-virtual {v0}, Lqidxisbestlol/ts;->b()Lqidxisbestlol/tr;
+    invoke-virtual {v0}, Lqidxisbestlol/ti;->b()Lqidxisbestlol/th;
 
     move-result-object v0
 
@@ -154,9 +174,17 @@
     goto :goto_0
 
     :cond_3
-    sget-object v0, Lqidxisbestlol/tp;->a:Lqidxisbestlol/tq;
+    check-cast p0, Lqidxisbestlol/tu;
 
-    invoke-virtual {v0}, Lqidxisbestlol/tq;->b()Lqidxisbestlol/tp;
+    invoke-direct {p0}, Lqidxisbestlol/tu;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    sget-object v0, Lqidxisbestlol/tr;->a:Lqidxisbestlol/ts;
+
+    invoke-virtual {v0}, Lqidxisbestlol/ts;->b()Lqidxisbestlol/tr;
 
     move-result-object v0
 
@@ -167,6 +195,19 @@
     goto :goto_0
 
     :cond_4
+    sget-object v0, Lqidxisbestlol/tp;->a:Lqidxisbestlol/tq;
+
+    invoke-virtual {v0}, Lqidxisbestlol/tq;->b()Lqidxisbestlol/tp;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_5
+
+    check-cast v0, Lqidxisbestlol/tt;
+
+    goto :goto_0
+
+    :cond_5
     sget-object v0, Lqidxisbestlol/tm;->a:Lqidxisbestlol/to;
 
     invoke-virtual {v0}, Lqidxisbestlol/to;->a()Lqidxisbestlol/tt;

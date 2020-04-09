@@ -75,11 +75,11 @@
 
     iget-object v0, p0, Lqidxisbestlol/lo;->a:Lqidxisbestlol/ln;
 
-    invoke-static {v0}, Lqidxisbestlol/ln;->a(Lqidxisbestlol/ln;)Lqidxisbestlol/ov;
+    invoke-static {v0}, Lqidxisbestlol/ln;->a(Lqidxisbestlol/ln;)Lqidxisbestlol/os;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lqidxisbestlol/ov;->c()V
+    invoke-virtual {v0}, Lqidxisbestlol/os;->c()V
 
     goto :goto_0
 

@@ -189,7 +189,7 @@
 
     aput-object p1, v4, v1
 
-    invoke-static {v0, v4}, Lqidxisbestlol/oj;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, v4}, Lqidxisbestlol/og;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -285,7 +285,7 @@
 
     aput-object p1, v4, v1
 
-    invoke-static {v0, v4}, Lqidxisbestlol/oj;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, v4}, Lqidxisbestlol/og;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 

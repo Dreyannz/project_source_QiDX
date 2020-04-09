@@ -17,7 +17,7 @@
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/of;Lqidxisbestlol/oa;)Lqidxisbestlol/nv;
+.method public a(Lqidxisbestlol/oc;Lqidxisbestlol/nx;)Lqidxisbestlol/ns;
     .locals 1
 
     const-string v0, "response"

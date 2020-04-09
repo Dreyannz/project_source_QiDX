@@ -20,5 +20,5 @@
 
 
 # virtual methods
-.method public abstract a(Lqidxisbestlol/nj;)Lqidxisbestlol/oa;
+.method public abstract a(Lqidxisbestlol/nj;)Lqidxisbestlol/nx;
 .end method

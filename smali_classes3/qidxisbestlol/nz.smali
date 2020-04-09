@@ -1,69 +1,142 @@
-.class public final Lqidxisbestlol/nz;
-.super Lqidxisbestlol/nx;
+.class public abstract Lqidxisbestlol/nz;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Closeable;
 
-# instance fields
-.field final synthetic a:[B
 
-.field final synthetic c:Lqidxisbestlol/nl;
-
-.field final synthetic d:I
-
-.field final synthetic e:I
+# static fields
+.field public static final a:Lqidxisbestlol/oa;
 
 
 # direct methods
-.method constructor <init>([BLqidxisbestlol/nl;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lqidxisbestlol/nz;->a:[B
+    new-instance v0, Lqidxisbestlol/oa;
 
-    iput-object p2, p0, Lqidxisbestlol/nz;->c:Lqidxisbestlol/nl;
+    const/4 v1, 0x0
 
-    iput p3, p0, Lqidxisbestlol/nz;->d:I
+    invoke-direct {v0, v1}, Lqidxisbestlol/oa;-><init>(Lqidxisbestlol/ig;)V
 
-    iput p4, p0, Lqidxisbestlol/nz;->e:I
-
-    invoke-direct {p0}, Lqidxisbestlol/nx;-><init>()V
+    sput-object v0, Lqidxisbestlol/nz;->a:Lqidxisbestlol/oa;
 
     return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final d()Ljava/nio/charset/Charset;
+    .locals 2
+
+    invoke-virtual {p0}, Lqidxisbestlol/nz;->a()Lqidxisbestlol/nl;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v1, Lqidxisbestlol/kg;->a:Ljava/nio/charset/Charset;
+
+    invoke-virtual {v0, v1}, Lqidxisbestlol/nl;->a(Ljava/nio/charset/Charset;)Ljava/nio/charset/Charset;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    sget-object v0, Lqidxisbestlol/kg;->a:Ljava/nio/charset/Charset;
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public a()Lqidxisbestlol/nl;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/nz;->c:Lqidxisbestlol/nl;
-
-    return-object v0
+.method public abstract a()Lqidxisbestlol/nl;
 .end method
 
-.method public a(Lqidxisbestlol/vf;)V
-    .locals 3
+.method public abstract b()J
+.end method
 
-    const-string v0, "sink"
+.method public abstract c()Lqidxisbestlol/vg;
+.end method
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+.method public close()V
+    .locals 1
 
-    iget-object v0, p0, Lqidxisbestlol/nz;->a:[B
+    invoke-virtual {p0}, Lqidxisbestlol/nz;->c()Lqidxisbestlol/vg;
 
-    iget v1, p0, Lqidxisbestlol/nz;->e:I
+    move-result-object v0
 
-    iget v2, p0, Lqidxisbestlol/nz;->d:I
+    check-cast v0, Ljava/io/Closeable;
 
-    invoke-interface {p1, v0, v1, v2}, Lqidxisbestlol/vf;->c([BII)Lqidxisbestlol/vf;
+    invoke-static {v0}, Lqidxisbestlol/og;->a(Ljava/io/Closeable;)V
 
     return-void
 .end method
 
-.method public b()J
-    .locals 2
+.method public final e()Ljava/lang/String;
+    .locals 5
 
-    iget v0, p0, Lqidxisbestlol/nz;->d:I
+    invoke-virtual {p0}, Lqidxisbestlol/nz;->c()Lqidxisbestlol/vg;
 
-    int-to-long v0, v0
+    move-result-object v1
 
-    return-wide v0
+    check-cast v1, Ljava/io/Closeable;
+
+    const/4 v2, 0x0
+
+    check-cast v2, Ljava/lang/Throwable;
+
+    nop
+
+    :try_start_0
+    move-object v0, v1
+
+    check-cast v0, Lqidxisbestlol/vg;
+
+    move-object v3, v0
+
+    invoke-direct {p0}, Lqidxisbestlol/nz;->d()Ljava/nio/charset/Charset;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Lqidxisbestlol/og;->a(Lqidxisbestlol/vg;Ljava/nio/charset/Charset;)Ljava/nio/charset/Charset;
+
+    move-result-object v4
+
+    invoke-interface {v3, v4}, Lqidxisbestlol/vg;->a(Ljava/nio/charset/Charset;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result-object v3
+
+    invoke-static {v1, v2}, Lqidxisbestlol/ht;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    return-object v3
+
+    :catch_0
+    move-exception v2
+
+    :try_start_1
+    throw v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :catchall_0
+    move-exception v3
+
+    invoke-static {v1, v2}, Lqidxisbestlol/ht;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v3
 .end method

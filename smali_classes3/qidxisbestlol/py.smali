@@ -1,5 +1,5 @@
 .class public final Lqidxisbestlol/py;
-.super Lqidxisbestlol/pc;
+.super Lqidxisbestlol/oz;
 .source "SourceFile"
 
 
@@ -19,7 +19,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, p2, v0, v1, v2}, Lqidxisbestlol/pc;-><init>(Ljava/lang/String;ZILqidxisbestlol/ig;)V
+    invoke-direct {p0, p2, v0, v1, v2}, Lqidxisbestlol/oz;-><init>(Ljava/lang/String;ZILqidxisbestlol/ig;)V
 
     return-void
 .end method

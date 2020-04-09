@@ -50,7 +50,7 @@
     goto :goto_0
 .end method
 
-.method public final b()Lqidxisbestlol/of;
+.method public final b()Lqidxisbestlol/oc;
     .locals 3
 
     invoke-virtual {p0}, Lqidxisbestlol/qd;->a()Z
@@ -80,7 +80,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lqidxisbestlol/of;
+    check-cast v0, Lqidxisbestlol/oc;
 
     return-object v0
 .end method

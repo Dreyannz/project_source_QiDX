@@ -201,31 +201,6 @@
     return-void
 .end method
 
-.method public final a(Z)V
-    .locals 1
-
-    invoke-virtual {p0}, Lqidxisbestlol/ux;->b_()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lqidxisbestlol/ux;->a(Ljava/io/IOException;)Ljava/io/IOException;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_0
-    return-void
-.end method
-
 .method public final a_()V
     .locals 6
 
@@ -292,25 +267,11 @@
 .method public final b(Ljava/io/IOException;)Ljava/io/IOException;
     .locals 1
 
-    const-string v0, "cause"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lqidxisbestlol/ux;->b_()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return-object p1
-
-    :cond_0
     invoke-virtual {p0, p1}, Lqidxisbestlol/ux;->a(Ljava/io/IOException;)Ljava/io/IOException;
 
-    move-result-object p1
+    move-result-object v0
 
-    goto :goto_0
+    return-object v0
 .end method
 
 .method public final b_()Z

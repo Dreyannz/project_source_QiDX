@@ -182,7 +182,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lqidxisbestlol/oj;->b:Lqidxisbestlol/nb;
+    sget-object v0, Lqidxisbestlol/og;->b:Lqidxisbestlol/nb;
 
     :goto_0
     return-object v0
@@ -376,7 +376,7 @@
     return-object v0
 .end method
 
-.method public final a(Lqidxisbestlol/oa;)Z
+.method public final a(Lqidxisbestlol/nx;)Z
     .locals 2
 
     const-string v0, "$this$hasVaryAll"
@@ -385,7 +385,7 @@
 
     check-cast p0, Lqidxisbestlol/lk;
 
-    invoke-virtual {p1}, Lqidxisbestlol/oa;->h()Lqidxisbestlol/nb;
+    invoke-virtual {p1}, Lqidxisbestlol/nx;->h()Lqidxisbestlol/nb;
 
     move-result-object v0
 
@@ -402,7 +402,7 @@
     return v0
 .end method
 
-.method public final a(Lqidxisbestlol/oa;Lqidxisbestlol/nb;Lqidxisbestlol/nv;)Z
+.method public final a(Lqidxisbestlol/nx;Lqidxisbestlol/nb;Lqidxisbestlol/ns;)Z
     .locals 4
 
     const/4 v2, 0x1
@@ -421,7 +421,7 @@
 
     check-cast p0, Lqidxisbestlol/lk;
 
-    invoke-virtual {p1}, Lqidxisbestlol/oa;->h()Lqidxisbestlol/nb;
+    invoke-virtual {p1}, Lqidxisbestlol/nx;->h()Lqidxisbestlol/nb;
 
     move-result-object v0
 
@@ -472,7 +472,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p3, v0}, Lqidxisbestlol/nv;->b(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {p3, v0}, Lqidxisbestlol/ns;->b(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
@@ -494,14 +494,14 @@
     goto :goto_0
 .end method
 
-.method public final b(Lqidxisbestlol/oa;)Lqidxisbestlol/nb;
+.method public final b(Lqidxisbestlol/nx;)Lqidxisbestlol/nb;
     .locals 2
 
     const-string v0, "$this$varyHeaders"
 
     invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lqidxisbestlol/oa;->j()Lqidxisbestlol/oa;
+    invoke-virtual {p1}, Lqidxisbestlol/nx;->j()Lqidxisbestlol/nx;
 
     move-result-object v0
 
@@ -510,15 +510,15 @@
     invoke-static {}, Lqidxisbestlol/ii;->a()V
 
     :cond_0
-    invoke-virtual {v0}, Lqidxisbestlol/oa;->c()Lqidxisbestlol/nv;
+    invoke-virtual {v0}, Lqidxisbestlol/nx;->c()Lqidxisbestlol/ns;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lqidxisbestlol/nv;->f()Lqidxisbestlol/nb;
+    invoke-virtual {v0}, Lqidxisbestlol/ns;->f()Lqidxisbestlol/nb;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lqidxisbestlol/oa;->h()Lqidxisbestlol/nb;
+    invoke-virtual {p1}, Lqidxisbestlol/nx;->h()Lqidxisbestlol/nb;
 
     move-result-object v1
 

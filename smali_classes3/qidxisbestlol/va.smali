@@ -61,7 +61,7 @@
     :goto_0
     cmp-long v0, v4, v2
 
-    if-lez v0, :cond_4
+    if-lez v0, :cond_7
 
     iget-object v6, p1, Lqidxisbestlol/vd;->a:Lqidxisbestlol/vv;
 
@@ -101,29 +101,35 @@
     :cond_2
     iget-object v6, p0, Lqidxisbestlol/va;->a:Lqidxisbestlol/ux;
 
-    const/4 v7, 0x0
-
     invoke-virtual {v6}, Lqidxisbestlol/ux;->a_()V
 
     nop
 
     :try_start_0
-    iget-object v8, p0, Lqidxisbestlol/va;->b:Lqidxisbestlol/vz;
+    iget-object v7, p0, Lqidxisbestlol/va;->b:Lqidxisbestlol/vz;
 
-    invoke-interface {v8, p1, v0, v1}, Lqidxisbestlol/vz;->a_(Lqidxisbestlol/vd;J)V
+    invoke-interface {v7, p1, v0, v1}, Lqidxisbestlol/vz;->a_(Lqidxisbestlol/vd;J)V
 
     sget-object v7, Lqidxisbestlol/fu;->a:Lqidxisbestlol/fu;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v7, 0x1
+    invoke-virtual {v6}, Lqidxisbestlol/ux;->b_()Z
 
-    invoke-virtual {v6, v7}, Lqidxisbestlol/ux;->a(Z)V
+    move-result v7
 
-    sub-long/2addr v4, v0
+    if-eqz v7, :cond_6
 
-    goto :goto_0
+    const/4 v0, 0x0
+
+    invoke-virtual {v6, v0}, Lqidxisbestlol/ux;->b(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    throw v0
 
     :cond_3
     iget-object v6, v6, Lqidxisbestlol/vv;->f:Lqidxisbestlol/vv;
@@ -138,12 +144,15 @@
     move-exception v0
 
     :try_start_1
-    invoke-virtual {v6, v0}, Lqidxisbestlol/ux;->b(Ljava/io/IOException;)Ljava/io/IOException;
+    invoke-virtual {v6}, Lqidxisbestlol/ux;->b_()Z
 
-    move-result-object v0
+    move-result v1
+
+    if-nez v1, :cond_5
 
     check-cast v0, Ljava/lang/Throwable;
 
+    :goto_2
     throw v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -151,11 +160,33 @@
     :catchall_0
     move-exception v0
 
-    invoke-virtual {v6, v7}, Lqidxisbestlol/ux;->a(Z)V
+    invoke-virtual {v6}, Lqidxisbestlol/ux;->b_()Z
 
-    throw v0
+    move-result v1
+
+    if-eqz v1, :cond_4
 
     :cond_4
+    throw v0
+
+    :cond_5
+    :try_start_2
+    invoke-virtual {v6, v0}, Lqidxisbestlol/ux;->b(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Throwable;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_2
+
+    :cond_6
+    sub-long/2addr v4, v0
+
+    goto :goto_0
+
+    :cond_7
     return-void
 .end method
 
@@ -172,8 +203,6 @@
 
     iget-object v1, p0, Lqidxisbestlol/va;->a:Lqidxisbestlol/ux;
 
-    const/4 v2, 0x0
-
     invoke-virtual {v1}, Lqidxisbestlol/ux;->a_()V
 
     nop
@@ -188,16 +217,14 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v0, 0x1
+    invoke-virtual {v1}, Lqidxisbestlol/ux;->b_()Z
 
-    invoke-virtual {v1, v0}, Lqidxisbestlol/ux;->a(Z)V
+    move-result v0
 
-    return-void
+    if-eqz v0, :cond_2
 
-    :catch_0
-    move-exception v0
+    const/4 v0, 0x0
 
-    :try_start_1
     invoke-virtual {v1, v0}, Lqidxisbestlol/ux;->b(Ljava/io/IOException;)Ljava/io/IOException;
 
     move-result-object v0
@@ -205,23 +232,56 @@
     check-cast v0, Ljava/lang/Throwable;
 
     throw v0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_1
+    invoke-virtual {v1}, Lqidxisbestlol/ux;->b_()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    :goto_0
+    throw v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {v1, v2}, Lqidxisbestlol/ux;->a(Z)V
+    invoke-virtual {v1}, Lqidxisbestlol/ux;->b_()Z
 
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    :cond_0
     throw v0
+
+    :cond_1
+    :try_start_2
+    invoke-virtual {v1, v0}, Lqidxisbestlol/ux;->b(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Throwable;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_0
+
+    :cond_2
+    return-void
 .end method
 
 .method public flush()V
     .locals 3
 
     iget-object v1, p0, Lqidxisbestlol/va;->a:Lqidxisbestlol/ux;
-
-    const/4 v2, 0x0
 
     invoke-virtual {v1}, Lqidxisbestlol/ux;->a_()V
 
@@ -237,16 +297,14 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v0, 0x1
+    invoke-virtual {v1}, Lqidxisbestlol/ux;->b_()Z
 
-    invoke-virtual {v1, v0}, Lqidxisbestlol/ux;->a(Z)V
+    move-result v0
 
-    return-void
+    if-eqz v0, :cond_2
 
-    :catch_0
-    move-exception v0
+    const/4 v0, 0x0
 
-    :try_start_1
     invoke-virtual {v1, v0}, Lqidxisbestlol/ux;->b(Ljava/io/IOException;)Ljava/io/IOException;
 
     move-result-object v0
@@ -254,15 +312,50 @@
     check-cast v0, Ljava/lang/Throwable;
 
     throw v0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_1
+    invoke-virtual {v1}, Lqidxisbestlol/ux;->b_()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    :goto_0
+    throw v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {v1, v2}, Lqidxisbestlol/ux;->a(Z)V
+    invoke-virtual {v1}, Lqidxisbestlol/ux;->b_()Z
 
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    :cond_0
     throw v0
+
+    :cond_1
+    :try_start_2
+    invoke-virtual {v1, v0}, Lqidxisbestlol/ux;->b(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Throwable;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_0
+
+    :cond_2
+    return-void
 .end method
 
 .method public toString()Ljava/lang/String;

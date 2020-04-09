@@ -1,47 +1,68 @@
-.class public interface abstract Lqidxisbestlol/sv;
+.class final Lqidxisbestlol/sv;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:Lqidxisbestlol/sv;
-
-.field public static final b:Lqidxisbestlol/sw;
+# interfaces
+.implements Lqidxisbestlol/st;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
-    new-instance v0, Lqidxisbestlol/sw;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/sw;-><init>(Lqidxisbestlol/ig;)V
-
-    sput-object v0, Lqidxisbestlol/sv;->b:Lqidxisbestlol/sw;
-
-    new-instance v0, Lqidxisbestlol/sx;
-
-    invoke-direct {v0}, Lqidxisbestlol/sx;-><init>()V
-
-    check-cast v0, Lqidxisbestlol/sv;
-
-    sput-object v0, Lqidxisbestlol/sv;->a:Lqidxisbestlol/sv;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(ILqidxisbestlol/rf;)V
+.method public a(ILqidxisbestlol/rd;)V
+    .locals 1
+
+    const-string v0, "errorCode"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
 .end method
 
-.method public abstract a(ILjava/util/List;)Z
+.method public a(ILjava/util/List;)Z
+    .locals 1
+
+    const-string v0, "requestHeaders"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
-.method public abstract a(ILjava/util/List;Z)Z
+.method public a(ILjava/util/List;Z)Z
+    .locals 1
+
+    const-string v0, "responseHeaders"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
-.method public abstract a(ILqidxisbestlol/vg;IZ)Z
+.method public a(ILqidxisbestlol/vg;IZ)Z
+    .locals 2
+
+    const-string v0, "source"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    int-to-long v0, p3
+
+    invoke-interface {p2, v0, v1}, Lqidxisbestlol/vg;->h(J)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

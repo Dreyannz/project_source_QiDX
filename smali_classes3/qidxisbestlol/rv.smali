@@ -1,5 +1,5 @@
 .class public final Lqidxisbestlol/rv;
-.super Lqidxisbestlol/pc;
+.super Lqidxisbestlol/oz;
 .source "SourceFile"
 
 
@@ -8,40 +8,28 @@
 
 .field final synthetic b:Z
 
-.field final synthetic c:Lqidxisbestlol/ru;
+.field final synthetic c:Lqidxisbestlol/rs;
 
-.field final synthetic d:Z
+.field final synthetic d:I
 
-.field final synthetic e:Lqidxisbestlol/iq;
-
-.field final synthetic f:Lqidxisbestlol/sy;
-
-.field final synthetic g:Lqidxisbestlol/ip;
-
-.field final synthetic h:Lqidxisbestlol/iq;
+.field final synthetic e:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZLjava/lang/String;ZLqidxisbestlol/ru;ZLqidxisbestlol/iq;Lqidxisbestlol/sy;Lqidxisbestlol/ip;Lqidxisbestlol/iq;)V
+.method public constructor <init>(Ljava/lang/String;ZLjava/lang/String;ZLqidxisbestlol/rs;II)V
     .locals 0
 
     iput-object p1, p0, Lqidxisbestlol/rv;->a:Ljava/lang/String;
 
     iput-boolean p2, p0, Lqidxisbestlol/rv;->b:Z
 
-    iput-object p5, p0, Lqidxisbestlol/rv;->c:Lqidxisbestlol/ru;
+    iput-object p5, p0, Lqidxisbestlol/rv;->c:Lqidxisbestlol/rs;
 
-    iput-boolean p6, p0, Lqidxisbestlol/rv;->d:Z
+    iput p6, p0, Lqidxisbestlol/rv;->d:I
 
-    iput-object p7, p0, Lqidxisbestlol/rv;->e:Lqidxisbestlol/iq;
+    iput p7, p0, Lqidxisbestlol/rv;->e:I
 
-    iput-object p8, p0, Lqidxisbestlol/rv;->f:Lqidxisbestlol/sy;
-
-    iput-object p9, p0, Lqidxisbestlol/rv;->g:Lqidxisbestlol/ip;
-
-    iput-object p10, p0, Lqidxisbestlol/rv;->h:Lqidxisbestlol/iq;
-
-    invoke-direct {p0, p3, p4}, Lqidxisbestlol/pc;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {p0, p3, p4}, Lqidxisbestlol/oz;-><init>(Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -49,27 +37,19 @@
 
 # virtual methods
 .method public a()J
-    .locals 3
+    .locals 4
 
-    iget-object v0, p0, Lqidxisbestlol/rv;->c:Lqidxisbestlol/ru;
+    iget-object v0, p0, Lqidxisbestlol/rv;->c:Lqidxisbestlol/rs;
 
-    iget-object v0, v0, Lqidxisbestlol/ru;->a:Lqidxisbestlol/rn;
+    iget-object v0, v0, Lqidxisbestlol/rs;->a:Lqidxisbestlol/rl;
 
-    invoke-virtual {v0}, Lqidxisbestlol/rn;->b()Lqidxisbestlol/rr;
+    const/4 v1, 0x1
 
-    move-result-object v1
+    iget v2, p0, Lqidxisbestlol/rv;->d:I
 
-    iget-object v0, p0, Lqidxisbestlol/rv;->c:Lqidxisbestlol/ru;
+    iget v3, p0, Lqidxisbestlol/rv;->e:I
 
-    iget-object v2, v0, Lqidxisbestlol/ru;->a:Lqidxisbestlol/rn;
-
-    iget-object v0, p0, Lqidxisbestlol/rv;->e:Lqidxisbestlol/iq;
-
-    iget-object v0, v0, Lqidxisbestlol/iq;->a:Ljava/lang/Object;
-
-    check-cast v0, Lqidxisbestlol/sy;
-
-    invoke-virtual {v1, v2, v0}, Lqidxisbestlol/rr;->a(Lqidxisbestlol/rn;Lqidxisbestlol/sy;)V
+    invoke-virtual {v0, v1, v2, v3}, Lqidxisbestlol/rl;->a(ZII)V
 
     nop
 

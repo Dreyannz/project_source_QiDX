@@ -1,114 +1,139 @@
-.class public final Lqidxisbestlol/oy;
-.super Ljava/lang/Object;
+.class public Lqidxisbestlol/oy;
+.super Lqidxisbestlol/vj;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field final synthetic a:Lqidxisbestlol/ot;
+.field private a:Z
 
-.field private final b:Ljava/lang/String;
-
-.field private final c:J
-
-.field private final d:Ljava/util/List;
-
-.field private final e:[J
+.field private final b:Lqidxisbestlol/hx;
 
 
 # direct methods
-.method public constructor <init>(Lqidxisbestlol/ot;Ljava/lang/String;JLjava/util/List;[J)V
+.method public constructor <init>(Lqidxisbestlol/vz;Lqidxisbestlol/hx;)V
     .locals 1
 
-    const-string v0, "key"
+    const-string v0, "delegate"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "onException"
 
     invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "sources"
+    invoke-direct {p0, p1}, Lqidxisbestlol/vj;-><init>(Lqidxisbestlol/vz;)V
 
-    invoke-static {p5, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "lengths"
-
-    invoke-static {p6, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iput-object p1, p0, Lqidxisbestlol/oy;->a:Lqidxisbestlol/ot;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lqidxisbestlol/oy;->b:Ljava/lang/String;
-
-    iput-wide p3, p0, Lqidxisbestlol/oy;->c:J
-
-    iput-object p5, p0, Lqidxisbestlol/oy;->d:Ljava/util/List;
-
-    iput-object p6, p0, Lqidxisbestlol/oy;->e:[J
+    iput-object p2, p0, Lqidxisbestlol/oy;->b:Lqidxisbestlol/hx;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lqidxisbestlol/ov;
-    .locals 4
+.method public a_(Lqidxisbestlol/vd;J)V
+    .locals 2
 
-    iget-object v0, p0, Lqidxisbestlol/oy;->a:Lqidxisbestlol/ot;
+    const-string v0, "source"
 
-    iget-object v1, p0, Lqidxisbestlol/oy;->b:Ljava/lang/String;
+    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-wide v2, p0, Lqidxisbestlol/oy;->c:J
+    iget-boolean v0, p0, Lqidxisbestlol/oy;->a:Z
 
-    invoke-virtual {v0, v1, v2, v3}, Lqidxisbestlol/ot;->a(Ljava/lang/String;J)Lqidxisbestlol/ov;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    invoke-virtual {p1, p2, p3}, Lqidxisbestlol/vd;->h(J)V
 
-    return-object v0
-.end method
+    :goto_0
+    return-void
 
-.method public final a(I)Lqidxisbestlol/wb;
-    .locals 1
+    :cond_0
+    nop
 
-    iget-object v0, p0, Lqidxisbestlol/oy;->d:Ljava/util/List;
+    :try_start_0
+    invoke-super {p0, p1, p2, p3}, Lqidxisbestlol/vj;->a_(Lqidxisbestlol/vd;J)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object v0
+    :catch_0
+    move-exception v0
 
-    check-cast v0, Lqidxisbestlol/wb;
+    const/4 v1, 0x1
 
-    return-object v0
+    iput-boolean v1, p0, Lqidxisbestlol/oy;->a:Z
+
+    iget-object v1, p0, Lqidxisbestlol/oy;->b:Lqidxisbestlol/hx;
+
+    invoke-interface {v1, v0}, Lqidxisbestlol/hx;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
 .end method
 
 .method public close()V
     .locals 2
 
-    iget-object v0, p0, Lqidxisbestlol/oy;->d:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
+    iget-boolean v0, p0, Lqidxisbestlol/oy;->a:Z
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :goto_0
+    return-void
 
-    move-result-object v0
+    :cond_0
+    nop
 
-    check-cast v0, Lqidxisbestlol/wb;
-
-    check-cast v0, Ljava/io/Closeable;
-
-    invoke-static {v0}, Lqidxisbestlol/oj;->a(Ljava/io/Closeable;)V
+    :try_start_0
+    invoke-super {p0}, Lqidxisbestlol/vj;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
+    :catch_0
+    move-exception v0
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lqidxisbestlol/oy;->a:Z
+
+    iget-object v1, p0, Lqidxisbestlol/oy;->b:Lqidxisbestlol/hx;
+
+    invoke-interface {v1, v0}, Lqidxisbestlol/hx;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+.end method
+
+.method public flush()V
+    .locals 2
+
+    iget-boolean v0, p0, Lqidxisbestlol/oy;->a:Z
+
+    if-eqz v0, :cond_0
+
+    :goto_0
     return-void
+
+    :cond_0
+    nop
+
+    :try_start_0
+    invoke-super {p0}, Lqidxisbestlol/vj;->flush()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lqidxisbestlol/oy;->a:Z
+
+    iget-object v1, p0, Lqidxisbestlol/oy;->b:Lqidxisbestlol/hx;
+
+    invoke-interface {v1, v0}, Lqidxisbestlol/hx;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
 .end method

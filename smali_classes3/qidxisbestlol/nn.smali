@@ -7,9 +7,9 @@
 
 
 # static fields
-.field private static final D:Ljava/util/List;
-
 .field private static final E:Ljava/util/List;
+
+.field private static final F:Ljava/util/List;
 
 .field public static final a:Lqidxisbestlol/np;
 
@@ -20,6 +20,8 @@
 .field private final B:I
 
 .field private final C:I
+
+.field private final D:Lqidxisbestlol/pz;
 
 .field private final b:Lqidxisbestlol/mm;
 
@@ -100,11 +102,11 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v0}, Lqidxisbestlol/oj;->a([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Lqidxisbestlol/og;->a([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    sput-object v0, Lqidxisbestlol/nn;->D:Ljava/util/List;
+    sput-object v0, Lqidxisbestlol/nn;->E:Ljava/util/List;
 
     new-array v0, v4, [Lqidxisbestlol/me;
 
@@ -116,11 +118,11 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v0}, Lqidxisbestlol/oj;->a([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Lqidxisbestlol/og;->a([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    sput-object v0, Lqidxisbestlol/nn;->E:Ljava/util/List;
+    sput-object v0, Lqidxisbestlol/nn;->F:Ljava/util/List;
 
     return-void
 .end method
@@ -168,7 +170,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lqidxisbestlol/oj;->b(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0}, Lqidxisbestlol/og;->b(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
@@ -178,7 +180,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lqidxisbestlol/oj;->b(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0}, Lqidxisbestlol/og;->b(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
@@ -312,6 +314,15 @@
 
     iput v0, p0, Lqidxisbestlol/nn;->C:I
 
+    invoke-virtual {p1}, Lqidxisbestlol/no;->C()Lqidxisbestlol/pz;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_5
+
+    :goto_1
+    iput-object v0, p0, Lqidxisbestlol/nn;->D:Lqidxisbestlol/pz;
+
     invoke-virtual {p1}, Lqidxisbestlol/no;->q()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v0
@@ -324,7 +335,7 @@
 
     instance-of v1, v0, Ljava/util/Collection;
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     move-object v1, v0
 
@@ -334,12 +345,12 @@
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     move v0, v2
 
-    :goto_1
-    if-eqz v0, :cond_8
+    :goto_2
+    if-eqz v0, :cond_9
 
     :cond_1
     invoke-virtual {p1}, Lqidxisbestlol/no;->q()Ljavax/net/ssl/SSLSocketFactory;
@@ -360,7 +371,7 @@
 
     iput-object v0, p0, Lqidxisbestlol/nn;->s:Ljavax/net/ssl/X509TrustManager;
 
-    :goto_2
+    :goto_3
     iget-object v0, p0, Lqidxisbestlol/nn;->r:Ljavax/net/ssl/SSLSocketFactory;
 
     if-eqz v0, :cond_2
@@ -390,7 +401,7 @@
 
     iget-object v0, p0, Lqidxisbestlol/nn;->d:Ljava/util/List;
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_c
 
     new-instance v0, Lqidxisbestlol/fr;
 
@@ -407,7 +418,7 @@
 
     if-eqz v0, :cond_4
 
-    :goto_3
+    :goto_4
     if-nez v0, :cond_0
 
     sget-object v0, Lqidxisbestlol/um;->a:Lqidxisbestlol/um;
@@ -421,19 +432,26 @@
 
     move-result-object v0
 
-    goto :goto_3
+    goto :goto_4
 
     :cond_5
+    new-instance v0, Lqidxisbestlol/pz;
+
+    invoke-direct {v0}, Lqidxisbestlol/pz;-><init>()V
+
+    goto :goto_1
+
+    :cond_6
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    :cond_6
+    :cond_7
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -445,18 +463,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     move v0, v3
 
-    goto :goto_1
-
-    :cond_7
-    move v0, v2
-
-    goto :goto_1
+    goto :goto_2
 
     :cond_8
+    move v0, v2
+
+    goto :goto_2
+
+    :cond_9
     sget-object v0, Lqidxisbestlol/tt;->b:Lqidxisbestlol/tu;
 
     invoke-virtual {v0}, Lqidxisbestlol/tu;->a()Lqidxisbestlol/tt;
@@ -483,11 +501,11 @@
 
     iget-object v1, p0, Lqidxisbestlol/nn;->s:Ljavax/net/ssl/X509TrustManager;
 
-    if-nez v1, :cond_9
+    if-nez v1, :cond_a
 
     invoke-static {}, Lqidxisbestlol/ii;->a()V
 
-    :cond_9
+    :cond_a
     invoke-static {v0, v1}, Lqidxisbestlol/np;->a(Lqidxisbestlol/np;Ljavax/net/ssl/X509TrustManager;)Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v0
@@ -498,30 +516,30 @@
 
     iget-object v1, p0, Lqidxisbestlol/nn;->s:Ljavax/net/ssl/X509TrustManager;
 
-    if-nez v1, :cond_a
+    if-nez v1, :cond_b
 
     invoke-static {}, Lqidxisbestlol/ii;->a()V
 
-    :cond_a
+    :cond_b
     invoke-virtual {v0, v1}, Lqidxisbestlol/ur;->a(Ljavax/net/ssl/X509TrustManager;)Lqidxisbestlol/uq;
 
     move-result-object v0
 
     iput-object v0, p0, Lqidxisbestlol/nn;->x:Lqidxisbestlol/uq;
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
-    :cond_b
+    :cond_c
     invoke-interface {v0, v4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_c
+    if-nez v0, :cond_d
 
     move v0, v2
 
-    :goto_4
-    if-nez v0, :cond_d
+    :goto_5
+    if-nez v0, :cond_e
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -555,15 +573,15 @@
 
     throw v0
 
-    :cond_c
+    :cond_d
     move v0, v3
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_d
+    :cond_e
     iget-object v0, p0, Lqidxisbestlol/nn;->e:Ljava/util/List;
 
-    if-nez v0, :cond_e
+    if-nez v0, :cond_f
 
     new-instance v0, Lqidxisbestlol/fr;
 
@@ -573,17 +591,17 @@
 
     throw v0
 
-    :cond_e
+    :cond_f
     invoke-interface {v0, v4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_f
+    if-nez v0, :cond_10
 
     move v0, v2
 
-    :goto_5
-    if-nez v0, :cond_10
+    :goto_6
+    if-nez v0, :cond_11
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -617,21 +635,13 @@
 
     throw v0
 
-    :cond_f
+    :cond_10
     move v0, v3
 
-    goto :goto_5
+    goto :goto_6
 
-    :cond_10
+    :cond_11
     return-void
-.end method
-
-.method public static final synthetic A()Ljava/util/List;
-    .locals 1
-
-    sget-object v0, Lqidxisbestlol/nn;->D:Ljava/util/List;
-
-    return-object v0
 .end method
 
 .method public static final synthetic B()Ljava/util/List;
@@ -642,22 +652,36 @@
     return-object v0
 .end method
 
+.method public static final synthetic C()Ljava/util/List;
+    .locals 1
+
+    sget-object v0, Lqidxisbestlol/nn;->F:Ljava/util/List;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public a(Lqidxisbestlol/nv;)Lqidxisbestlol/ls;
+.method public final A()Lqidxisbestlol/pz;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/nn;->D:Lqidxisbestlol/pz;
+
+    return-object v0
+.end method
+
+.method public a(Lqidxisbestlol/ns;)Lqidxisbestlol/ls;
     .locals 2
 
     const-string v0, "request"
 
     invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lqidxisbestlol/ns;->a:Lqidxisbestlol/nu;
+    new-instance v0, Lqidxisbestlol/pn;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p0, p1, v1}, Lqidxisbestlol/nu;->a(Lqidxisbestlol/nn;Lqidxisbestlol/nv;Z)Lqidxisbestlol/ns;
-
-    move-result-object v0
+    invoke-direct {v0, p0, p1, v1}, Lqidxisbestlol/pn;-><init>(Lqidxisbestlol/nn;Lqidxisbestlol/ns;Z)V
 
     check-cast v0, Lqidxisbestlol/ls;
 

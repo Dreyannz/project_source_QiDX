@@ -31,7 +31,7 @@
 
     new-instance v1, Lqidxisbestlol/pw;
 
-    sget-object v2, Lqidxisbestlol/pf;->a:Lqidxisbestlol/pf;
+    sget-object v2, Lqidxisbestlol/pc;->a:Lqidxisbestlol/pc;
 
     move v3, p1
 
@@ -39,7 +39,7 @@
 
     move-object v6, p4
 
-    invoke-direct/range {v1 .. v6}, Lqidxisbestlol/pw;-><init>(Lqidxisbestlol/pf;IJLjava/util/concurrent/TimeUnit;)V
+    invoke-direct/range {v1 .. v6}, Lqidxisbestlol/pw;-><init>(Lqidxisbestlol/pc;IJLjava/util/concurrent/TimeUnit;)V
 
     invoke-direct {p0, v1}, Lqidxisbestlol/md;-><init>(Lqidxisbestlol/pw;)V
 

@@ -12,7 +12,7 @@
 # instance fields
 .field private final c:Lqidxisbestlol/fk;
 
-.field private final d:Lqidxisbestlol/og;
+.field private final d:Lqidxisbestlol/od;
 
 .field private final e:Lqidxisbestlol/lz;
 
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lqidxisbestlol/og;Lqidxisbestlol/lz;Ljava/util/List;Lqidxisbestlol/hw;)V
+.method public constructor <init>(Lqidxisbestlol/od;Lqidxisbestlol/lz;Ljava/util/List;Lqidxisbestlol/hw;)V
     .locals 1
 
     const-string v0, "tlsVersion"
@@ -85,7 +85,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqidxisbestlol/mx;->d:Lqidxisbestlol/og;
+    iput-object p1, p0, Lqidxisbestlol/mx;->d:Lqidxisbestlol/od;
 
     iput-object p2, p0, Lqidxisbestlol/mx;->e:Lqidxisbestlol/lz;
 
@@ -154,10 +154,10 @@
     return-object v0
 .end method
 
-.method public final b()Lqidxisbestlol/og;
+.method public final b()Lqidxisbestlol/od;
     .locals 1
 
-    iget-object v0, p0, Lqidxisbestlol/mx;->d:Lqidxisbestlol/og;
+    iget-object v0, p0, Lqidxisbestlol/mx;->d:Lqidxisbestlol/od;
 
     return-object v0
 .end method
@@ -189,9 +189,9 @@
 
     check-cast v0, Lqidxisbestlol/mx;
 
-    iget-object v0, v0, Lqidxisbestlol/mx;->d:Lqidxisbestlol/og;
+    iget-object v0, v0, Lqidxisbestlol/mx;->d:Lqidxisbestlol/od;
 
-    iget-object v1, p0, Lqidxisbestlol/mx;->d:Lqidxisbestlol/og;
+    iget-object v1, p0, Lqidxisbestlol/mx;->d:Lqidxisbestlol/od;
 
     if-ne v0, v1, :cond_0
 
@@ -253,9 +253,9 @@
 .method public hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lqidxisbestlol/mx;->d:Lqidxisbestlol/og;
+    iget-object v0, p0, Lqidxisbestlol/mx;->d:Lqidxisbestlol/od;
 
-    invoke-virtual {v0}, Lqidxisbestlol/og;->hashCode()I
+    invoke-virtual {v0}, Lqidxisbestlol/od;->hashCode()I
 
     move-result v0
 
@@ -297,60 +297,15 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 6
+    .locals 5
 
-    const/16 v5, 0xa
+    const/16 v4, 0xa
 
-    const/16 v4, 0x20
+    const/16 v3, 0x20
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    nop
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Handshake{"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "tlsVersion="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lqidxisbestlol/mx;->d:Lqidxisbestlol/og;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "cipherSuite="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lqidxisbestlol/mx;->e:Lqidxisbestlol/lz;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "peerCertificates="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
+    :try_start_0
     invoke-virtual {p0}, Lqidxisbestlol/mx;->a()Ljava/util/List;
 
     move-result-object v0
@@ -359,26 +314,28 @@
 
     new-instance v1, Ljava/util/ArrayList;
 
-    invoke-static {v0, v5}, Lqidxisbestlol/gj;->a(Ljava/lang/Iterable;I)I
+    const/16 v2, 0xa
 
-    move-result v3
+    invoke-static {v0, v2}, Lqidxisbestlol/gj;->a(Ljava/lang/Iterable;I)I
 
-    invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(I)V
+    move-result v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
     check-cast v1, Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v3
+    move-result-object v2
 
     :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -389,17 +346,70 @@
     move-result-object v0
 
     invoke-interface {v1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljavax/net/ssl/SSLPeerUnverifiedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    check-cast v1, Ljava/util/List;
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, "Failed: SSLPeerUnverifiedException"
+
+    :goto_1
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Handshake{"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "tlsVersion="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lqidxisbestlol/mx;->d:Lqidxisbestlol/od;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "cipherSuite="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lqidxisbestlol/mx;->e:Lqidxisbestlol/lz;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "peerCertificates="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -415,7 +425,7 @@
 
     new-instance v1, Ljava/util/ArrayList;
 
-    invoke-static {v0, v5}, Lqidxisbestlol/gj;->a(Ljava/lang/Iterable;I)I
+    invoke-static {v0, v4}, Lqidxisbestlol/gj;->a(Ljava/lang/Iterable;I)I
 
     move-result v3
 
@@ -427,7 +437,7 @@
 
     move-result-object v3
 
-    :goto_1
+    :goto_2
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
@@ -445,6 +455,18 @@
     move-result-object v0
 
     invoke-interface {v1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_0
+    :try_start_1
+    check-cast v1, Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    :try_end_1
+    .catch Ljavax/net/ssl/SSLPeerUnverifiedException; {:try_start_1 .. :try_end_1} :catch_0
+
+    move-result-object v0
 
     goto :goto_1
 

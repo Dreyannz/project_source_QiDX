@@ -118,7 +118,7 @@
 
     const-string v0, "/\\"
 
-    invoke-static {p1, v0, v2, p3}, Lqidxisbestlol/oj;->a(Ljava/lang/String;Ljava/lang/String;II)I
+    invoke-static {p1, v0, v2, p3}, Lqidxisbestlol/og;->a(Ljava/lang/String;Ljava/lang/String;II)I
 
     move-result v3
 
@@ -620,7 +620,7 @@
 
     move-object/from16 v0, p2
 
-    invoke-static {v0, v2, v3, v4, v5}, Lqidxisbestlol/oj;->a(Ljava/lang/String;IIILjava/lang/Object;)I
+    invoke-static {v0, v2, v3, v4, v5}, Lqidxisbestlol/og;->a(Ljava/lang/String;IIILjava/lang/Object;)I
 
     move-result v2
 
@@ -632,7 +632,7 @@
 
     move-object/from16 v0, p2
 
-    invoke-static {v0, v2, v3, v4, v5}, Lqidxisbestlol/oj;->b(Ljava/lang/String;IIILjava/lang/Object;)I
+    invoke-static {v0, v2, v3, v4, v5}, Lqidxisbestlol/og;->b(Ljava/lang/String;IIILjava/lang/Object;)I
 
     move-result v17
 
@@ -733,7 +733,7 @@
 
     move/from16 v1, v17
 
-    invoke-static {v0, v2, v4, v1}, Lqidxisbestlol/oj;->a(Ljava/lang/String;Ljava/lang/String;II)I
+    invoke-static {v0, v2, v4, v1}, Lqidxisbestlol/og;->a(Ljava/lang/String;Ljava/lang/String;II)I
 
     move-result v16
 
@@ -881,7 +881,7 @@
 
     move/from16 v1, v16
 
-    invoke-static {v0, v2, v4, v1}, Lqidxisbestlol/oj;->a(Ljava/lang/String;CII)I
+    invoke-static {v0, v2, v4, v1}, Lqidxisbestlol/og;->a(Ljava/lang/String;CII)I
 
     move-result v5
 
@@ -1084,7 +1084,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lqidxisbestlol/oi;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lqidxisbestlol/of;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1193,7 +1193,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lqidxisbestlol/oi;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lqidxisbestlol/of;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1296,7 +1296,7 @@
 
     move/from16 v1, v17
 
-    invoke-static {v0, v2, v3, v1}, Lqidxisbestlol/oj;->a(Ljava/lang/String;Ljava/lang/String;II)I
+    invoke-static {v0, v2, v3, v1}, Lqidxisbestlol/og;->a(Ljava/lang/String;Ljava/lang/String;II)I
 
     move-result v4
 
@@ -1326,7 +1326,7 @@
 
     move/from16 v1, v17
 
-    invoke-static {v0, v2, v4, v1}, Lqidxisbestlol/oj;->a(Ljava/lang/String;CII)I
+    invoke-static {v0, v2, v4, v1}, Lqidxisbestlol/og;->a(Ljava/lang/String;CII)I
 
     move-result v5
 
@@ -2217,7 +2217,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lqidxisbestlol/oi;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lqidxisbestlol/of;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

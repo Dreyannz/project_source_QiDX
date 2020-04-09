@@ -327,7 +327,7 @@
 
     check-cast v1, Ljava/lang/CharSequence;
 
-    invoke-static {v0, v1, v3, v8, v5}, Lqidxisbestlol/kl;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
+    invoke-static {v0, v1, v3, v8, v5}, Lqidxisbestlol/kl;->c(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
 
     move-result v0
 
@@ -654,7 +654,7 @@
 
     nop
 
-    invoke-static {p1}, Lqidxisbestlol/oj;->b(Ljava/lang/String;)Z
+    invoke-static {p1}, Lqidxisbestlol/og;->b(Ljava/lang/String;)Z
 
     move-result v0
 

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/op;
+.implements Lqidxisbestlol/om;
 
 
 # instance fields
@@ -15,11 +15,11 @@
 
 .field private d:Z
 
-.field private final e:Lqidxisbestlol/ov;
+.field private final e:Lqidxisbestlol/os;
 
 
 # direct methods
-.method public constructor <init>(Lqidxisbestlol/lh;Lqidxisbestlol/ov;)V
+.method public constructor <init>(Lqidxisbestlol/lh;Lqidxisbestlol/os;)V
     .locals 2
 
     const-string v0, "editor"
@@ -30,13 +30,13 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lqidxisbestlol/ln;->e:Lqidxisbestlol/ov;
+    iput-object p2, p0, Lqidxisbestlol/ln;->e:Lqidxisbestlol/os;
 
-    iget-object v0, p0, Lqidxisbestlol/ln;->e:Lqidxisbestlol/ov;
+    iget-object v0, p0, Lqidxisbestlol/ln;->e:Lqidxisbestlol/os;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lqidxisbestlol/ov;->a(I)Lqidxisbestlol/vz;
+    invoke-virtual {v0, v1}, Lqidxisbestlol/os;->a(I)Lqidxisbestlol/vz;
 
     move-result-object v0
 
@@ -55,10 +55,10 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lqidxisbestlol/ln;)Lqidxisbestlol/ov;
+.method public static final synthetic a(Lqidxisbestlol/ln;)Lqidxisbestlol/os;
     .locals 1
 
-    iget-object v0, p0, Lqidxisbestlol/ln;->e:Lqidxisbestlol/ov;
+    iget-object v0, p0, Lqidxisbestlol/ln;->e:Lqidxisbestlol/os;
 
     return-object v0
 .end method
@@ -126,14 +126,14 @@
 
     check-cast v0, Ljava/io/Closeable;
 
-    invoke-static {v0}, Lqidxisbestlol/oj;->a(Ljava/io/Closeable;)V
+    invoke-static {v0}, Lqidxisbestlol/og;->a(Ljava/io/Closeable;)V
 
     nop
 
     :try_start_2
-    iget-object v0, p0, Lqidxisbestlol/ln;->e:Lqidxisbestlol/ov;
+    iget-object v0, p0, Lqidxisbestlol/ln;->e:Lqidxisbestlol/os;
 
-    invoke-virtual {v0}, Lqidxisbestlol/ov;->d()V
+    invoke-virtual {v0}, Lqidxisbestlol/os;->d()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 

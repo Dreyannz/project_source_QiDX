@@ -308,7 +308,7 @@
     return-object v0
 .end method
 
-.method public final varargs a([Lqidxisbestlol/og;)Lqidxisbestlol/mf;
+.method public final varargs a([Lqidxisbestlol/od;)Lqidxisbestlol/mf;
     .locals 5
 
     const/4 v2, 0x0
@@ -355,7 +355,7 @@
 
     aget-object v4, p1, v1
 
-    invoke-virtual {v4}, Lqidxisbestlol/og;->a()Ljava/lang/String;
+    invoke-virtual {v4}, Lqidxisbestlol/od;->a()Ljava/lang/String;
 
     move-result-object v4
 

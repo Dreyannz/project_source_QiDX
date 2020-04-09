@@ -106,6 +106,14 @@
     return-void
 .end method
 
+.method public static final synthetic a(Lqidxisbestlol/qb;)Lqidxisbestlol/ld;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/qb;->f:Lqidxisbestlol/ld;
+
+    return-object v0
+.end method
+
 .method private final a(Ljava/net/Proxy;)V
     .locals 6
 
@@ -391,32 +399,27 @@
 .end method
 
 .method private final a(Lqidxisbestlol/ne;Ljava/net/Proxy;)V
-    .locals 4
+    .locals 3
 
-    const/4 v2, 0x1
+    new-instance v0, Lqidxisbestlol/qe;
 
-    const/4 v3, 0x0
+    invoke-direct {v0, p0, p2, p1}, Lqidxisbestlol/qe;-><init>(Lqidxisbestlol/qb;Ljava/net/Proxy;Lqidxisbestlol/ne;)V
 
-    iget-object v0, p0, Lqidxisbestlol/qb;->i:Lqidxisbestlol/mq;
+    iget-object v1, p0, Lqidxisbestlol/qb;->i:Lqidxisbestlol/mq;
 
-    iget-object v1, p0, Lqidxisbestlol/qb;->h:Lqidxisbestlol/ls;
+    iget-object v2, p0, Lqidxisbestlol/qb;->h:Lqidxisbestlol/ls;
 
-    invoke-virtual {v0, v1, p1}, Lqidxisbestlol/mq;->a(Lqidxisbestlol/ls;Lqidxisbestlol/ne;)V
+    invoke-virtual {v1, v2, p1}, Lqidxisbestlol/mq;->a(Lqidxisbestlol/ls;Lqidxisbestlol/ne;)V
 
-    if-eqz p2, :cond_0
-
-    invoke-static {p2}, Lqidxisbestlol/gj;->a(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v0}, Lqidxisbestlol/qe;->b()Ljava/util/List;
 
     move-result-object v0
 
-    move-object v1, v0
+    iput-object v0, p0, Lqidxisbestlol/qb;->b:Ljava/util/List;
 
-    move-object v2, p0
+    const/4 v0, 0x0
 
-    :goto_0
-    iput-object v1, v2, Lqidxisbestlol/qb;->b:Ljava/util/List;
-
-    iput v3, p0, Lqidxisbestlol/qb;->c:I
+    iput v0, p0, Lqidxisbestlol/qb;->c:I
 
     iget-object v0, p0, Lqidxisbestlol/qb;->i:Lqidxisbestlol/mq;
 
@@ -427,70 +430,6 @@
     invoke-virtual {v0, v1, p1, v2}, Lqidxisbestlol/mq;->a(Lqidxisbestlol/ls;Lqidxisbestlol/ne;Ljava/util/List;)V
 
     return-void
-
-    :cond_0
-    iget-object v0, p0, Lqidxisbestlol/qb;->f:Lqidxisbestlol/ld;
-
-    invoke-virtual {v0}, Lqidxisbestlol/ld;->k()Ljava/net/ProxySelector;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lqidxisbestlol/ne;->b()Ljava/net/URI;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/net/ProxySelector;->select(Ljava/net/URI;)Ljava/util/List;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    move-object v0, v1
-
-    check-cast v0, Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    move v0, v2
-
-    :goto_1
-    if-eqz v0, :cond_2
-
-    invoke-static {v1}, Lqidxisbestlol/oj;->b(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    move-object v2, p0
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v3
-
-    goto :goto_1
-
-    :cond_2
-    move-object v0, p0
-
-    new-array v1, v2, [Ljava/net/Proxy;
-
-    sget-object v2, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
-
-    aput-object v2, v1, v3
-
-    invoke-static {v1}, Lqidxisbestlol/oj;->a([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    move-object v2, v0
-
-    goto :goto_0
 .end method
 
 .method private final c()Z
@@ -695,15 +634,15 @@
 
     check-cast v1, Ljava/net/InetSocketAddress;
 
-    new-instance v4, Lqidxisbestlol/of;
+    new-instance v4, Lqidxisbestlol/oc;
 
     iget-object v5, p0, Lqidxisbestlol/qb;->f:Lqidxisbestlol/ld;
 
-    invoke-direct {v4, v5, v2, v1}, Lqidxisbestlol/of;-><init>(Lqidxisbestlol/ld;Ljava/net/Proxy;Ljava/net/InetSocketAddress;)V
+    invoke-direct {v4, v5, v2, v1}, Lqidxisbestlol/oc;-><init>(Lqidxisbestlol/ld;Ljava/net/Proxy;Ljava/net/InetSocketAddress;)V
 
     iget-object v1, p0, Lqidxisbestlol/qb;->g:Lqidxisbestlol/pz;
 
-    invoke-virtual {v1, v4}, Lqidxisbestlol/pz;->c(Lqidxisbestlol/of;)Z
+    invoke-virtual {v1, v4}, Lqidxisbestlol/pz;->c(Lqidxisbestlol/oc;)Z
 
     move-result v1
 

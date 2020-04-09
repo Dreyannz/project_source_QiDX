@@ -7,5 +7,5 @@
 .method public abstract a(Lqidxisbestlol/ls;Ljava/io/IOException;)V
 .end method
 
-.method public abstract a(Lqidxisbestlol/ls;Lqidxisbestlol/oa;)V
+.method public abstract a(Lqidxisbestlol/ls;Lqidxisbestlol/nx;)V
 .end method

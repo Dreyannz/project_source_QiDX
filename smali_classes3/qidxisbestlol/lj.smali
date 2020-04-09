@@ -29,11 +29,11 @@
 
     iget-object v0, p0, Lqidxisbestlol/lj;->a:Lqidxisbestlol/li;
 
-    invoke-virtual {v0}, Lqidxisbestlol/li;->d()Lqidxisbestlol/oy;
+    invoke-virtual {v0}, Lqidxisbestlol/li;->d()Lqidxisbestlol/ov;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lqidxisbestlol/oy;->close()V
+    invoke-virtual {v0}, Lqidxisbestlol/ov;->close()V
 
     invoke-super {p0}, Lqidxisbestlol/vk;->close()V
 

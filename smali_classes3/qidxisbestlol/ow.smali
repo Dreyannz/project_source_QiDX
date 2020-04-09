@@ -1,73 +1,104 @@
-.class final Lqidxisbestlol/ow;
-.super Lqidxisbestlol/ij;
+.class public final Lqidxisbestlol/ow;
+.super Lqidxisbestlol/oz;
 .source "SourceFile"
-
-# interfaces
-.implements Lqidxisbestlol/hx;
 
 
 # instance fields
-.field final synthetic a:Lqidxisbestlol/ov;
-
-.field final synthetic b:I
-
-
-# direct methods
-.method constructor <init>(Lqidxisbestlol/ov;I)V
-    .locals 1
-
-    iput-object p1, p0, Lqidxisbestlol/ow;->a:Lqidxisbestlol/ov;
-
-    iput p2, p0, Lqidxisbestlol/ow;->b:I
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lqidxisbestlol/ij;-><init>(I)V
-
-    return-void
-.end method
+.field final synthetic a:Lqidxisbestlol/oq;
 
 
 # virtual methods
-.method public bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public a()J
+    .locals 6
 
-    check-cast p1, Ljava/io/IOException;
+    const-wide/16 v4, -0x1
 
-    invoke-virtual {p0, p1}, Lqidxisbestlol/ow;->a(Ljava/io/IOException;)V
-
-    sget-object v0, Lqidxisbestlol/fu;->a:Lqidxisbestlol/fu;
-
-    return-object v0
-.end method
-
-.method public final a(Ljava/io/IOException;)V
-    .locals 2
-
-    const-string v0, "it"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lqidxisbestlol/ow;->a:Lqidxisbestlol/ov;
-
-    iget-object v1, v0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/ot;
+    iget-object v1, p0, Lqidxisbestlol/ow;->a:Lqidxisbestlol/oq;
 
     monitor-enter v1
 
     nop
 
     :try_start_0
-    iget-object v0, p0, Lqidxisbestlol/ow;->a:Lqidxisbestlol/ov;
+    iget-object v0, p0, Lqidxisbestlol/ow;->a:Lqidxisbestlol/oq;
 
-    invoke-virtual {v0}, Lqidxisbestlol/ov;->b()V
+    invoke-static {v0}, Lqidxisbestlol/oq;->a(Lqidxisbestlol/oq;)Z
 
-    sget-object v0, Lqidxisbestlol/fu;->a:Lqidxisbestlol/fu;
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lqidxisbestlol/ow;->a:Lqidxisbestlol/oq;
+
+    invoke-virtual {v0}, Lqidxisbestlol/oq;->a()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
     monitor-exit v1
 
-    return-void
+    :goto_0
+    return-wide v4
+
+    :cond_1
+    nop
+
+    :try_start_1
+    iget-object v0, p0, Lqidxisbestlol/ow;->a:Lqidxisbestlol/oq;
+
+    invoke-virtual {v0}, Lqidxisbestlol/oq;->d()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_1
+    nop
+
+    :try_start_2
+    iget-object v0, p0, Lqidxisbestlol/ow;->a:Lqidxisbestlol/oq;
+
+    invoke-static {v0}, Lqidxisbestlol/oq;->b(Lqidxisbestlol/oq;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lqidxisbestlol/ow;->a:Lqidxisbestlol/oq;
+
+    invoke-virtual {v0}, Lqidxisbestlol/oq;->c()V
+
+    iget-object v0, p0, Lqidxisbestlol/ow;->a:Lqidxisbestlol/oq;
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v2}, Lqidxisbestlol/oq;->a(Lqidxisbestlol/oq;I)V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :cond_2
+    :goto_2
+    monitor-exit v1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_3
+    iget-object v0, p0, Lqidxisbestlol/ow;->a:Lqidxisbestlol/oq;
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v2}, Lqidxisbestlol/oq;->b(Lqidxisbestlol/oq;Z)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    goto :goto_1
 
     :catchall_0
     move-exception v0
@@ -75,4 +106,30 @@
     monitor-exit v1
 
     throw v0
+
+    :catch_1
+    move-exception v0
+
+    :try_start_4
+    iget-object v0, p0, Lqidxisbestlol/ow;->a:Lqidxisbestlol/oq;
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v2}, Lqidxisbestlol/oq;->c(Lqidxisbestlol/oq;Z)V
+
+    iget-object v0, p0, Lqidxisbestlol/ow;->a:Lqidxisbestlol/oq;
+
+    invoke-static {}, Lqidxisbestlol/vp;->a()Lqidxisbestlol/vz;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lqidxisbestlol/vp;->a(Lqidxisbestlol/vz;)Lqidxisbestlol/vf;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lqidxisbestlol/oq;->a(Lqidxisbestlol/oq;Lqidxisbestlol/vf;)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    goto :goto_2
 .end method

@@ -1,12 +1,12 @@
 .class final Lqidxisbestlol/li;
-.super Lqidxisbestlol/oc;
+.super Lqidxisbestlol/nz;
 .source "SourceFile"
 
 
 # instance fields
 .field private final b:Lqidxisbestlol/vg;
 
-.field private final c:Lqidxisbestlol/oy;
+.field private final c:Lqidxisbestlol/ov;
 
 .field private final d:Ljava/lang/String;
 
@@ -14,26 +14,26 @@
 
 
 # direct methods
-.method public constructor <init>(Lqidxisbestlol/oy;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lqidxisbestlol/ov;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
     const-string v0, "snapshot"
 
     invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lqidxisbestlol/oc;-><init>()V
+    invoke-direct {p0}, Lqidxisbestlol/nz;-><init>()V
 
-    iput-object p1, p0, Lqidxisbestlol/li;->c:Lqidxisbestlol/oy;
+    iput-object p1, p0, Lqidxisbestlol/li;->c:Lqidxisbestlol/ov;
 
     iput-object p2, p0, Lqidxisbestlol/li;->d:Ljava/lang/String;
 
     iput-object p3, p0, Lqidxisbestlol/li;->e:Ljava/lang/String;
 
-    iget-object v0, p0, Lqidxisbestlol/li;->c:Lqidxisbestlol/oy;
+    iget-object v0, p0, Lqidxisbestlol/li;->c:Lqidxisbestlol/ov;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lqidxisbestlol/oy;->a(I)Lqidxisbestlol/wb;
+    invoke-virtual {v0, v1}, Lqidxisbestlol/ov;->a(I)Lqidxisbestlol/wb;
 
     move-result-object v1
 
@@ -85,7 +85,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-static {v2, v0, v1}, Lqidxisbestlol/oj;->a(Ljava/lang/String;J)J
+    invoke-static {v2, v0, v1}, Lqidxisbestlol/og;->a(Ljava/lang/String;J)J
 
     move-result-wide v0
 
@@ -101,10 +101,10 @@
     return-object v0
 .end method
 
-.method public final d()Lqidxisbestlol/oy;
+.method public final d()Lqidxisbestlol/ov;
     .locals 1
 
-    iget-object v0, p0, Lqidxisbestlol/li;->c:Lqidxisbestlol/oy;
+    iget-object v0, p0, Lqidxisbestlol/li;->c:Lqidxisbestlol/ov;
 
     return-object v0
 .end method

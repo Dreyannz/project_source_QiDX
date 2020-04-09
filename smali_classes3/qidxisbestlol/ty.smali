@@ -51,9 +51,9 @@
 .method public final b()Z
     .locals 2
 
-    sget-object v0, Lqidxisbestlol/tg;->a:Lqidxisbestlol/th;
+    sget-object v0, Lqidxisbestlol/te;->a:Lqidxisbestlol/tf;
 
-    invoke-virtual {v0}, Lqidxisbestlol/th;->a()Z
+    invoke-virtual {v0}, Lqidxisbestlol/tf;->a()Z
 
     move-result v0
 

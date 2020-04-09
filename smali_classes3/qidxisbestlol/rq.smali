@@ -19,15 +19,3 @@
 
     return-void
 .end method
-
-
-# virtual methods
-.method public final a()Lqidxisbestlol/sy;
-    .locals 1
-
-    invoke-static {}, Lqidxisbestlol/rn;->m()Lqidxisbestlol/sy;
-
-    move-result-object v0
-
-    return-object v0
-.end method
