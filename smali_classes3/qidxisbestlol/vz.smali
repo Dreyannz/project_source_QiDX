@@ -4,18 +4,14 @@
 
 # interfaces
 .implements Ljava/io/Closeable;
-.implements Ljava/io/Flushable;
 
 
 # virtual methods
-.method public abstract a()Lqidxisbestlol/wc;
+.method public abstract a(Lqidxisbestlol/vb;J)J
 .end method
 
-.method public abstract a_(Lqidxisbestlol/vd;J)V
+.method public abstract a()Lqidxisbestlol/wa;
 .end method
 
 .method public abstract close()V
-.end method
-
-.method public abstract flush()V
 .end method

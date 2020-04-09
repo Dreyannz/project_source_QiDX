@@ -1,104 +1,45 @@
 .class Lqidxisbestlol/ej;
-.super Ljava/lang/Object;
+.super Lqidxisbestlol/ag;
 .source "SourceFile"
-
-# interfaces
-.implements Lqidxisbestlol/ak;
-
-
-# instance fields
-.field final synthetic a:Ljava/lang/Class;
-
-.field final synthetic b:Lqidxisbestlol/ai;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Class;Lqidxisbestlol/ai;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lqidxisbestlol/ej;->a:Ljava/lang/Class;
-
-    iput-object p2, p0, Lqidxisbestlol/ej;->b:Lqidxisbestlol/ai;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lqidxisbestlol/ag;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/n;Lqidxisbestlol/ev;)Lqidxisbestlol/ai;
-    .locals 2
+.method public a(Lqidxisbestlol/eu;Ljava/lang/Boolean;)V
+    .locals 1
 
-    invoke-virtual {p2}, Lqidxisbestlol/ev;->a()Ljava/lang/Class;
+    if-nez p2, :cond_0
 
-    move-result-object v1
-
-    iget-object v0, p0, Lqidxisbestlol/ej;->a:Ljava/lang/Class;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
+    const-string v0, "null"
 
     :goto_0
-    return-object v0
+    invoke-virtual {p1, v0}, Lqidxisbestlol/eu;->b(Ljava/lang/String;)Lqidxisbestlol/eu;
+
+    return-void
 
     :cond_0
-    new-instance v0, Lqidxisbestlol/ek;
+    invoke-virtual {p2}, Ljava/lang/Boolean;->toString()Ljava/lang/String;
 
-    invoke-direct {v0, p0, v1}, Lqidxisbestlol/ek;-><init>(Lqidxisbestlol/ej;Ljava/lang/Class;)V
+    move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 2
+.method public bridge synthetic a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p2, Ljava/lang/Boolean;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/ej;->a(Lqidxisbestlol/eu;Ljava/lang/Boolean;)V
 
-    const-string v1, "Factory[typeHierarchy="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lqidxisbestlol/ej;->a:Ljava/lang/Class;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ",adapter="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lqidxisbestlol/ej;->b:Lqidxisbestlol/ai;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

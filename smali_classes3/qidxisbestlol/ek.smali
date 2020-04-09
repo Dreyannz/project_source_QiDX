@@ -1,37 +1,33 @@
 .class Lqidxisbestlol/ek;
-.super Lqidxisbestlol/ai;
+.super Lqidxisbestlol/ag;
 .source "SourceFile"
 
 
-# instance fields
-.field final synthetic a:Ljava/lang/Class;
-
-.field final synthetic b:Lqidxisbestlol/ej;
-
-
 # direct methods
-.method constructor <init>(Lqidxisbestlol/ej;Ljava/lang/Class;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lqidxisbestlol/ek;->b:Lqidxisbestlol/ej;
-
-    iput-object p2, p0, Lqidxisbestlol/ek;->a:Ljava/lang/Class;
-
-    invoke-direct {p0}, Lqidxisbestlol/ai;-><init>()V
+    invoke-direct {p0}, Lqidxisbestlol/ag;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
-    .locals 1
+.method public a(Lqidxisbestlol/eu;Ljava/lang/Number;)V
+    .locals 0
 
-    iget-object v0, p0, Lqidxisbestlol/ek;->b:Lqidxisbestlol/ej;
+    invoke-virtual {p1, p2}, Lqidxisbestlol/eu;->a(Ljava/lang/Number;)Lqidxisbestlol/eu;
 
-    iget-object v0, v0, Lqidxisbestlol/ej;->b:Lqidxisbestlol/ai;
+    return-void
+.end method
 
-    invoke-virtual {v0, p1, p2}, Lqidxisbestlol/ai;->a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
+.method public bridge synthetic a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/ek;->a(Lqidxisbestlol/eu;Ljava/lang/Number;)V
 
     return-void
 .end method

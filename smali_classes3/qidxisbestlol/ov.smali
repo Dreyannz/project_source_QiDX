@@ -1,114 +1,117 @@
-.class public final Lqidxisbestlol/ov;
-.super Ljava/lang/Object;
+.class final Lqidxisbestlol/ov;
+.super Lqidxisbestlol/ih;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Closeable;
+.implements Lqidxisbestlol/hv;
 
 
 # instance fields
-.field final synthetic a:Lqidxisbestlol/oq;
-
-.field private final b:Ljava/lang/String;
-
-.field private final c:J
-
-.field private final d:Ljava/util/List;
-
-.field private final e:[J
+.field final synthetic a:Lqidxisbestlol/oo;
 
 
 # direct methods
-.method public constructor <init>(Lqidxisbestlol/oq;Ljava/lang/String;JLjava/util/List;[J)V
+.method constructor <init>(Lqidxisbestlol/oo;)V
     .locals 1
 
-    const-string v0, "key"
+    iput-object p1, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/oo;
 
-    invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 v0, 0x1
 
-    const-string v0, "sources"
-
-    invoke-static {p5, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "lengths"
-
-    invoke-static {p6, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iput-object p1, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/oq;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lqidxisbestlol/ov;->b:Ljava/lang/String;
-
-    iput-wide p3, p0, Lqidxisbestlol/ov;->c:J
-
-    iput-object p5, p0, Lqidxisbestlol/ov;->d:Ljava/util/List;
-
-    iput-object p6, p0, Lqidxisbestlol/ov;->e:[J
+    invoke-direct {p0, v0}, Lqidxisbestlol/ih;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lqidxisbestlol/os;
-    .locals 4
-
-    iget-object v0, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/oq;
-
-    iget-object v1, p0, Lqidxisbestlol/ov;->b:Ljava/lang/String;
-
-    iget-wide v2, p0, Lqidxisbestlol/ov;->c:J
-
-    invoke-virtual {v0, v1, v2, v3}, Lqidxisbestlol/oq;->a(Ljava/lang/String;J)Lqidxisbestlol/os;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final a(I)Lqidxisbestlol/wb;
+.method public bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lqidxisbestlol/ov;->d:Ljava/util/List;
+    check-cast p1, Ljava/io/IOException;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lqidxisbestlol/ov;->a(Ljava/io/IOException;)V
 
-    move-result-object v0
-
-    check-cast v0, Lqidxisbestlol/wb;
+    sget-object v0, Lqidxisbestlol/fs;->a:Lqidxisbestlol/fs;
 
     return-object v0
 .end method
 
-.method public close()V
-    .locals 2
+.method public final a(Ljava/io/IOException;)V
+    .locals 5
 
-    iget-object v0, p0, Lqidxisbestlol/ov;->d:Ljava/util/List;
+    const-string v0, "it"
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v1
+    iget-object v1, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/oo;
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
+    sget-boolean v0, Lqidxisbestlol/oe;->f:Z
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v1}, Ljava/lang/Thread;->holdsLock(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, Lqidxisbestlol/wb;
+    if-nez v0, :cond_0
 
-    check-cast v0, Ljava/io/Closeable;
+    new-instance v0, Ljava/lang/AssertionError;
 
-    invoke-static {v0}, Lqidxisbestlol/og;->a(Ljava/io/Closeable;)V
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Thread "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v3
+
+    const-string v4, "Thread.currentThread()"
+
+    invoke-static {v3, v4}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " MUST hold lock on "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    throw v0
 
     :cond_0
+    nop
+
+    iget-object v0, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/oo;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lqidxisbestlol/oo;->a(Lqidxisbestlol/oo;Z)V
+
     return-void
 .end method

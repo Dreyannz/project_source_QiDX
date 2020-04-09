@@ -1,5 +1,5 @@
 .class Lqidxisbestlol/ds;
-.super Lqidxisbestlol/ai;
+.super Lqidxisbestlol/ag;
 .source "SourceFile"
 
 
@@ -7,65 +7,39 @@
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lqidxisbestlol/ai;-><init>()V
+    invoke-direct {p0}, Lqidxisbestlol/ag;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
+.method public bridge synthetic a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p2, Ljava/util/BitSet;
+    check-cast p2, Ljava/net/URL;
 
-    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/ds;->a(Lqidxisbestlol/ew;Ljava/util/BitSet;)V
+    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/ds;->a(Lqidxisbestlol/eu;Ljava/net/URL;)V
 
     return-void
 .end method
 
-.method public a(Lqidxisbestlol/ew;Ljava/util/BitSet;)V
-    .locals 6
+.method public a(Lqidxisbestlol/eu;Ljava/net/URL;)V
+    .locals 1
 
-    const/4 v1, 0x0
+    if-nez p2, :cond_0
 
-    invoke-virtual {p1}, Lqidxisbestlol/ew;->b()Lqidxisbestlol/ew;
-
-    invoke-virtual {p2}, Ljava/util/BitSet;->length()I
-
-    move-result v3
-
-    move v2, v1
+    const/4 v0, 0x0
 
     :goto_0
-    if-ge v2, v3, :cond_1
-
-    invoke-virtual {p2, v2}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_1
-    int-to-long v4, v0
-
-    invoke-virtual {p1, v4, v5}, Lqidxisbestlol/ew;->a(J)Lqidxisbestlol/ew;
-
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p1}, Lqidxisbestlol/ew;->c()Lqidxisbestlol/ew;
+    invoke-virtual {p1, v0}, Lqidxisbestlol/eu;->b(Ljava/lang/String;)Lqidxisbestlol/eu;
 
     return-void
+
+    :cond_0
+    invoke-virtual {p2}, Ljava/net/URL;->toExternalForm()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

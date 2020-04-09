@@ -1,53 +1,144 @@
 .class public final Lqidxisbestlol/uj;
-.super Lqidxisbestlol/ub;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lqidxisbestlol/uk;
-
-
-# instance fields
-.field private final c:Ljava/lang/Class;
-
-.field private final d:Ljava/lang/Class;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static final a(ILjava/lang/String;Ljava/lang/Throwable;)V
+    .locals 9
 
-    new-instance v0, Lqidxisbestlol/uk;
+    const/4 v3, 0x0
 
-    const/4 v1, 0x0
+    const-string v0, "message"
 
-    invoke-direct {v0, v1}, Lqidxisbestlol/uk;-><init>(Lqidxisbestlol/ig;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sput-object v0, Lqidxisbestlol/uj;->b:Lqidxisbestlol/uk;
+    packed-switch p0, :pswitch_data_0
 
+    const/4 v0, 0x3
+
+    move v8, v0
+
+    :goto_0
+    if-eqz p2, :cond_4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\n"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {p2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    :goto_1
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    move v2, v3
+
+    :goto_2
+    if-ge v2, v7, :cond_2
+
+    move-object v0, v6
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    const/16 v1, 0xa
+
+    const/4 v4, 0x4
+
+    const/4 v5, 0x0
+
+    invoke-static/range {v0 .. v5}, Lqidxisbestlol/kj;->a(Ljava/lang/CharSequence;CIZILjava/lang/Object;)I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    :goto_3
+    add-int/lit16 v1, v2, 0xfa0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    const-string v4, "OkHttp"
+
+    if-nez v6, :cond_1
+
+    new-instance v0, Lqidxisbestlol/fp;
+
+    const-string v1, "null cannot be cast to non-null type java.lang.String"
+
+    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    const/4 v0, 0x5
+
+    move v8, v0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v7
+
+    goto :goto_3
+
+    :cond_1
+    invoke-virtual {v6, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v5, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
+
+    invoke-static {v2, v5}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v8, v4, v2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+
+    if-lt v1, v0, :cond_3
+
+    add-int/lit8 v2, v1, 0x1
+
+    goto :goto_2
+
+    :cond_2
     return-void
-.end method
 
-.method public constructor <init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V
-    .locals 1
+    :cond_3
+    move v2, v1
 
-    const-string v0, "sslSocketClass"
+    goto :goto_3
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    :cond_4
+    move-object v6, p1
 
-    const-string v0, "sslSocketFactoryClass"
+    goto :goto_1
 
-    invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "paramClass"
-
-    invoke-static {p3, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-direct {p0, p1}, Lqidxisbestlol/ub;-><init>(Ljava/lang/Class;)V
-
-    iput-object p2, p0, Lqidxisbestlol/uj;->c:Ljava/lang/Class;
-
-    iput-object p3, p0, Lqidxisbestlol/uj;->d:Ljava/lang/Class;
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x5
+        :pswitch_0
+    .end packed-switch
 .end method

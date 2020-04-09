@@ -1,49 +1,59 @@
 .class Lqidxisbestlol/r;
-.super Lqidxisbestlol/ai;
+.super Lqidxisbestlol/ag;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic a:Lqidxisbestlol/ai;
+.field private a:Lqidxisbestlol/ag;
 
 
 # direct methods
-.method constructor <init>(Lqidxisbestlol/ai;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lqidxisbestlol/r;->a:Lqidxisbestlol/ai;
-
-    invoke-direct {p0}, Lqidxisbestlol/ai;-><init>()V
+    invoke-direct {p0}, Lqidxisbestlol/ag;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
-    .locals 0
+.method public a(Lqidxisbestlol/ag;)V
+    .locals 1
 
-    check-cast p2, Ljava/util/concurrent/atomic/AtomicLong;
+    iget-object v0, p0, Lqidxisbestlol/r;->a:Lqidxisbestlol/ag;
 
-    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/r;->a(Lqidxisbestlol/ew;Ljava/util/concurrent/atomic/AtomicLong;)V
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
+
+    throw v0
+
+    :cond_0
+    iput-object p1, p0, Lqidxisbestlol/r;->a:Lqidxisbestlol/ag;
 
     return-void
 .end method
 
-.method public a(Lqidxisbestlol/ew;Ljava/util/concurrent/atomic/AtomicLong;)V
-    .locals 4
+.method public a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lqidxisbestlol/r;->a:Lqidxisbestlol/ai;
+    iget-object v0, p0, Lqidxisbestlol/r;->a:Lqidxisbestlol/ag;
 
-    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+    if-nez v0, :cond_0
 
-    move-result-wide v2
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
-    move-result-object v1
+    throw v0
 
-    invoke-virtual {v0, p1, v1}, Lqidxisbestlol/ai;->a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
+    :cond_0
+    iget-object v0, p0, Lqidxisbestlol/r;->a:Lqidxisbestlol/ag;
+
+    invoke-virtual {v0, p1, p2}, Lqidxisbestlol/ag;->a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
 
     return-void
 .end method

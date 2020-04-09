@@ -1,10 +1,11 @@
-.class public final Lqidxisbestlol/gv;
+.class final Lqidxisbestlol/gv;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/ListIterator;
-.implements Lqidxisbestlol/iv;
+.implements Ljava/io/Serializable;
+.implements Ljava/util/Map;
+.implements Lqidxisbestlol/it;
 
 
 # static fields
@@ -34,19 +35,55 @@
 
 
 # virtual methods
-.method public a()Ljava/lang/Void;
+.method public a()I
     .locals 1
 
-    new-instance v0, Ljava/util/NoSuchElementException;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
+    return v0
 .end method
 
-.method public synthetic add(Ljava/lang/Object;)V
+.method public a(Ljava/lang/Object;)Ljava/lang/Void;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public a(Ljava/lang/Void;)Z
+    .locals 1
+
+    const-string v0, "value"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public b()Ljava/util/Set;
+    .locals 1
+
+    sget-object v0, Lqidxisbestlol/gw;->a:Lqidxisbestlol/gw;
+
+    check-cast v0, Ljava/util/Set;
+
+    return-object v0
+.end method
+
+.method public c()Ljava/util/Set;
+    .locals 1
+
+    sget-object v0, Lqidxisbestlol/gw;->a:Lqidxisbestlol/gw;
+
+    check-cast v0, Ljava/util/Set;
+
+    return-object v0
+.end method
+
+.method public clear()V
     .locals 2
 
     new-instance v0, Ljava/lang/UnsupportedOperationException;
@@ -58,19 +95,7 @@
     throw v0
 .end method
 
-.method public b()Ljava/lang/Void;
-    .locals 1
-
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-.end method
-
-.method public hasNext()Z
+.method public containsKey(Ljava/lang/Object;)Z
     .locals 1
 
     const/4 v0, 0x0
@@ -78,25 +103,85 @@
     return v0
 .end method
 
-.method public hasPrevious()Z
+.method public final containsValue(Ljava/lang/Object;)Z
     .locals 1
 
+    instance-of v0, p1, Ljava/lang/Void;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ljava/lang/Void;
+
+    invoke-virtual {p0, p1}, Lqidxisbestlol/gv;->a(Ljava/lang/Void;)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
     const/4 v0, 0x0
 
-    return v0
+    goto :goto_0
 .end method
 
-.method public synthetic next()Ljava/lang/Object;
+.method public d()Ljava/util/Collection;
     .locals 1
 
-    invoke-virtual {p0}, Lqidxisbestlol/gv;->a()Ljava/lang/Void;
+    sget-object v0, Lqidxisbestlol/gu;->a:Lqidxisbestlol/gu;
+
+    check-cast v0, Ljava/util/Collection;
+
+    return-object v0
+.end method
+
+.method public final entrySet()Ljava/util/Set;
+    .locals 1
+
+    invoke-virtual {p0}, Lqidxisbestlol/gv;->b()Ljava/util/Set;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public nextIndex()I
+.method public equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Ljava/util/Map;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ljava/util/Map;
+
+    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lqidxisbestlol/gv;->a(Ljava/lang/Object;)Ljava/lang/Void;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public hashCode()I
     .locals 1
 
     const/4 v0, 0x0
@@ -104,44 +189,84 @@
     return v0
 .end method
 
-.method public synthetic previous()Ljava/lang/Object;
+.method public isEmpty()Z
     .locals 1
 
-    invoke-virtual {p0}, Lqidxisbestlol/gv;->b()Ljava/lang/Void;
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final keySet()Ljava/util/Set;
+    .locals 1
+
+    invoke-virtual {p0}, Lqidxisbestlol/gv;->c()Ljava/util/Set;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public previousIndex()I
+.method public synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public putAll(Ljava/util/Map;)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final size()I
     .locals 1
 
-    const/4 v0, -0x1
+    invoke-virtual {p0}, Lqidxisbestlol/gv;->a()I
+
+    move-result v0
 
     return v0
 .end method
 
-.method public remove()V
-    .locals 2
+.method public toString()Ljava/lang/String;
+    .locals 1
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    const-string v0, "{}"
 
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object v0
 .end method
 
-.method public synthetic set(Ljava/lang/Object;)V
-    .locals 2
+.method public final values()Ljava/util/Collection;
+    .locals 1
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    invoke-virtual {p0}, Lqidxisbestlol/gv;->d()Ljava/util/Collection;
 
-    const-string v1, "Operation is not supported for read-only collection"
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object v0
 .end method

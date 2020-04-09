@@ -3,18 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/bw;
+.implements Lqidxisbestlol/bu;
 
 
 # instance fields
-.field final synthetic a:Lqidxisbestlol/av;
+.field final synthetic a:Lqidxisbestlol/s;
+
+.field final synthetic b:Ljava/lang/reflect/Type;
+
+.field final synthetic c:Lqidxisbestlol/at;
 
 
 # direct methods
-.method constructor <init>(Lqidxisbestlol/av;)V
+.method constructor <init>(Lqidxisbestlol/at;Lqidxisbestlol/s;Ljava/lang/reflect/Type;)V
     .locals 0
 
-    iput-object p1, p0, Lqidxisbestlol/ba;->a:Lqidxisbestlol/av;
+    iput-object p1, p0, Lqidxisbestlol/ba;->c:Lqidxisbestlol/at;
+
+    iput-object p2, p0, Lqidxisbestlol/ba;->a:Lqidxisbestlol/s;
+
+    iput-object p3, p0, Lqidxisbestlol/ba;->b:Ljava/lang/reflect/Type;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -24,11 +32,15 @@
 
 # virtual methods
 .method public a()Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lqidxisbestlol/bo;
+    iget-object v0, p0, Lqidxisbestlol/ba;->a:Lqidxisbestlol/s;
 
-    invoke-direct {v0}, Lqidxisbestlol/bo;-><init>()V
+    iget-object v1, p0, Lqidxisbestlol/ba;->b:Ljava/lang/reflect/Type;
+
+    invoke-interface {v0, v1}, Lqidxisbestlol/s;->a(Ljava/lang/reflect/Type;)Ljava/lang/Object;
+
+    move-result-object v0
 
     return-object v0
 .end method

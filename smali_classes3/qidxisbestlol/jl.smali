@@ -2,4 +2,4 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lqidxisbestlol/ji;
+.implements Lqidxisbestlol/jj;

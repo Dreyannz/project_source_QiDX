@@ -1,598 +1,189 @@
-.class public final Lqidxisbestlol/no;
-.super Ljava/lang/Object;
+.class public final enum Lqidxisbestlol/no;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum a:Lqidxisbestlol/no;
+
+.field public static final enum b:Lqidxisbestlol/no;
+
+.field public static final enum c:Lqidxisbestlol/no;
+
+.field public static final enum d:Lqidxisbestlol/no;
+
+.field public static final enum e:Lqidxisbestlol/no;
+
+.field public static final enum f:Lqidxisbestlol/no;
+
+.field public static final g:Lqidxisbestlol/np;
+
+.field private static final synthetic h:[Lqidxisbestlol/no;
+
+
 # instance fields
-.field private A:I
-
-.field private B:I
-
-.field private C:Lqidxisbestlol/pz;
-
-.field private a:Lqidxisbestlol/mm;
-
-.field private b:Lqidxisbestlol/md;
-
-.field private final c:Ljava/util/List;
-
-.field private final d:Ljava/util/List;
-
-.field private e:Lqidxisbestlol/mt;
-
-.field private f:Z
-
-.field private g:Lqidxisbestlol/le;
-
-.field private h:Z
-
-.field private i:Z
-
-.field private j:Lqidxisbestlol/mj;
-
-.field private k:Lqidxisbestlol/lh;
-
-.field private l:Lqidxisbestlol/mn;
-
-.field private m:Ljava/net/Proxy;
-
-.field private n:Ljava/net/ProxySelector;
-
-.field private o:Lqidxisbestlol/le;
-
-.field private p:Ljavax/net/SocketFactory;
-
-.field private q:Ljavax/net/ssl/SSLSocketFactory;
-
-.field private r:Ljavax/net/ssl/X509TrustManager;
-
-.field private s:Ljava/util/List;
-
-.field private t:Ljava/util/List;
-
-.field private u:Ljavax/net/ssl/HostnameVerifier;
-
-.field private v:Lqidxisbestlol/lu;
-
-.field private w:Lqidxisbestlol/uq;
-
-.field private x:I
-
-.field private y:I
-
-.field private z:I
+.field private final i:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 9
 
-    const/16 v2, 0x2710
+    const/4 v8, 0x4
 
-    const/4 v1, 0x1
+    const/4 v7, 0x3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v6, 0x2
 
-    new-instance v0, Lqidxisbestlol/mm;
+    const/4 v5, 0x1
 
-    invoke-direct {v0}, Lqidxisbestlol/mm;-><init>()V
+    const/4 v4, 0x0
 
-    iput-object v0, p0, Lqidxisbestlol/no;->a:Lqidxisbestlol/mm;
+    const/4 v0, 0x6
 
-    new-instance v0, Lqidxisbestlol/md;
+    new-array v0, v0, [Lqidxisbestlol/no;
 
-    invoke-direct {v0}, Lqidxisbestlol/md;-><init>()V
+    new-instance v1, Lqidxisbestlol/no;
 
-    iput-object v0, p0, Lqidxisbestlol/no;->b:Lqidxisbestlol/md;
+    const-string v2, "HTTP_1_0"
 
-    new-instance v0, Ljava/util/ArrayList;
+    const-string v3, "http/1.0"
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v1, v2, v4, v3}, Lqidxisbestlol/no;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    check-cast v0, Ljava/util/List;
+    sput-object v1, Lqidxisbestlol/no;->a:Lqidxisbestlol/no;
 
-    iput-object v0, p0, Lqidxisbestlol/no;->c:Ljava/util/List;
+    aput-object v1, v0, v4
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v1, Lqidxisbestlol/no;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const-string v2, "HTTP_1_1"
 
-    check-cast v0, Ljava/util/List;
+    const-string v3, "http/1.1"
 
-    iput-object v0, p0, Lqidxisbestlol/no;->d:Ljava/util/List;
+    invoke-direct {v1, v2, v5, v3}, Lqidxisbestlol/no;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sget-object v0, Lqidxisbestlol/mq;->a:Lqidxisbestlol/mq;
+    sput-object v1, Lqidxisbestlol/no;->b:Lqidxisbestlol/no;
 
-    invoke-static {v0}, Lqidxisbestlol/og;->a(Lqidxisbestlol/mq;)Lqidxisbestlol/mt;
+    aput-object v1, v0, v5
 
-    move-result-object v0
+    new-instance v1, Lqidxisbestlol/no;
 
-    iput-object v0, p0, Lqidxisbestlol/no;->e:Lqidxisbestlol/mt;
+    const-string v2, "SPDY_3"
 
-    iput-boolean v1, p0, Lqidxisbestlol/no;->f:Z
+    const-string v3, "spdy/3.1"
 
-    sget-object v0, Lqidxisbestlol/le;->a:Lqidxisbestlol/le;
+    invoke-direct {v1, v2, v6, v3}, Lqidxisbestlol/no;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iput-object v0, p0, Lqidxisbestlol/no;->g:Lqidxisbestlol/le;
+    sput-object v1, Lqidxisbestlol/no;->c:Lqidxisbestlol/no;
 
-    iput-boolean v1, p0, Lqidxisbestlol/no;->h:Z
+    aput-object v1, v0, v6
 
-    iput-boolean v1, p0, Lqidxisbestlol/no;->i:Z
+    new-instance v1, Lqidxisbestlol/no;
 
-    sget-object v0, Lqidxisbestlol/mj;->a:Lqidxisbestlol/mj;
+    const-string v2, "HTTP_2"
 
-    iput-object v0, p0, Lqidxisbestlol/no;->j:Lqidxisbestlol/mj;
+    const-string v3, "h2"
 
-    sget-object v0, Lqidxisbestlol/mn;->a:Lqidxisbestlol/mn;
+    invoke-direct {v1, v2, v7, v3}, Lqidxisbestlol/no;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iput-object v0, p0, Lqidxisbestlol/no;->l:Lqidxisbestlol/mn;
+    sput-object v1, Lqidxisbestlol/no;->d:Lqidxisbestlol/no;
 
-    sget-object v0, Lqidxisbestlol/le;->a:Lqidxisbestlol/le;
+    aput-object v1, v0, v7
 
-    iput-object v0, p0, Lqidxisbestlol/no;->o:Lqidxisbestlol/le;
+    new-instance v1, Lqidxisbestlol/no;
 
-    invoke-static {}, Ljavax/net/SocketFactory;->getDefault()Ljavax/net/SocketFactory;
+    const-string v2, "H2_PRIOR_KNOWLEDGE"
 
-    move-result-object v0
+    const-string v3, "h2_prior_knowledge"
 
-    const-string v1, "SocketFactory.getDefault()"
+    invoke-direct {v1, v2, v8, v3}, Lqidxisbestlol/no;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    invoke-static {v0, v1}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    sput-object v1, Lqidxisbestlol/no;->e:Lqidxisbestlol/no;
 
-    iput-object v0, p0, Lqidxisbestlol/no;->p:Ljavax/net/SocketFactory;
+    aput-object v1, v0, v8
 
-    sget-object v0, Lqidxisbestlol/nn;->a:Lqidxisbestlol/np;
+    const/4 v1, 0x5
 
-    invoke-virtual {v0}, Lqidxisbestlol/np;->b()Ljava/util/List;
+    new-instance v2, Lqidxisbestlol/no;
 
-    move-result-object v0
+    const-string v3, "QUIC"
 
-    iput-object v0, p0, Lqidxisbestlol/no;->s:Ljava/util/List;
+    const/4 v4, 0x5
 
-    sget-object v0, Lqidxisbestlol/nn;->a:Lqidxisbestlol/np;
+    const-string v5, "quic"
 
-    invoke-virtual {v0}, Lqidxisbestlol/np;->a()Ljava/util/List;
+    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/no;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    move-result-object v0
+    sput-object v2, Lqidxisbestlol/no;->f:Lqidxisbestlol/no;
 
-    iput-object v0, p0, Lqidxisbestlol/no;->t:Ljava/util/List;
+    aput-object v2, v0, v1
 
-    sget-object v0, Lqidxisbestlol/us;->a:Lqidxisbestlol/us;
+    sput-object v0, Lqidxisbestlol/no;->h:[Lqidxisbestlol/no;
 
-    check-cast v0, Ljavax/net/ssl/HostnameVerifier;
+    new-instance v0, Lqidxisbestlol/np;
 
-    iput-object v0, p0, Lqidxisbestlol/no;->u:Ljavax/net/ssl/HostnameVerifier;
+    const/4 v1, 0x0
 
-    sget-object v0, Lqidxisbestlol/lu;->a:Lqidxisbestlol/lu;
+    invoke-direct {v0, v1}, Lqidxisbestlol/np;-><init>(Lqidxisbestlol/ie;)V
 
-    iput-object v0, p0, Lqidxisbestlol/no;->v:Lqidxisbestlol/lu;
-
-    iput v2, p0, Lqidxisbestlol/no;->y:I
-
-    iput v2, p0, Lqidxisbestlol/no;->z:I
-
-    iput v2, p0, Lqidxisbestlol/no;->A:I
+    sput-object v0, Lqidxisbestlol/no;->g:Lqidxisbestlol/np;
 
     return-void
 .end method
 
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lqidxisbestlol/no;->i:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static final synthetic a(Lqidxisbestlol/no;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/no;->i:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lqidxisbestlol/no;
+    .locals 1
+
+    const-class v0, Lqidxisbestlol/no;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, Lqidxisbestlol/no;
+
+    return-object v0
+.end method
+
+.method public static values()[Lqidxisbestlol/no;
+    .locals 1
+
+    sget-object v0, Lqidxisbestlol/no;->h:[Lqidxisbestlol/no;
+
+    invoke-virtual {v0}, [Lqidxisbestlol/no;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lqidxisbestlol/no;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final A()I
+.method public toString()Ljava/lang/String;
     .locals 1
 
-    iget v0, p0, Lqidxisbestlol/no;->A:I
-
-    return v0
-.end method
-
-.method public final B()I
-    .locals 1
-
-    iget v0, p0, Lqidxisbestlol/no;->B:I
-
-    return v0
-.end method
-
-.method public final C()Lqidxisbestlol/pz;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->C:Lqidxisbestlol/pz;
+    iget-object v0, p0, Lqidxisbestlol/no;->i:Ljava/lang/String;
 
     return-object v0
-.end method
-
-.method public final D()Lqidxisbestlol/nn;
-    .locals 1
-
-    new-instance v0, Lqidxisbestlol/nn;
-
-    invoke-direct {v0, p0}, Lqidxisbestlol/nn;-><init>(Lqidxisbestlol/no;)V
-
-    return-object v0
-.end method
-
-.method public final a()Lqidxisbestlol/mm;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->a:Lqidxisbestlol/mm;
-
-    return-object v0
-.end method
-
-.method public final a(JLjava/util/concurrent/TimeUnit;)Lqidxisbestlol/no;
-    .locals 3
-
-    const-string v0, "unit"
-
-    invoke-static {p3, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    move-object v0, p0
-
-    check-cast v0, Lqidxisbestlol/no;
-
-    const-string v1, "timeout"
-
-    invoke-static {v1, p1, p2, p3}, Lqidxisbestlol/og;->a(Ljava/lang/String;JLjava/util/concurrent/TimeUnit;)I
-
-    move-result v1
-
-    iput v1, v0, Lqidxisbestlol/no;->y:I
-
-    nop
-
-    check-cast p0, Lqidxisbestlol/no;
-
-    return-object p0
-.end method
-
-.method public final a(Ljavax/net/ssl/HostnameVerifier;)Lqidxisbestlol/no;
-    .locals 2
-
-    const-string v0, "hostnameVerifier"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    move-object v0, p0
-
-    check-cast v0, Lqidxisbestlol/no;
-
-    iget-object v1, v0, Lqidxisbestlol/no;->u:Ljavax/net/ssl/HostnameVerifier;
-
-    invoke-static {p1, v1}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    xor-int/lit8 v1, v1, 0x1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    check-cast v1, Lqidxisbestlol/pz;
-
-    iput-object v1, v0, Lqidxisbestlol/no;->C:Lqidxisbestlol/pz;
-
-    :cond_0
-    iput-object p1, v0, Lqidxisbestlol/no;->u:Ljavax/net/ssl/HostnameVerifier;
-
-    nop
-
-    check-cast p0, Lqidxisbestlol/no;
-
-    return-object p0
-.end method
-
-.method public final a(Ljavax/net/ssl/SSLSocketFactory;Ljavax/net/ssl/X509TrustManager;)Lqidxisbestlol/no;
-    .locals 2
-
-    const-string v0, "sslSocketFactory"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "trustManager"
-
-    invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    move-object v0, p0
-
-    check-cast v0, Lqidxisbestlol/no;
-
-    iget-object v1, v0, Lqidxisbestlol/no;->q:Ljavax/net/ssl/SSLSocketFactory;
-
-    invoke-static {p1, v1}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    xor-int/lit8 v1, v1, 0x1
-
-    if-nez v1, :cond_0
-
-    iget-object v1, v0, Lqidxisbestlol/no;->r:Ljavax/net/ssl/X509TrustManager;
-
-    invoke-static {p2, v1}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    xor-int/lit8 v1, v1, 0x1
-
-    if-eqz v1, :cond_1
-
-    :cond_0
-    const/4 v1, 0x0
-
-    check-cast v1, Lqidxisbestlol/pz;
-
-    iput-object v1, v0, Lqidxisbestlol/no;->C:Lqidxisbestlol/pz;
-
-    :cond_1
-    iput-object p1, v0, Lqidxisbestlol/no;->q:Ljavax/net/ssl/SSLSocketFactory;
-
-    sget-object v1, Lqidxisbestlol/uq;->b:Lqidxisbestlol/ur;
-
-    invoke-virtual {v1, p2}, Lqidxisbestlol/ur;->a(Ljavax/net/ssl/X509TrustManager;)Lqidxisbestlol/uq;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lqidxisbestlol/no;->w:Lqidxisbestlol/uq;
-
-    iput-object p2, v0, Lqidxisbestlol/no;->r:Ljavax/net/ssl/X509TrustManager;
-
-    nop
-
-    check-cast p0, Lqidxisbestlol/no;
-
-    return-object p0
-.end method
-
-.method public final b()Lqidxisbestlol/md;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->b:Lqidxisbestlol/md;
-
-    return-object v0
-.end method
-
-.method public final b(JLjava/util/concurrent/TimeUnit;)Lqidxisbestlol/no;
-    .locals 3
-
-    const-string v0, "unit"
-
-    invoke-static {p3, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    move-object v0, p0
-
-    check-cast v0, Lqidxisbestlol/no;
-
-    const-string v1, "timeout"
-
-    invoke-static {v1, p1, p2, p3}, Lqidxisbestlol/og;->a(Ljava/lang/String;JLjava/util/concurrent/TimeUnit;)I
-
-    move-result v1
-
-    iput v1, v0, Lqidxisbestlol/no;->z:I
-
-    nop
-
-    check-cast p0, Lqidxisbestlol/no;
-
-    return-object p0
-.end method
-
-.method public final c()Ljava/util/List;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->c:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public final c(JLjava/util/concurrent/TimeUnit;)Lqidxisbestlol/no;
-    .locals 3
-
-    const-string v0, "unit"
-
-    invoke-static {p3, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    move-object v0, p0
-
-    check-cast v0, Lqidxisbestlol/no;
-
-    const-string v1, "timeout"
-
-    invoke-static {v1, p1, p2, p3}, Lqidxisbestlol/og;->a(Ljava/lang/String;JLjava/util/concurrent/TimeUnit;)I
-
-    move-result v1
-
-    iput v1, v0, Lqidxisbestlol/no;->A:I
-
-    nop
-
-    check-cast p0, Lqidxisbestlol/no;
-
-    return-object p0
-.end method
-
-.method public final d()Ljava/util/List;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->d:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public final e()Lqidxisbestlol/mt;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->e:Lqidxisbestlol/mt;
-
-    return-object v0
-.end method
-
-.method public final f()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lqidxisbestlol/no;->f:Z
-
-    return v0
-.end method
-
-.method public final g()Lqidxisbestlol/le;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->g:Lqidxisbestlol/le;
-
-    return-object v0
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lqidxisbestlol/no;->h:Z
-
-    return v0
-.end method
-
-.method public final i()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lqidxisbestlol/no;->i:Z
-
-    return v0
-.end method
-
-.method public final j()Lqidxisbestlol/mj;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->j:Lqidxisbestlol/mj;
-
-    return-object v0
-.end method
-
-.method public final k()Lqidxisbestlol/lh;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->k:Lqidxisbestlol/lh;
-
-    return-object v0
-.end method
-
-.method public final l()Lqidxisbestlol/mn;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->l:Lqidxisbestlol/mn;
-
-    return-object v0
-.end method
-
-.method public final m()Ljava/net/Proxy;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->m:Ljava/net/Proxy;
-
-    return-object v0
-.end method
-
-.method public final n()Ljava/net/ProxySelector;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->n:Ljava/net/ProxySelector;
-
-    return-object v0
-.end method
-
-.method public final o()Lqidxisbestlol/le;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->o:Lqidxisbestlol/le;
-
-    return-object v0
-.end method
-
-.method public final p()Ljavax/net/SocketFactory;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->p:Ljavax/net/SocketFactory;
-
-    return-object v0
-.end method
-
-.method public final q()Ljavax/net/ssl/SSLSocketFactory;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->q:Ljavax/net/ssl/SSLSocketFactory;
-
-    return-object v0
-.end method
-
-.method public final r()Ljavax/net/ssl/X509TrustManager;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->r:Ljavax/net/ssl/X509TrustManager;
-
-    return-object v0
-.end method
-
-.method public final s()Ljava/util/List;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->s:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public final t()Ljava/util/List;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->t:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public final u()Ljavax/net/ssl/HostnameVerifier;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->u:Ljavax/net/ssl/HostnameVerifier;
-
-    return-object v0
-.end method
-
-.method public final v()Lqidxisbestlol/lu;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->v:Lqidxisbestlol/lu;
-
-    return-object v0
-.end method
-
-.method public final w()Lqidxisbestlol/uq;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/no;->w:Lqidxisbestlol/uq;
-
-    return-object v0
-.end method
-
-.method public final x()I
-    .locals 1
-
-    iget v0, p0, Lqidxisbestlol/no;->x:I
-
-    return v0
-.end method
-
-.method public final y()I
-    .locals 1
-
-    iget v0, p0, Lqidxisbestlol/no;->y:I
-
-    return v0
-.end method
-
-.method public final z()I
-    .locals 1
-
-    iget v0, p0, Lqidxisbestlol/no;->z:I
-
-    return v0
 .end method

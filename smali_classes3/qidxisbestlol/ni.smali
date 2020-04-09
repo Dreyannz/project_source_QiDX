@@ -1,24 +1,29 @@
-.class public interface abstract Lqidxisbestlol/ni;
+.class public final Lqidxisbestlol/ni;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lqidxisbestlol/nk;
+.field static final synthetic a:Lqidxisbestlol/ni;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Lqidxisbestlol/nk;->a:Lqidxisbestlol/nk;
+    new-instance v0, Lqidxisbestlol/ni;
 
-    sput-object v0, Lqidxisbestlol/ni;->a:Lqidxisbestlol/nk;
+    invoke-direct {v0}, Lqidxisbestlol/ni;-><init>()V
+
+    sput-object v0, Lqidxisbestlol/ni;->a:Lqidxisbestlol/ni;
 
     return-void
 .end method
 
+.method private constructor <init>()V
+    .locals 0
 
-# virtual methods
-.method public abstract a(Lqidxisbestlol/nj;)Lqidxisbestlol/nx;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

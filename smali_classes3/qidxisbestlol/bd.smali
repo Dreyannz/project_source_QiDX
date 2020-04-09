@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/bw;
+.implements Lqidxisbestlol/bu;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/reflect/Constructor;
+.field final synthetic a:Ljava/lang/reflect/Type;
 
-.field final synthetic b:Lqidxisbestlol/av;
+.field final synthetic b:Lqidxisbestlol/at;
 
 
 # direct methods
-.method constructor <init>(Lqidxisbestlol/av;Ljava/lang/reflect/Constructor;)V
+.method constructor <init>(Lqidxisbestlol/at;Ljava/lang/reflect/Type;)V
     .locals 0
 
-    iput-object p1, p0, Lqidxisbestlol/bd;->b:Lqidxisbestlol/av;
+    iput-object p1, p0, Lqidxisbestlol/bd;->b:Lqidxisbestlol/at;
 
-    iput-object p2, p0, Lqidxisbestlol/bd;->a:Ljava/lang/reflect/Constructor;
+    iput-object p2, p0, Lqidxisbestlol/bd;->a:Ljava/lang/reflect/Type;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,103 +28,97 @@
 
 # virtual methods
 .method public a()Ljava/lang/Object;
-    .locals 4
+    .locals 3
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lqidxisbestlol/bd;->a:Ljava/lang/reflect/Type;
 
-    :try_start_0
-    iget-object v1, p0, Lqidxisbestlol/bd;->a:Ljava/lang/reflect/Constructor;
+    instance-of v0, v0, Ljava/lang/reflect/ParameterizedType;
 
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lqidxisbestlol/bd;->a:Ljava/lang/reflect/Type;
+
+    check-cast v0, Ljava/lang/reflect/ParameterizedType;
+
+    invoke-interface {v0}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    instance-of v1, v0, Ljava/lang/Class;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Ljava/lang/Class;
+
+    invoke-static {v0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
 
     move-result-object v0
 
     return-object v0
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    new-instance v0, Lqidxisbestlol/w;
 
-    new-instance v1, Ljava/lang/RuntimeException;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v2, "Invalid EnumSet type: "
 
-    const-string v3, "Failed to invoke "
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    move-result-object v2
+    iget-object v2, p0, Lqidxisbestlol/bd;->a:Ljava/lang/reflect/Type;
 
-    iget-object v3, p0, Lqidxisbestlol/bd;->a:Ljava/lang/reflect/Constructor;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string v3, " with no args"
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    move-result-object v2
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    invoke-direct {v0, v1}, Lqidxisbestlol/w;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    throw v0
 
-    throw v1
+    :cond_1
+    new-instance v0, Lqidxisbestlol/w;
 
-    :catch_1
-    move-exception v0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/RuntimeException;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, "Invalid EnumSet type: "
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, "Failed to invoke "
+    move-result-object v1
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lqidxisbestlol/bd;->a:Ljava/lang/reflect/Type;
 
-    move-result-object v2
-
-    iget-object v3, p0, Lqidxisbestlol/bd;->a:Ljava/lang/reflect/Constructor;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string v3, " with no args"
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    move-result-object v2
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    invoke-direct {v0, v1}, Lqidxisbestlol/w;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->getTargetException()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :catch_2
-    move-exception v0
-
-    new-instance v1, Ljava/lang/AssertionError;
-
-    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v1
+    throw v0
 .end method

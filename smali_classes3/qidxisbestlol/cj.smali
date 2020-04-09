@@ -1,74 +1,146 @@
 .class public final Lqidxisbestlol/cj;
-.super Ljava/lang/Object;
+.super Lqidxisbestlol/ag;
 .source "SourceFile"
 
-# interfaces
-.implements Lqidxisbestlol/ak;
+
+# static fields
+.field public static final a:Lqidxisbestlol/ai;
 
 
 # instance fields
-.field private final a:Lqidxisbestlol/av;
+.field private final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lqidxisbestlol/av;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lqidxisbestlol/ck;
 
-    iput-object p1, p0, Lqidxisbestlol/cj;->a:Lqidxisbestlol/av;
+    invoke-direct {v0}, Lqidxisbestlol/ck;-><init>()V
 
+    sput-object v0, Lqidxisbestlol/cj;->a:Lqidxisbestlol/ai;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 3
+
+    const/4 v2, 0x2
+
+    invoke-direct {p0}, Lqidxisbestlol/ag;-><init>()V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lqidxisbestlol/cj;->b:Ljava/util/List;
+
+    iget-object v0, p0, Lqidxisbestlol/cj;->b:Ljava/util/List;
+
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-static {v2, v2, v1}, Ljava/text/DateFormat;->getDateTimeInstance(IILjava/util/Locale;)Ljava/text/DateFormat;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-virtual {v0, v1}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lqidxisbestlol/cj;->b:Ljava/util/List;
+
+    invoke-static {v2, v2}, Ljava/text/DateFormat;->getDateTimeInstance(II)Ljava/text/DateFormat;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    invoke-static {}, Lqidxisbestlol/bk;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lqidxisbestlol/cj;->b:Ljava/util/List;
+
+    invoke-static {v2, v2}, Lqidxisbestlol/bv;->a(II)Ljava/text/DateFormat;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/n;Lqidxisbestlol/ev;)Lqidxisbestlol/ai;
-    .locals 4
+.method public bridge synthetic a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {p2}, Lqidxisbestlol/ev;->b()Ljava/lang/reflect/Type;
+    check-cast p2, Ljava/util/Date;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/cj;->a(Lqidxisbestlol/eu;Ljava/util/Date;)V
 
-    invoke-virtual {p2}, Lqidxisbestlol/ev;->a()Ljava/lang/Class;
+    return-void
+.end method
 
-    move-result-object v1
+.method public declared-synchronized a(Lqidxisbestlol/eu;Ljava/util/Date;)V
+    .locals 2
 
-    const-class v2, Ljava/util/Collection;
+    monitor-enter p0
 
-    invoke-virtual {v2, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+    if-nez p2, :cond_0
 
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const/4 v0, 0x0
+    :try_start_0
+    invoke-virtual {p1}, Lqidxisbestlol/eu;->f()Lqidxisbestlol/eu;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :goto_0
-    return-object v0
+    monitor-exit p0
+
+    return-void
 
     :cond_0
-    invoke-static {v0, v1}, Lqidxisbestlol/ar;->a(Ljava/lang/reflect/Type;Ljava/lang/Class;)Ljava/lang/reflect/Type;
+    :try_start_1
+    iget-object v0, p0, Lqidxisbestlol/cj;->b:Ljava/util/List;
 
-    move-result-object v1
+    const/4 v1, 0x0
 
-    invoke-static {v1}, Lqidxisbestlol/ev;->a(Ljava/lang/reflect/Type;)Lqidxisbestlol/ev;
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lqidxisbestlol/n;->a(Lqidxisbestlol/ev;)Lqidxisbestlol/ai;
+    check-cast v0, Ljava/text/DateFormat;
 
-    move-result-object v2
+    invoke-virtual {v0, p2}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
-    iget-object v0, p0, Lqidxisbestlol/cj;->a:Lqidxisbestlol/av;
+    move-result-object v0
 
-    invoke-virtual {v0, p2}, Lqidxisbestlol/av;->a(Lqidxisbestlol/ev;)Lqidxisbestlol/bw;
-
-    move-result-object v3
-
-    new-instance v0, Lqidxisbestlol/ck;
-
-    invoke-direct {v0, p1, v1, v2, v3}, Lqidxisbestlol/ck;-><init>(Lqidxisbestlol/n;Ljava/lang/reflect/Type;Lqidxisbestlol/ai;Lqidxisbestlol/bw;)V
+    invoke-virtual {p1, v0}, Lqidxisbestlol/eu;->b(Ljava/lang/String;)Lqidxisbestlol/eu;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method

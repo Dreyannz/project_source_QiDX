@@ -1,67 +1,104 @@
-.class final Lqidxisbestlol/bs;
-.super Ljava/util/AbstractSet;
+.class abstract Lqidxisbestlol/bs;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Iterator;
 
 
 # instance fields
-.field final synthetic a:Lqidxisbestlol/bo;
+.field b:Lqidxisbestlol/bt;
+
+.field c:Lqidxisbestlol/bt;
+
+.field d:I
+
+.field final synthetic e:Lqidxisbestlol/bm;
 
 
 # direct methods
-.method constructor <init>(Lqidxisbestlol/bo;)V
-    .locals 0
+.method constructor <init>(Lqidxisbestlol/bm;)V
+    .locals 1
 
-    iput-object p1, p0, Lqidxisbestlol/bs;->a:Lqidxisbestlol/bo;
+    iput-object p1, p0, Lqidxisbestlol/bs;->e:Lqidxisbestlol/bm;
 
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v0, p0, Lqidxisbestlol/bs;->e:Lqidxisbestlol/bm;
+
+    iget-object v0, v0, Lqidxisbestlol/bm;->e:Lqidxisbestlol/bt;
+
+    iget-object v0, v0, Lqidxisbestlol/bt;->d:Lqidxisbestlol/bt;
+
+    iput-object v0, p0, Lqidxisbestlol/bs;->b:Lqidxisbestlol/bt;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lqidxisbestlol/bs;->c:Lqidxisbestlol/bt;
+
+    iget-object v0, p0, Lqidxisbestlol/bs;->e:Lqidxisbestlol/bm;
+
+    iget v0, v0, Lqidxisbestlol/bm;->d:I
+
+    iput v0, p0, Lqidxisbestlol/bs;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public clear()V
-    .locals 1
+.method final b()Lqidxisbestlol/bt;
+    .locals 3
 
-    iget-object v0, p0, Lqidxisbestlol/bs;->a:Lqidxisbestlol/bo;
+    iget-object v0, p0, Lqidxisbestlol/bs;->b:Lqidxisbestlol/bt;
 
-    invoke-virtual {v0}, Lqidxisbestlol/bo;->clear()V
+    iget-object v1, p0, Lqidxisbestlol/bs;->e:Lqidxisbestlol/bm;
 
-    return-void
-.end method
+    iget-object v1, v1, Lqidxisbestlol/bm;->e:Lqidxisbestlol/bt;
 
-.method public contains(Ljava/lang/Object;)Z
-    .locals 1
+    if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lqidxisbestlol/bs;->a:Lqidxisbestlol/bo;
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    invoke-virtual {v0, p1}, Lqidxisbestlol/bo;->containsKey(Ljava/lang/Object;)Z
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    move-result v0
+    throw v0
 
-    return v0
-.end method
+    :cond_0
+    iget-object v1, p0, Lqidxisbestlol/bs;->e:Lqidxisbestlol/bm;
 
-.method public iterator()Ljava/util/Iterator;
-    .locals 1
+    iget v1, v1, Lqidxisbestlol/bm;->d:I
 
-    new-instance v0, Lqidxisbestlol/bt;
+    iget v2, p0, Lqidxisbestlol/bs;->d:I
 
-    invoke-direct {v0, p0}, Lqidxisbestlol/bt;-><init>(Lqidxisbestlol/bs;)V
+    if-eq v1, v2, :cond_1
+
+    new-instance v0, Ljava/util/ConcurrentModificationException;
+
+    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
+
+    throw v0
+
+    :cond_1
+    iget-object v1, v0, Lqidxisbestlol/bt;->d:Lqidxisbestlol/bt;
+
+    iput-object v1, p0, Lqidxisbestlol/bs;->b:Lqidxisbestlol/bt;
+
+    iput-object v0, p0, Lqidxisbestlol/bs;->c:Lqidxisbestlol/bt;
 
     return-object v0
 .end method
 
-.method public remove(Ljava/lang/Object;)Z
-    .locals 1
+.method public final hasNext()Z
+    .locals 2
 
-    iget-object v0, p0, Lqidxisbestlol/bs;->a:Lqidxisbestlol/bo;
+    iget-object v0, p0, Lqidxisbestlol/bs;->b:Lqidxisbestlol/bt;
 
-    invoke-virtual {v0, p1}, Lqidxisbestlol/bo;->b(Ljava/lang/Object;)Lqidxisbestlol/bv;
+    iget-object v1, p0, Lqidxisbestlol/bs;->e:Lqidxisbestlol/bm;
 
-    move-result-object v0
+    iget-object v1, v1, Lqidxisbestlol/bm;->e:Lqidxisbestlol/bt;
 
-    if-eqz v0, :cond_0
+    if-eq v0, v1, :cond_0
 
     const/4 v0, 0x1
 
@@ -74,12 +111,37 @@
     goto :goto_0
 .end method
 
-.method public size()I
-    .locals 1
+.method public final remove()V
+    .locals 3
 
-    iget-object v0, p0, Lqidxisbestlol/bs;->a:Lqidxisbestlol/bo;
+    iget-object v0, p0, Lqidxisbestlol/bs;->c:Lqidxisbestlol/bt;
 
-    iget v0, v0, Lqidxisbestlol/bo;->c:I
+    if-nez v0, :cond_0
 
-    return v0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+
+    :cond_0
+    iget-object v0, p0, Lqidxisbestlol/bs;->e:Lqidxisbestlol/bm;
+
+    iget-object v1, p0, Lqidxisbestlol/bs;->c:Lqidxisbestlol/bt;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lqidxisbestlol/bm;->a(Lqidxisbestlol/bt;Z)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lqidxisbestlol/bs;->c:Lqidxisbestlol/bt;
+
+    iget-object v0, p0, Lqidxisbestlol/bs;->e:Lqidxisbestlol/bm;
+
+    iget v0, v0, Lqidxisbestlol/bm;->d:I
+
+    iput v0, p0, Lqidxisbestlol/bs;->d:I
+
+    return-void
 .end method

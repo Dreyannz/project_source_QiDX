@@ -2,17 +2,12 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqidxisbestlol/ug;
+
 
 # static fields
 .field public static final a:Lqidxisbestlol/ue;
-
-
-# instance fields
-.field private final b:Ljava/lang/reflect/Method;
-
-.field private final c:Ljava/lang/reflect/Method;
-
-.field private final d:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -23,121 +18,129 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lqidxisbestlol/ue;-><init>(Lqidxisbestlol/ig;)V
+    invoke-direct {v0, v1}, Lqidxisbestlol/ue;-><init>(Lqidxisbestlol/ie;)V
 
     sput-object v0, Lqidxisbestlol/ud;->a:Lqidxisbestlol/ue;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;)V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqidxisbestlol/ud;->b:Ljava/lang/reflect/Method;
-
-    iput-object p2, p0, Lqidxisbestlol/ud;->c:Ljava/lang/reflect/Method;
-
-    iput-object p3, p0, Lqidxisbestlol/ud;->d:Ljava/lang/reflect/Method;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Ljava/lang/Object;
-    .locals 5
+.method public a(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 2
 
-    const/4 v1, 0x0
+    const-string v0, "sslSocket"
 
-    const-string v0, "closer"
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v0, "protocols"
 
-    iget-object v0, p0, Lqidxisbestlol/ud;->b:Ljava/lang/reflect/Method;
+    invoke-static {p3, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lqidxisbestlol/ud;->a(Ljavax/net/ssl/SSLSocket;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    nop
+    const/4 v0, 0x1
 
-    :try_start_0
-    iget-object v0, p0, Lqidxisbestlol/ud;->b:Ljava/lang/reflect/Method;
+    invoke-static {p1, v0}, Lorg/conscrypt/Conscrypt;->setUseSessionTickets(Ljavax/net/ssl/SSLSocket;Z)V
 
-    const/4 v2, 0x0
+    sget-object v0, Lqidxisbestlol/tr;->b:Lqidxisbestlol/ts;
 
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p3}, Lqidxisbestlol/ts;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    iget-object v2, p0, Lqidxisbestlol/ud;->c:Ljava/lang/reflect/Method;
+    check-cast v0, Ljava/util/Collection;
 
-    if-nez v2, :cond_0
+    const/4 v1, 0x0
 
-    invoke-static {}, Lqidxisbestlol/ii;->a()V
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lqidxisbestlol/fp;
+
+    const-string v1, "null cannot be cast to non-null type kotlin.Array<T>"
+
+    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_0
-    const/4 v3, 0x1
+    check-cast v0, [Ljava/lang/String;
 
-    new-array v3, v3, [Ljava/lang/Object;
+    invoke-static {p1, v0}, Lorg/conscrypt/Conscrypt;->setApplicationProtocols(Ljavax/net/ssl/SSLSocket;[Ljava/lang/String;)V
 
-    const/4 v4, 0x0
+    :cond_1
+    return-void
+.end method
 
-    aput-object p1, v3, v4
+.method public a()Z
+    .locals 1
 
-    invoke-virtual {v2, v0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    sget-object v0, Lqidxisbestlol/th;->a:Lqidxisbestlol/ti;
+
+    invoke-virtual {v0}, Lqidxisbestlol/ti;->a()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public a(Ljavax/net/ssl/SSLSocket;)Z
+    .locals 1
+
+    const-string v0, "sslSocket"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p1}, Lorg/conscrypt/Conscrypt;->isConscrypt(Ljavax/net/ssl/SSLSocket;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public b(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "sslSocket"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    nop
+
+    invoke-virtual {p0, p1}, Lqidxisbestlol/ud;->a(Ljavax/net/ssl/SSLSocket;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lorg/conscrypt/Conscrypt;->getApplicationProtocol(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+
+    move-result-object v0
 
     :goto_0
     return-object v0
 
-    :catch_0
-    move-exception v0
-
-    :cond_1
-    move-object v0, v1
-
-    goto :goto_0
-.end method
-
-.method public final a(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_1
-
-    nop
-
-    :try_start_0
-    iget-object v1, p0, Lqidxisbestlol/ud;->d:Ljava/lang/reflect/Method;
-
-    if-nez v1, :cond_0
-
-    invoke-static {}, Lqidxisbestlol/ii;->a()V
-
     :cond_0
-    const/4 v2, 0x0
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    invoke-virtual {v1, p1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    const/4 v0, 0x1
-
-    :cond_1
-    :goto_0
-    return v0
-
-    :catch_0
-    move-exception v1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

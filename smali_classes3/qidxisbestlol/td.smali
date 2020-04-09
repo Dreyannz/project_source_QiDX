@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ig;)V
+.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
     .locals 0
 
     invoke-direct {p0}, Lqidxisbestlol/td;-><init>()V
@@ -32,12 +32,22 @@
     return v0
 .end method
 
-.method public final b()Lqidxisbestlol/tt;
+.method public final b()Z
+    .locals 1
+
+    invoke-static {}, Lqidxisbestlol/tc;->b()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c()Lqidxisbestlol/tr;
     .locals 1
 
     check-cast p0, Lqidxisbestlol/td;
 
-    invoke-virtual {p0}, Lqidxisbestlol/td;->a()Z
+    invoke-virtual {p0}, Lqidxisbestlol/td;->b()Z
 
     move-result v0
 
@@ -47,7 +57,7 @@
 
     invoke-direct {v0}, Lqidxisbestlol/tc;-><init>()V
 
-    check-cast v0, Lqidxisbestlol/tt;
+    check-cast v0, Lqidxisbestlol/tr;
 
     :goto_0
     return-object v0

@@ -1,50 +1,61 @@
-.class Lqidxisbestlol/fe;
+.class public Lqidxisbestlol/fe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field private final a:Lqidxisbestlol/fd;
-
-.field private final b:Lqidxisbestlol/ez;
-
-.field private final c:Ljava/io/IOException;
-
 
 # direct methods
-.method constructor <init>(Lqidxisbestlol/fd;Lqidxisbestlol/ez;Ljava/io/IOException;)V
-    .locals 0
+.method public static a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    new-instance v0, Lorg/json/JSONObject;
 
-    iput-object p1, p0, Lqidxisbestlol/fe;->a:Lqidxisbestlol/fd;
+    invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    iput-object p2, p0, Lqidxisbestlol/fe;->b:Lqidxisbestlol/ez;
+    invoke-virtual {v0, p0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object p3, p0, Lqidxisbestlol/fe;->c:Ljava/io/IOException;
+    move-result-object v0
 
-    return-void
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    const/4 v0, 0x0
+
+    check-cast v0, Ljava/lang/String;
+
+    goto :goto_0
 .end method
 
+.method public static b(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 1
 
-# virtual methods
-.method public run()V
-    .locals 2
-    .annotation runtime Ljava/lang/Override;
-    .end annotation
+    :try_start_0
+    new-instance v0, Lorg/json/JSONObject;
 
-    iget-object v0, p0, Lqidxisbestlol/fe;->b:Lqidxisbestlol/ez;
+    invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lqidxisbestlol/fe;->c:Ljava/io/IOException;
+    invoke-virtual {v0, p0}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    move-result v0
 
-    move-result-object v1
+    :goto_0
+    return v0
 
-    invoke-interface {v0, v1}, Lqidxisbestlol/ez;->b(Ljava/lang/String;)V
+    :catch_0
+    move-exception v0
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

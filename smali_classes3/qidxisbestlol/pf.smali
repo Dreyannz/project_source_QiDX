@@ -3,120 +3,82 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/pd;
+.implements Lqidxisbestlol/ng;
 
 
-# instance fields
-.field private final a:Ljava/util/concurrent/ThreadPoolExecutor;
+# static fields
+.field public static final b:Lqidxisbestlol/pf;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ThreadFactory;)V
-    .locals 9
+.method static constructor <clinit>()V
+    .locals 1
 
-    const-string v0, "threadFactory"
+    new-instance v0, Lqidxisbestlol/pf;
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v0}, Lqidxisbestlol/pf;-><init>()V
+
+    sput-object v0, Lqidxisbestlol/pf;->b:Lqidxisbestlol/pf;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    const/4 v2, 0x0
-
-    const v3, 0x7fffffff
-
-    const-wide/16 v4, 0x3c
-
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    new-instance v7, Ljava/util/concurrent/SynchronousQueue;
-
-    invoke-direct {v7}, Ljava/util/concurrent/SynchronousQueue;-><init>()V
-
-    check-cast v7, Ljava/util/concurrent/BlockingQueue;
-
-    move-object v8, p1
-
-    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
-
-    iput-object v1, p0, Lqidxisbestlol/pf;->a:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()J
-    .locals 2
+.method public a(Lqidxisbestlol/nh;)Lqidxisbestlol/nv;
+    .locals 9
 
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    const/4 v3, 0x0
 
-    move-result-wide v0
+    const/4 v1, 0x0
 
-    return-wide v0
-.end method
+    const-string v0, "chain"
 
-.method public a(Ljava/lang/Runnable;)V
-    .locals 1
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "runnable"
+    move-object v0, p1
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    check-cast v0, Lqidxisbestlol/ql;
 
-    iget-object v0, p0, Lqidxisbestlol/pf;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+    invoke-virtual {v0}, Lqidxisbestlol/ql;->c()Lqidxisbestlol/pl;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+    move-result-object v2
 
-    return-void
-.end method
+    check-cast p1, Lqidxisbestlol/ql;
 
-.method public a(Lqidxisbestlol/pc;)V
-    .locals 1
+    invoke-virtual {v2, p1}, Lqidxisbestlol/pl;->a(Lqidxisbestlol/ql;)Lqidxisbestlol/ph;
 
-    const-string v0, "taskRunner"
+    move-result-object v2
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    const/16 v7, 0x3d
 
-    check-cast p1, Ljava/lang/Object;
+    move v4, v1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->notify()V
+    move v5, v1
 
-    return-void
-.end method
+    move v6, v1
 
-.method public a(Lqidxisbestlol/pc;J)V
-    .locals 8
+    move-object v8, v3
 
-    const-wide/32 v2, 0xf4240
+    invoke-static/range {v0 .. v8}, Lqidxisbestlol/ql;->a(Lqidxisbestlol/ql;ILqidxisbestlol/ph;Lqidxisbestlol/nq;IIIILjava/lang/Object;)Lqidxisbestlol/ql;
 
-    const-wide/16 v6, 0x0
+    move-result-object v1
 
-    const-string v0, "taskRunner"
+    invoke-virtual {v0}, Lqidxisbestlol/ql;->e()Lqidxisbestlol/nq;
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v0
 
-    div-long v0, p2, v2
+    invoke-virtual {v1, v0}, Lqidxisbestlol/ql;->a(Lqidxisbestlol/nq;)Lqidxisbestlol/nv;
 
-    mul-long/2addr v2, v0
+    move-result-object v0
 
-    sub-long v2, p2, v2
-
-    cmp-long v4, v0, v6
-
-    if-gtz v4, :cond_0
-
-    cmp-long v4, p2, v6
-
-    if-lez v4, :cond_1
-
-    :cond_0
-    check-cast p1, Ljava/lang/Object;
-
-    long-to-int v2, v2
-
-    invoke-virtual {p1, v0, v1, v2}, Ljava/lang/Object;->wait(JI)V
-
-    :cond_1
-    return-void
+    return-object v0
 .end method

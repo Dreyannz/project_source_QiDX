@@ -1,43 +1,71 @@
 .class public final Lqidxisbestlol/py;
-.super Lqidxisbestlol/oz;
+.super Ljava/lang/RuntimeException;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic a:Lqidxisbestlol/pw;
+.field private a:Ljava/io/IOException;
+
+.field private final b:Ljava/io/IOException;
 
 
 # direct methods
-.method constructor <init>(Lqidxisbestlol/pw;Ljava/lang/String;)V
-    .locals 3
+.method public constructor <init>(Ljava/io/IOException;)V
+    .locals 1
 
-    iput-object p1, p0, Lqidxisbestlol/py;->a:Lqidxisbestlol/pw;
+    const-string v0, "firstConnectException"
 
-    const/4 v0, 0x0
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/4 v1, 0x2
+    move-object v0, p1
 
-    const/4 v2, 0x0
+    check-cast v0, Ljava/lang/Throwable;
 
-    invoke-direct {p0, p2, v0, v1, v2}, Lqidxisbestlol/oz;-><init>(Ljava/lang/String;ZILqidxisbestlol/ig;)V
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    iput-object p1, p0, Lqidxisbestlol/py;->b:Ljava/io/IOException;
+
+    iget-object v0, p0, Lqidxisbestlol/py;->b:Ljava/io/IOException;
+
+    iput-object v0, p0, Lqidxisbestlol/py;->a:Ljava/io/IOException;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()J
-    .locals 4
+.method public final a()Ljava/io/IOException;
+    .locals 1
 
-    iget-object v0, p0, Lqidxisbestlol/py;->a:Lqidxisbestlol/pw;
+    iget-object v0, p0, Lqidxisbestlol/py;->a:Ljava/io/IOException;
 
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    return-object v0
+.end method
 
-    move-result-wide v2
+.method public final a(Ljava/io/IOException;)V
+    .locals 2
 
-    invoke-virtual {v0, v2, v3}, Lqidxisbestlol/pw;->a(J)J
+    const-string v0, "e"
 
-    move-result-wide v0
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-wide v0
+    iget-object v1, p0, Lqidxisbestlol/py;->b:Ljava/io/IOException;
+
+    move-object v0, p1
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    invoke-virtual {v1, v0}, Ljava/io/IOException;->addSuppressed(Ljava/lang/Throwable;)V
+
+    iput-object p1, p0, Lqidxisbestlol/py;->a:Ljava/io/IOException;
+
+    return-void
+.end method
+
+.method public final b()Ljava/io/IOException;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/py;->b:Ljava/io/IOException;
+
+    return-object v0
 .end method

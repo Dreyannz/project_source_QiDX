@@ -3,89 +3,217 @@
 .source "SourceFile"
 
 
+# instance fields
+.field private final a:Lqidxisbestlol/lb;
+
+.field private final b:Ljava/net/Proxy;
+
+.field private final c:Ljava/net/InetSocketAddress;
+
+
 # direct methods
-.method private constructor <init>()V
-    .locals 0
+.method public constructor <init>(Lqidxisbestlol/lb;Ljava/net/Proxy;Ljava/net/InetSocketAddress;)V
+    .locals 1
+
+    const-string v0, "address"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "proxy"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "socketAddress"
+
+    invoke-static {p3, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lqidxisbestlol/oa;->a:Lqidxisbestlol/lb;
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ig;)V
-    .locals 0
+    iput-object p2, p0, Lqidxisbestlol/oa;->b:Ljava/net/Proxy;
 
-    invoke-direct {p0}, Lqidxisbestlol/oa;-><init>()V
+    iput-object p3, p0, Lqidxisbestlol/oa;->c:Ljava/net/InetSocketAddress;
 
     return-void
-.end method
-
-.method public static synthetic a(Lqidxisbestlol/oa;[BLqidxisbestlol/nl;ILjava/lang/Object;)Lqidxisbestlol/nz;
-    .locals 1
-
-    and-int/lit8 v0, p3, 0x1
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    check-cast v0, Lqidxisbestlol/nl;
-
-    :goto_0
-    invoke-virtual {p0, p1, v0}, Lqidxisbestlol/oa;->a([BLqidxisbestlol/nl;)Lqidxisbestlol/nz;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    move-object v0, p2
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final a(Lqidxisbestlol/vg;Lqidxisbestlol/nl;J)Lqidxisbestlol/nz;
+.method public final a()Z
+    .locals 2
+
+    iget-object v0, p0, Lqidxisbestlol/oa;->a:Lqidxisbestlol/lb;
+
+    invoke-virtual {v0}, Lqidxisbestlol/lb;->f()Ljavax/net/ssl/SSLSocketFactory;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lqidxisbestlol/oa;->b:Ljava/net/Proxy;
+
+    invoke-virtual {v0}, Ljava/net/Proxy;->type()Ljava/net/Proxy$Type;
+
+    move-result-object v0
+
+    sget-object v1, Ljava/net/Proxy$Type;->HTTP:Ljava/net/Proxy$Type;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final b()Lqidxisbestlol/lb;
     .locals 1
 
-    const-string v0, "$this$asResponseBody"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    new-instance v0, Lqidxisbestlol/ob;
-
-    invoke-direct {v0, p1, p2, p3, p4}, Lqidxisbestlol/ob;-><init>(Lqidxisbestlol/vg;Lqidxisbestlol/nl;J)V
-
-    check-cast v0, Lqidxisbestlol/nz;
+    iget-object v0, p0, Lqidxisbestlol/oa;->a:Lqidxisbestlol/lb;
 
     return-object v0
 .end method
 
-.method public final a([BLqidxisbestlol/nl;)Lqidxisbestlol/nz;
-    .locals 4
+.method public final c()Ljava/net/Proxy;
+    .locals 1
 
-    const-string v0, "$this$toResponseBody"
+    iget-object v0, p0, Lqidxisbestlol/oa;->b:Ljava/net/Proxy;
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    check-cast p0, Lqidxisbestlol/oa;
+.method public final d()Ljava/net/InetSocketAddress;
+    .locals 1
 
-    new-instance v0, Lqidxisbestlol/vd;
+    iget-object v0, p0, Lqidxisbestlol/oa;->c:Ljava/net/InetSocketAddress;
 
-    invoke-direct {v0}, Lqidxisbestlol/vd;-><init>()V
+    return-object v0
+.end method
 
-    invoke-virtual {v0, p1}, Lqidxisbestlol/vd;->b([B)Lqidxisbestlol/vd;
+.method public equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    instance-of v0, p1, Lqidxisbestlol/oa;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Lqidxisbestlol/oa;
+
+    iget-object v0, v0, Lqidxisbestlol/oa;->a:Lqidxisbestlol/lb;
+
+    iget-object v1, p0, Lqidxisbestlol/oa;->a:Lqidxisbestlol/lb;
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Lqidxisbestlol/oa;
+
+    iget-object v0, v0, Lqidxisbestlol/oa;->b:Ljava/net/Proxy;
+
+    iget-object v1, p0, Lqidxisbestlol/oa;->b:Ljava/net/Proxy;
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lqidxisbestlol/oa;
+
+    iget-object v0, p1, Lqidxisbestlol/oa;->c:Ljava/net/InetSocketAddress;
+
+    iget-object v1, p0, Lqidxisbestlol/oa;->c:Ljava/net/InetSocketAddress;
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lqidxisbestlol/oa;->a:Lqidxisbestlol/lb;
+
+    invoke-virtual {v0}, Lqidxisbestlol/lb;->hashCode()I
+
+    move-result v0
+
+    add-int/lit16 v0, v0, 0x20f
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lqidxisbestlol/oa;->b:Ljava/net/Proxy;
+
+    invoke-virtual {v1}, Ljava/net/Proxy;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lqidxisbestlol/oa;->c:Ljava/net/InetSocketAddress;
+
+    invoke-virtual {v1}, Ljava/net/InetSocketAddress;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Route{"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Lqidxisbestlol/vg;
+    iget-object v1, p0, Lqidxisbestlol/oa;->c:Ljava/net/InetSocketAddress;
 
-    array-length v1, p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    int-to-long v2, v1
+    move-result-object v0
 
-    invoke-virtual {p0, v0, p2, v2, v3}, Lqidxisbestlol/oa;->a(Lqidxisbestlol/vg;Lqidxisbestlol/nl;J)Lqidxisbestlol/nz;
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

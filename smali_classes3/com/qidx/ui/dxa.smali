@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private a:Lqidxisbestlol/ex;
+.field private a:Lqidxisbestlol/ev;
 
-.field private b:Lqidxisbestlol/ez;
+.field private b:Lqidxisbestlol/ex;
 
-.field private c:Lqidxisbestlol/ez;
+.field private c:Lqidxisbestlol/ex;
 
 .field private d:Ljava/util/Timer;
 
@@ -32,10 +32,10 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/qidx/ui/dxa;)Lqidxisbestlol/ex;
+.method static synthetic a(Lcom/qidx/ui/dxa;)Lqidxisbestlol/ev;
     .locals 1
 
-    iget-object v0, p0, Lcom/qidx/ui/dxa;->a:Lqidxisbestlol/ex;
+    iget-object v0, p0, Lcom/qidx/ui/dxa;->a:Lqidxisbestlol/ev;
 
     return-object v0
 .end method
@@ -268,10 +268,10 @@
     return-void
 .end method
 
-.method static synthetic b(Lcom/qidx/ui/dxa;)Lqidxisbestlol/ez;
+.method static synthetic b(Lcom/qidx/ui/dxa;)Lqidxisbestlol/ex;
     .locals 1
 
-    iget-object v0, p0, Lcom/qidx/ui/dxa;->b:Lqidxisbestlol/ez;
+    iget-object v0, p0, Lcom/qidx/ui/dxa;->b:Lqidxisbestlol/ex;
 
     return-object v0
 .end method
@@ -279,11 +279,11 @@
 .method private b()V
     .locals 4
 
-    iget-object v0, p0, Lcom/qidx/ui/dxa;->a:Lqidxisbestlol/ex;
+    iget-object v0, p0, Lcom/qidx/ui/dxa;->a:Lqidxisbestlol/ev;
 
-    iget-object v1, p0, Lcom/qidx/ui/dxa;->c:Lqidxisbestlol/ez;
+    iget-object v1, p0, Lcom/qidx/ui/dxa;->c:Lqidxisbestlol/ex;
 
-    invoke-virtual {v0, v1}, Lqidxisbestlol/ex;->a(Lqidxisbestlol/ez;)V
+    invoke-virtual {v0, v1}, Lqidxisbestlol/ev;->a(Lqidxisbestlol/ex;)V
 
     new-instance v0, Lcom/qidx/ui/dxb;
 
@@ -315,23 +315,23 @@
 .method private c()V
     .locals 1
 
-    new-instance v0, Lqidxisbestlol/ex;
+    new-instance v0, Lqidxisbestlol/ev;
 
-    invoke-direct {v0, p0}, Lqidxisbestlol/ex;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, p0}, Lqidxisbestlol/ev;-><init>(Landroid/app/Activity;)V
 
-    iput-object v0, p0, Lcom/qidx/ui/dxa;->a:Lqidxisbestlol/ex;
+    iput-object v0, p0, Lcom/qidx/ui/dxa;->a:Lqidxisbestlol/ev;
 
     new-instance v0, Lcom/qidx/ui/dxc;
 
     invoke-direct {v0, p0}, Lcom/qidx/ui/dxc;-><init>(Lcom/qidx/ui/dxa;)V
 
-    iput-object v0, p0, Lcom/qidx/ui/dxa;->b:Lqidxisbestlol/ez;
+    iput-object v0, p0, Lcom/qidx/ui/dxa;->b:Lqidxisbestlol/ex;
 
     new-instance v0, Lcom/qidx/ui/dxg;
 
     invoke-direct {v0, p0}, Lcom/qidx/ui/dxg;-><init>(Lcom/qidx/ui/dxa;)V
 
-    iput-object v0, p0, Lcom/qidx/ui/dxa;->c:Lqidxisbestlol/ez;
+    iput-object v0, p0, Lcom/qidx/ui/dxa;->c:Lqidxisbestlol/ex;
 
     return-void
 .end method

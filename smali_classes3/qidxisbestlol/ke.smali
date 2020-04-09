@@ -1,88 +1,183 @@
-.class Lqidxisbestlol/ke;
+.class public final Lqidxisbestlol/ke;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Ljava/nio/charset/Charset;
+
+.field public static final b:Ljava/nio/charset/Charset;
+
+.field public static final c:Ljava/nio/charset/Charset;
+
+.field public static final d:Ljava/nio/charset/Charset;
+
+.field public static final e:Ljava/nio/charset/Charset;
+
+.field public static final f:Ljava/nio/charset/Charset;
+
+.field public static final g:Lqidxisbestlol/ke;
+
+.field private static h:Ljava/nio/charset/Charset;
+
+.field private static i:Ljava/nio/charset/Charset;
+
+
 # direct methods
-.method public static final a(I)I
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/16 v4, 0x24
+    new-instance v0, Lqidxisbestlol/ke;
 
-    const/4 v3, 0x2
+    invoke-direct {v0}, Lqidxisbestlol/ke;-><init>()V
 
-    if-gt v3, p0, :cond_0
+    sput-object v0, Lqidxisbestlol/ke;->g:Lqidxisbestlol/ke;
 
-    if-ge v4, p0, :cond_1
+    const-string v0, "UTF-8"
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "Charset.forName(\"UTF-8\")"
 
-    const-string v2, "radix "
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-object v0, Lqidxisbestlol/ke;->a:Ljava/nio/charset/Charset;
 
-    move-result-object v1
+    const-string v0, "UTF-16"
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v2, " was not in valid range "
+    const-string v1, "Charset.forName(\"UTF-16\")"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v1
+    sput-object v0, Lqidxisbestlol/ke;->b:Ljava/nio/charset/Charset;
 
-    new-instance v2, Lqidxisbestlol/jc;
+    const-string v0, "UTF-16BE"
 
-    invoke-direct {v2, v3, v4}, Lqidxisbestlol/jc;-><init>(II)V
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "Charset.forName(\"UTF-16BE\")"
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v1
+    sput-object v0, Lqidxisbestlol/ke;->c:Ljava/nio/charset/Charset;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const-string v0, "UTF-16LE"
 
-    check-cast v0, Ljava/lang/Throwable;
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
-    throw v0
+    move-result-object v0
 
-    :cond_1
-    return p0
+    const-string v1, "Charset.forName(\"UTF-16LE\")"
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sput-object v0, Lqidxisbestlol/ke;->d:Ljava/nio/charset/Charset;
+
+    const-string v0, "US-ASCII"
+
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v0
+
+    const-string v1, "Charset.forName(\"US-ASCII\")"
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sput-object v0, Lqidxisbestlol/ke;->e:Ljava/nio/charset/Charset;
+
+    const-string v0, "ISO-8859-1"
+
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v0
+
+    const-string v1, "Charset.forName(\"ISO-8859-1\")"
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sput-object v0, Lqidxisbestlol/ke;->f:Ljava/nio/charset/Charset;
+
+    return-void
 .end method
 
-.method public static final a(C)Z
-    .locals 1
+.method private constructor <init>()V
+    .locals 0
 
-    invoke-static {p0}, Ljava/lang/Character;->isWhitespace(C)Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    return-void
+.end method
 
-    if-nez v0, :cond_0
 
-    invoke-static {p0}, Ljava/lang/Character;->isSpaceChar(C)Z
+# virtual methods
+.method public final a()Ljava/nio/charset/Charset;
+    .locals 2
 
-    move-result v0
+    sget-object v0, Lqidxisbestlol/ke;->h:Ljava/nio/charset/Charset;
 
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
+    if-eqz v0, :cond_0
 
     :goto_0
-    return v0
+    return-object v0
 
-    :cond_1
-    const/4 v0, 0x0
+    :cond_0
+    check-cast p0, Lqidxisbestlol/ke;
+
+    const-string v0, "UTF-32LE"
+
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v0
+
+    const-string v1, "Charset.forName(\"UTF-32LE\")"
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sput-object v0, Lqidxisbestlol/ke;->h:Ljava/nio/charset/Charset;
+
+    nop
+
+    nop
+
+    goto :goto_0
+.end method
+
+.method public final b()Ljava/nio/charset/Charset;
+    .locals 2
+
+    sget-object v0, Lqidxisbestlol/ke;->i:Ljava/nio/charset/Charset;
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    check-cast p0, Lqidxisbestlol/ke;
+
+    const-string v0, "UTF-32BE"
+
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v0
+
+    const-string v1, "Charset.forName(\"UTF-32BE\")"
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sput-object v0, Lqidxisbestlol/ke;->i:Ljava/nio/charset/Charset;
+
+    nop
+
+    nop
 
     goto :goto_0
 .end method

@@ -1,39 +1,54 @@
 .class public abstract Lqidxisbestlol/ij;
-.super Ljava/lang/Object;
+.super Lqidxisbestlol/ii;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
-.implements Lqidxisbestlol/ih;
-
-
-# instance fields
-.field private final a:I
+.implements Lqidxisbestlol/jm;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lqidxisbestlol/ij;->a:I
+    invoke-direct {p0}, Lqidxisbestlol/ii;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 2
+.method public a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p0}, Lqidxisbestlol/ir;->a(Lqidxisbestlol/ij;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lqidxisbestlol/ij;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, "Reflection.renderLambdaToString(this)"
+    return-object v0
+.end method
 
-    invoke-static {v0, v1}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/String;)V
+.method protected a()Lqidxisbestlol/jg;
+    .locals 1
+
+    invoke-static {p0}, Lqidxisbestlol/ip;->a(Lqidxisbestlol/ij;)Lqidxisbestlol/jm;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public i()Lqidxisbestlol/jn;
+    .locals 1
+
+    invoke-virtual {p0}, Lqidxisbestlol/ij;->h()Lqidxisbestlol/jk;
+
+    move-result-object v0
+
+    check-cast v0, Lqidxisbestlol/jm;
+
+    invoke-interface {v0}, Lqidxisbestlol/jm;->i()Lqidxisbestlol/jn;
+
+    move-result-object v0
 
     return-object v0
 .end method

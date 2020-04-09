@@ -1,269 +1,94 @@
-.class final Lqidxisbestlol/bv;
+.class public Lqidxisbestlol/bv;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Map$Entry;
-
-
-# instance fields
-.field a:Lqidxisbestlol/bv;
-
-.field b:Lqidxisbestlol/bv;
-
-.field c:Lqidxisbestlol/bv;
-
-.field d:Lqidxisbestlol/bv;
-
-.field e:Lqidxisbestlol/bv;
-
-.field final f:Ljava/lang/Object;
-
-.field g:Ljava/lang/Object;
-
-.field h:I
-
 
 # direct methods
-.method constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lqidxisbestlol/bv;->f:Ljava/lang/Object;
-
-    iput-object p0, p0, Lqidxisbestlol/bv;->e:Lqidxisbestlol/bv;
-
-    iput-object p0, p0, Lqidxisbestlol/bv;->d:Lqidxisbestlol/bv;
-
-    return-void
-.end method
-
-.method constructor <init>(Lqidxisbestlol/bv;Ljava/lang/Object;Lqidxisbestlol/bv;Lqidxisbestlol/bv;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqidxisbestlol/bv;->a:Lqidxisbestlol/bv;
-
-    iput-object p2, p0, Lqidxisbestlol/bv;->f:Ljava/lang/Object;
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lqidxisbestlol/bv;->h:I
-
-    iput-object p3, p0, Lqidxisbestlol/bv;->d:Lqidxisbestlol/bv;
-
-    iput-object p4, p0, Lqidxisbestlol/bv;->e:Lqidxisbestlol/bv;
-
-    iput-object p0, p4, Lqidxisbestlol/bv;->d:Lqidxisbestlol/bv;
-
-    iput-object p0, p3, Lqidxisbestlol/bv;->e:Lqidxisbestlol/bv;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a()Lqidxisbestlol/bv;
-    .locals 2
-
-    iget-object v0, p0, Lqidxisbestlol/bv;->b:Lqidxisbestlol/bv;
-
-    :goto_0
-    if-eqz v0, :cond_0
-
-    iget-object v1, v0, Lqidxisbestlol/bv;->b:Lqidxisbestlol/bv;
-
-    move-object p0, v0
-
-    move-object v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    return-object p0
-.end method
-
-.method public b()Lqidxisbestlol/bv;
-    .locals 2
-
-    iget-object v0, p0, Lqidxisbestlol/bv;->c:Lqidxisbestlol/bv;
-
-    :goto_0
-    if-eqz v0, :cond_0
-
-    iget-object v1, v0, Lqidxisbestlol/bv;->c:Lqidxisbestlol/bv;
-
-    move-object p0, v0
-
-    move-object v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    return-object p0
-.end method
-
-.method public equals(Ljava/lang/Object;)Z
+.method private static a(I)Ljava/lang/String;
     .locals 3
 
-    const/4 v0, 0x0
+    packed-switch p0, :pswitch_data_0
 
-    instance-of v1, p1, Ljava/util/Map$Entry;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    if-eqz v1, :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    check-cast p1, Ljava/util/Map$Entry;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lqidxisbestlol/bv;->f:Ljava/lang/Object;
+    const-string v2, "Unknown DateFormat style: "
 
-    if-nez v1, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    if-nez v1, :cond_0
-
-    :goto_0
-    iget-object v1, p0, Lqidxisbestlol/bv;->g:Ljava/lang/Object;
-
-    if-nez v1, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    if-nez v1, :cond_0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :goto_1
-    const/4 v0, 0x1
+    move-result-object v1
 
-    :cond_0
-    return v0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    :cond_1
-    iget-object v1, p0, Lqidxisbestlol/bv;->f:Ljava/lang/Object;
+    throw v0
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v1, p0, Lqidxisbestlol/bv;->g:Ljava/lang/Object;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_1
-.end method
-
-.method public getKey()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/bv;->f:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public getValue()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/bv;->g:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public hashCode()I
-    .locals 3
-
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Lqidxisbestlol/bv;->f:Ljava/lang/Object;
-
-    if-nez v0, :cond_0
-
-    move v0, v1
+    :pswitch_0
+    const-string v0, "M/d/yy"
 
     :goto_0
-    iget-object v2, p0, Lqidxisbestlol/bv;->g:Ljava/lang/Object;
+    return-object v0
 
-    if-nez v2, :cond_1
-
-    :goto_1
-    xor-int/2addr v0, v1
-
-    return v0
-
-    :cond_0
-    iget-object v0, p0, Lqidxisbestlol/bv;->f:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
+    :pswitch_1
+    const-string v0, "MMM d, yyyy"
 
     goto :goto_0
 
-    :cond_1
-    iget-object v1, p0, Lqidxisbestlol/bv;->g:Ljava/lang/Object;
+    :pswitch_2
+    const-string v0, "MMMM d, yyyy"
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    goto :goto_0
 
-    move-result v1
+    :pswitch_3
+    const-string v0, "EEEE, MMMM d, yyyy"
 
-    goto :goto_1
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/bv;->g:Ljava/lang/Object;
-
-    iput-object p1, p0, Lqidxisbestlol/bv;->g:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 2
+.method public static a(II)Ljava/text/DateFormat;
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lqidxisbestlol/bv;->f:Ljava/lang/Object;
+    invoke-static {p0}, Lqidxisbestlol/bv;->a(I)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "="
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lqidxisbestlol/bv;->g:Ljava/lang/Object;
+    const-string v1, " "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {p1}, Lqidxisbestlol/bv;->b(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -271,5 +96,67 @@
 
     move-result-object v0
 
+    new-instance v1, Ljava/text/SimpleDateFormat;
+
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-direct {v1, v0, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    return-object v1
+.end method
+
+.method private static b(I)Ljava/lang/String;
+    .locals 3
+
+    packed-switch p0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Unknown DateFormat style: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    const-string v0, "h:mm a"
+
+    :goto_0
     return-object v0
+
+    :pswitch_1
+    const-string v0, "h:mm:ss a"
+
+    goto :goto_0
+
+    :pswitch_2
+    const-string v0, "h:mm:ss a z"
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

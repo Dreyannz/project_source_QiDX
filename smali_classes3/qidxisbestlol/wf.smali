@@ -3,339 +3,90 @@
 .source "SourceFile"
 
 
-# static fields
-.field private static final a:[B
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static final a(Lqidxisbestlol/vw;I)I
+    .locals 4
 
-    const-string v0, "0123456789abcdef"
+    const-string v0, "$this$segment"
 
-    invoke-static {v0}, Lqidxisbestlol/uv;->a(Ljava/lang/String;)[B
+    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lqidxisbestlol/vw;->p()[I
+
+    move-result-object v1
+
+    add-int/lit8 v2, p1, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p0}, Lqidxisbestlol/vw;->o()[[B
 
     move-result-object v0
 
-    sput-object v0, Lqidxisbestlol/wf;->a:[B
+    check-cast v0, [Ljava/lang/Object;
 
-    return-void
-.end method
+    array-length v0, v0
 
-.method public static final a(Lqidxisbestlol/vd;Lqidxisbestlol/vq;Z)I
-    .locals 12
-
-    const-string v0, "$this$selectPrefix"
-
-    invoke-static {p0, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "options"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v7, p0, Lqidxisbestlol/vd;->a:Lqidxisbestlol/vv;
-
-    if-eqz v7, :cond_2
-
-    iget-object v5, v7, Lqidxisbestlol/vv;->a:[B
-
-    iget v4, v7, Lqidxisbestlol/vv;->b:I
-
-    iget v3, v7, Lqidxisbestlol/vv;->c:I
-
-    invoke-virtual {p1}, Lqidxisbestlol/vq;->c()[I
-
-    move-result-object v10
-
-    const/4 v1, 0x0
-
-    const/4 v0, -0x1
-
-    move v2, v1
-
-    move-object v6, v7
-
-    :goto_0
-    nop
-
-    add-int/lit8 v1, v2, 0x1
-
-    aget v8, v10, v2
-
-    add-int/lit8 v2, v1, 0x1
-
-    aget v1, v10, v1
-
-    const/4 v9, -0x1
-
-    if-eq v1, v9, :cond_11
-
-    :goto_1
-    if-nez v6, :cond_4
-
-    :cond_0
-    if-eqz p2, :cond_1
-
-    const/4 v1, -0x2
-
-    :cond_1
-    :goto_2
-    return v1
-
-    :cond_2
-    if-eqz p2, :cond_3
-
-    const/4 v0, -0x2
-
-    :goto_3
-    move v1, v0
-
-    goto :goto_2
-
-    :cond_3
-    const/4 v0, -0x1
-
-    goto :goto_3
-
-    :cond_4
-    if-gez v8, :cond_b
-
-    mul-int/lit8 v0, v8, -0x1
-
-    add-int v11, v2, v0
-
-    move v0, v2
-
-    :goto_4
-    nop
-
-    add-int/lit8 v8, v4, 0x1
-
-    aget-byte v2, v5, v4
-
-    const/16 v4, 0xff
-
-    and-int/2addr v4, v2
-
-    add-int/lit8 v2, v0, 0x1
-
-    aget v0, v10, v0
-
-    if-ne v4, v0, :cond_1
-
-    if-ne v2, v11, :cond_9
-
-    const/4 v0, 0x1
-
-    move v9, v0
-
-    :goto_5
-    if-ne v8, v3, :cond_10
-
-    if-nez v6, :cond_5
-
-    invoke-static {}, Lqidxisbestlol/ii;->a()V
-
-    :cond_5
-    iget-object v6, v6, Lqidxisbestlol/vv;->f:Lqidxisbestlol/vv;
-
-    if-nez v6, :cond_6
-
-    invoke-static {}, Lqidxisbestlol/ii;->a()V
-
-    :cond_6
-    iget v4, v6, Lqidxisbestlol/vv;->b:I
-
-    iget-object v5, v6, Lqidxisbestlol/vv;->a:[B
-
-    iget v3, v6, Lqidxisbestlol/vv;->c:I
-
-    if-ne v6, v7, :cond_7
-
-    if-eqz v9, :cond_0
-
-    const/4 v0, 0x0
-
-    check-cast v0, Lqidxisbestlol/vv;
-
-    move-object v6, v0
-
-    :cond_7
-    :goto_6
-    if-eqz v9, :cond_a
-
-    aget v2, v10, v2
-
-    :cond_8
-    :goto_7
-    if-ltz v2, :cond_e
-
-    move v1, v2
-
-    goto :goto_2
-
-    :cond_9
-    const/4 v0, 0x0
-
-    move v9, v0
-
-    goto :goto_5
-
-    :cond_a
-    move v0, v2
-
-    goto :goto_4
-
-    :cond_b
-    add-int/lit8 v0, v4, 0x1
-
-    aget-byte v4, v5, v4
-
-    const/16 v9, 0xff
-
-    and-int/2addr v4, v9
-
-    add-int v9, v2, v8
-
-    :goto_8
-    nop
-
-    if-eq v2, v9, :cond_1
-
-    aget v11, v10, v2
-
-    if-ne v4, v11, :cond_d
-
-    add-int/2addr v2, v8
-
-    aget v2, v10, v2
-
-    if-ne v0, v3, :cond_f
-
-    iget-object v6, v6, Lqidxisbestlol/vv;->f:Lqidxisbestlol/vv;
-
-    if-nez v6, :cond_c
-
-    invoke-static {}, Lqidxisbestlol/ii;->a()V
-
-    :cond_c
-    iget v4, v6, Lqidxisbestlol/vv;->b:I
-
-    iget-object v5, v6, Lqidxisbestlol/vv;->a:[B
-
-    iget v3, v6, Lqidxisbestlol/vv;->c:I
-
-    if-ne v6, v7, :cond_8
-
-    const/4 v0, 0x0
-
-    check-cast v0, Lqidxisbestlol/vv;
-
-    move-object v6, v0
-
-    goto :goto_7
-
-    :cond_d
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_8
-
-    :cond_e
-    neg-int v2, v2
-
-    move v0, v1
-
-    goto/16 :goto_0
-
-    :cond_f
-    move v4, v0
-
-    goto :goto_7
-
-    :cond_10
-    move v4, v8
-
-    goto :goto_6
-
-    :cond_11
-    move v1, v0
-
-    goto/16 :goto_1
-.end method
-
-.method public static synthetic a(Lqidxisbestlol/vd;Lqidxisbestlol/vq;ZILjava/lang/Object;)I
-    .locals 1
-
-    and-int/lit8 v0, p3, 0x2
-
-    if-eqz v0, :cond_0
-
-    const/4 p2, 0x0
-
-    :cond_0
-    invoke-static {p0, p1, p2}, Lqidxisbestlol/wf;->a(Lqidxisbestlol/vd;Lqidxisbestlol/vq;Z)I
+    invoke-static {v1, v2, v3, v0}, Lqidxisbestlol/wf;->a([IIII)I
 
     move-result v0
 
+    if-ltz v0, :cond_0
+
+    :goto_0
     return v0
-.end method
-
-.method public static final a(Lqidxisbestlol/vd;J)Ljava/lang/String;
-    .locals 5
-
-    const-wide/16 v2, 0x1
-
-    const-string v0, "$this$readUtf8Line"
-
-    invoke-static {p0, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    nop
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p1, v0
-
-    if-lez v0, :cond_0
-
-    sub-long v0, p1, v2
-
-    invoke-virtual {p0, v0, v1}, Lqidxisbestlol/vd;->c(J)B
-
-    move-result v0
-
-    const/16 v1, 0xd
-
-    int-to-byte v1, v1
-
-    if-ne v0, v1, :cond_0
-
-    sub-long v0, p1, v2
-
-    invoke-virtual {p0, v0, v1}, Lqidxisbestlol/vd;->e(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-wide/16 v2, 0x2
-
-    invoke-virtual {p0, v2, v3}, Lqidxisbestlol/vd;->h(J)V
-
-    :goto_0
-    return-object v0
 
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/vd;->e(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v2, v3}, Lqidxisbestlol/vd;->h(J)V
+    xor-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 .end method
 
-.method public static final a()[B
-    .locals 1
+.method public static final a([IIII)I
+    .locals 4
 
-    sget-object v0, Lqidxisbestlol/wf;->a:[B
+    const-string v0, "$this$binarySearch"
 
-    return-object v0
+    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    add-int/lit8 v0, p3, -0x1
+
+    move v1, p2
+
+    :goto_0
+    if-gt v1, v0, :cond_2
+
+    add-int v2, v1, v0
+
+    ushr-int/lit8 v2, v2, 0x1
+
+    aget v3, p0, v2
+
+    nop
+
+    if-ge v3, p1, :cond_0
+
+    add-int/lit8 v1, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    if-le v3, p1, :cond_1
+
+    add-int/lit8 v0, v2, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    :goto_1
+    return v0
+
+    :cond_2
+    neg-int v0, v1
+
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_1
 .end method

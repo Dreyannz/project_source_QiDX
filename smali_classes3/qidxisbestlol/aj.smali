@@ -1,39 +1,36 @@
-.class Lqidxisbestlol/aj;
-.super Lqidxisbestlol/ai;
+.class public interface abstract annotation Lqidxisbestlol/aj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
-# instance fields
-.field final synthetic a:Lqidxisbestlol/ai;
 
+# annotations
+.annotation system Ldalvik/annotation/AnnotationDefault;
+    value = .subannotation Lqidxisbestlol/aj;
+        a = true
+        b = true
+    .end subannotation
+.end annotation
 
-# direct methods
-.method constructor <init>(Lqidxisbestlol/ai;)V
-    .locals 0
+.annotation runtime Ljava/lang/annotation/Documented;
+.end annotation
 
-    iput-object p1, p0, Lqidxisbestlol/aj;->a:Lqidxisbestlol/ai;
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
 
-    invoke-direct {p0}, Lqidxisbestlol/ai;-><init>()V
-
-    return-void
-.end method
+.annotation runtime Ljava/lang/annotation/Target;
+    value = {
+        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;
+    }
+.end annotation
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
-    .locals 1
+.method public abstract a()Z
+.end method
 
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Lqidxisbestlol/ew;->f()Lqidxisbestlol/ew;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lqidxisbestlol/aj;->a:Lqidxisbestlol/ai;
-
-    invoke-virtual {v0, p1, p2}, Lqidxisbestlol/ai;->a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
-
-    goto :goto_0
+.method public abstract b()Z
 .end method

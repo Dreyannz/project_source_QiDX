@@ -1,56 +1,49 @@
 .class Lqidxisbestlol/cb;
-.super Ljava/lang/Object;
+.super Lqidxisbestlol/ca;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/CharSequence;
 
 
 # instance fields
-.field a:[C
+.field final synthetic a:Ljava/lang/reflect/Method;
+
+.field final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Ljava/lang/reflect/Method;Ljava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqidxisbestlol/cb;->a:Ljava/lang/reflect/Method;
+
+    iput-object p2, p0, Lqidxisbestlol/cb;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Lqidxisbestlol/ca;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public charAt(I)C
-    .locals 1
+.method public a(Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Lqidxisbestlol/cb;->a:[C
+    invoke-static {p1}, Lqidxisbestlol/cb;->b(Ljava/lang/Class;)V
 
-    aget-char v0, v0, p1
+    iget-object v0, p0, Lqidxisbestlol/cb;->a:Ljava/lang/reflect/Method;
 
-    return v0
-.end method
+    iget-object v1, p0, Lqidxisbestlol/cb;->b:Ljava/lang/Object;
 
-.method public length()I
-    .locals 1
+    const/4 v2, 0x1
 
-    iget-object v0, p0, Lqidxisbestlol/cb;->a:[C
+    new-array v2, v2, [Ljava/lang/Object;
 
-    array-length v0, v0
+    const/4 v3, 0x0
 
-    return v0
-.end method
+    aput-object p1, v2, v3
 
-.method public subSequence(II)Ljava/lang/CharSequence;
-    .locals 3
+    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/String;
-
-    iget-object v1, p0, Lqidxisbestlol/cb;->a:[C
-
-    sub-int v2, p2, p1
-
-    invoke-direct {v0, v1, p1, v2}, Ljava/lang/String;-><init>([CII)V
+    move-result-object v0
 
     return-object v0
 .end method

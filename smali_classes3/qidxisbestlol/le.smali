@@ -1,38 +1,30 @@
-.class public interface abstract Lqidxisbestlol/le;
+.class final Lqidxisbestlol/le;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:Lqidxisbestlol/le;
-
-.field public static final b:Lqidxisbestlol/lf;
+# interfaces
+.implements Lqidxisbestlol/lc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
-    new-instance v0, Lqidxisbestlol/lf;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/lf;-><init>(Lqidxisbestlol/ig;)V
-
-    sput-object v0, Lqidxisbestlol/le;->b:Lqidxisbestlol/lf;
-
-    new-instance v0, Lqidxisbestlol/lg;
-
-    invoke-direct {v0}, Lqidxisbestlol/lg;-><init>()V
-
-    check-cast v0, Lqidxisbestlol/le;
-
-    sput-object v0, Lqidxisbestlol/le;->a:Lqidxisbestlol/le;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Lqidxisbestlol/oc;Lqidxisbestlol/nx;)Lqidxisbestlol/ns;
+.method public a(Lqidxisbestlol/oa;Lqidxisbestlol/nv;)Lqidxisbestlol/nq;
+    .locals 1
+
+    const-string v0, "response"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

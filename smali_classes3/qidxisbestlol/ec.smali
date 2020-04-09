@@ -1,5 +1,5 @@
 .class Lqidxisbestlol/ec;
-.super Lqidxisbestlol/ai;
+.super Lqidxisbestlol/ag;
 .source "SourceFile"
 
 
@@ -7,39 +7,27 @@
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lqidxisbestlol/ai;-><init>()V
+    invoke-direct {p0}, Lqidxisbestlol/ag;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
+.method public a(Lqidxisbestlol/eu;Ljava/lang/Boolean;)V
     .locals 0
 
-    check-cast p2, Ljava/util/Locale;
-
-    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/ec;->a(Lqidxisbestlol/ew;Ljava/util/Locale;)V
+    invoke-virtual {p1, p2}, Lqidxisbestlol/eu;->a(Ljava/lang/Boolean;)Lqidxisbestlol/eu;
 
     return-void
 .end method
 
-.method public a(Lqidxisbestlol/ew;Ljava/util/Locale;)V
-    .locals 1
+.method public bridge synthetic a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
+    .locals 0
 
-    if-nez p2, :cond_0
+    check-cast p2, Ljava/lang/Boolean;
 
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {p1, v0}, Lqidxisbestlol/ew;->b(Ljava/lang/String;)Lqidxisbestlol/ew;
+    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/ec;->a(Lqidxisbestlol/eu;Ljava/lang/Boolean;)V
 
     return-void
-
-    :cond_0
-    invoke-virtual {p2}, Ljava/util/Locale;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
 .end method

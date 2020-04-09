@@ -1,66 +1,29 @@
-.class public final Lqidxisbestlol/z;
-.super Lqidxisbestlol/x;
+.class public Lqidxisbestlol/z;
+.super Ljava/lang/RuntimeException;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lqidxisbestlol/z;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lqidxisbestlol/z;
-
-    invoke-direct {v0}, Lqidxisbestlol/z;-><init>()V
-
-    sput-object v0, Lqidxisbestlol/z;->a:Lqidxisbestlol/z;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
-    invoke-direct {p0}, Lqidxisbestlol/x;-><init>()V
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
-# virtual methods
-.method public equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-direct {p0, p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    if-eq p0, p1, :cond_0
-
-    instance-of v0, p1, Lqidxisbestlol/z;
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method
 
-.method public hashCode()I
-    .locals 1
+.method public constructor <init>(Ljava/lang/Throwable;)V
+    .locals 0
 
-    const-class v0, Lqidxisbestlol/z;
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

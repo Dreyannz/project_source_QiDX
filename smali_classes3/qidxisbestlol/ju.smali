@@ -1,2 +1,3 @@
-.class public final Lqidxisbestlol/ju;
-.super Lqidxisbestlol/jz;
+.class Lqidxisbestlol/ju;
+.super Lqidxisbestlol/jt;
+.source "SourceFile"

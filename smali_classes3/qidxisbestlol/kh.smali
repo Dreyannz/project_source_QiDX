@@ -1,88 +1,130 @@
-.class final Lqidxisbestlol/kh;
+.class public final Lqidxisbestlol/kh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/jt;
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final a:Lqidxisbestlol/ki;
 
 
 # instance fields
-.field private final a:Ljava/lang/CharSequence;
-
-.field private final b:I
-
-.field private final c:I
-
-.field private final d:Lqidxisbestlol/hy;
+.field private final b:Ljava/util/regex/Pattern;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;IILqidxisbestlol/hy;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    const-string v0, "input"
+    new-instance v0, Lqidxisbestlol/ki;
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 v1, 0x0
 
-    const-string v0, "getNextMatch"
+    invoke-direct {v0, v1}, Lqidxisbestlol/ki;-><init>(Lqidxisbestlol/ie;)V
 
-    invoke-static {p4, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqidxisbestlol/kh;->a:Ljava/lang/CharSequence;
-
-    iput p2, p0, Lqidxisbestlol/kh;->b:I
-
-    iput p3, p0, Lqidxisbestlol/kh;->c:I
-
-    iput-object p4, p0, Lqidxisbestlol/kh;->d:Lqidxisbestlol/hy;
+    sput-object v0, Lqidxisbestlol/kh;->a:Lqidxisbestlol/ki;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lqidxisbestlol/kh;)I
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 2
 
-    iget v0, p0, Lqidxisbestlol/kh;->c:I
+    const-string v0, "pattern"
 
-    return v0
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    const-string v1, "Pattern.compile(pattern)"
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0, v0}, Lqidxisbestlol/kh;-><init>(Ljava/util/regex/Pattern;)V
+
+    return-void
 .end method
 
-.method public static final synthetic b(Lqidxisbestlol/kh;)Ljava/lang/CharSequence;
+.method public constructor <init>(Ljava/util/regex/Pattern;)V
     .locals 1
 
-    iget-object v0, p0, Lqidxisbestlol/kh;->a:Ljava/lang/CharSequence;
+    const-string v0, "nativePattern"
 
-    return-object v0
-.end method
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-.method public static final synthetic c(Lqidxisbestlol/kh;)Lqidxisbestlol/hy;
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lqidxisbestlol/kh;->d:Lqidxisbestlol/hy;
+    iput-object p1, p0, Lqidxisbestlol/kh;->b:Ljava/util/regex/Pattern;
 
-    return-object v0
-.end method
-
-.method public static final synthetic d(Lqidxisbestlol/kh;)I
-    .locals 1
-
-    iget v0, p0, Lqidxisbestlol/kh;->b:I
-
-    return v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/util/Iterator;
+.method public final a(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "input"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "replacement"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lqidxisbestlol/kh;->b:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "nativePattern.matcher(in\u2026).replaceAll(replacement)"
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final a(Ljava/lang/CharSequence;)Z
     .locals 1
 
-    new-instance v0, Lqidxisbestlol/ki;
+    const-string v0, "input"
 
-    invoke-direct {v0, p0}, Lqidxisbestlol/ki;-><init>(Lqidxisbestlol/kh;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Ljava/util/Iterator;
+    iget-object v0, p0, Lqidxisbestlol/kh;->b:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lqidxisbestlol/kh;->b:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0}, Ljava/util/regex/Pattern;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "nativePattern.toString()"
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

@@ -4,87 +4,195 @@
 
 
 # direct methods
-.method private static final a(II)I
-    .locals 1
+.method public static final a(Lqidxisbestlol/jh;)Ljava/lang/Class;
+    .locals 3
 
-    rem-int v0, p0, p1
+    const-string v0, "$this$javaObjectType"
 
-    if-ltz v0, :cond_0
+    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    :goto_0
-    return v0
+    check-cast p0, Lqidxisbestlol/ib;
+
+    invoke-interface {p0}, Lqidxisbestlol/ib;->a()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->isPrimitive()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    if-nez v0, :cond_3
+
+    new-instance v0, Lqidxisbestlol/fp;
+
+    const-string v1, "null cannot be cast to non-null type java.lang.Class<T>"
+
+    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_0
-    add-int/2addr v0, p1
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    goto :goto_0
-.end method
+    move-result-object v1
 
-.method public static final a(III)I
-    .locals 2
-
-    nop
-
-    if-lez p2, :cond_2
-
-    if-lt p0, p1, :cond_1
-
-    :cond_0
-    :goto_0
-    return p1
+    if-nez v1, :cond_2
 
     :cond_1
-    invoke-static {p1, p0, p2}, Lqidxisbestlol/hs;->b(III)I
+    :goto_0
+    if-nez v0, :cond_3
 
-    move-result v0
+    new-instance v0, Lqidxisbestlol/fp;
 
-    sub-int/2addr p1, v0
+    const-string v1, "null cannot be cast to non-null type java.lang.Class<T>"
+
+    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    sparse-switch v2, :sswitch_data_0
 
     goto :goto_0
 
-    :cond_2
-    if-gez p2, :cond_3
+    :sswitch_0
+    const-string v2, "double"
 
-    if-le p0, p1, :cond_0
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    neg-int v0, p2
+    move-result v1
 
-    invoke-static {p0, p1, v0}, Lqidxisbestlol/hs;->b(III)I
+    if-eqz v1, :cond_1
 
-    move-result v0
+    const-class v0, Ljava/lang/Double;
 
-    add-int/2addr p1, v0
+    goto :goto_0
+
+    :sswitch_1
+    const-string v2, "boolean"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-class v0, Ljava/lang/Boolean;
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v2, "void"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-class v0, Ljava/lang/Void;
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v2, "byte"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-class v0, Ljava/lang/Byte;
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v2, "char"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-class v0, Ljava/lang/Character;
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v2, "short"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-class v0, Ljava/lang/Short;
+
+    goto :goto_0
+
+    :sswitch_6
+    const-string v2, "float"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-class v0, Ljava/lang/Float;
+
+    goto :goto_0
+
+    :sswitch_7
+    const-string v2, "int"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-class v0, Ljava/lang/Integer;
+
+    goto :goto_0
+
+    :sswitch_8
+    const-string v2, "long"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-class v0, Ljava/lang/Long;
 
     goto :goto_0
 
     :cond_3
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    return-object v0
 
-    const-string v1, "Step is zero."
+    nop
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-.end method
-
-.method private static final b(III)I
-    .locals 2
-
-    invoke-static {p0, p2}, Lqidxisbestlol/hs;->a(II)I
-
-    move-result v0
-
-    invoke-static {p1, p2}, Lqidxisbestlol/hs;->a(II)I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    invoke-static {v0, p2}, Lqidxisbestlol/hs;->a(II)I
-
-    move-result v0
-
-    return v0
+    :sswitch_data_0
+    .sparse-switch
+        -0x4f08842f -> :sswitch_0
+        0x197ef -> :sswitch_7
+        0x2e6108 -> :sswitch_3
+        0x2e9356 -> :sswitch_4
+        0x32c67c -> :sswitch_8
+        0x375194 -> :sswitch_2
+        0x3db6c28 -> :sswitch_1
+        0x5d0225c -> :sswitch_6
+        0x685847c -> :sswitch_5
+    .end sparse-switch
 .end method

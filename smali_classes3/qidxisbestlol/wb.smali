@@ -1,17 +1,21 @@
-.class public interface abstract Lqidxisbestlol/wb;
+.class public final Lqidxisbestlol/wb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Closeable;
 
+# direct methods
+.method private constructor <init>()V
+    .locals 0
 
-# virtual methods
-.method public abstract a(Lqidxisbestlol/vd;J)J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method
 
-.method public abstract a()Lqidxisbestlol/wc;
-.end method
+.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
+    .locals 0
 
-.method public abstract close()V
+    invoke-direct {p0}, Lqidxisbestlol/wb;-><init>()V
+
+    return-void
 .end method

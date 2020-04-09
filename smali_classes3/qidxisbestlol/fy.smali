@@ -1,328 +1,140 @@
-.class public final Lqidxisbestlol/fy;
-.super Ljava/lang/Object;
+.class Lqidxisbestlol/fy;
+.super Lqidxisbestlol/fx;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/ListIterator;
+.implements Lqidxisbestlol/it;
+
+
+# instance fields
+.field final synthetic b:Lqidxisbestlol/fv;
 
 
 # direct methods
-.method private constructor <init>()V
-    .locals 0
+.method public constructor <init>(Lqidxisbestlol/fv;I)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqidxisbestlol/fy;->b:Lqidxisbestlol/fv;
 
-    return-void
-.end method
+    invoke-direct {p0, p1}, Lqidxisbestlol/fx;-><init>(Lqidxisbestlol/fv;)V
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ig;)V
-    .locals 0
+    sget-object v0, Lqidxisbestlol/fv;->a:Lqidxisbestlol/fw;
 
-    invoke-direct {p0}, Lqidxisbestlol/fy;-><init>()V
+    invoke-virtual {p1}, Lqidxisbestlol/fv;->size()I
+
+    move-result v1
+
+    invoke-virtual {v0, p2, v1}, Lqidxisbestlol/fw;->b(II)V
+
+    invoke-virtual {p0, p2}, Lqidxisbestlol/fy;->a(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/Collection;)I
-    .locals 4
+.method public add(Ljava/lang/Object;)V
+    .locals 2
 
-    const-string v0, "c"
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v1, "Operation is not supported for read-only collection"
 
-    const/4 v0, 0x1
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    throw v0
+.end method
 
-    move-result-object v1
+.method public hasPrevious()Z
+    .locals 1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    mul-int/lit8 v3, v0, 0x1f
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Lqidxisbestlol/fy;->a()I
 
     move-result v0
 
-    :goto_1
-    add-int/2addr v0, v3
+    if-lez v0, :cond_0
 
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final a(II)V
-    .locals 3
-
-    if-ltz p1, :cond_0
-
-    if-lt p1, p2, :cond_1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "index: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ", size: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_1
-    return-void
-.end method
-
-.method public final a(III)V
-    .locals 3
-
-    if-ltz p1, :cond_0
-
-    if-le p2, p3, :cond_1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "fromIndex: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ", toIndex: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ", size: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_1
-    if-le p1, p2, :cond_2
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "fromIndex: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " > toIndex: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_2
-    return-void
-.end method
-
-.method public final a(Ljava/util/Collection;Ljava/util/Collection;)Z
-    .locals 5
-
-    const/4 v0, 0x0
-
-    const-string v1, "c"
-
-    invoke-static {p1, v1}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v1, "other"
-
-    invoke-static {p2, v1}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
-
-    move-result v1
-
-    invoke-interface {p2}, Ljava/util/Collection;->size()I
-
-    move-result v2
-
-    if-eq v1, v2, :cond_0
+    const/4 v0, 0x1
 
     :goto_0
     return v0
 
     :cond_0
-    invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    xor-int/lit8 v3, v3, 0x1
-
-    if-eqz v3, :cond_1
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public final b(II)V
-    .locals 3
+.method public nextIndex()I
+    .locals 1
 
-    if-ltz p1, :cond_0
+    invoke-virtual {p0}, Lqidxisbestlol/fy;->a()I
 
-    if-le p1, p2, :cond_1
+    move-result v0
 
-    :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+    return v0
+.end method
 
-    new-instance v1, Ljava/lang/StringBuilder;
+.method public previous()Ljava/lang/Object;
+    .locals 2
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {p0}, Lqidxisbestlol/fy;->hasPrevious()Z
 
-    const-string v2, "index: "
+    move-result v0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    move-result-object v1
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ", size: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
     check-cast v0, Ljava/lang/Throwable;
 
     throw v0
 
-    :cond_1
-    return-void
+    :cond_0
+    iget-object v0, p0, Lqidxisbestlol/fy;->b:Lqidxisbestlol/fv;
+
+    invoke-virtual {p0}, Lqidxisbestlol/fy;->a()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    invoke-virtual {p0, v1}, Lqidxisbestlol/fy;->a(I)V
+
+    invoke-virtual {p0}, Lqidxisbestlol/fy;->a()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lqidxisbestlol/fv;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public previousIndex()I
+    .locals 1
+
+    invoke-virtual {p0}, Lqidxisbestlol/fy;->a()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    return v0
+.end method
+
+.method public set(Ljava/lang/Object;)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

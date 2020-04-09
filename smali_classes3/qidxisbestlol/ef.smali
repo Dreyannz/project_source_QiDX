@@ -3,12 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/ak;
+.implements Lqidxisbestlol/ai;
+
+
+# instance fields
+.field final synthetic a:Ljava/lang/Class;
+
+.field final synthetic b:Ljava/lang/Class;
+
+.field final synthetic c:Lqidxisbestlol/ag;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Ljava/lang/Class;Ljava/lang/Class;Lqidxisbestlol/ag;)V
     .locals 0
+
+    iput-object p1, p0, Lqidxisbestlol/ef;->a:Ljava/lang/Class;
+
+    iput-object p2, p0, Lqidxisbestlol/ef;->b:Ljava/lang/Class;
+
+    iput-object p3, p0, Lqidxisbestlol/ef;->c:Lqidxisbestlol/ag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -17,48 +31,93 @@
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/n;Lqidxisbestlol/ev;)Lqidxisbestlol/ai;
+.method public a(Lqidxisbestlol/l;Lqidxisbestlol/et;)Lqidxisbestlol/ag;
     .locals 2
 
-    invoke-virtual {p2}, Lqidxisbestlol/ev;->a()Ljava/lang/Class;
+    invoke-virtual {p2}, Lqidxisbestlol/et;->a()Ljava/lang/Class;
 
     move-result-object v0
 
-    const-class v1, Ljava/lang/Enum;
+    iget-object v1, p0, Lqidxisbestlol/ef;->a:Ljava/lang/Class;
 
-    invoke-virtual {v1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+    if-eq v0, v1, :cond_0
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const-class v1, Ljava/lang/Enum;
+    iget-object v1, p0, Lqidxisbestlol/ef;->b:Ljava/lang/Class;
 
     if-ne v0, v1, :cond_1
 
     :cond_0
-    const/4 v0, 0x0
+    iget-object v0, p0, Lqidxisbestlol/ef;->c:Lqidxisbestlol/ag;
 
     :goto_0
     return-object v0
 
     :cond_1
-    invoke-virtual {v0}, Ljava/lang/Class;->isEnum()Z
+    const/4 v0, 0x0
 
-    move-result v1
+    goto :goto_0
+.end method
 
-    if-nez v1, :cond_2
+.method public toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Factory[type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    :cond_2
-    new-instance v1, Lqidxisbestlol/er;
+    iget-object v1, p0, Lqidxisbestlol/ef;->b:Ljava/lang/Class;
 
-    invoke-direct {v1, v0}, Lqidxisbestlol/er;-><init>(Ljava/lang/Class;)V
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-object v0, v1
+    move-result-object v1
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "+"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lqidxisbestlol/ef;->a:Ljava/lang/Class;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ",adapter="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lqidxisbestlol/ef;->c:Lqidxisbestlol/ag;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

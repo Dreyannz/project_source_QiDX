@@ -3,114 +3,264 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/ui;
+.implements Lqidxisbestlol/ug;
 
 
-# static fields
-.field public static final a:Lqidxisbestlol/ug;
+# instance fields
+.field private a:Z
+
+.field private b:Lqidxisbestlol/ug;
+
+.field private final c:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    new-instance v0, Lqidxisbestlol/ug;
+    const-string v0, "socketPackage"
 
-    const/4 v1, 0x0
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lqidxisbestlol/ug;-><init>(Lqidxisbestlol/ig;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lqidxisbestlol/uf;->a:Lqidxisbestlol/ug;
+    iput-object p1, p0, Lqidxisbestlol/uf;->c:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 0
+.method private final declared-synchronized c(Ljavax/net/ssl/SSLSocket;)Lqidxisbestlol/ug;
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    monitor-enter p0
 
-    return-void
+    :try_start_0
+    iget-boolean v0, p0, Lqidxisbestlol/uf;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v0, :cond_0
+
+    nop
+
+    :try_start_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    :goto_0
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v3, p0, Lqidxisbestlol/uf;->c:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ".OpenSSLSocketImpl"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-string v1, "possibleClass.superclass"
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "No OpenSSLSocketImpl superclass of socket of type "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    throw v0
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_2
+    sget-object v1, Lqidxisbestlol/tr;->b:Lqidxisbestlol/ts;
+
+    invoke-virtual {v1}, Lqidxisbestlol/ts;->a()Lqidxisbestlol/tr;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Failed to initialize DeferredSocketAdapter "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lqidxisbestlol/uf;->c:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x5
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    invoke-virtual {v1, v2, v3, v0}, Lqidxisbestlol/tr;->a(Ljava/lang/String;ILjava/lang/Throwable;)V
+
+    :goto_1
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lqidxisbestlol/uf;->a:Z
+
+    :cond_0
+    iget-object v0, p0, Lqidxisbestlol/uf;->b:Lqidxisbestlol/ug;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :cond_1
+    move-object v1, v0
+
+    goto :goto_0
+
+    :cond_2
+    :try_start_3
+    new-instance v0, Lqidxisbestlol/tz;
+
+    invoke-direct {v0, v1}, Lqidxisbestlol/tz;-><init>(Ljava/lang/Class;)V
+
+    check-cast v0, Lqidxisbestlol/ug;
+
+    iput-object v0, p0, Lqidxisbestlol/uf;->b:Lqidxisbestlol/ug;
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method
 
 
 # virtual methods
 .method public a(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
-    .locals 2
+    .locals 1
 
     const-string v0, "sslSocket"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "protocols"
 
-    invoke-static {p3, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lqidxisbestlol/uf;->a(Ljavax/net/ssl/SSLSocket;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, v0}, Lorg/conscrypt/Conscrypt;->setUseSessionTickets(Ljavax/net/ssl/SSLSocket;Z)V
-
-    sget-object v0, Lqidxisbestlol/tt;->b:Lqidxisbestlol/tu;
-
-    invoke-virtual {v0, p3}, Lqidxisbestlol/tu;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lqidxisbestlol/uf;->c(Ljavax/net/ssl/SSLSocket;)Lqidxisbestlol/ug;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/Collection;
+    if-eqz v0, :cond_0
 
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lqidxisbestlol/fr;
-
-    const-string v1, "null cannot be cast to non-null type kotlin.Array<T>"
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/fr;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    invoke-interface {v0, p1, p2, p3}, Lqidxisbestlol/ug;->a(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
 
     :cond_0
-    check-cast v0, [Ljava/lang/String;
-
-    invoke-static {p1, v0}, Lorg/conscrypt/Conscrypt;->setApplicationProtocols(Ljavax/net/ssl/SSLSocket;[Ljava/lang/String;)V
-
-    :cond_1
     return-void
 .end method
 
 .method public a()Z
     .locals 1
 
-    sget-object v0, Lqidxisbestlol/tj;->a:Lqidxisbestlol/tk;
-
-    invoke-virtual {v0}, Lqidxisbestlol/tk;->a()Z
-
-    move-result v0
+    const/4 v0, 0x1
 
     return v0
 .end method
 
 .method public a(Ljavax/net/ssl/SSLSocket;)Z
-    .locals 1
+    .locals 5
 
     const-string v0, "sslSocket"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lorg/conscrypt/Conscrypt;->isConscrypt(Ljavax/net/ssl/SSLSocket;)Z
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "sslSocket.javaClass.name"
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqidxisbestlol/uf;->c:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x0
+
+    invoke-static {v0, v1, v2, v3, v4}, Lqidxisbestlol/kj;->a(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result v0
 
@@ -122,17 +272,15 @@
 
     const-string v0, "sslSocket"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    nop
+    invoke-direct {p0, p1}, Lqidxisbestlol/uf;->c(Ljavax/net/ssl/SSLSocket;)Lqidxisbestlol/ug;
 
-    invoke-virtual {p0, p1}, Lqidxisbestlol/uf;->a(Ljavax/net/ssl/SSLSocket;)Z
-
-    move-result v0
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lorg/conscrypt/Conscrypt;->getApplicationProtocol(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    invoke-interface {v0, p1}, Lqidxisbestlol/ug;->b(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
 
     move-result-object v0
 

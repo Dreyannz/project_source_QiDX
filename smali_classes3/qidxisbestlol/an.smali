@@ -7,12 +7,6 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/AnnotationDefault;
-    value = .subannotation Lqidxisbestlol/an;
-        b = {}
-    .end subannotation
-.end annotation
-
 .annotation runtime Ljava/lang/annotation/Documented;
 .end annotation
 
@@ -23,14 +17,11 @@
 .annotation runtime Ljava/lang/annotation/Target;
     value = {
         .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;
+        .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;
     }
 .end annotation
 
 
 # virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
-
-.method public abstract b()[Ljava/lang/String;
+.method public abstract a()D
 .end method

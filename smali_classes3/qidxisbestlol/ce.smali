@@ -1,23 +1,13 @@
 .class Lqidxisbestlol/ce;
-.super Lqidxisbestlol/cc;
+.super Lqidxisbestlol/ca;
 .source "SourceFile"
 
 
-# instance fields
-.field final synthetic a:Ljava/lang/reflect/Method;
-
-.field final synthetic b:I
-
-
 # direct methods
-.method constructor <init>(Ljava/lang/reflect/Method;I)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lqidxisbestlol/ce;->a:Ljava/lang/reflect/Method;
-
-    iput p2, p0, Lqidxisbestlol/ce;->b:I
-
-    invoke-direct {p0}, Lqidxisbestlol/cc;-><init>()V
+    invoke-direct {p0}, Lqidxisbestlol/ca;-><init>()V
 
     return-void
 .end method
@@ -25,35 +15,29 @@
 
 # virtual methods
 .method public a(Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 5
+    .locals 3
 
-    invoke-static {p1}, Lqidxisbestlol/ce;->b(Ljava/lang/Class;)V
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    iget-object v0, p0, Lqidxisbestlol/ce;->a:Ljava/lang/reflect/Method;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v2, 0x2
+    const-string v2, "Cannot allocate "
 
-    new-array v2, v2, [Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
+    move-result-object v1
 
-    aput-object p1, v2, v3
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x1
+    move-result-object v1
 
-    iget v4, p0, Lqidxisbestlol/ce;->b:I
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v1
 
-    move-result-object v4
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    aput-object v4, v2, v3
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
+    throw v0
 .end method

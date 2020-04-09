@@ -1,48 +1,127 @@
 .class Lqidxisbestlol/dz;
-.super Ljava/lang/Object;
+.super Lqidxisbestlol/ag;
 .source "SourceFile"
-
-# interfaces
-.implements Lqidxisbestlol/ak;
 
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lqidxisbestlol/ag;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/n;Lqidxisbestlol/ev;)Lqidxisbestlol/ai;
+.method public bridge synthetic a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p2, Ljava/util/Calendar;
+
+    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/dz;->a(Lqidxisbestlol/eu;Ljava/util/Calendar;)V
+
+    return-void
+.end method
+
+.method public a(Lqidxisbestlol/eu;Ljava/util/Calendar;)V
     .locals 2
 
-    invoke-virtual {p2}, Lqidxisbestlol/ev;->a()Ljava/lang/Class;
+    if-nez p2, :cond_0
 
-    move-result-object v0
-
-    const-class v1, Ljava/sql/Timestamp;
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Lqidxisbestlol/eu;->f()Lqidxisbestlol/eu;
 
     :goto_0
-    return-object v0
+    return-void
 
     :cond_0
-    const-class v0, Ljava/util/Date;
+    invoke-virtual {p1}, Lqidxisbestlol/eu;->d()Lqidxisbestlol/eu;
 
-    invoke-virtual {p1, v0}, Lqidxisbestlol/n;->a(Ljava/lang/Class;)Lqidxisbestlol/ai;
+    const-string v0, "year"
 
-    move-result-object v1
+    invoke-virtual {p1, v0}, Lqidxisbestlol/eu;->a(Ljava/lang/String;)Lqidxisbestlol/eu;
 
-    new-instance v0, Lqidxisbestlol/ea;
+    const/4 v0, 0x1
 
-    invoke-direct {v0, p0, v1}, Lqidxisbestlol/ea;-><init>(Lqidxisbestlol/dz;Lqidxisbestlol/ai;)V
+    invoke-virtual {p2, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    invoke-virtual {p1, v0, v1}, Lqidxisbestlol/eu;->a(J)Lqidxisbestlol/eu;
+
+    const-string v0, "month"
+
+    invoke-virtual {p1, v0}, Lqidxisbestlol/eu;->a(Ljava/lang/String;)Lqidxisbestlol/eu;
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p2, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    invoke-virtual {p1, v0, v1}, Lqidxisbestlol/eu;->a(J)Lqidxisbestlol/eu;
+
+    const-string v0, "dayOfMonth"
+
+    invoke-virtual {p1, v0}, Lqidxisbestlol/eu;->a(Ljava/lang/String;)Lqidxisbestlol/eu;
+
+    const/4 v0, 0x5
+
+    invoke-virtual {p2, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    invoke-virtual {p1, v0, v1}, Lqidxisbestlol/eu;->a(J)Lqidxisbestlol/eu;
+
+    const-string v0, "hourOfDay"
+
+    invoke-virtual {p1, v0}, Lqidxisbestlol/eu;->a(Ljava/lang/String;)Lqidxisbestlol/eu;
+
+    const/16 v0, 0xb
+
+    invoke-virtual {p2, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    invoke-virtual {p1, v0, v1}, Lqidxisbestlol/eu;->a(J)Lqidxisbestlol/eu;
+
+    const-string v0, "minute"
+
+    invoke-virtual {p1, v0}, Lqidxisbestlol/eu;->a(Ljava/lang/String;)Lqidxisbestlol/eu;
+
+    const/16 v0, 0xc
+
+    invoke-virtual {p2, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    invoke-virtual {p1, v0, v1}, Lqidxisbestlol/eu;->a(J)Lqidxisbestlol/eu;
+
+    const-string v0, "second"
+
+    invoke-virtual {p1, v0}, Lqidxisbestlol/eu;->a(Ljava/lang/String;)Lqidxisbestlol/eu;
+
+    const/16 v0, 0xd
+
+    invoke-virtual {p2, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    invoke-virtual {p1, v0, v1}, Lqidxisbestlol/eu;->a(J)Lqidxisbestlol/eu;
+
+    invoke-virtual {p1}, Lqidxisbestlol/eu;->e()Lqidxisbestlol/eu;
 
     goto :goto_0
 .end method

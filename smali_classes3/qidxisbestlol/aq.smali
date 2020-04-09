@@ -1,35 +1,105 @@
-.class public final Lqidxisbestlol/aq;
+.class final Lqidxisbestlol/aq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
+.implements Ljava/lang/reflect/GenericArrayType;
+
+
+# instance fields
+.field private final a:Ljava/lang/reflect/Type;
+
 
 # direct methods
-.method public static a(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/reflect/Type;)V
     .locals 1
 
-    if-nez p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/NullPointerException;
+    invoke-static {p1}, Lqidxisbestlol/ap;->d(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
 
-    invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
+    move-result-object v0
 
-    throw v0
+    iput-object v0, p0, Lqidxisbestlol/aq;->a:Ljava/lang/reflect/Type;
 
-    :cond_0
-    return-object p0
+    return-void
 .end method
 
-.method public static a(Z)V
+
+# virtual methods
+.method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    if-nez p0, :cond_0
+    instance-of v0, p1, Ljava/lang/reflect/GenericArrayType;
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    check-cast p1, Ljava/lang/reflect/GenericArrayType;
 
-    throw v0
+    invoke-static {p0, p1}, Lqidxisbestlol/ap;->a(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
 
     :cond_0
-    return-void
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getGenericComponentType()Ljava/lang/reflect/Type;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/aq;->a:Ljava/lang/reflect/Type;
+
+    return-object v0
+.end method
+
+.method public hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/aq;->a:Ljava/lang/reflect/Type;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lqidxisbestlol/aq;->a:Ljava/lang/reflect/Type;
+
+    invoke-static {v1}, Lqidxisbestlol/ap;->f(Ljava/lang/reflect/Type;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "[]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

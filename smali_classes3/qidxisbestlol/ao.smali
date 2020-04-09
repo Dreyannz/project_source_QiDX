@@ -1,27 +1,35 @@
-.class public interface abstract annotation Lqidxisbestlol/ao;
+.class public final Lqidxisbestlol/ao;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
 
+# direct methods
+.method public static a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-# annotations
-.annotation runtime Ljava/lang/annotation/Documented;
-.end annotation
+    if-nez p0, :cond_0
 
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
+    new-instance v0, Ljava/lang/NullPointerException;
 
-.annotation runtime Ljava/lang/annotation/Target;
-    value = {
-        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;
-    }
-.end annotation
+    invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
+    throw v0
 
-# virtual methods
-.method public abstract a()D
+    :cond_0
+    return-object p0
+.end method
+
+.method public static a(Z)V
+    .locals 1
+
+    if-nez p0, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw v0
+
+    :cond_0
+    return-void
 .end method

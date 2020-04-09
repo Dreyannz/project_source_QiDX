@@ -28,6 +28,22 @@
     .annotation runtime Ljava/lang/Override;
     .end annotation
 
+    iget-object v0, p0, Lcom/qidx/ui/dxf;->a:Lcom/qidx/ui/dxc;
+
+    invoke-static {v0}, Lcom/qidx/ui/dxc;->a(Lcom/qidx/ui/dxc;)Lcom/qidx/ui/dxa;
+
+    move-result-object v0
+
+    const-string v1, "#StayHome"
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V

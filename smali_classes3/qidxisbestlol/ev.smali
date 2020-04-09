@@ -3,206 +3,297 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static a:Ljava/lang/String;
+
+.field private static b:Ljava/lang/String;
+
+.field private static c:Ljava/lang/String;
+
+.field private static d:Ljava/lang/String;
+
+.field private static e:Ljava/lang/String;
+
+
 # instance fields
-.field final a:Ljava/lang/Class;
+.field private f:Landroid/app/Activity;
 
-.field final b:Ljava/lang/reflect/Type;
+.field private g:Ljava/io/File;
 
-.field final c:I
+.field private h:Ljava/lang/String;
+
+.field private i:Ljava/lang/String;
 
 
 # direct methods
-.method protected constructor <init>()V
-    .locals 1
+.method static final constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "5"
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sput-object v0, Lqidxisbestlol/ev;->b:Ljava/lang/String;
+
+    const-string v0, "09"
+
+    sput-object v0, Lqidxisbestlol/ev;->c:Ljava/lang/String;
+
+    const-string v0, "04"
+
+    sput-object v0, Lqidxisbestlol/ev;->d:Ljava/lang/String;
+
+    const-string v0, "20"
+
+    sput-object v0, Lqidxisbestlol/ev;->e:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuffer;
+
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+
+    new-instance v1, Ljava/lang/StringBuffer;
+
+    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
+
+    new-instance v2, Ljava/lang/StringBuffer;
+
+    invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
+
+    sget-object v3, Lqidxisbestlol/ev;->b:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    sget-object v3, Lqidxisbestlol/ev;->c:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v1
+
+    sget-object v2, Lqidxisbestlol/ev;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    invoke-static {v0}, Lqidxisbestlol/ev;->a(Ljava/lang/Class;)Ljava/lang/reflect/Type;
+    sget-object v1, Lqidxisbestlol/ev;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    iput-object v0, p0, Lqidxisbestlol/ev;->b:Ljava/lang/reflect/Type;
-
-    iget-object v0, p0, Lqidxisbestlol/ev;->b:Ljava/lang/reflect/Type;
-
-    invoke-static {v0}, Lqidxisbestlol/ar;->e(Ljava/lang/reflect/Type;)Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lqidxisbestlol/ev;->a:Ljava/lang/Class;
-
-    iget-object v0, p0, Lqidxisbestlol/ev;->b:Ljava/lang/reflect/Type;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    iput v0, p0, Lqidxisbestlol/ev;->c:I
+    sput-object v0, Lqidxisbestlol/ev;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-.method constructor <init>(Ljava/lang/reflect/Type;)V
-    .locals 1
+.method public constructor <init>(Landroid/app/Activity;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1}, Lqidxisbestlol/aq;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/reflect/Type;
+    iput-object v0, p0, Lqidxisbestlol/ev;->g:Ljava/io/File;
 
-    invoke-static {v0}, Lqidxisbestlol/ar;->d(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
+    const-string v0, "/data/data/com.qidx.ui/files/bin/downloaded"
 
-    move-result-object v0
+    iput-object v0, p0, Lqidxisbestlol/ev;->h:Ljava/lang/String;
 
-    iput-object v0, p0, Lqidxisbestlol/ev;->b:Ljava/lang/reflect/Type;
+    const-string v0, "app.apk"
 
-    iget-object v0, p0, Lqidxisbestlol/ev;->b:Ljava/lang/reflect/Type;
+    iput-object v0, p0, Lqidxisbestlol/ev;->i:Ljava/lang/String;
 
-    invoke-static {v0}, Lqidxisbestlol/ar;->e(Ljava/lang/reflect/Type;)Ljava/lang/Class;
+    iput-object p1, p0, Lqidxisbestlol/ev;->f:Landroid/app/Activity;
 
-    move-result-object v0
+    const-string v0, "QiDX OTA"
 
-    iput-object v0, p0, Lqidxisbestlol/ev;->a:Ljava/lang/Class;
+    const-string v1, "OverTheAir Manager created"
 
-    iget-object v0, p0, Lqidxisbestlol/ev;->b:Ljava/lang/reflect/Type;
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const-string v0, "QiDX OTA"
 
-    move-result v0
+    new-instance v1, Ljava/lang/StringBuffer;
 
-    iput v0, p0, Lqidxisbestlol/ev;->c:I
+    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
+
+    const-string v2, "Running Build: QOS"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v1
+
+    sget-object v2, Lqidxisbestlol/ev;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
 
-.method static a(Ljava/lang/Class;)Ljava/lang/reflect/Type;
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getGenericSuperclass()Ljava/lang/reflect/Type;
-
-    move-result-object v0
-
-    instance-of v1, v0, Ljava/lang/Class;
-
-    if-eqz v1, :cond_0
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Missing type parameter."
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    check-cast v0, Ljava/lang/reflect/ParameterizedType;
-
-    invoke-interface {v0}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    invoke-static {v0}, Lqidxisbestlol/ar;->d(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static a(Ljava/lang/reflect/Type;)Lqidxisbestlol/ev;
+.method private a()Landroid/app/Activity;
     .locals 1
 
-    new-instance v0, Lqidxisbestlol/ev;
-
-    invoke-direct {v0, p0}, Lqidxisbestlol/ev;-><init>(Ljava/lang/reflect/Type;)V
-
-    return-object v0
-.end method
-
-.method public static b(Ljava/lang/Class;)Lqidxisbestlol/ev;
-    .locals 1
-
-    new-instance v0, Lqidxisbestlol/ev;
-
-    invoke-direct {v0, p0}, Lqidxisbestlol/ev;-><init>(Ljava/lang/reflect/Type;)V
+    iget-object v0, p0, Lqidxisbestlol/ev;->f:Landroid/app/Activity;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Class;
-    .locals 1
+.method public a(Ljava/lang/String;Lqidxisbestlol/ex;)V
+    .locals 4
 
-    iget-object v0, p0, Lqidxisbestlol/ev;->a:Ljava/lang/Class;
+    :try_start_0
+    const-string v0, "QiDX OTA"
 
-    return-object v0
-.end method
+    const-string v1, "Method to check for update was requested"
 
-.method public final b()Ljava/lang/reflect/Type;
-    .locals 1
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v0, p0, Lqidxisbestlol/ev;->b:Ljava/lang/reflect/Type;
+    new-instance v0, Ljava/util/HashMap;
 
-    return-object v0
-.end method
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    const-string v1, "version"
 
-    instance-of v0, p1, Lqidxisbestlol/ev;
+    invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    new-instance v1, Lqidxisbestlol/ew;
 
-    iget-object v0, p0, Lqidxisbestlol/ev;->b:Ljava/lang/reflect/Type;
+    invoke-direct {p0}, Lqidxisbestlol/ev;->a()Landroid/app/Activity;
 
-    check-cast p1, Lqidxisbestlol/ev;
+    move-result-object v2
 
-    iget-object v1, p1, Lqidxisbestlol/ev;->b:Ljava/lang/reflect/Type;
+    invoke-direct {v1, v2}, Lqidxisbestlol/ew;-><init>(Landroid/app/Activity;)V
 
-    invoke-static {v0, v1}, Lqidxisbestlol/ar;->a(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z
+    const/4 v2, 0x0
 
-    move-result v0
+    invoke-virtual {v1, v0, v2}, Lqidxisbestlol/ew;->a(Ljava/util/HashMap;I)V
 
-    if-eqz v0, :cond_0
+    const-string v0, "GET"
 
-    const/4 v0, 0x1
+    const-string v2, "https://dxqidx.herokuapp.com/ota/"
+
+    invoke-virtual {v1, v0, v2, p2}, Lqidxisbestlol/ew;->a(Ljava/lang/String;Ljava/lang/String;Lqidxisbestlol/ex;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    return v0
+    return-void
 
-    :cond_0
-    const/4 v0, 0x0
+    :catch_0
+    move-exception v0
+
+    const-string v1, "QiDX OTA"
+
+    new-instance v2, Ljava/lang/StringBuffer;
+
+    invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
+
+    const-string v3, "An error occurred while executing the method of checking for new updates, error: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public a(Lqidxisbestlol/ex;)V
+    .locals 4
 
-    iget v0, p0, Lqidxisbestlol/ev;->c:I
+    :try_start_0
+    new-instance v0, Lqidxisbestlol/ew;
 
-    return v0
-.end method
+    invoke-direct {p0}, Lqidxisbestlol/ev;->a()Landroid/app/Activity;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    move-result-object v1
 
-    iget-object v0, p0, Lqidxisbestlol/ev;->b:Ljava/lang/reflect/Type;
+    invoke-direct {v0, v1}, Lqidxisbestlol/ew;-><init>(Landroid/app/Activity;)V
 
-    invoke-static {v0}, Lqidxisbestlol/ar;->f(Ljava/lang/reflect/Type;)Ljava/lang/String;
+    const-string v1, "GET"
+
+    const-string v2, "https://dxqidx.herokuapp.com/ota/changelogs.php"
+
+    invoke-virtual {v0, v1, v2, p1}, Lqidxisbestlol/ew;->a(Ljava/lang/String;Ljava/lang/String;Lqidxisbestlol/ex;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "QiDX OTA"
+
+    new-instance v2, Ljava/lang/StringBuffer;
+
+    invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
+
+    const-string v3, "An error occurred while executing the method of obtain changelogs, error: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
 .end method

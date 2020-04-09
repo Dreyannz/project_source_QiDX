@@ -1,41 +1,46 @@
-.class public interface abstract Lqidxisbestlol/mj;
+.class final Lqidxisbestlol/mj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:Lqidxisbestlol/mj;
-
-.field public static final b:Lqidxisbestlol/mk;
+# interfaces
+.implements Lqidxisbestlol/mh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
-    new-instance v0, Lqidxisbestlol/mk;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/mk;-><init>(Lqidxisbestlol/ig;)V
-
-    sput-object v0, Lqidxisbestlol/mj;->b:Lqidxisbestlol/mk;
-
-    new-instance v0, Lqidxisbestlol/ml;
-
-    invoke-direct {v0}, Lqidxisbestlol/ml;-><init>()V
-
-    check-cast v0, Lqidxisbestlol/mj;
-
-    sput-object v0, Lqidxisbestlol/mj;->a:Lqidxisbestlol/mj;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Lqidxisbestlol/ne;)Ljava/util/List;
+.method public a(Lqidxisbestlol/nc;)Ljava/util/List;
+    .locals 1
+
+    const-string v0, "url"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {}, Lqidxisbestlol/gh;->a()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public abstract a(Lqidxisbestlol/ne;Ljava/util/List;)V
+.method public a(Lqidxisbestlol/nc;Ljava/util/List;)V
+    .locals 1
+
+    const-string v0, "url"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "cookies"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
 .end method

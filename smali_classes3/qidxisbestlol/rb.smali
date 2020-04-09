@@ -1,164 +1,315 @@
-.class final Lqidxisbestlol/rb;
-.super Lqidxisbestlol/qv;
+.class public final enum Lqidxisbestlol/rb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field final synthetic b:Lqidxisbestlol/qu;
+# static fields
+.field public static final enum a:Lqidxisbestlol/rb;
 
-.field private c:Z
+.field public static final enum b:Lqidxisbestlol/rb;
+
+.field public static final enum c:Lqidxisbestlol/rb;
+
+.field public static final enum d:Lqidxisbestlol/rb;
+
+.field public static final enum e:Lqidxisbestlol/rb;
+
+.field public static final enum f:Lqidxisbestlol/rb;
+
+.field public static final enum g:Lqidxisbestlol/rb;
+
+.field public static final enum h:Lqidxisbestlol/rb;
+
+.field public static final enum i:Lqidxisbestlol/rb;
+
+.field public static final enum j:Lqidxisbestlol/rb;
+
+.field public static final enum k:Lqidxisbestlol/rb;
+
+.field public static final enum l:Lqidxisbestlol/rb;
+
+.field public static final enum m:Lqidxisbestlol/rb;
+
+.field public static final enum n:Lqidxisbestlol/rb;
+
+.field public static final o:Lqidxisbestlol/rc;
+
+.field private static final synthetic p:[Lqidxisbestlol/rb;
+
+
+# instance fields
+.field private final q:I
 
 
 # direct methods
-.method public constructor <init>(Lqidxisbestlol/qu;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput-object p1, p0, Lqidxisbestlol/rb;->b:Lqidxisbestlol/qu;
+    const/4 v7, 0x4
 
-    invoke-direct {p0, p1}, Lqidxisbestlol/qv;-><init>(Lqidxisbestlol/qu;)V
+    const/4 v6, 0x3
+
+    const/4 v5, 0x2
+
+    const/4 v4, 0x1
+
+    const/4 v3, 0x0
+
+    const/16 v0, 0xe
+
+    new-array v0, v0, [Lqidxisbestlol/rb;
+
+    new-instance v1, Lqidxisbestlol/rb;
+
+    const-string v2, "NO_ERROR"
+
+    invoke-direct {v1, v2, v3, v3}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lqidxisbestlol/rb;->a:Lqidxisbestlol/rb;
+
+    aput-object v1, v0, v3
+
+    new-instance v1, Lqidxisbestlol/rb;
+
+    const-string v2, "PROTOCOL_ERROR"
+
+    invoke-direct {v1, v2, v4, v4}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lqidxisbestlol/rb;->b:Lqidxisbestlol/rb;
+
+    aput-object v1, v0, v4
+
+    new-instance v1, Lqidxisbestlol/rb;
+
+    const-string v2, "INTERNAL_ERROR"
+
+    invoke-direct {v1, v2, v5, v5}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lqidxisbestlol/rb;->c:Lqidxisbestlol/rb;
+
+    aput-object v1, v0, v5
+
+    new-instance v1, Lqidxisbestlol/rb;
+
+    const-string v2, "FLOW_CONTROL_ERROR"
+
+    invoke-direct {v1, v2, v6, v6}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lqidxisbestlol/rb;->d:Lqidxisbestlol/rb;
+
+    aput-object v1, v0, v6
+
+    new-instance v1, Lqidxisbestlol/rb;
+
+    const-string v2, "SETTINGS_TIMEOUT"
+
+    invoke-direct {v1, v2, v7, v7}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lqidxisbestlol/rb;->e:Lqidxisbestlol/rb;
+
+    aput-object v1, v0, v7
+
+    const/4 v1, 0x5
+
+    new-instance v2, Lqidxisbestlol/rb;
+
+    const-string v3, "STREAM_CLOSED"
+
+    const/4 v4, 0x5
+
+    const/4 v5, 0x5
+
+    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lqidxisbestlol/rb;->f:Lqidxisbestlol/rb;
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x6
+
+    new-instance v2, Lqidxisbestlol/rb;
+
+    const-string v3, "FRAME_SIZE_ERROR"
+
+    const/4 v4, 0x6
+
+    const/4 v5, 0x6
+
+    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lqidxisbestlol/rb;->g:Lqidxisbestlol/rb;
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x7
+
+    new-instance v2, Lqidxisbestlol/rb;
+
+    const-string v3, "REFUSED_STREAM"
+
+    const/4 v4, 0x7
+
+    const/4 v5, 0x7
+
+    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lqidxisbestlol/rb;->h:Lqidxisbestlol/rb;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8
+
+    new-instance v2, Lqidxisbestlol/rb;
+
+    const-string v3, "CANCEL"
+
+    const/16 v4, 0x8
+
+    const/16 v5, 0x8
+
+    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lqidxisbestlol/rb;->i:Lqidxisbestlol/rb;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9
+
+    new-instance v2, Lqidxisbestlol/rb;
+
+    const-string v3, "COMPRESSION_ERROR"
+
+    const/16 v4, 0x9
+
+    const/16 v5, 0x9
+
+    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lqidxisbestlol/rb;->j:Lqidxisbestlol/rb;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa
+
+    new-instance v2, Lqidxisbestlol/rb;
+
+    const-string v3, "CONNECT_ERROR"
+
+    const/16 v4, 0xa
+
+    const/16 v5, 0xa
+
+    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lqidxisbestlol/rb;->k:Lqidxisbestlol/rb;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb
+
+    new-instance v2, Lqidxisbestlol/rb;
+
+    const-string v3, "ENHANCE_YOUR_CALM"
+
+    const/16 v4, 0xb
+
+    const/16 v5, 0xb
+
+    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lqidxisbestlol/rb;->l:Lqidxisbestlol/rb;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc
+
+    new-instance v2, Lqidxisbestlol/rb;
+
+    const-string v3, "INADEQUATE_SECURITY"
+
+    const/16 v4, 0xc
+
+    const/16 v5, 0xc
+
+    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lqidxisbestlol/rb;->m:Lqidxisbestlol/rb;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xd
+
+    new-instance v2, Lqidxisbestlol/rb;
+
+    const-string v3, "HTTP_1_1_REQUIRED"
+
+    const/16 v4, 0xd
+
+    const/16 v5, 0xd
+
+    invoke-direct {v2, v3, v4, v5}, Lqidxisbestlol/rb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lqidxisbestlol/rb;->n:Lqidxisbestlol/rb;
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lqidxisbestlol/rb;->p:[Lqidxisbestlol/rb;
+
+    new-instance v0, Lqidxisbestlol/rc;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lqidxisbestlol/rc;-><init>(Lqidxisbestlol/ie;)V
+
+    sput-object v0, Lqidxisbestlol/rb;->o:Lqidxisbestlol/rc;
 
     return-void
+.end method
+
+.method private constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Lqidxisbestlol/rb;->q:I
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lqidxisbestlol/rb;
+    .locals 1
+
+    const-class v0, Lqidxisbestlol/rb;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, Lqidxisbestlol/rb;
+
+    return-object v0
+.end method
+
+.method public static values()[Lqidxisbestlol/rb;
+    .locals 1
+
+    sget-object v0, Lqidxisbestlol/rb;->p:[Lqidxisbestlol/rb;
+
+    invoke-virtual {v0}, [Lqidxisbestlol/rb;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lqidxisbestlol/rb;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/vd;J)J
-    .locals 8
-
-    const/4 v2, 0x0
-
-    const-wide/16 v0, -0x1
-
-    const/4 v4, 0x1
-
-    const-string v3, "sink"
-
-    invoke-static {p1, v3}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-wide/16 v6, 0x0
-
-    cmp-long v3, p2, v6
-
-    if-ltz v3, :cond_0
-
-    move v3, v4
-
-    :goto_0
-    if-nez v3, :cond_1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "byteCount < 0: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_0
-    move v3, v2
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Lqidxisbestlol/rb;->b()Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    move v2, v4
-
-    :cond_2
-    if-nez v2, :cond_3
-
-    const-string v1, "closed"
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_3
-    iget-boolean v2, p0, Lqidxisbestlol/rb;->c:Z
-
-    if-eqz v2, :cond_4
-
-    :goto_1
-    return-wide v0
-
-    :cond_4
-    invoke-super {p0, p1, p2, p3}, Lqidxisbestlol/qv;->a(Lqidxisbestlol/vd;J)J
-
-    move-result-wide v2
-
-    cmp-long v5, v2, v0
-
-    if-nez v5, :cond_5
-
-    iput-boolean v4, p0, Lqidxisbestlol/rb;->c:Z
-
-    invoke-virtual {p0}, Lqidxisbestlol/rb;->c()V
-
-    goto :goto_1
-
-    :cond_5
-    move-wide v0, v2
-
-    goto :goto_1
-.end method
-
-.method public close()V
+.method public final a()I
     .locals 1
 
-    invoke-virtual {p0}, Lqidxisbestlol/rb;->b()Z
+    iget v0, p0, Lqidxisbestlol/rb;->q:I
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-boolean v0, p0, Lqidxisbestlol/rb;->c:Z
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0}, Lqidxisbestlol/rb;->c()V
-
-    :cond_1
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lqidxisbestlol/rb;->a(Z)V
-
-    goto :goto_0
+    return v0
 .end method

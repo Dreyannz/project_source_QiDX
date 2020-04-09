@@ -1,117 +1,90 @@
-.class final Lqidxisbestlol/hq;
+.class public final Lqidxisbestlol/hq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/reflect/Method;
-
-.field public static final b:Lqidxisbestlol/hq;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method private static final a(II)I
+    .locals 1
 
-    const/4 v2, 0x0
+    rem-int v0, p0, p1
 
-    new-instance v0, Lqidxisbestlol/hq;
-
-    invoke-direct {v0}, Lqidxisbestlol/hq;-><init>()V
-
-    sput-object v0, Lqidxisbestlol/hq;->b:Lqidxisbestlol/hq;
-
-    const-class v4, Ljava/lang/Throwable;
-
-    invoke-virtual {v4}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
-
-    move-result-object v5
-
-    const-string v0, "throwableClass.methods"
-
-    invoke-static {v5, v0}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    array-length v6, v5
-
-    move v3, v2
+    if-ltz v0, :cond_0
 
     :goto_0
-    if-ge v3, v6, :cond_2
-
-    aget-object v1, v5, v3
-
-    const-string v0, "it"
-
-    invoke-static {v1, v0}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v7, "addSuppressed"
-
-    invoke-static {v0, v7}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/reflect/Method;->getParameterTypes()[Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-string v7, "it.parameterTypes"
-
-    invoke-static {v0, v7}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-static {v0}, Lqidxisbestlol/gd;->b([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Class;
-
-    invoke-static {v0, v4}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_1
-    if-eqz v0, :cond_1
-
-    move-object v0, v1
-
-    :goto_2
-    nop
-
-    sput-object v0, Lqidxisbestlol/hq;->a:Ljava/lang/reflect/Method;
-
-    return-void
+    return v0
 
     :cond_0
-    move v0, v2
+    add-int/2addr v0, p1
 
-    goto :goto_1
+    goto :goto_0
+.end method
+
+.method public static final a(III)I
+    .locals 2
+
+    nop
+
+    if-lez p2, :cond_2
+
+    if-lt p0, p1, :cond_1
+
+    :cond_0
+    :goto_0
+    return p1
 
     :cond_1
-    add-int/lit8 v0, v3, 0x1
+    invoke-static {p1, p0, p2}, Lqidxisbestlol/hq;->b(III)I
 
-    move v3, v0
+    move-result v0
+
+    sub-int/2addr p1, v0
 
     goto :goto_0
 
     :cond_2
-    const/4 v0, 0x0
+    if-gez p2, :cond_3
 
-    goto :goto_2
+    if-le p0, p1, :cond_0
+
+    neg-int v0, p2
+
+    invoke-static {p0, p1, v0}, Lqidxisbestlol/hq;->b(III)I
+
+    move-result v0
+
+    add-int/2addr p1, v0
+
+    goto :goto_0
+
+    :cond_3
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Step is zero."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    throw v0
 .end method
 
-.method private constructor <init>()V
-    .locals 0
+.method private static final b(III)I
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0, p2}, Lqidxisbestlol/hq;->a(II)I
 
-    return-void
+    move-result v0
+
+    invoke-static {p1, p2}, Lqidxisbestlol/hq;->a(II)I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    invoke-static {v0, p2}, Lqidxisbestlol/hq;->a(II)I
+
+    move-result v0
+
+    return v0
 .end method

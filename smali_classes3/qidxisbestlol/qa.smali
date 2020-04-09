@@ -1,71 +1,59 @@
 .class public final Lqidxisbestlol/qa;
-.super Ljava/lang/RuntimeException;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field private a:Ljava/io/IOException;
-
-.field private final b:Ljava/io/IOException;
-
-
 # direct methods
-.method public constructor <init>(Ljava/io/IOException;)V
-    .locals 1
+.method private constructor <init>()V
+    .locals 0
 
-    const-string v0, "firstConnectException"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    return-void
+.end method
 
-    move-object v0, p1
+.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
+    .locals 0
 
-    check-cast v0, Ljava/lang/Throwable;
-
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    iput-object p1, p0, Lqidxisbestlol/qa;->b:Ljava/io/IOException;
-
-    iget-object v0, p0, Lqidxisbestlol/qa;->b:Ljava/io/IOException;
-
-    iput-object v0, p0, Lqidxisbestlol/qa;->a:Ljava/io/IOException;
+    invoke-direct {p0}, Lqidxisbestlol/qa;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/io/IOException;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/qa;->a:Ljava/io/IOException;
-
-    return-object v0
-.end method
-
-.method public final a(Ljava/io/IOException;)V
+.method public final a(Ljava/net/InetSocketAddress;)Ljava/lang/String;
     .locals 2
 
-    const-string v0, "e"
+    const-string v0, "$this$socketHost"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lqidxisbestlol/qa;->b:Ljava/io/IOException;
+    invoke-virtual {p1}, Ljava/net/InetSocketAddress;->getAddress()Ljava/net/InetAddress;
 
-    move-object v0, p1
+    move-result-object v0
 
-    check-cast v0, Ljava/lang/Throwable;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v0}, Ljava/io/IOException;->addSuppressed(Ljava/lang/Throwable;)V
+    invoke-virtual {v0}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
-    iput-object p1, p0, Lqidxisbestlol/qa;->a:Ljava/io/IOException;
+    move-result-object v0
 
-    return-void
-.end method
+    const-string v1, "address.hostAddress"
 
-.method public final b()Ljava/io/IOException;
-    .locals 1
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lqidxisbestlol/qa;->b:Ljava/io/IOException;
-
+    :goto_0
     return-object v0
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/net/InetSocketAddress;->getHostName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "hostName"
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    goto :goto_0
 .end method

@@ -1,146 +1,214 @@
 .class public final Lqidxisbestlol/cl;
-.super Lqidxisbestlol/ai;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:Lqidxisbestlol/ak;
+# interfaces
+.implements Lqidxisbestlol/ai;
 
 
 # instance fields
-.field private final b:Ljava/util/List;
+.field private final a:Lqidxisbestlol/at;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lqidxisbestlol/at;)V
+    .locals 0
 
-    new-instance v0, Lqidxisbestlol/cm;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lqidxisbestlol/cm;-><init>()V
+    iput-object p1, p0, Lqidxisbestlol/cl;->a:Lqidxisbestlol/at;
 
-    sput-object v0, Lqidxisbestlol/cl;->a:Lqidxisbestlol/ak;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 3
-
-    const/4 v2, 0x2
-
-    invoke-direct {p0}, Lqidxisbestlol/ai;-><init>()V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lqidxisbestlol/cl;->b:Ljava/util/List;
-
-    iget-object v0, p0, Lqidxisbestlol/cl;->b:Ljava/util/List;
-
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-static {v2, v2, v1}, Ljava/text/DateFormat;->getDateTimeInstance(IILjava/util/Locale;)Ljava/text/DateFormat;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v0
-
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-virtual {v0, v1}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lqidxisbestlol/cl;->b:Ljava/util/List;
-
-    invoke-static {v2, v2}, Ljava/text/DateFormat;->getDateTimeInstance(II)Ljava/text/DateFormat;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    invoke-static {}, Lqidxisbestlol/bm;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lqidxisbestlol/cl;->b:Ljava/util/List;
-
-    invoke-static {v2, v2}, Lqidxisbestlol/bx;->a(II)Ljava/text/DateFormat;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
-    .locals 0
+.method a(Lqidxisbestlol/at;Lqidxisbestlol/l;Lqidxisbestlol/et;Lqidxisbestlol/ak;)Lqidxisbestlol/ag;
+    .locals 6
 
-    check-cast p2, Ljava/util/Date;
+    const/4 v5, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/cl;->a(Lqidxisbestlol/ew;Ljava/util/Date;)V
+    invoke-interface {p4}, Lqidxisbestlol/ak;->a()Ljava/lang/Class;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public declared-synchronized a(Lqidxisbestlol/ew;Ljava/util/Date;)V
-    .locals 2
+    invoke-static {v0}, Lqidxisbestlol/et;->b(Ljava/lang/Class;)Lqidxisbestlol/et;
 
-    monitor-enter p0
+    move-result-object v0
 
-    if-nez p2, :cond_0
+    invoke-virtual {p1, v0}, Lqidxisbestlol/at;->a(Lqidxisbestlol/et;)Lqidxisbestlol/bu;
 
-    :try_start_0
-    invoke-virtual {p1}, Lqidxisbestlol/ew;->f()Lqidxisbestlol/ew;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v0
+
+    invoke-interface {v0}, Lqidxisbestlol/bu;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lqidxisbestlol/ag;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Lqidxisbestlol/ag;
 
     :goto_0
-    monitor-exit p0
+    if-eqz v0, :cond_0
 
-    return-void
+    invoke-interface {p4}, Lqidxisbestlol/ak;->b()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Lqidxisbestlol/ag;->a()Lqidxisbestlol/ag;
+
+    move-result-object v0
 
     :cond_0
-    :try_start_1
-    iget-object v0, p0, Lqidxisbestlol/cl;->b:Ljava/util/List;
+    return-object v0
 
-    const/4 v1, 0x0
+    :cond_1
+    instance-of v1, v0, Lqidxisbestlol/ai;
 
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    if-eqz v1, :cond_2
 
-    move-result-object v0
+    check-cast v0, Lqidxisbestlol/ai;
 
-    check-cast v0, Ljava/text/DateFormat;
-
-    invoke-virtual {v0, p2}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-interface {v0, p2, p3}, Lqidxisbestlol/ai;->a(Lqidxisbestlol/l;Lqidxisbestlol/et;)Lqidxisbestlol/ag;
 
     move-result-object v0
-
-    invoke-virtual {p1, v0}, Lqidxisbestlol/ew;->b(Ljava/lang/String;)Lqidxisbestlol/ew;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_2
+    instance-of v1, v0, Lqidxisbestlol/ac;
 
-    monitor-exit p0
+    if-nez v1, :cond_3
 
-    throw v0
+    instance-of v1, v0, Lqidxisbestlol/u;
+
+    if-eqz v1, :cond_6
+
+    :cond_3
+    instance-of v1, v0, Lqidxisbestlol/ac;
+
+    if-eqz v1, :cond_4
+
+    move-object v1, v0
+
+    check-cast v1, Lqidxisbestlol/ac;
+
+    :goto_1
+    instance-of v2, v0, Lqidxisbestlol/u;
+
+    if-eqz v2, :cond_5
+
+    check-cast v0, Lqidxisbestlol/u;
+
+    move-object v2, v0
+
+    :goto_2
+    new-instance v0, Lqidxisbestlol/da;
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    invoke-direct/range {v0 .. v5}, Lqidxisbestlol/da;-><init>(Lqidxisbestlol/ac;Lqidxisbestlol/u;Lqidxisbestlol/l;Lqidxisbestlol/et;Lqidxisbestlol/ai;)V
+
+    goto :goto_0
+
+    :cond_4
+    move-object v1, v5
+
+    goto :goto_1
+
+    :cond_5
+    move-object v2, v5
+
+    goto :goto_2
+
+    :cond_6
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Invalid attempt to bind an instance of "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, " as a @JsonAdapter for "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p3}, Lqidxisbestlol/et;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, ". @JsonAdapter value must be a TypeAdapter, TypeAdapterFactory, JsonSerializer or JsonDeserializer."
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public a(Lqidxisbestlol/l;Lqidxisbestlol/et;)Lqidxisbestlol/ag;
+    .locals 2
+
+    invoke-virtual {p2}, Lqidxisbestlol/et;->a()Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-class v1, Lqidxisbestlol/ak;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+
+    move-result-object v0
+
+    check-cast v0, Lqidxisbestlol/ak;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v1, p0, Lqidxisbestlol/cl;->a:Lqidxisbestlol/at;
+
+    invoke-virtual {p0, v1, p1, p2, v0}, Lqidxisbestlol/cl;->a(Lqidxisbestlol/at;Lqidxisbestlol/l;Lqidxisbestlol/et;Lqidxisbestlol/ak;)Lqidxisbestlol/ag;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

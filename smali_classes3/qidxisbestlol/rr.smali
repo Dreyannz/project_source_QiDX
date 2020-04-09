@@ -1,31 +1,79 @@
 .class public final Lqidxisbestlol/rr;
-.super Lqidxisbestlol/rp;
+.super Lqidxisbestlol/ox;
 .source "SourceFile"
 
 
+# instance fields
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Z
+
+.field final synthetic c:Lqidxisbestlol/rq;
+
+.field final synthetic d:Z
+
+.field final synthetic e:Lqidxisbestlol/io;
+
+.field final synthetic f:Lqidxisbestlol/su;
+
+.field final synthetic g:Lqidxisbestlol/in;
+
+.field final synthetic h:Lqidxisbestlol/io;
+
+
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>(Ljava/lang/String;ZLjava/lang/String;ZLqidxisbestlol/rq;ZLqidxisbestlol/io;Lqidxisbestlol/su;Lqidxisbestlol/in;Lqidxisbestlol/io;)V
     .locals 0
 
-    invoke-direct {p0}, Lqidxisbestlol/rp;-><init>()V
+    iput-object p1, p0, Lqidxisbestlol/rr;->a:Ljava/lang/String;
+
+    iput-boolean p2, p0, Lqidxisbestlol/rr;->b:Z
+
+    iput-object p5, p0, Lqidxisbestlol/rr;->c:Lqidxisbestlol/rq;
+
+    iput-boolean p6, p0, Lqidxisbestlol/rr;->d:Z
+
+    iput-object p7, p0, Lqidxisbestlol/rr;->e:Lqidxisbestlol/io;
+
+    iput-object p8, p0, Lqidxisbestlol/rr;->f:Lqidxisbestlol/su;
+
+    iput-object p9, p0, Lqidxisbestlol/rr;->g:Lqidxisbestlol/in;
+
+    iput-object p10, p0, Lqidxisbestlol/rr;->h:Lqidxisbestlol/io;
+
+    invoke-direct {p0, p3, p4}, Lqidxisbestlol/ox;-><init>(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/sk;)V
-    .locals 2
+.method public a()J
+    .locals 3
 
-    const-string v0, "stream"
+    iget-object v0, p0, Lqidxisbestlol/rr;->c:Lqidxisbestlol/rq;
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v0, v0, Lqidxisbestlol/rq;->a:Lqidxisbestlol/rj;
 
-    sget-object v0, Lqidxisbestlol/rd;->h:Lqidxisbestlol/rd;
+    invoke-virtual {v0}, Lqidxisbestlol/rj;->b()Lqidxisbestlol/rn;
 
-    const/4 v1, 0x0
+    move-result-object v1
 
-    invoke-virtual {p1, v0, v1}, Lqidxisbestlol/sk;->a(Lqidxisbestlol/rd;Ljava/io/IOException;)V
+    iget-object v0, p0, Lqidxisbestlol/rr;->c:Lqidxisbestlol/rq;
 
-    return-void
+    iget-object v2, v0, Lqidxisbestlol/rq;->a:Lqidxisbestlol/rj;
+
+    iget-object v0, p0, Lqidxisbestlol/rr;->e:Lqidxisbestlol/io;
+
+    iget-object v0, v0, Lqidxisbestlol/io;->a:Ljava/lang/Object;
+
+    check-cast v0, Lqidxisbestlol/su;
+
+    invoke-virtual {v1, v2, v0}, Lqidxisbestlol/rn;->a(Lqidxisbestlol/rj;Lqidxisbestlol/su;)V
+
+    nop
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
 .end method

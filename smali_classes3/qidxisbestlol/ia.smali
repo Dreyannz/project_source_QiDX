@@ -1,21 +1,40 @@
-.class public final Lqidxisbestlol/ia;
+.class Lqidxisbestlol/ia;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field private static final a:Lqidxisbestlol/ia;
+
 
 # direct methods
-.method public static final a([Ljava/lang/Object;)Ljava/util/Iterator;
+.method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "array"
+    new-instance v0, Lqidxisbestlol/ia;
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v0}, Lqidxisbestlol/ia;-><init>()V
 
-    new-instance v0, Lqidxisbestlol/hz;
+    sput-object v0, Lqidxisbestlol/ia;->a:Lqidxisbestlol/ia;
 
-    invoke-direct {v0, p0}, Lqidxisbestlol/hz;-><init>([Ljava/lang/Object;)V
+    return-void
+.end method
 
-    check-cast v0, Ljava/util/Iterator;
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method static synthetic a()Lqidxisbestlol/ia;
+    .locals 1
+
+    sget-object v0, Lqidxisbestlol/ia;->a:Lqidxisbestlol/ia;
 
     return-object v0
 .end method

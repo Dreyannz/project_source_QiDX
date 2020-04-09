@@ -2,25 +2,110 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Comparator;
-
 
 # static fields
-.field public static final a:Lqidxisbestlol/ho;
+.field public static final a:Ljava/lang/reflect/Method;
+
+.field public static final b:Lqidxisbestlol/ho;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 8
+
+    const/4 v2, 0x0
 
     new-instance v0, Lqidxisbestlol/ho;
 
     invoke-direct {v0}, Lqidxisbestlol/ho;-><init>()V
 
-    sput-object v0, Lqidxisbestlol/ho;->a:Lqidxisbestlol/ho;
+    sput-object v0, Lqidxisbestlol/ho;->b:Lqidxisbestlol/ho;
+
+    const-class v4, Ljava/lang/Throwable;
+
+    invoke-virtual {v4}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
+
+    move-result-object v5
+
+    const-string v0, "throwableClass.methods"
+
+    invoke-static {v5, v0}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    array-length v6, v5
+
+    move v3, v2
+
+    :goto_0
+    if-ge v3, v6, :cond_2
+
+    aget-object v1, v5, v3
+
+    const-string v0, "it"
+
+    invoke-static {v1, v0}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v7, "addSuppressed"
+
+    invoke-static {v0, v7}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/reflect/Method;->getParameterTypes()[Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-string v7, "it.parameterTypes"
+
+    invoke-static {v0, v7}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v0}, Lqidxisbestlol/gb;->b([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Class;
+
+    invoke-static {v0, v4}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_1
+    if-eqz v0, :cond_1
+
+    move-object v0, v1
+
+    :goto_2
+    nop
+
+    sput-object v0, Lqidxisbestlol/ho;->a:Ljava/lang/reflect/Method;
 
     return-void
+
+    :cond_0
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_1
+    add-int/lit8 v0, v3, 0x1
+
+    move v3, v0
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_2
 .end method
 
 .method private constructor <init>()V
@@ -29,48 +114,4 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public a(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
-    .locals 1
-
-    const-string v0, "a"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "b"
-
-    invoke-static {p2, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-interface {p2, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
-
-    check-cast p1, Ljava/lang/Comparable;
-
-    check-cast p2, Ljava/lang/Comparable;
-
-    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/ho;->a(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final reversed()Ljava/util/Comparator;
-    .locals 1
-
-    sget-object v0, Lqidxisbestlol/hn;->a:Lqidxisbestlol/hn;
-
-    check-cast v0, Ljava/util/Comparator;
-
-    return-object v0
 .end method

@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/ak;
+.implements Lqidxisbestlol/ai;
 
 
 # instance fields
 .field final synthetic a:Ljava/lang/Class;
 
-.field final synthetic b:Lqidxisbestlol/ai;
+.field final synthetic b:Ljava/lang/Class;
+
+.field final synthetic c:Lqidxisbestlol/ag;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Class;Lqidxisbestlol/ai;)V
+.method constructor <init>(Ljava/lang/Class;Ljava/lang/Class;Lqidxisbestlol/ag;)V
     .locals 0
 
     iput-object p1, p0, Lqidxisbestlol/eg;->a:Ljava/lang/Class;
 
-    iput-object p2, p0, Lqidxisbestlol/eg;->b:Lqidxisbestlol/ai;
+    iput-object p2, p0, Lqidxisbestlol/eg;->b:Ljava/lang/Class;
+
+    iput-object p3, p0, Lqidxisbestlol/eg;->c:Lqidxisbestlol/ag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,23 +31,28 @@
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/n;Lqidxisbestlol/ev;)Lqidxisbestlol/ai;
+.method public a(Lqidxisbestlol/l;Lqidxisbestlol/et;)Lqidxisbestlol/ag;
     .locals 2
 
-    invoke-virtual {p2}, Lqidxisbestlol/ev;->a()Ljava/lang/Class;
+    invoke-virtual {p2}, Lqidxisbestlol/et;->a()Ljava/lang/Class;
 
     move-result-object v0
 
     iget-object v1, p0, Lqidxisbestlol/eg;->a:Ljava/lang/Class;
 
-    if-ne v0, v1, :cond_0
+    if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lqidxisbestlol/eg;->b:Lqidxisbestlol/ai;
+    iget-object v1, p0, Lqidxisbestlol/eg;->b:Ljava/lang/Class;
+
+    if-ne v0, v1, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Lqidxisbestlol/eg;->c:Lqidxisbestlol/ag;
 
     :goto_0
     return-object v0
 
-    :cond_0
+    :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
@@ -72,13 +81,29 @@
 
     move-result-object v0
 
+    const-string v1, "+"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lqidxisbestlol/eg;->b:Ljava/lang/Class;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
     const-string v1, ",adapter="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lqidxisbestlol/eg;->b:Lqidxisbestlol/ai;
+    iget-object v1, p0, Lqidxisbestlol/eg;->c:Lqidxisbestlol/ag;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

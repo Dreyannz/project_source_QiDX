@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ig;)V
+.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
     .locals 0
 
     invoke-direct {p0}, Lokhttp3/internal/publicsuffix/a;-><init>()V
@@ -118,7 +118,7 @@
 
     const/16 v12, 0xff
 
-    invoke-static {v8, v12}, Lqidxisbestlol/og;->a(BI)I
+    invoke-static {v8, v12}, Lqidxisbestlol/oe;->a(BI)I
 
     move-result v8
 
@@ -151,7 +151,7 @@
 
     const/16 v8, 0xff
 
-    invoke-static {v1, v8}, Lqidxisbestlol/og;->a(BI)I
+    invoke-static {v1, v8}, Lqidxisbestlol/oe;->a(BI)I
 
     move-result v1
 
@@ -279,7 +279,7 @@
 
     const-string v0, "UTF_8"
 
-    invoke-static {v1, v0}, Lqidxisbestlol/ii;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/String;
 

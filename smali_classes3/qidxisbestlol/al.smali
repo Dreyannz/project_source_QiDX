@@ -9,8 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/AnnotationDefault;
     value = .subannotation Lqidxisbestlol/al;
-        a = true
-        b = true
+        b = {}
     .end subannotation
 .end annotation
 
@@ -23,14 +22,15 @@
 
 .annotation runtime Ljava/lang/annotation/Target;
     value = {
-        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;
+        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;
     }
 .end annotation
 
 
 # virtual methods
-.method public abstract a()Z
+.method public abstract a()Ljava/lang/String;
 .end method
 
-.method public abstract b()Z
+.method public abstract b()[Ljava/lang/String;
 .end method

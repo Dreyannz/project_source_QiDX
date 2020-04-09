@@ -1,51 +1,88 @@
-.class Lqidxisbestlol/kf;
-.super Lqidxisbestlol/ke;
+.class final Lqidxisbestlol/kf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqidxisbestlol/jr;
+
+
+# instance fields
+.field private final a:Ljava/lang/CharSequence;
+
+.field private final b:I
+
+.field private final c:I
+
+.field private final d:Lqidxisbestlol/hw;
 
 
 # direct methods
-.method public static final a(CCZ)Z
-    .locals 4
+.method public constructor <init>(Ljava/lang/CharSequence;IILqidxisbestlol/hw;)V
+    .locals 1
 
-    const/4 v1, 0x0
+    const-string v0, "input"
 
-    const/4 v0, 0x1
+    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-ne p0, p1, :cond_1
+    const-string v0, "getNextMatch"
 
-    :cond_0
-    :goto_0
+    invoke-static {p4, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqidxisbestlol/kf;->a:Ljava/lang/CharSequence;
+
+    iput p2, p0, Lqidxisbestlol/kf;->b:I
+
+    iput p3, p0, Lqidxisbestlol/kf;->c:I
+
+    iput-object p4, p0, Lqidxisbestlol/kf;->d:Lqidxisbestlol/hw;
+
+    return-void
+.end method
+
+.method public static final synthetic a(Lqidxisbestlol/kf;)I
+    .locals 1
+
+    iget v0, p0, Lqidxisbestlol/kf;->c:I
+
     return v0
+.end method
 
-    :cond_1
-    if-nez p2, :cond_2
+.method public static final synthetic b(Lqidxisbestlol/kf;)Ljava/lang/CharSequence;
+    .locals 1
 
-    move v0, v1
+    iget-object v0, p0, Lqidxisbestlol/kf;->a:Ljava/lang/CharSequence;
 
-    goto :goto_0
+    return-object v0
+.end method
 
-    :cond_2
-    invoke-static {p0}, Ljava/lang/Character;->toUpperCase(C)C
+.method public static final synthetic c(Lqidxisbestlol/kf;)Lqidxisbestlol/hw;
+    .locals 1
 
-    move-result v2
+    iget-object v0, p0, Lqidxisbestlol/kf;->d:Lqidxisbestlol/hw;
 
-    invoke-static {p1}, Ljava/lang/Character;->toUpperCase(C)C
+    return-object v0
+.end method
 
-    move-result v3
+.method public static final synthetic d(Lqidxisbestlol/kf;)I
+    .locals 1
 
-    if-eq v2, v3, :cond_0
+    iget v0, p0, Lqidxisbestlol/kf;->b:I
 
-    invoke-static {p0}, Ljava/lang/Character;->toLowerCase(C)C
+    return v0
+.end method
 
-    move-result v2
 
-    invoke-static {p1}, Ljava/lang/Character;->toLowerCase(C)C
+# virtual methods
+.method public a()Ljava/util/Iterator;
+    .locals 1
 
-    move-result v3
+    new-instance v0, Lqidxisbestlol/kg;
 
-    if-eq v2, v3, :cond_0
+    invoke-direct {v0, p0}, Lqidxisbestlol/kg;-><init>(Lqidxisbestlol/kf;)V
 
-    move v0, v1
+    check-cast v0, Ljava/util/Iterator;
 
-    goto :goto_0
+    return-object v0
 .end method

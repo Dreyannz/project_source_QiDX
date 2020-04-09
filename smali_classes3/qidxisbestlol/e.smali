@@ -1,21 +1,27 @@
-.class public final Lqidxisbestlol/e;
-.super Ljava/lang/Object;
+.class final enum Lqidxisbestlol/e;
+.super Lqidxisbestlol/d;
 .source "SourceFile"
 
 
-# instance fields
-.field private final a:Ljava/lang/reflect/Field;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/reflect/Field;)V
-    .locals 0
+.method constructor <init>(Ljava/lang/String;I)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    invoke-static {p1}, Lqidxisbestlol/aq;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iput-object p1, p0, Lqidxisbestlol/e;->a:Ljava/lang/reflect/Field;
+    invoke-direct {p0, p1, p2, v0}, Lqidxisbestlol/d;-><init>(Ljava/lang/String;ILqidxisbestlol/e;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/reflect/Field;)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p1}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

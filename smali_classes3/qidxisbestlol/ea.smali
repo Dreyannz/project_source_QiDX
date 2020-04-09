@@ -1,45 +1,45 @@
 .class Lqidxisbestlol/ea;
-.super Lqidxisbestlol/ai;
+.super Lqidxisbestlol/ag;
 .source "SourceFile"
 
 
-# instance fields
-.field final synthetic a:Lqidxisbestlol/ai;
-
-.field final synthetic b:Lqidxisbestlol/dz;
-
-
 # direct methods
-.method constructor <init>(Lqidxisbestlol/dz;Lqidxisbestlol/ai;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lqidxisbestlol/ea;->b:Lqidxisbestlol/dz;
-
-    iput-object p2, p0, Lqidxisbestlol/ea;->a:Lqidxisbestlol/ai;
-
-    invoke-direct {p0}, Lqidxisbestlol/ai;-><init>()V
+    invoke-direct {p0}, Lqidxisbestlol/ag;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
+.method public bridge synthetic a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p2, Ljava/sql/Timestamp;
+    check-cast p2, Ljava/util/Locale;
 
-    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/ea;->a(Lqidxisbestlol/ew;Ljava/sql/Timestamp;)V
+    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/ea;->a(Lqidxisbestlol/eu;Ljava/util/Locale;)V
 
     return-void
 .end method
 
-.method public a(Lqidxisbestlol/ew;Ljava/sql/Timestamp;)V
+.method public a(Lqidxisbestlol/eu;Ljava/util/Locale;)V
     .locals 1
 
-    iget-object v0, p0, Lqidxisbestlol/ea;->a:Lqidxisbestlol/ai;
+    if-nez p2, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lqidxisbestlol/ai;->a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p1, v0}, Lqidxisbestlol/eu;->b(Ljava/lang/String;)Lqidxisbestlol/eu;
 
     return-void
+
+    :cond_0
+    invoke-virtual {p2}, Ljava/util/Locale;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

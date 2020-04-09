@@ -1,26 +1,13 @@
-.class public final Lqidxisbestlol/v;
-.super Lqidxisbestlol/x;
+.class public abstract Lqidxisbestlol/v;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Iterable;
-
-
-# instance fields
-.field private final a:Ljava/util/List;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
-    invoke-direct {p0}, Lqidxisbestlol/x;-><init>()V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lqidxisbestlol/v;->a:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -30,88 +17,35 @@
 .method public a()Ljava/lang/Number;
     .locals 2
 
-    iget-object v0, p0, Lqidxisbestlol/v;->a:Ljava/util/List;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v0
+    move-result-object v1
 
-    const/4 v1, 0x1
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v1
 
-    iget-object v0, p0, Lqidxisbestlol/v;->a:Ljava/util/List;
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqidxisbestlol/x;
-
-    invoke-virtual {v0}, Lqidxisbestlol/x;->a()Ljava/lang/Number;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
-.end method
-
-.method public a(Lqidxisbestlol/x;)V
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    sget-object p1, Lqidxisbestlol/z;->a:Lqidxisbestlol/z;
-
-    :cond_0
-    iget-object v0, p0, Lqidxisbestlol/v;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-void
 .end method
 
 .method public b()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lqidxisbestlol/v;->a:Ljava/util/List;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v0
+    move-result-object v1
 
-    const/4 v1, 0x1
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v1
 
-    iget-object v0, p0, Lqidxisbestlol/v;->a:Ljava/util/List;
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqidxisbestlol/x;
-
-    invoke-virtual {v0}, Lqidxisbestlol/x;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -119,93 +53,202 @@
 .method public c()Z
     .locals 2
 
-    iget-object v0, p0, Lqidxisbestlol/v;->a:Ljava/util/List;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v0
+    move-result-object v1
 
-    const/4 v1, 0x1
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v1
 
-    iget-object v0, p0, Lqidxisbestlol/v;->a:Ljava/util/List;
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqidxisbestlol/x;
-
-    invoke-virtual {v0}, Lqidxisbestlol/x;->c()Z
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
-.method public equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public d()Z
+    .locals 1
 
-    if-eq p1, p0, :cond_0
+    instance-of v0, p0, Lqidxisbestlol/t;
 
-    instance-of v0, p1, Lqidxisbestlol/v;
+    return v0
+.end method
 
-    if-eqz v0, :cond_1
+.method public e()Z
+    .locals 1
 
-    check-cast p1, Lqidxisbestlol/v;
+    instance-of v0, p0, Lqidxisbestlol/y;
 
-    iget-object v0, p1, Lqidxisbestlol/v;->a:Ljava/util/List;
+    return v0
+.end method
 
-    iget-object v1, p0, Lqidxisbestlol/v;->a:Ljava/util/List;
+.method public f()Z
+    .locals 1
 
-    invoke-interface {v0, v1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+    instance-of v0, p0, Lqidxisbestlol/aa;
+
+    return v0
+.end method
+
+.method public g()Z
+    .locals 1
+
+    instance-of v0, p0, Lqidxisbestlol/x;
+
+    return v0
+.end method
+
+.method public h()Lqidxisbestlol/y;
+    .locals 3
+
+    invoke-virtual {p0}, Lqidxisbestlol/v;->e()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lqidxisbestlol/y;
+
+    return-object p0
 
     :cond_0
-    const/4 v0, 0x1
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    return v0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    :cond_1
-    const/4 v0, 0x0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto :goto_0
+    const-string v2, "Not a JSON Object: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public hashCode()I
-    .locals 1
+.method public i()Lqidxisbestlol/t;
+    .locals 3
 
-    iget-object v0, p0, Lqidxisbestlol/v;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->hashCode()I
+    invoke-virtual {p0}, Lqidxisbestlol/v;->d()Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lqidxisbestlol/t;
+
+    return-object p0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Not a JSON Array: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public iterator()Ljava/util/Iterator;
-    .locals 1
+.method public j()Lqidxisbestlol/aa;
+    .locals 3
 
-    iget-object v0, p0, Lqidxisbestlol/v;->a:Ljava/util/List;
+    invoke-virtual {p0}, Lqidxisbestlol/v;->f()Z
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lqidxisbestlol/aa;
+
+    return-object p0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Not a JSON Primitive: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 3
+
+    :try_start_0
+    new-instance v0, Ljava/io/StringWriter;
+
+    invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
+
+    new-instance v1, Lqidxisbestlol/eu;
+
+    invoke-direct {v1, v0}, Lqidxisbestlol/eu;-><init>(Ljava/io/Writer;)V
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Lqidxisbestlol/eu;->b(Z)V
+
+    invoke-static {p0, v1}, Lqidxisbestlol/bx;->a(Lqidxisbestlol/v;Lqidxisbestlol/eu;)V
+
+    invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
     return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
 .end method

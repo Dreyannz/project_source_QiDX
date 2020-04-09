@@ -1,102 +1,63 @@
-.class final Lqidxisbestlol/df;
-.super Lqidxisbestlol/ai;
+.class Lqidxisbestlol/df;
+.super Lqidxisbestlol/ag;
 .source "SourceFile"
 
 
-# instance fields
-.field private final a:Lqidxisbestlol/n;
-
-.field private final b:Lqidxisbestlol/ai;
-
-.field private final c:Ljava/lang/reflect/Type;
-
-
 # direct methods
-.method constructor <init>(Lqidxisbestlol/n;Lqidxisbestlol/ai;Ljava/lang/reflect/Type;)V
+.method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lqidxisbestlol/ai;-><init>()V
-
-    iput-object p1, p0, Lqidxisbestlol/df;->a:Lqidxisbestlol/n;
-
-    iput-object p2, p0, Lqidxisbestlol/df;->b:Lqidxisbestlol/ai;
-
-    iput-object p3, p0, Lqidxisbestlol/df;->c:Ljava/lang/reflect/Type;
+    invoke-direct {p0}, Lqidxisbestlol/ag;-><init>()V
 
     return-void
-.end method
-
-.method private a(Ljava/lang/reflect/Type;Ljava/lang/Object;)Ljava/lang/reflect/Type;
-    .locals 1
-
-    if-eqz p2, :cond_1
-
-    const-class v0, Ljava/lang/Object;
-
-    if-eq p1, v0, :cond_0
-
-    instance-of v0, p1, Ljava/lang/reflect/TypeVariable;
-
-    if-nez v0, :cond_0
-
-    instance-of v0, p1, Ljava/lang/Class;
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    :cond_1
-    return-object p1
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
+.method public a(Lqidxisbestlol/eu;Ljava/lang/Class;)V
     .locals 3
 
-    iget-object v0, p0, Lqidxisbestlol/df;->b:Lqidxisbestlol/ai;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    iget-object v1, p0, Lqidxisbestlol/df;->c:Ljava/lang/reflect/Type;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {p0, v1, p2}, Lqidxisbestlol/df;->a(Ljava/lang/reflect/Type;Ljava/lang/Object;)Ljava/lang/reflect/Type;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v1
+    const-string v2, "Attempted to serialize java.lang.Class: "
 
-    iget-object v2, p0, Lqidxisbestlol/df;->c:Ljava/lang/reflect/Type;
-
-    if-eq v1, v2, :cond_0
-
-    iget-object v0, p0, Lqidxisbestlol/df;->a:Lqidxisbestlol/n;
-
-    invoke-static {v1}, Lqidxisbestlol/ev;->a(Ljava/lang/reflect/Type;)Lqidxisbestlol/ev;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lqidxisbestlol/n;->a(Lqidxisbestlol/ev;)Lqidxisbestlol/ai;
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    instance-of v1, v0, Lqidxisbestlol/cw;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v1, :cond_1
+    move-result-object v1
 
-    :cond_0
-    :goto_0
-    invoke-virtual {v0, p1, p2}, Lqidxisbestlol/ai;->a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
+    const-string v2, ". Forgot to register a type adapter?"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public bridge synthetic a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p2, Ljava/lang/Class;
+
+    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/df;->a(Lqidxisbestlol/eu;Ljava/lang/Class;)V
 
     return-void
-
-    :cond_1
-    iget-object v1, p0, Lqidxisbestlol/df;->b:Lqidxisbestlol/ai;
-
-    instance-of v1, v1, Lqidxisbestlol/cw;
-
-    if-nez v1, :cond_0
-
-    iget-object v0, p0, Lqidxisbestlol/df;->b:Lqidxisbestlol/ai;
-
-    goto :goto_0
 .end method

@@ -1,3 +1,3 @@
 .class Lqidxisbestlol/kp;
-.super Lqidxisbestlol/km;
+.super Lqidxisbestlol/ko;
 .source "SourceFile"

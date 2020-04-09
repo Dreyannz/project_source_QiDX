@@ -1,31 +1,21 @@
 .class public final Lqidxisbestlol/pq;
-.super Lqidxisbestlol/ux;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field final synthetic a:Lqidxisbestlol/pn;
-
-
 # direct methods
-.method constructor <init>(Lqidxisbestlol/pn;)V
+.method private constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lqidxisbestlol/pq;->a:Lqidxisbestlol/pn;
-
-    invoke-direct {p0}, Lqidxisbestlol/ux;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
+    .locals 0
 
-# virtual methods
-.method protected a()V
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/pq;->a:Lqidxisbestlol/pn;
-
-    invoke-virtual {v0}, Lqidxisbestlol/pn;->d()V
+    invoke-direct {p0}, Lqidxisbestlol/pq;-><init>()V
 
     return-void
 .end method

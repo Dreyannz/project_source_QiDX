@@ -1,131 +1,74 @@
 .class public final Lqidxisbestlol/cq;
-.super Ljava/lang/Object;
+.super Lqidxisbestlol/ag;
 .source "SourceFile"
 
-# interfaces
-.implements Lqidxisbestlol/ak;
+
+# static fields
+.field public static final a:Lqidxisbestlol/ai;
 
 
 # instance fields
-.field final a:Z
-
-.field private final b:Lqidxisbestlol/av;
+.field private final b:Lqidxisbestlol/l;
 
 
 # direct methods
-.method public constructor <init>(Lqidxisbestlol/av;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lqidxisbestlol/cr;
 
-    iput-object p1, p0, Lqidxisbestlol/cq;->b:Lqidxisbestlol/av;
+    invoke-direct {v0}, Lqidxisbestlol/cr;-><init>()V
 
-    iput-boolean p2, p0, Lqidxisbestlol/cq;->a:Z
+    sput-object v0, Lqidxisbestlol/cq;->a:Lqidxisbestlol/ai;
 
     return-void
 .end method
 
-.method private a(Lqidxisbestlol/n;Ljava/lang/reflect/Type;)Lqidxisbestlol/ai;
-    .locals 1
+.method constructor <init>(Lqidxisbestlol/l;)V
+    .locals 0
 
-    sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+    invoke-direct {p0}, Lqidxisbestlol/ag;-><init>()V
 
-    if-eq p2, v0, :cond_0
+    iput-object p1, p0, Lqidxisbestlol/cq;->b:Lqidxisbestlol/l;
 
-    const-class v0, Ljava/lang/Boolean;
-
-    if-ne p2, v0, :cond_1
-
-    :cond_0
-    sget-object v0, Lqidxisbestlol/dg;->f:Lqidxisbestlol/ai;
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    invoke-static {p2}, Lqidxisbestlol/ev;->a(Ljava/lang/reflect/Type;)Lqidxisbestlol/ev;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lqidxisbestlol/n;->a(Lqidxisbestlol/ev;)Lqidxisbestlol/ai;
-
-    move-result-object v0
-
-    goto :goto_0
+    return-void
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/n;Lqidxisbestlol/ev;)Lqidxisbestlol/ai;
-    .locals 8
+.method public a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
+    .locals 2
 
-    const/4 v5, 0x1
+    if-nez p2, :cond_0
 
-    const/4 v3, 0x0
-
-    invoke-virtual {p2}, Lqidxisbestlol/ev;->b()Ljava/lang/reflect/Type;
-
-    move-result-object v0
-
-    invoke-virtual {p2}, Lqidxisbestlol/ev;->a()Ljava/lang/Class;
-
-    move-result-object v1
-
-    const-class v2, Ljava/util/Map;
-
-    invoke-virtual {v2, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Lqidxisbestlol/eu;->f()Lqidxisbestlol/eu;
 
     :goto_0
-    return-object v0
+    return-void
 
     :cond_0
-    invoke-static {v0}, Lqidxisbestlol/ar;->e(Ljava/lang/reflect/Type;)Ljava/lang/Class;
+    iget-object v0, p0, Lqidxisbestlol/cq;->b:Lqidxisbestlol/l;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lqidxisbestlol/ar;->b(Ljava/lang/reflect/Type;Ljava/lang/Class;)[Ljava/lang/reflect/Type;
-
-    move-result-object v1
-
-    aget-object v0, v1, v3
-
-    invoke-direct {p0, p1, v0}, Lqidxisbestlol/cq;->a(Lqidxisbestlol/n;Ljava/lang/reflect/Type;)Lqidxisbestlol/ai;
-
-    move-result-object v4
-
-    aget-object v0, v1, v5
-
-    invoke-static {v0}, Lqidxisbestlol/ev;->a(Ljava/lang/reflect/Type;)Lqidxisbestlol/ev;
+    invoke-virtual {v0, v1}, Lqidxisbestlol/l;->a(Ljava/lang/Class;)Lqidxisbestlol/ag;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lqidxisbestlol/n;->a(Lqidxisbestlol/ev;)Lqidxisbestlol/ai;
+    instance-of v1, v0, Lqidxisbestlol/cq;
 
-    move-result-object v6
+    if-eqz v1, :cond_1
 
-    iget-object v0, p0, Lqidxisbestlol/cq;->b:Lqidxisbestlol/av;
+    invoke-virtual {p1}, Lqidxisbestlol/eu;->d()Lqidxisbestlol/eu;
 
-    invoke-virtual {v0, p2}, Lqidxisbestlol/av;->a(Lqidxisbestlol/ev;)Lqidxisbestlol/bw;
+    invoke-virtual {p1}, Lqidxisbestlol/eu;->e()Lqidxisbestlol/eu;
 
-    move-result-object v7
+    goto :goto_0
 
-    new-instance v0, Lqidxisbestlol/cr;
-
-    aget-object v3, v1, v3
-
-    aget-object v5, v1, v5
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    invoke-direct/range {v0 .. v7}, Lqidxisbestlol/cr;-><init>(Lqidxisbestlol/cq;Lqidxisbestlol/n;Ljava/lang/reflect/Type;Lqidxisbestlol/ai;Ljava/lang/reflect/Type;Lqidxisbestlol/ai;Lqidxisbestlol/bw;)V
+    :cond_1
+    invoke-virtual {v0, p1, p2}, Lqidxisbestlol/ag;->a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

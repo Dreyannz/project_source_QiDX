@@ -1,8 +1,15 @@
-.class public interface abstract Lqidxisbestlol/ae;
-.super Ljava/lang/Object;
+.class final enum Lqidxisbestlol/ae;
+.super Lqidxisbestlol/ad;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Ljava/lang/Object;Ljava/lang/reflect/Type;Lqidxisbestlol/ad;)Lqidxisbestlol/x;
+# direct methods
+.method constructor <init>(Ljava/lang/String;I)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v0}, Lqidxisbestlol/ad;-><init>(Ljava/lang/String;ILqidxisbestlol/ae;)V
+
+    return-void
 .end method

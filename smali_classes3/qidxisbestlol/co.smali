@@ -1,572 +1,131 @@
 .class public final Lqidxisbestlol/co;
-.super Lqidxisbestlol/ew;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field private static final a:Ljava/io/Writer;
-
-.field private static final b:Lqidxisbestlol/ac;
+# interfaces
+.implements Lqidxisbestlol/ai;
 
 
 # instance fields
-.field private final c:Ljava/util/List;
+.field final a:Z
 
-.field private d:Ljava/lang/String;
-
-.field private e:Lqidxisbestlol/x;
+.field private final b:Lqidxisbestlol/at;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lqidxisbestlol/at;Z)V
+    .locals 0
 
-    new-instance v0, Lqidxisbestlol/cp;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lqidxisbestlol/cp;-><init>()V
+    iput-object p1, p0, Lqidxisbestlol/co;->b:Lqidxisbestlol/at;
 
-    sput-object v0, Lqidxisbestlol/co;->a:Ljava/io/Writer;
-
-    new-instance v0, Lqidxisbestlol/ac;
-
-    const-string v1, "closed"
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/ac;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lqidxisbestlol/co;->b:Lqidxisbestlol/ac;
+    iput-boolean p2, p0, Lqidxisbestlol/co;->a:Z
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method private a(Lqidxisbestlol/l;Ljava/lang/reflect/Type;)Lqidxisbestlol/ag;
     .locals 1
 
-    sget-object v0, Lqidxisbestlol/co;->a:Ljava/io/Writer;
+    sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    invoke-direct {p0, v0}, Lqidxisbestlol/ew;-><init>(Ljava/io/Writer;)V
+    if-eq p2, v0, :cond_0
 
-    new-instance v0, Ljava/util/ArrayList;
+    const-class v0, Ljava/lang/Boolean;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    sget-object v0, Lqidxisbestlol/z;->a:Lqidxisbestlol/z;
-
-    iput-object v0, p0, Lqidxisbestlol/co;->e:Lqidxisbestlol/x;
-
-    return-void
-.end method
-
-.method private a(Lqidxisbestlol/x;)V
-    .locals 2
-
-    iget-object v0, p0, Lqidxisbestlol/co;->d:Ljava/lang/String;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p1}, Lqidxisbestlol/x;->g()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lqidxisbestlol/co;->i()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
+    if-ne p2, v0, :cond_1
 
     :cond_0
-    invoke-direct {p0}, Lqidxisbestlol/co;->j()Lqidxisbestlol/x;
-
-    move-result-object v0
-
-    check-cast v0, Lqidxisbestlol/aa;
-
-    iget-object v1, p0, Lqidxisbestlol/co;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, p1}, Lqidxisbestlol/aa;->a(Ljava/lang/String;Lqidxisbestlol/x;)V
-
-    :cond_1
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lqidxisbestlol/co;->d:Ljava/lang/String;
+    sget-object v0, Lqidxisbestlol/de;->f:Lqidxisbestlol/ag;
 
     :goto_0
-    return-void
-
-    :cond_2
-    iget-object v0, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iput-object p1, p0, Lqidxisbestlol/co;->e:Lqidxisbestlol/x;
-
-    goto :goto_0
-
-    :cond_3
-    invoke-direct {p0}, Lqidxisbestlol/co;->j()Lqidxisbestlol/x;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lqidxisbestlol/v;
-
-    if-eqz v1, :cond_4
-
-    check-cast v0, Lqidxisbestlol/v;
-
-    invoke-virtual {v0, p1}, Lqidxisbestlol/v;->a(Lqidxisbestlol/x;)V
-
-    goto :goto_0
-
-    :cond_4
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-.end method
-
-.method private j()Lqidxisbestlol/x;
-    .locals 2
-
-    iget-object v0, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    iget-object v1, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqidxisbestlol/x;
-
     return-object v0
+
+    :cond_1
+    invoke-static {p2}, Lqidxisbestlol/et;->a(Ljava/lang/reflect/Type;)Lqidxisbestlol/et;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lqidxisbestlol/l;->a(Lqidxisbestlol/et;)Lqidxisbestlol/ag;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public a(J)Lqidxisbestlol/ew;
-    .locals 3
+.method public a(Lqidxisbestlol/l;Lqidxisbestlol/et;)Lqidxisbestlol/ag;
+    .locals 8
 
-    new-instance v0, Lqidxisbestlol/ac;
+    const/4 v5, 0x1
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const/4 v3, 0x0
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/ac;-><init>(Ljava/lang/Number;)V
-
-    invoke-direct {p0, v0}, Lqidxisbestlol/co;->a(Lqidxisbestlol/x;)V
-
-    return-object p0
-.end method
-
-.method public a(Ljava/lang/Boolean;)Lqidxisbestlol/ew;
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p0}, Lqidxisbestlol/co;->f()Lqidxisbestlol/ew;
-
-    move-result-object p0
-
-    :goto_0
-    return-object p0
-
-    :cond_0
-    new-instance v0, Lqidxisbestlol/ac;
-
-    invoke-direct {v0, p1}, Lqidxisbestlol/ac;-><init>(Ljava/lang/Boolean;)V
-
-    invoke-direct {p0, v0}, Lqidxisbestlol/co;->a(Lqidxisbestlol/x;)V
-
-    goto :goto_0
-.end method
-
-.method public a(Ljava/lang/Number;)Lqidxisbestlol/ew;
-    .locals 3
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p0}, Lqidxisbestlol/co;->f()Lqidxisbestlol/ew;
-
-    move-result-object p0
-
-    :goto_0
-    return-object p0
-
-    :cond_0
-    invoke-virtual {p0}, Lqidxisbestlol/co;->g()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Number;->doubleValue()D
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-static {v0, v1}, Ljava/lang/Double;->isInfinite(D)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "JSON forbids NaN and infinities: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    new-instance v0, Lqidxisbestlol/ac;
-
-    invoke-direct {v0, p1}, Lqidxisbestlol/ac;-><init>(Ljava/lang/Number;)V
-
-    invoke-direct {p0, v0}, Lqidxisbestlol/co;->a(Lqidxisbestlol/x;)V
-
-    goto :goto_0
-.end method
-
-.method public a(Ljava/lang/String;)Lqidxisbestlol/ew;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lqidxisbestlol/co;->d:Ljava/lang/String;
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-
-    :cond_1
-    invoke-direct {p0}, Lqidxisbestlol/co;->j()Lqidxisbestlol/x;
+    invoke-virtual {p2}, Lqidxisbestlol/et;->b()Ljava/lang/reflect/Type;
 
     move-result-object v0
 
-    instance-of v0, v0, Lqidxisbestlol/aa;
-
-    if-eqz v0, :cond_2
-
-    iput-object p1, p0, Lqidxisbestlol/co;->d:Ljava/lang/String;
-
-    return-object p0
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-.end method
-
-.method public a(Z)Lqidxisbestlol/ew;
-    .locals 2
-
-    new-instance v0, Lqidxisbestlol/ac;
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p2}, Lqidxisbestlol/et;->a()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lqidxisbestlol/ac;-><init>(Ljava/lang/Boolean;)V
+    const-class v2, Ljava/util/Map;
 
-    invoke-direct {p0, v0}, Lqidxisbestlol/co;->a(Lqidxisbestlol/x;)V
+    invoke-virtual {v2, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
-    return-object p0
-.end method
+    move-result v1
 
-.method public a()Lqidxisbestlol/x;
-    .locals 3
+    if-nez v1, :cond_0
 
-    iget-object v0, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
+    const/4 v0, 0x0
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Expected one JSON element but was "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    iget-object v0, p0, Lqidxisbestlol/co;->e:Lqidxisbestlol/x;
-
+    :goto_0
     return-object v0
-.end method
-
-.method public b()Lqidxisbestlol/ew;
-    .locals 2
-
-    new-instance v0, Lqidxisbestlol/v;
-
-    invoke-direct {v0}, Lqidxisbestlol/v;-><init>()V
-
-    invoke-direct {p0, v0}, Lqidxisbestlol/co;->a(Lqidxisbestlol/x;)V
-
-    iget-object v1, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-object p0
-.end method
-
-.method public b(Ljava/lang/String;)Lqidxisbestlol/ew;
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p0}, Lqidxisbestlol/co;->f()Lqidxisbestlol/ew;
-
-    move-result-object p0
-
-    :goto_0
-    return-object p0
 
     :cond_0
-    new-instance v0, Lqidxisbestlol/ac;
+    invoke-static {v0}, Lqidxisbestlol/ap;->e(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
-    invoke-direct {v0, p1}, Lqidxisbestlol/ac;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    invoke-direct {p0, v0}, Lqidxisbestlol/co;->a(Lqidxisbestlol/x;)V
+    invoke-static {v0, v1}, Lqidxisbestlol/ap;->b(Ljava/lang/reflect/Type;Ljava/lang/Class;)[Ljava/lang/reflect/Type;
+
+    move-result-object v1
+
+    aget-object v0, v1, v3
+
+    invoke-direct {p0, p1, v0}, Lqidxisbestlol/co;->a(Lqidxisbestlol/l;Ljava/lang/reflect/Type;)Lqidxisbestlol/ag;
+
+    move-result-object v4
+
+    aget-object v0, v1, v5
+
+    invoke-static {v0}, Lqidxisbestlol/et;->a(Ljava/lang/reflect/Type;)Lqidxisbestlol/et;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lqidxisbestlol/l;->a(Lqidxisbestlol/et;)Lqidxisbestlol/ag;
+
+    move-result-object v6
+
+    iget-object v0, p0, Lqidxisbestlol/co;->b:Lqidxisbestlol/at;
+
+    invoke-virtual {v0, p2}, Lqidxisbestlol/at;->a(Lqidxisbestlol/et;)Lqidxisbestlol/bu;
+
+    move-result-object v7
+
+    new-instance v0, Lqidxisbestlol/cp;
+
+    aget-object v3, v1, v3
+
+    aget-object v5, v1, v5
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    invoke-direct/range {v0 .. v7}, Lqidxisbestlol/cp;-><init>(Lqidxisbestlol/co;Lqidxisbestlol/l;Ljava/lang/reflect/Type;Lqidxisbestlol/ag;Ljava/lang/reflect/Type;Lqidxisbestlol/ag;Lqidxisbestlol/bu;)V
 
     goto :goto_0
-.end method
-
-.method public c()Lqidxisbestlol/ew;
-    .locals 2
-
-    iget-object v0, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lqidxisbestlol/co;->d:Ljava/lang/String;
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-
-    :cond_1
-    invoke-direct {p0}, Lqidxisbestlol/co;->j()Lqidxisbestlol/x;
-
-    move-result-object v0
-
-    instance-of v0, v0, Lqidxisbestlol/v;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    iget-object v1, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
-
-    return-object p0
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-.end method
-
-.method public close()V
-    .locals 2
-
-    iget-object v0, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/io/IOException;
-
-    const-string v1, "Incomplete document"
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    iget-object v0, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    sget-object v1, Lqidxisbestlol/co;->b:Lqidxisbestlol/ac;
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public d()Lqidxisbestlol/ew;
-    .locals 2
-
-    new-instance v0, Lqidxisbestlol/aa;
-
-    invoke-direct {v0}, Lqidxisbestlol/aa;-><init>()V
-
-    invoke-direct {p0, v0}, Lqidxisbestlol/co;->a(Lqidxisbestlol/x;)V
-
-    iget-object v1, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-object p0
-.end method
-
-.method public e()Lqidxisbestlol/ew;
-    .locals 2
-
-    iget-object v0, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lqidxisbestlol/co;->d:Ljava/lang/String;
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-
-    :cond_1
-    invoke-direct {p0}, Lqidxisbestlol/co;->j()Lqidxisbestlol/x;
-
-    move-result-object v0
-
-    instance-of v0, v0, Lqidxisbestlol/aa;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    iget-object v1, p0, Lqidxisbestlol/co;->c:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
-
-    return-object p0
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-.end method
-
-.method public f()Lqidxisbestlol/ew;
-    .locals 1
-
-    sget-object v0, Lqidxisbestlol/z;->a:Lqidxisbestlol/z;
-
-    invoke-direct {p0, v0}, Lqidxisbestlol/co;->a(Lqidxisbestlol/x;)V
-
-    return-object p0
-.end method
-
-.method public flush()V
-    .locals 0
-
-    return-void
 .end method

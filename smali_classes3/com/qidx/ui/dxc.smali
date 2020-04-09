@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/ez;
+.implements Lqidxisbestlol/ex;
 
 
 # instance fields
@@ -40,7 +40,7 @@
 
     const-string v0, "fatalError"
 
-    invoke-static {v0, p1}, Lqidxisbestlol/fg;->b(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v0, p1}, Lqidxisbestlol/fe;->b(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -62,7 +62,7 @@
 
     const-string v1, "errorMessage"
 
-    invoke-static {v1, p1}, Lqidxisbestlol/fg;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lqidxisbestlol/fe;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -86,7 +86,7 @@
     :cond_0
     const-string v0, "newUpdate"
 
-    invoke-static {v0, p1}, Lqidxisbestlol/fg;->b(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v0, p1}, Lqidxisbestlol/fe;->b(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -141,6 +141,18 @@
     goto :goto_0
 
     :cond_1
+    iget-object v0, p0, Lcom/qidx/ui/dxc;->a:Lcom/qidx/ui/dxa;
+
+    const-string v1, "#StayHome"
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V

@@ -1,109 +1,144 @@
-.class final Lqidxisbestlol/hz;
+.class public abstract Lqidxisbestlol/hz;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Lqidxisbestlol/iv;
+.implements Ljava/io/Serializable;
+.implements Lqidxisbestlol/jg;
+
+
+# static fields
+.field public static final b:Ljava/lang/Object;
 
 
 # instance fields
-.field private a:I
+.field protected final a:Ljava/lang/Object;
 
-.field private final b:[Ljava/lang/Object;
+.field private transient c:Lqidxisbestlol/jg;
 
 
 # direct methods
-.method public constructor <init>([Ljava/lang/Object;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "array"
+    invoke-static {}, Lqidxisbestlol/ia;->a()Lqidxisbestlol/ia;
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ii;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v0
+
+    sput-object v0, Lqidxisbestlol/hz;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    sget-object v0, Lqidxisbestlol/hz;->b:Ljava/lang/Object;
+
+    invoke-direct {p0, v0}, Lqidxisbestlol/hz;-><init>(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method protected constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqidxisbestlol/hz;->b:[Ljava/lang/Object;
+    iput-object p1, p0, Lqidxisbestlol/hz;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public hasNext()Z
-    .locals 2
+.method public varargs a([Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lqidxisbestlol/hz;->a:I
+    invoke-virtual {p0}, Lqidxisbestlol/hz;->d()Lqidxisbestlol/jg;
 
-    iget-object v1, p0, Lqidxisbestlol/hz;->b:[Ljava/lang/Object;
+    move-result-object v0
 
-    array-length v1, v1
+    invoke-interface {v0, p1}, Lqidxisbestlol/jg;->a([Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public next()Ljava/lang/Object;
-    .locals 3
-
-    nop
-
-    :try_start_0
-    iget-object v0, p0, Lqidxisbestlol/hz;->b:[Ljava/lang/Object;
-
-    iget v1, p0, Lqidxisbestlol/hz;->a:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Lqidxisbestlol/hz;->a:I
-
-    aget-object v0, v0, v1
-    :try_end_0
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v0
 
     return-object v0
+.end method
 
-    :catch_0
-    move-exception v0
+.method protected abstract a()Lqidxisbestlol/jg;
+.end method
 
-    move-object v1, v0
+.method public b()Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lqidxisbestlol/hz;->a:I
+    iget-object v0, p0, Lqidxisbestlol/hz;->a:Ljava/lang/Object;
 
-    add-int/lit8 v0, v0, -0x1
+    return-object v0
+.end method
 
-    iput v0, p0, Lqidxisbestlol/hz;->a:I
+.method public c()Lqidxisbestlol/jg;
+    .locals 1
 
-    new-instance v0, Ljava/util/NoSuchElementException;
+    iget-object v0, p0, Lqidxisbestlol/hz;->c:Lqidxisbestlol/jg;
 
-    invoke-virtual {v1}, Ljava/lang/ArrayIndexOutOfBoundsException;->getMessage()Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    move-result-object v1
+    invoke-virtual {p0}, Lqidxisbestlol/hz;->a()Lqidxisbestlol/jg;
 
-    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    check-cast v0, Ljava/lang/Throwable;
+    iput-object v0, p0, Lqidxisbestlol/hz;->c:Lqidxisbestlol/jg;
+
+    :cond_0
+    return-object v0
+.end method
+
+.method protected d()Lqidxisbestlol/jg;
+    .locals 1
+
+    invoke-virtual {p0}, Lqidxisbestlol/hz;->c()Lqidxisbestlol/jg;
+
+    move-result-object v0
+
+    if-ne v0, p0, :cond_0
+
+    new-instance v0, Lqidxisbestlol/ht;
+
+    invoke-direct {v0}, Lqidxisbestlol/ht;-><init>()V
+
+    throw v0
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public e()Lqidxisbestlol/ji;
+    .locals 1
+
+    new-instance v0, Ljava/lang/AbstractMethodError;
+
+    invoke-direct {v0}, Ljava/lang/AbstractMethodError;-><init>()V
 
     throw v0
 .end method
 
-.method public remove()V
-    .locals 2
+.method public f()Ljava/lang/String;
+    .locals 1
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    new-instance v0, Ljava/lang/AbstractMethodError;
 
-    const-string v1, "Operation is not supported for read-only collection"
+    invoke-direct {v0}, Ljava/lang/AbstractMethodError;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    throw v0
+.end method
+
+.method public g()Ljava/lang/String;
+    .locals 1
+
+    new-instance v0, Ljava/lang/AbstractMethodError;
+
+    invoke-direct {v0}, Ljava/lang/AbstractMethodError;-><init>()V
 
     throw v0
 .end method

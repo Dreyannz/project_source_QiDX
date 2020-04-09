@@ -1,42 +1,43 @@
 .class Lqidxisbestlol/bp;
-.super Ljava/lang/Object;
+.super Lqidxisbestlol/bs;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Comparator;
+
+# instance fields
+.field final synthetic a:Lqidxisbestlol/bo;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method constructor <init>(Lqidxisbestlol/bo;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqidxisbestlol/bp;->a:Lqidxisbestlol/bo;
+
+    iget-object v0, p1, Lqidxisbestlol/bo;->a:Lqidxisbestlol/bm;
+
+    invoke-direct {p0, v0}, Lqidxisbestlol/bs;-><init>(Lqidxisbestlol/bm;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+.method public a()Ljava/util/Map$Entry;
     .locals 1
 
-    invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+    invoke-virtual {p0}, Lqidxisbestlol/bp;->b()Lqidxisbestlol/bt;
 
-    move-result v0
+    move-result-object v0
 
-    return v0
+    return-object v0
 .end method
 
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public synthetic next()Ljava/lang/Object;
     .locals 1
 
-    check-cast p1, Ljava/lang/Comparable;
+    invoke-virtual {p0}, Lqidxisbestlol/bp;->a()Ljava/util/Map$Entry;
 
-    check-cast p2, Ljava/lang/Comparable;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/bp;->a(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

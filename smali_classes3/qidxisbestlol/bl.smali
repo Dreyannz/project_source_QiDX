@@ -1,87 +1,187 @@
-.class Lqidxisbestlol/bl;
-.super Lqidxisbestlol/ai;
+.class public final Lqidxisbestlol/bl;
+.super Ljava/lang/Number;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic a:Z
-
-.field final synthetic b:Z
-
-.field final synthetic c:Lqidxisbestlol/n;
-
-.field final synthetic d:Lqidxisbestlol/ev;
-
-.field final synthetic e:Lqidxisbestlol/bk;
-
-.field private f:Lqidxisbestlol/ai;
+.field private final a:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lqidxisbestlol/bk;ZZLqidxisbestlol/n;Lqidxisbestlol/ev;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lqidxisbestlol/bl;->e:Lqidxisbestlol/bk;
+    invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    iput-boolean p2, p0, Lqidxisbestlol/bl;->a:Z
-
-    iput-boolean p3, p0, Lqidxisbestlol/bl;->b:Z
-
-    iput-object p4, p0, Lqidxisbestlol/bl;->c:Lqidxisbestlol/n;
-
-    iput-object p5, p0, Lqidxisbestlol/bl;->d:Lqidxisbestlol/ev;
-
-    invoke-direct {p0}, Lqidxisbestlol/ai;-><init>()V
+    iput-object p1, p0, Lqidxisbestlol/bl;->a:Ljava/lang/String;
 
     return-void
-.end method
-
-.method private b()Lqidxisbestlol/ai;
-    .locals 3
-
-    iget-object v0, p0, Lqidxisbestlol/bl;->f:Lqidxisbestlol/ai;
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lqidxisbestlol/bl;->c:Lqidxisbestlol/n;
-
-    iget-object v1, p0, Lqidxisbestlol/bl;->e:Lqidxisbestlol/bk;
-
-    iget-object v2, p0, Lqidxisbestlol/bl;->d:Lqidxisbestlol/ev;
-
-    invoke-virtual {v0, v1, v2}, Lqidxisbestlol/n;->a(Lqidxisbestlol/ak;Lqidxisbestlol/ev;)Lqidxisbestlol/ai;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lqidxisbestlol/bl;->f:Lqidxisbestlol/ai;
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
-    .locals 1
+.method public doubleValue()D
+    .locals 2
 
-    iget-boolean v0, p0, Lqidxisbestlol/bl;->b:Z
+    iget-object v0, p0, Lqidxisbestlol/bl;->a:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
-    invoke-virtual {p1}, Lqidxisbestlol/ew;->f()Lqidxisbestlol/ew;
+    move-result-wide v0
 
-    :goto_0
-    return-void
+    return-wide v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v1, 0x1
+
+    const/4 v0, 0x0
+
+    if-ne p0, p1, :cond_1
+
+    move v0, v1
 
     :cond_0
-    invoke-direct {p0}, Lqidxisbestlol/bl;->b()Lqidxisbestlol/ai;
+    :goto_0
+    return v0
 
-    move-result-object v0
+    :cond_1
+    instance-of v2, p1, Lqidxisbestlol/bl;
 
-    invoke-virtual {v0, p1, p2}, Lqidxisbestlol/ai;->a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
+    if-eqz v2, :cond_0
+
+    check-cast p1, Lqidxisbestlol/bl;
+
+    iget-object v2, p0, Lqidxisbestlol/bl;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lqidxisbestlol/bl;->a:Ljava/lang/String;
+
+    if-eq v2, v3, :cond_2
+
+    iget-object v2, p0, Lqidxisbestlol/bl;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lqidxisbestlol/bl;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    :cond_2
+    move v0, v1
 
     goto :goto_0
+.end method
+
+.method public floatValue()F
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/bl;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/bl;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public intValue()I
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lqidxisbestlol/bl;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_1
+    iget-object v0, p0, Lqidxisbestlol/bl;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    :try_end_1
+    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-result-wide v0
+
+    long-to-int v0, v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    new-instance v0, Ljava/math/BigDecimal;
+
+    iget-object v1, p0, Lqidxisbestlol/bl;->a:Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/math/BigDecimal;->intValue()I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public longValue()J
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lqidxisbestlol/bl;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-wide v0
+
+    :goto_0
+    return-wide v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v0, Ljava/math/BigDecimal;
+
+    iget-object v1, p0, Lqidxisbestlol/bl;->a:Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/math/BigDecimal;->longValue()J
+
+    move-result-wide v0
+
+    goto :goto_0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/bl;->a:Ljava/lang/String;
+
+    return-object v0
 .end method

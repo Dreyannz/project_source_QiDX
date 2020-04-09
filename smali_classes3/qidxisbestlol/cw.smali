@@ -1,94 +1,92 @@
 .class public final Lqidxisbestlol/cw;
-.super Lqidxisbestlol/ai;
+.super Lqidxisbestlol/ag;
 .source "SourceFile"
 
 
-# instance fields
-.field private final a:Lqidxisbestlol/bw;
+# static fields
+.field public static final a:Lqidxisbestlol/ai;
 
-.field private final b:Ljava/util/Map;
+
+# instance fields
+.field private final b:Ljava/text/DateFormat;
 
 
 # direct methods
-.method constructor <init>(Lqidxisbestlol/bw;Ljava/util/Map;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Lqidxisbestlol/ai;-><init>()V
+    new-instance v0, Lqidxisbestlol/cx;
 
-    iput-object p1, p0, Lqidxisbestlol/cw;->a:Lqidxisbestlol/bw;
+    invoke-direct {v0}, Lqidxisbestlol/cx;-><init>()V
 
-    iput-object p2, p0, Lqidxisbestlol/cw;->b:Ljava/util/Map;
+    sput-object v0, Lqidxisbestlol/cw;->a:Lqidxisbestlol/ai;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Lqidxisbestlol/ag;-><init>()V
+
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "MMM d, yyyy"
+
+    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lqidxisbestlol/cw;->b:Ljava/text/DateFormat;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
-    .locals 3
+.method public bridge synthetic a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p2, Ljava/sql/Date;
+
+    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/cw;->a(Lqidxisbestlol/eu;Ljava/sql/Date;)V
+
+    return-void
+.end method
+
+.method public declared-synchronized a(Lqidxisbestlol/eu;Ljava/sql/Date;)V
+    .locals 1
+
+    monitor-enter p0
 
     if-nez p2, :cond_0
 
-    invoke-virtual {p1}, Lqidxisbestlol/ew;->f()Lqidxisbestlol/ew;
+    const/4 v0, 0x0
 
     :goto_0
+    :try_start_0
+    invoke-virtual {p1, v0}, Lqidxisbestlol/eu;->b(Ljava/lang/String;)Lqidxisbestlol/eu;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
     return-void
 
     :cond_0
-    invoke-virtual {p1}, Lqidxisbestlol/ew;->d()Lqidxisbestlol/ew;
+    :try_start_1
+    iget-object v0, p0, Lqidxisbestlol/cw;->b:Ljava/text/DateFormat;
 
-    :try_start_0
-    iget-object v0, p0, Lqidxisbestlol/cw;->b:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_1
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0, p2}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v0
-
-    check-cast v0, Lqidxisbestlol/cx;
-
-    invoke-virtual {v0, p2}, Lqidxisbestlol/cx;->a(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, v0, Lqidxisbestlol/cx;->h:Ljava/lang/String;
-
-    invoke-virtual {p1, v2}, Lqidxisbestlol/ew;->a(Ljava/lang/String;)Lqidxisbestlol/ew;
-
-    invoke-virtual {v0, p1, p2}, Lqidxisbestlol/cx;->a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/AssertionError;
-
-    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v1
-
-    :cond_2
-    invoke-virtual {p1}, Lqidxisbestlol/ew;->e()Lqidxisbestlol/ew;
 
     goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method

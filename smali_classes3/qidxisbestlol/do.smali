@@ -1,5 +1,5 @@
 .class Lqidxisbestlol/do;
-.super Lqidxisbestlol/ai;
+.super Lqidxisbestlol/ag;
 .source "SourceFile"
 
 
@@ -7,27 +7,27 @@
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lqidxisbestlol/ai;-><init>()V
+    invoke-direct {p0}, Lqidxisbestlol/ag;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
+.method public bridge synthetic a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p2, Ljava/lang/String;
+    check-cast p2, Ljava/math/BigInteger;
 
-    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/do;->a(Lqidxisbestlol/ew;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/do;->a(Lqidxisbestlol/eu;Ljava/math/BigInteger;)V
 
     return-void
 .end method
 
-.method public a(Lqidxisbestlol/ew;Ljava/lang/String;)V
+.method public a(Lqidxisbestlol/eu;Ljava/math/BigInteger;)V
     .locals 0
 
-    invoke-virtual {p1, p2}, Lqidxisbestlol/ew;->b(Ljava/lang/String;)Lqidxisbestlol/ew;
+    invoke-virtual {p1, p2}, Lqidxisbestlol/eu;->a(Ljava/lang/Number;)Lqidxisbestlol/eu;
 
     return-void
 .end method

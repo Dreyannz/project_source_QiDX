@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/ak;
+.implements Lqidxisbestlol/ai;
 
 
 # direct methods
@@ -17,14 +17,14 @@
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/n;Lqidxisbestlol/ev;)Lqidxisbestlol/ai;
+.method public a(Lqidxisbestlol/l;Lqidxisbestlol/et;)Lqidxisbestlol/ag;
     .locals 2
 
-    invoke-virtual {p2}, Lqidxisbestlol/ev;->a()Ljava/lang/Class;
+    invoke-virtual {p2}, Lqidxisbestlol/et;->a()Ljava/lang/Class;
 
     move-result-object v0
 
-    const-class v1, Ljava/sql/Date;
+    const-class v1, Ljava/sql/Time;
 
     if-ne v0, v1, :cond_0
 

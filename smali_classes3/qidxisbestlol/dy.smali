@@ -1,37 +1,45 @@
 .class Lqidxisbestlol/dy;
-.super Lqidxisbestlol/ai;
+.super Lqidxisbestlol/ag;
 .source "SourceFile"
 
 
+# instance fields
+.field final synthetic a:Lqidxisbestlol/ag;
+
+.field final synthetic b:Lqidxisbestlol/dx;
+
+
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lqidxisbestlol/dx;Lqidxisbestlol/ag;)V
     .locals 0
 
-    invoke-direct {p0}, Lqidxisbestlol/ai;-><init>()V
+    iput-object p1, p0, Lqidxisbestlol/dy;->b:Lqidxisbestlol/dx;
+
+    iput-object p2, p0, Lqidxisbestlol/dy;->a:Lqidxisbestlol/ag;
+
+    invoke-direct {p0}, Lqidxisbestlol/ag;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a(Lqidxisbestlol/ew;Ljava/lang/Object;)V
+.method public bridge synthetic a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p2, Ljava/util/Currency;
+    check-cast p2, Ljava/sql/Timestamp;
 
-    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/dy;->a(Lqidxisbestlol/ew;Ljava/util/Currency;)V
+    invoke-virtual {p0, p1, p2}, Lqidxisbestlol/dy;->a(Lqidxisbestlol/eu;Ljava/sql/Timestamp;)V
 
     return-void
 .end method
 
-.method public a(Lqidxisbestlol/ew;Ljava/util/Currency;)V
+.method public a(Lqidxisbestlol/eu;Ljava/sql/Timestamp;)V
     .locals 1
 
-    invoke-virtual {p2}, Ljava/util/Currency;->getCurrencyCode()Ljava/lang/String;
+    iget-object v0, p0, Lqidxisbestlol/dy;->a:Lqidxisbestlol/ag;
 
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lqidxisbestlol/ew;->b(Ljava/lang/String;)Lqidxisbestlol/ew;
+    invoke-virtual {v0, p1, p2}, Lqidxisbestlol/ag;->a(Lqidxisbestlol/eu;Ljava/lang/Object;)V
 
     return-void
 .end method

@@ -27,19 +27,19 @@
 
     iget-object v0, p0, Lcom/qidx/ui/dxb;->a:Lcom/qidx/ui/dxa;
 
-    invoke-static {v0}, Lcom/qidx/ui/dxa;->a(Lcom/qidx/ui/dxa;)Lqidxisbestlol/ex;
+    invoke-static {v0}, Lcom/qidx/ui/dxa;->a(Lcom/qidx/ui/dxa;)Lqidxisbestlol/ev;
 
     move-result-object v0
 
-    sget-object v1, Lqidxisbestlol/ex;->a:Ljava/lang/String;
+    sget-object v1, Lqidxisbestlol/ev;->a:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/qidx/ui/dxb;->a:Lcom/qidx/ui/dxa;
 
-    invoke-static {v2}, Lcom/qidx/ui/dxa;->b(Lcom/qidx/ui/dxa;)Lqidxisbestlol/ez;
+    invoke-static {v2}, Lcom/qidx/ui/dxa;->b(Lcom/qidx/ui/dxa;)Lqidxisbestlol/ex;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lqidxisbestlol/ex;->a(Ljava/lang/String;Lqidxisbestlol/ez;)V
+    invoke-virtual {v0, v1, v2}, Lqidxisbestlol/ev;->a(Ljava/lang/String;Lqidxisbestlol/ex;)V
 
     return-void
 .end method

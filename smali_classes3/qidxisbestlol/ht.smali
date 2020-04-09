@@ -1,40 +1,15 @@
-.class public final Lqidxisbestlol/ht;
-.super Ljava/lang/Object;
+.class public Lqidxisbestlol/ht;
+.super Ljava/lang/Error;
 .source "SourceFile"
 
 
 # direct methods
-.method public static final a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+.method public constructor <init>()V
     .locals 1
 
-    nop
+    const-string v0, "Kotlin reflection implementation is not found at runtime. Make sure you have kotlin-reflect.jar in the classpath"
 
-    if-nez p0, :cond_0
+    invoke-direct {p0, v0}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
 
-    :goto_0
     return-void
-
-    :cond_0
-    if-nez p1, :cond_1
-
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-
-    goto :goto_0
-
-    :cond_1
-    nop
-
-    :try_start_0
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-static {p1, v0}, Lqidxisbestlol/fh;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-
-    goto :goto_0
 .end method
