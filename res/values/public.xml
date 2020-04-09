@@ -509,6 +509,7 @@
     <public type="drawable" name="dummy_ae_115" id="0x7f070115" />
     <public type="drawable" name="dummy_ae_116" id="0x7f070116" />
     <public type="drawable" name="dummy_ae_117" id="0x7f070117" />
+    <public type="drawable" name="APKTOOL_DUMMY_11a" id="0x7f07011a" />
     <public type="drawable" name="APKTOOL_DUMMY_11b" id="0x7f07011b" />
     <public type="drawable" name="APKTOOL_DUMMY_11c" id="0x7f07011c" />
     <public type="drawable" name="APKTOOL_DUMMY_11d" id="0x7f07011d" />
@@ -735,7 +736,6 @@
     <public type="drawable" name="text_select_handle_right" id="0x7f070108" />
     <public type="drawable" name="ic_launcher_round" id="0x7f070118" />
     <public type="drawable" name="ic_qidx" id="0x7f070119" />
-    <public type="drawable" name="ic_pything_flat" id="0x7f07011a" />
     <public type="drawable" name="drawer_shadow" id="0x7f070038" />
     <public type="drawable" name="notification_action_background" id="0x7f0700e2" />
     <public type="drawable" name="banner" id="0x7f07000a" />
