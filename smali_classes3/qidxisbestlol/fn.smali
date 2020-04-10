@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field private a:Lqidxisbestlol/hu;
+.field private a:Lqidxisbestlol/hs;
 
 .field private volatile b:Ljava/lang/Object;
 
@@ -16,16 +16,16 @@
 
 
 # direct methods
-.method public constructor <init>(Lqidxisbestlol/hu;Ljava/lang/Object;)V
+.method public constructor <init>(Lqidxisbestlol/hs;Ljava/lang/Object;)V
     .locals 1
 
     const-string v0, "initializer"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqidxisbestlol/fn;->a:Lqidxisbestlol/hu;
+    iput-object p1, p0, Lqidxisbestlol/fn;->a:Lqidxisbestlol/hs;
 
     sget-object v0, Lqidxisbestlol/fq;->a:Lqidxisbestlol/fq;
 
@@ -44,7 +44,7 @@
     goto :goto_0
 .end method
 
-.method public synthetic constructor <init>(Lqidxisbestlol/hu;Ljava/lang/Object;ILqidxisbestlol/ie;)V
+.method public synthetic constructor <init>(Lqidxisbestlol/hs;Ljava/lang/Object;ILqidxisbestlol/hy;)V
     .locals 1
 
     and-int/lit8 v0, p3, 0x2
@@ -54,7 +54,7 @@
     const/4 p2, 0x0
 
     :cond_0
-    invoke-direct {p0, p1, p2}, Lqidxisbestlol/fn;-><init>(Lqidxisbestlol/hu;Ljava/lang/Object;)V
+    invoke-direct {p0, p1, p2}, Lqidxisbestlol/fn;-><init>(Lqidxisbestlol/hs;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -98,14 +98,14 @@
 
     :cond_1
     :try_start_1
-    iget-object v0, p0, Lqidxisbestlol/fn;->a:Lqidxisbestlol/hu;
+    iget-object v0, p0, Lqidxisbestlol/fn;->a:Lqidxisbestlol/hs;
 
     if-nez v0, :cond_2
 
-    invoke-static {}, Lqidxisbestlol/ig;->a()V
+    invoke-static {}, Lqidxisbestlol/ia;->a()V
 
     :cond_2
-    invoke-interface {v0}, Lqidxisbestlol/hu;->a()Ljava/lang/Object;
+    invoke-interface {v0}, Lqidxisbestlol/hs;->a()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -113,9 +113,9 @@
 
     const/4 v0, 0x0
 
-    check-cast v0, Lqidxisbestlol/hu;
+    check-cast v0, Lqidxisbestlol/hs;
 
-    iput-object v0, p0, Lqidxisbestlol/fn;->a:Lqidxisbestlol/hu;
+    iput-object v0, p0, Lqidxisbestlol/fn;->a:Lqidxisbestlol/hs;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

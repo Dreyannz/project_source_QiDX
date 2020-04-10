@@ -1,139 +1,78 @@
-.class public final Lqidxisbestlol/oc;
-.super Ljava/lang/Object;
+.class final Lqidxisbestlol/oc;
+.super Lqidxisbestlol/ib;
 .source "SourceFile"
+
+# interfaces
+.implements Lqidxisbestlol/ht;
+
+
+# instance fields
+.field final synthetic a:Lqidxisbestlol/ob;
+
+.field final synthetic b:I
 
 
 # direct methods
-.method private constructor <init>()V
-    .locals 0
+.method constructor <init>(Lqidxisbestlol/ob;I)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqidxisbestlol/oc;->a:Lqidxisbestlol/ob;
 
-    return-void
-.end method
+    iput p2, p0, Lqidxisbestlol/oc;->b:I
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
-    .locals 0
+    const/4 v0, 0x1
 
-    invoke-direct {p0}, Lqidxisbestlol/oc;-><init>()V
+    invoke-direct {p0, v0}, Lqidxisbestlol/ib;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lqidxisbestlol/ob;
-    .locals 3
+.method public bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const-string v0, "javaName"
+    check-cast p1, Ljava/io/IOException;
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lqidxisbestlol/oc;->a(Ljava/io/IOException;)V
 
-    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+    sget-object v0, Lqidxisbestlol/fs;->a:Lqidxisbestlol/fs;
 
-    move-result v0
+    return-object v0
+.end method
 
-    sparse-switch v0, :sswitch_data_0
+.method public final a(Ljava/io/IOException;)V
+    .locals 2
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    const-string v0, "it"
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v0, p0, Lqidxisbestlol/oc;->a:Lqidxisbestlol/ob;
 
-    const-string v2, "Unexpected TLS version: "
+    iget-object v1, v0, Lqidxisbestlol/ob;->a:Lqidxisbestlol/nz;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    monitor-enter v1
 
-    move-result-object v1
+    nop
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_start_0
+    iget-object v0, p0, Lqidxisbestlol/oc;->a:Lqidxisbestlol/ob;
 
-    move-result-object v1
+    invoke-virtual {v0}, Lqidxisbestlol/ob;->b()V
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object v0, Lqidxisbestlol/fs;->a:Lqidxisbestlol/fs;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v1
+    monitor-exit v1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    return-void
 
-    check-cast v0, Ljava/lang/Throwable;
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
 
     throw v0
-
-    :sswitch_0
-    const-string v0, "SSLv3"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lqidxisbestlol/ob;->e:Lqidxisbestlol/ob;
-
-    :goto_0
-    return-object v0
-
-    :sswitch_1
-    const-string v0, "TLSv1"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lqidxisbestlol/ob;->d:Lqidxisbestlol/ob;
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "TLSv1.3"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lqidxisbestlol/ob;->a:Lqidxisbestlol/ob;
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v0, "TLSv1.2"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lqidxisbestlol/ob;->b:Lqidxisbestlol/ob;
-
-    goto :goto_0
-
-    :sswitch_4
-    const-string v0, "TLSv1.1"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lqidxisbestlol/ob;->c:Lqidxisbestlol/ob;
-
-    goto :goto_0
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x1dfc3f27 -> :sswitch_4
-        -0x1dfc3f26 -> :sswitch_3
-        -0x1dfc3f25 -> :sswitch_2
-        0x4b88569 -> :sswitch_0
-        0x4c38896 -> :sswitch_1
-    .end sparse-switch
 .end method

@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
+.method public synthetic constructor <init>(Lqidxisbestlol/hy;)V
     .locals 0
 
     invoke-direct {p0}, Lqidxisbestlol/to;-><init>()V
@@ -22,36 +22,77 @@
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final a()Lqidxisbestlol/tn;
+    .locals 7
 
-    invoke-static {}, Lqidxisbestlol/tn;->c()Z
+    const/4 v1, 0x0
 
-    move-result v0
+    nop
 
-    return v0
-.end method
+    :try_start_0
+    const-string v0, "dalvik.system.CloseGuard"
 
-.method public final b()Lqidxisbestlol/tn;
-    .locals 1
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    check-cast p0, Lqidxisbestlol/to;
+    move-result-object v3
 
-    invoke-virtual {p0}, Lqidxisbestlol/to;->a()Z
+    const-string v0, "get"
 
-    move-result v0
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_0
+    new-array v2, v2, [Ljava/lang/Class;
 
-    new-instance v0, Lqidxisbestlol/tn;
+    invoke-virtual {v3, v0, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    invoke-direct {v0}, Lqidxisbestlol/tn;-><init>()V
+    move-result-object v0
+
+    const-string v2, "open"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Class;
+
+    const/4 v5, 0x0
+
+    const-class v6, Ljava/lang/String;
+
+    aput-object v6, v4, v5
+
+    invoke-virtual {v3, v2, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v2
+
+    const-string v4, "warnIfOpen"
+
+    const/4 v5, 0x0
+
+    new-array v5, v5, [Ljava/lang/Class;
+
+    invoke-virtual {v3, v4, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v1
 
     :goto_0
-    return-object v0
+    new-instance v3, Lqidxisbestlol/tn;
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-direct {v3, v0, v2, v1}, Lqidxisbestlol/tn;-><init>(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;)V
+
+    return-object v3
+
+    :catch_0
+    move-exception v0
+
+    move-object v0, v1
+
+    check-cast v0, Ljava/lang/reflect/Method;
+
+    move-object v2, v1
+
+    check-cast v2, Ljava/lang/reflect/Method;
+
+    check-cast v1, Ljava/lang/reflect/Method;
 
     goto :goto_0
 .end method

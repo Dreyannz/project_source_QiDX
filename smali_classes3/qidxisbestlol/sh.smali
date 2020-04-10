@@ -1,35 +1,21 @@
-.class public interface abstract Lqidxisbestlol/sh;
+.class public final Lqidxisbestlol/sh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()V
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method
 
-.method public abstract a(IIIZ)V
-.end method
+.method public synthetic constructor <init>(Lqidxisbestlol/hy;)V
+    .locals 0
 
-.method public abstract a(IILjava/util/List;)V
-.end method
+    invoke-direct {p0}, Lqidxisbestlol/sh;-><init>()V
 
-.method public abstract a(IJ)V
-.end method
-
-.method public abstract a(ILqidxisbestlol/rb;)V
-.end method
-
-.method public abstract a(ILqidxisbestlol/rb;Lqidxisbestlol/vf;)V
-.end method
-
-.method public abstract a(ZII)V
-.end method
-
-.method public abstract a(ZIILjava/util/List;)V
-.end method
-
-.method public abstract a(ZILqidxisbestlol/ve;I)V
-.end method
-
-.method public abstract a(ZLqidxisbestlol/su;)V
+    return-void
 .end method

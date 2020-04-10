@@ -1,262 +1,150 @@
 .class final Lqidxisbestlol/vm;
-.super Ljava/lang/Object;
+.super Lqidxisbestlol/uh;
 .source "SourceFile"
-
-# interfaces
-.implements Lqidxisbestlol/vz;
 
 
 # instance fields
-.field private final a:Ljava/io/InputStream;
+.field private final a:Ljava/util/logging/Logger;
 
-.field private final b:Lqidxisbestlol/wa;
+.field private final e:Ljava/net/Socket;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/InputStream;Lqidxisbestlol/wa;)V
+.method public constructor <init>(Ljava/net/Socket;)V
     .locals 1
 
-    const-string v0, "input"
+    const-string v0, "socket"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "timeout"
+    invoke-direct {p0}, Lqidxisbestlol/uh;-><init>()V
 
-    invoke-static {p2, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    iput-object p1, p0, Lqidxisbestlol/vm;->e:Ljava/net/Socket;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "okio.Okio"
 
-    iput-object p1, p0, Lqidxisbestlol/vm;->a:Ljava/io/InputStream;
+    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
 
-    iput-object p2, p0, Lqidxisbestlol/vm;->b:Lqidxisbestlol/wa;
+    move-result-object v0
+
+    iput-object v0, p0, Lqidxisbestlol/vm;->a:Ljava/util/logging/Logger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/vb;J)J
-    .locals 6
+.method protected a(Ljava/io/IOException;)Ljava/io/IOException;
+    .locals 2
 
-    const/4 v2, 0x1
+    new-instance v0, Ljava/net/SocketTimeoutException;
 
-    const-wide/16 v0, 0x0
+    const-string v1, "timeout"
 
-    const-string v3, "sink"
+    invoke-direct {v0, v1}, Ljava/net/SocketTimeoutException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, v3}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    if-eqz p1, :cond_0
 
-    cmp-long v3, p2, v0
+    check-cast p1, Ljava/lang/Throwable;
 
-    if-nez v3, :cond_0
-
-    :goto_0
-    return-wide v0
+    invoke-virtual {v0, p1}, Ljava/net/SocketTimeoutException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     :cond_0
-    cmp-long v0, p2, v0
+    check-cast v0, Ljava/io/IOException;
 
-    if-ltz v0, :cond_1
+    return-object v0
+.end method
 
-    move v0, v2
+.method protected a()V
+    .locals 5
 
-    :goto_1
-    if-nez v0, :cond_2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "byteCount < 0: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_2
     nop
 
     :try_start_0
-    iget-object v0, p0, Lqidxisbestlol/vm;->b:Lqidxisbestlol/wa;
+    iget-object v0, p0, Lqidxisbestlol/vm;->e:Ljava/net/Socket;
 
-    invoke-virtual {v0}, Lqidxisbestlol/wa;->e_()V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lqidxisbestlol/vb;->h(I)Lqidxisbestlol/vt;
-
-    move-result-object v0
-
-    iget v1, v0, Lqidxisbestlol/vt;->c:I
-
-    rsub-int v1, v1, 0x2000
-
-    int-to-long v2, v1
-
-    invoke-static {p2, p3, v2, v3}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v2
-
-    nop
-
-    long-to-int v1, v2
-
-    iget-object v2, p0, Lqidxisbestlol/vm;->a:Ljava/io/InputStream;
-
-    iget-object v3, v0, Lqidxisbestlol/vt;->a:[B
-
-    iget v4, v0, Lqidxisbestlol/vt;->c:I
-
-    invoke-virtual {v2, v3, v4, v1}, Ljava/io/InputStream;->read([BII)I
-
-    move-result v1
-
-    const/4 v2, -0x1
-
-    if-ne v1, v2, :cond_4
-
-    iget v1, v0, Lqidxisbestlol/vt;->b:I
-
-    iget v2, v0, Lqidxisbestlol/vt;->c:I
-
-    if-ne v1, v2, :cond_3
-
-    invoke-virtual {v0}, Lqidxisbestlol/vt;->b()Lqidxisbestlol/vt;
-
-    move-result-object v1
-
-    iput-object v1, p1, Lqidxisbestlol/vb;->a:Lqidxisbestlol/vt;
-
-    sget-object v1, Lqidxisbestlol/vv;->a:Lqidxisbestlol/vv;
-
-    invoke-virtual {v1, v0}, Lqidxisbestlol/vv;->a(Lqidxisbestlol/vt;)V
-
-    :cond_3
-    const-wide/16 v0, -0x1
-
-    goto :goto_0
-
-    :cond_4
-    iget v2, v0, Lqidxisbestlol/vt;->c:I
-
-    add-int/2addr v2, v1
-
-    iput v2, v0, Lqidxisbestlol/vt;->c:I
-
-    invoke-virtual {p1}, Lqidxisbestlol/vb;->b()J
-
-    move-result-wide v2
-
-    int-to-long v4, v1
-
-    add-long/2addr v2, v4
-
-    invoke-virtual {p1, v2, v3}, Lqidxisbestlol/vb;->a(J)V
+    invoke-virtual {v0}, Ljava/net/Socket;->close()V
     :try_end_0
-    .catch Ljava/lang/AssertionError; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/AssertionError; {:try_start_0 .. :try_end_0} :catch_1
 
-    int-to-long v0, v1
-
-    goto :goto_0
+    :goto_0
+    return-void
 
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lqidxisbestlol/vn;->a(Ljava/lang/AssertionError;)Z
+    iget-object v1, p0, Lqidxisbestlol/vm;->a:Ljava/util/logging/Logger;
+
+    sget-object v2, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Failed to close timed out socket "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lqidxisbestlol/vm;->e:Ljava/net/Socket;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    invoke-virtual {v1, v2, v3, v0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    invoke-static {v0}, Lqidxisbestlol/uz;->a(Ljava/lang/AssertionError;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_0
 
-    new-instance v1, Ljava/io/IOException;
+    iget-object v1, p0, Lqidxisbestlol/vm;->a:Ljava/util/logging/Logger;
+
+    sget-object v2, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Failed to close timed out socket "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lqidxisbestlol/vm;->e:Ljava/net/Socket;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
 
     check-cast v0, Ljava/lang/Throwable;
 
-    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v2, v3, v0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-object v0, v1
+    goto :goto_0
 
+    :cond_0
     check-cast v0, Ljava/lang/Throwable;
 
     throw v0
-
-    :cond_5
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-.end method
-
-.method public a()Lqidxisbestlol/wa;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/vm;->b:Lqidxisbestlol/wa;
-
-    return-object v0
-.end method
-
-.method public close()V
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/vm;->a:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-
-    return-void
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "source("
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lqidxisbestlol/vm;->a:Ljava/io/InputStream;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const/16 v1, 0x29
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

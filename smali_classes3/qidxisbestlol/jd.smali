@@ -1,3 +1,3 @@
 .class Lqidxisbestlol/jd;
-.super Ljava/lang/Object;
+.super Lqidxisbestlol/jc;
 .source "SourceFile"

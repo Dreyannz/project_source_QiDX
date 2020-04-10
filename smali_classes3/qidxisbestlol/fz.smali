@@ -20,13 +20,15 @@
 
     const-string v0, "list"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0}, Lqidxisbestlol/fv;-><init>()V
 
     iput-object p1, p0, Lqidxisbestlol/fz;->c:Lqidxisbestlol/fv;
 
     iput p2, p0, Lqidxisbestlol/fz;->d:I
+
+    nop
 
     sget-object v0, Lqidxisbestlol/fv;->a:Lqidxisbestlol/fw;
 

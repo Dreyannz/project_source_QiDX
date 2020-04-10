@@ -1,71 +1,71 @@
 .class public final Lqidxisbestlol/py;
-.super Ljava/lang/RuntimeException;
+.super Lqidxisbestlol/ni;
 .source "SourceFile"
 
 
 # instance fields
-.field private a:Ljava/io/IOException;
+.field private final b:Ljava/lang/String;
 
-.field private final b:Ljava/io/IOException;
+.field private final c:J
+
+.field private final d:Lqidxisbestlol/uq;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/IOException;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;JLqidxisbestlol/uq;)V
+    .locals 2
 
-    const-string v0, "firstConnectException"
+    const-string v0, "source"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-object v0, p1
+    invoke-direct {p0}, Lqidxisbestlol/ni;-><init>()V
 
-    check-cast v0, Ljava/lang/Throwable;
+    iput-object p1, p0, Lqidxisbestlol/py;->b:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    iput-wide p2, p0, Lqidxisbestlol/py;->c:J
 
-    iput-object p1, p0, Lqidxisbestlol/py;->b:Ljava/io/IOException;
-
-    iget-object v0, p0, Lqidxisbestlol/py;->b:Ljava/io/IOException;
-
-    iput-object v0, p0, Lqidxisbestlol/py;->a:Ljava/io/IOException;
+    iput-object p4, p0, Lqidxisbestlol/py;->d:Lqidxisbestlol/uq;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/io/IOException;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/py;->a:Ljava/io/IOException;
-
-    return-object v0
-.end method
-
-.method public final a(Ljava/io/IOException;)V
+.method public a()Lqidxisbestlol/mu;
     .locals 2
 
-    const-string v0, "e"
+    iget-object v0, p0, Lqidxisbestlol/py;->b:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lqidxisbestlol/py;->b:Ljava/io/IOException;
+    sget-object v1, Lqidxisbestlol/mu;->a:Lqidxisbestlol/mv;
 
-    move-object v0, p1
+    invoke-virtual {v1, v0}, Lqidxisbestlol/mv;->b(Ljava/lang/String;)Lqidxisbestlol/mu;
 
-    check-cast v0, Ljava/lang/Throwable;
+    move-result-object v0
 
-    invoke-virtual {v1, v0}, Ljava/io/IOException;->addSuppressed(Ljava/lang/Throwable;)V
+    :goto_0
+    return-object v0
 
-    iput-object p1, p0, Lqidxisbestlol/py;->a:Ljava/io/IOException;
+    :cond_0
+    const/4 v0, 0x0
 
-    return-void
+    goto :goto_0
 .end method
 
-.method public final b()Ljava/io/IOException;
+.method public b()J
+    .locals 2
+
+    iget-wide v0, p0, Lqidxisbestlol/py;->c:J
+
+    return-wide v0
+.end method
+
+.method public c()Lqidxisbestlol/uq;
     .locals 1
 
-    iget-object v0, p0, Lqidxisbestlol/py;->b:Ljava/io/IOException;
+    iget-object v0, p0, Lqidxisbestlol/py;->d:Lqidxisbestlol/uq;
 
     return-object v0
 .end method

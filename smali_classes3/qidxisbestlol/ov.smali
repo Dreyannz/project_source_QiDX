@@ -1,96 +1,186 @@
-.class final Lqidxisbestlol/ov;
-.super Lqidxisbestlol/ih;
+.class public final Lqidxisbestlol/ov;
+.super Lqidxisbestlol/uu;
 .source "SourceFile"
-
-# interfaces
-.implements Lqidxisbestlol/hv;
 
 
 # instance fields
-.field final synthetic a:Lqidxisbestlol/oo;
+.field final synthetic a:Lqidxisbestlol/ot;
+
+.field private b:J
+
+.field private c:Z
+
+.field private d:Z
+
+.field private e:Z
+
+.field private final f:J
 
 
 # direct methods
-.method constructor <init>(Lqidxisbestlol/oo;)V
-    .locals 1
+.method public constructor <init>(Lqidxisbestlol/ot;Lqidxisbestlol/vn;J)V
+    .locals 5
 
-    iput-object p1, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/oo;
+    const-string v0, "delegate"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object p1, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/ot;
+
+    invoke-direct {p0, p2}, Lqidxisbestlol/uu;-><init>(Lqidxisbestlol/vn;)V
+
+    iput-wide p3, p0, Lqidxisbestlol/ov;->f:J
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lqidxisbestlol/ih;-><init>(I)V
+    iput-boolean v0, p0, Lqidxisbestlol/ov;->c:Z
 
+    nop
+
+    iget-wide v0, p0, Lqidxisbestlol/ov;->f:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lqidxisbestlol/ov;->a(Ljava/io/IOException;)Ljava/io/IOException;
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public a(Lqidxisbestlol/un;J)J
+    .locals 8
 
-    check-cast p1, Ljava/io/IOException;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1}, Lqidxisbestlol/ov;->a(Ljava/io/IOException;)V
+    const-wide/16 v2, -0x1
 
-    sget-object v0, Lqidxisbestlol/fs;->a:Lqidxisbestlol/fs;
+    const-string v1, "sink"
 
-    return-object v0
-.end method
+    invoke-static {p1, v1}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-.method public final a(Ljava/io/IOException;)V
-    .locals 5
+    iget-boolean v1, p0, Lqidxisbestlol/ov;->e:Z
 
-    const-string v0, "it"
+    if-nez v1, :cond_0
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/oo;
+    :cond_0
+    if-nez v0, :cond_1
 
-    sget-boolean v0, Lqidxisbestlol/oe;->f:Z
+    const-string v1, "closed"
 
-    if-eqz v0, :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    invoke-static {v1}, Ljava/lang/Thread;->holdsLock(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result v0
+    move-result-object v1
 
-    if-nez v0, :cond_0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Ljava/lang/AssertionError;
+    check-cast v0, Ljava/lang/Throwable;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    throw v0
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    :cond_1
+    nop
 
-    const-string v3, "Thread "
+    :try_start_0
+    invoke-virtual {p0}, Lqidxisbestlol/ov;->b()Lqidxisbestlol/vn;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    move-result-object v2
+    invoke-interface {v0, p1, p2, p3}, Lqidxisbestlol/vn;->a(Lqidxisbestlol/un;J)J
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    move-result-wide v4
 
-    move-result-object v3
+    iget-boolean v0, p0, Lqidxisbestlol/ov;->c:Z
 
-    const-string v4, "Thread.currentThread()"
+    if-eqz v0, :cond_2
 
-    invoke-static {v3, v4}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {v3}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+    iput-boolean v0, p0, Lqidxisbestlol/ov;->c:Z
 
-    move-result-object v3
+    iget-object v0, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/ot;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lqidxisbestlol/ot;->l()Lqidxisbestlol/ly;
 
-    move-result-object v2
+    move-result-object v1
 
-    const-string v3, " MUST hold lock on "
+    iget-object v0, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/ot;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lqidxisbestlol/ot;->k()Lqidxisbestlol/ox;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v0, Lqidxisbestlol/la;
+
+    invoke-virtual {v1, v0}, Lqidxisbestlol/ly;->f(Lqidxisbestlol/la;)V
+
+    :cond_2
+    cmp-long v0, v4, v2
+
+    if-nez v0, :cond_3
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lqidxisbestlol/ov;->a(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-wide v0, v2
+
+    :goto_0
+    return-wide v0
+
+    :cond_3
+    iget-wide v0, p0, Lqidxisbestlol/ov;->b:J
+
+    add-long v6, v0, v4
+
+    iget-wide v0, p0, Lqidxisbestlol/ov;->f:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_4
+
+    iget-wide v0, p0, Lqidxisbestlol/ov;->f:J
+
+    cmp-long v0, v6, v0
+
+    if-lez v0, :cond_4
+
+    new-instance v0, Ljava/net/ProtocolException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "expected "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-wide v2, p0, Lqidxisbestlol/ov;->f:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " bytes but received "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -98,20 +188,138 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    throw v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {p0, v0}, Lqidxisbestlol/ov;->a(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
 
     check-cast v0, Ljava/lang/Throwable;
 
     throw v0
 
+    :cond_4
+    :try_start_1
+    iput-wide v6, p0, Lqidxisbestlol/ov;->b:J
+
+    iget-wide v0, p0, Lqidxisbestlol/ov;->f:J
+
+    cmp-long v0, v6, v0
+
+    if-nez v0, :cond_5
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lqidxisbestlol/ov;->a(Ljava/io/IOException;)Ljava/io/IOException;
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :cond_5
+    move-wide v0, v4
+
+    goto :goto_0
+.end method
+
+.method public final a(Ljava/io/IOException;)Ljava/io/IOException;
+    .locals 7
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    iget-boolean v0, p0, Lqidxisbestlol/ov;->d:Z
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    return-object p1
+
     :cond_0
+    iput-boolean v4, p0, Lqidxisbestlol/ov;->d:Z
+
+    if-nez p1, :cond_1
+
+    iget-boolean v0, p0, Lqidxisbestlol/ov;->c:Z
+
+    if-eqz v0, :cond_1
+
+    iput-boolean v5, p0, Lqidxisbestlol/ov;->c:Z
+
+    iget-object v0, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/ot;
+
+    invoke-virtual {v0}, Lqidxisbestlol/ot;->l()Lqidxisbestlol/ly;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/ot;
+
+    invoke-virtual {v0}, Lqidxisbestlol/ot;->k()Lqidxisbestlol/ox;
+
+    move-result-object v0
+
+    check-cast v0, Lqidxisbestlol/la;
+
+    invoke-virtual {v1, v0}, Lqidxisbestlol/ly;->f(Lqidxisbestlol/la;)V
+
+    :cond_1
+    iget-object v1, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/ot;
+
+    iget-wide v2, p0, Lqidxisbestlol/ov;->b:J
+
+    move-object v6, p1
+
+    invoke-virtual/range {v1 .. v6}, Lqidxisbestlol/ot;->a(JZZLjava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object p1
+
+    goto :goto_0
+.end method
+
+.method public close()V
+    .locals 1
+
+    iget-boolean v0, p0, Lqidxisbestlol/ov;->e:Z
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lqidxisbestlol/ov;->e:Z
+
     nop
 
-    iget-object v0, p0, Lqidxisbestlol/ov;->a:Lqidxisbestlol/oo;
+    :try_start_0
+    invoke-super {p0}, Lqidxisbestlol/uu;->close()V
 
-    const/4 v1, 0x1
+    const/4 v0, 0x0
 
-    invoke-static {v0, v1}, Lqidxisbestlol/oo;->a(Lqidxisbestlol/oo;Z)V
+    invoke-virtual {p0, v0}, Lqidxisbestlol/ov;->a(Ljava/io/IOException;)Ljava/io/IOException;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {p0, v0}, Lqidxisbestlol/ov;->a(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    throw v0
 .end method

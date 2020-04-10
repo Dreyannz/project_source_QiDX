@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/jr;
+.implements Lqidxisbestlol/ja;
 
 
 # instance fields

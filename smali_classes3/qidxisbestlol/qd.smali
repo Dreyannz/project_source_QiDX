@@ -2,435 +2,331 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqidxisbestlol/ng;
-
-
-# instance fields
-.field private final b:Lqidxisbestlol/mh;
-
 
 # direct methods
-.method public constructor <init>(Lqidxisbestlol/mh;)V
-    .locals 1
-
-    const-string v0, "cookieJar"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+.method private constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqidxisbestlol/qd;->b:Lqidxisbestlol/mh;
 
     return-void
 .end method
 
-.method private final a(Ljava/util/List;)Ljava/lang/String;
-    .locals 6
+.method public synthetic constructor <init>(Lqidxisbestlol/hy;)V
+    .locals 0
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Lqidxisbestlol/qd;-><init>()V
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    check-cast p1, Ljava/lang/Iterable;
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    move v1, v0
-
-    :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    add-int/lit8 v2, v1, 0x1
-
-    if-gez v1, :cond_0
-
-    invoke-static {}, Lqidxisbestlol/gh;->b()V
-
-    :cond_0
-    check-cast v0, Lqidxisbestlol/mf;
-
-    if-lez v1, :cond_1
-
-    const-string v1, "; "
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_1
-    invoke-virtual {v0}, Lqidxisbestlol/mf;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const/16 v5, 0x3d
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lqidxisbestlol/mf;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    nop
-
-    move v1, v2
-
-    goto :goto_0
-
-    :cond_2
-    nop
-
-    nop
-
-    nop
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "StringBuilder().apply(builderAction).toString()"
-
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/nh;)Lqidxisbestlol/nv;
-    .locals 12
-
-    const-wide/16 v10, -0x1
-
-    const/4 v8, 0x2
+.method public final a(Ljava/lang/String;)Lqidxisbestlol/qc;
+    .locals 7
 
     const/4 v4, 0x0
 
-    const/4 v3, 0x1
+    const/16 v6, 0x20
 
-    const/4 v7, 0x0
+    const/16 v1, 0x9
 
-    const-string v0, "chain"
+    const/4 v3, 0x2
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 v2, 0x0
 
-    invoke-interface {p1}, Lqidxisbestlol/nh;->a()Lqidxisbestlol/nq;
+    const-string v0, "statusLine"
 
-    move-result-object v5
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v5}, Lqidxisbestlol/nq;->b()Lqidxisbestlol/nr;
+    const-string v0, "HTTP/1."
 
-    move-result-object v6
+    invoke-static {p1, v0, v2, v3, v4}, Lqidxisbestlol/js;->a(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
-    invoke-virtual {v5}, Lqidxisbestlol/nq;->g()Lqidxisbestlol/ns;
+    move-result v0
 
-    move-result-object v0
+    if-eqz v0, :cond_4
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    invoke-virtual {v0}, Lqidxisbestlol/ns;->a()Lqidxisbestlol/nj;
+    move-result v0
 
-    move-result-object v1
+    if-lt v0, v1, :cond_0
 
-    if-eqz v1, :cond_0
+    const/16 v0, 0x8
 
-    const-string v2, "Content-Type"
+    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
-    invoke-virtual {v1}, Lqidxisbestlol/nj;->toString()Ljava/lang/String;
+    move-result v0
 
-    move-result-object v1
-
-    invoke-virtual {v6, v2, v1}, Lqidxisbestlol/nr;->a(Ljava/lang/String;Ljava/lang/String;)Lqidxisbestlol/nr;
+    if-eq v0, v6, :cond_1
 
     :cond_0
-    invoke-virtual {v0}, Lqidxisbestlol/ns;->b()J
+    new-instance v0, Ljava/net/ProtocolException;
 
-    move-result-wide v0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    cmp-long v2, v0, v10
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-eqz v2, :cond_8
+    const-string v2, "Unexpected status line: "
 
-    const-string v2, "Content-Length"
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v2, v0}, Lqidxisbestlol/nr;->a(Ljava/lang/String;Ljava/lang/String;)Lqidxisbestlol/nr;
+    move-result-object v1
 
-    const-string v0, "Transfer-Encoding"
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v6, v0}, Lqidxisbestlol/nr;->b(Ljava/lang/String;)Lqidxisbestlol/nr;
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    throw v0
 
     :cond_1
-    :goto_0
-    const-string v0, "Host"
+    const/4 v0, 0x7
 
-    invoke-virtual {v5, v0}, Lqidxisbestlol/nq;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
-    move-result-object v0
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x30
 
     if-nez v0, :cond_2
 
-    const-string v0, "Host"
+    sget-object v0, Lqidxisbestlol/mz;->a:Lqidxisbestlol/mz;
 
-    invoke-virtual {v5}, Lqidxisbestlol/nq;->d()Lqidxisbestlol/nc;
+    :goto_0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    add-int/lit8 v3, v1, 0x3
+
+    if-ge v2, v3, :cond_6
+
+    new-instance v0, Ljava/net/ProtocolException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Unexpected status line: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-static {v1, v4, v3, v7}, Lqidxisbestlol/oe;->a(Lqidxisbestlol/nc;ZILjava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v6, v0, v1}, Lqidxisbestlol/nr;->a(Ljava/lang/String;Ljava/lang/String;)Lqidxisbestlol/nr;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    throw v0
 
     :cond_2
-    const-string v0, "Connection"
+    const/4 v2, 0x1
 
-    invoke-virtual {v5, v0}, Lqidxisbestlol/nq;->a(Ljava/lang/String;)Ljava/lang/String;
+    if-ne v0, v2, :cond_3
 
-    move-result-object v0
+    sget-object v0, Lqidxisbestlol/mz;->b:Lqidxisbestlol/mz;
 
-    if-nez v0, :cond_3
-
-    const-string v0, "Connection"
-
-    const-string v1, "Keep-Alive"
-
-    invoke-virtual {v6, v0, v1}, Lqidxisbestlol/nr;->a(Ljava/lang/String;Ljava/lang/String;)Lqidxisbestlol/nr;
+    goto :goto_0
 
     :cond_3
-    const-string v0, "Accept-Encoding"
+    new-instance v0, Ljava/net/ProtocolException;
 
-    invoke-virtual {v5, v0}, Lqidxisbestlol/nq;->a(Ljava/lang/String;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-nez v0, :cond_9
+    const-string v2, "Unexpected status line: "
 
-    const-string v0, "Range"
-
-    invoke-virtual {v5, v0}, Lqidxisbestlol/nq;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_9
-
-    const-string v0, "Accept-Encoding"
-
-    const-string v1, "gzip"
-
-    invoke-virtual {v6, v0, v1}, Lqidxisbestlol/nr;->a(Ljava/lang/String;Ljava/lang/String;)Lqidxisbestlol/nr;
-
-    move v2, v3
-
-    :goto_1
-    iget-object v0, p0, Lqidxisbestlol/qd;->b:Lqidxisbestlol/mh;
-
-    invoke-virtual {v5}, Lqidxisbestlol/nq;->d()Lqidxisbestlol/nc;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lqidxisbestlol/mh;->a(Lqidxisbestlol/nc;)Ljava/util/List;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    move-object v0, v1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    check-cast v0, Ljava/util/Collection;
+    move-result-object v1
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
 
-    move-result v0
+    check-cast v0, Ljava/lang/Throwable;
 
-    if-nez v0, :cond_4
-
-    move v4, v3
+    throw v0
 
     :cond_4
-    if-eqz v4, :cond_5
+    const-string v0, "ICY "
 
-    const-string v0, "Cookie"
+    invoke-static {p1, v0, v2, v3, v4}, Lqidxisbestlol/js;->a(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
-    invoke-direct {p0, v1}, Lqidxisbestlol/qd;->a(Ljava/util/List;)Ljava/lang/String;
+    move-result v0
 
-    move-result-object v1
+    if-eqz v0, :cond_5
 
-    invoke-virtual {v6, v0, v1}, Lqidxisbestlol/nr;->a(Ljava/lang/String;Ljava/lang/String;)Lqidxisbestlol/nr;
+    sget-object v0, Lqidxisbestlol/mz;->a:Lqidxisbestlol/mz;
+
+    const/4 v1, 0x4
+
+    goto :goto_0
 
     :cond_5
-    const-string v0, "User-Agent"
+    new-instance v0, Ljava/net/ProtocolException;
 
-    invoke-virtual {v5, v0}, Lqidxisbestlol/nq;->a(Ljava/lang/String;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-nez v0, :cond_6
+    const-string v2, "Unexpected status line: "
 
-    const-string v0, "User-Agent"
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "okhttp/4.4.0"
+    move-result-object v1
 
-    invoke-virtual {v6, v0, v1}, Lqidxisbestlol/nr;->a(Ljava/lang/String;Ljava/lang/String;)Lqidxisbestlol/nr;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    throw v0
 
     :cond_6
-    invoke-virtual {v6}, Lqidxisbestlol/nr;->b()Lqidxisbestlol/nq;
+    nop
 
-    move-result-object v0
+    add-int/lit8 v2, v1, 0x3
 
-    invoke-interface {p1, v0}, Lqidxisbestlol/nh;->a(Lqidxisbestlol/nq;)Lqidxisbestlol/nv;
+    :try_start_0
+    invoke-virtual {p1, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v2
 
-    iget-object v0, p0, Lqidxisbestlol/qd;->b:Lqidxisbestlol/mh;
+    const-string v3, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-virtual {v5}, Lqidxisbestlol/nq;->d()Lqidxisbestlol/nc;
+    invoke-static {v2, v3}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v3
+
+    const-string v2, ""
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    add-int/lit8 v5, v1, 0x3
+
+    if-le v4, v5, :cond_8
+
+    add-int/lit8 v2, v1, 0x3
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    if-eq v2, v6, :cond_7
+
+    new-instance v0, Ljava/net/ProtocolException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Unexpected status line: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v4}, Lqidxisbestlol/nv;->h()Lqidxisbestlol/mz;
-
-    move-result-object v6
-
-    invoke-static {v0, v1, v6}, Lqidxisbestlol/qj;->a(Lqidxisbestlol/mh;Lqidxisbestlol/nc;Lqidxisbestlol/mz;)V
-
-    invoke-virtual {v4}, Lqidxisbestlol/nv;->a()Lqidxisbestlol/nw;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Lqidxisbestlol/nw;->a(Lqidxisbestlol/nq;)Lqidxisbestlol/nw;
-
-    move-result-object v5
-
-    if-eqz v2, :cond_7
-
-    const-string v0, "gzip"
-
-    const-string v1, "Content-Encoding"
-
-    invoke-static {v4, v1, v7, v8, v7}, Lqidxisbestlol/nv;->a(Lqidxisbestlol/nv;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v3}, Lqidxisbestlol/kj;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_7
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v4}, Lqidxisbestlol/qj;->a(Lqidxisbestlol/nv;)Z
+    check-cast v0, Ljava/lang/Throwable;
 
-    move-result v0
+    throw v0
 
-    if-eqz v0, :cond_7
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {v4}, Lqidxisbestlol/nv;->i()Lqidxisbestlol/nx;
+    new-instance v0, Ljava/net/ProtocolException;
 
-    move-result-object v0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_7
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v1, Lqidxisbestlol/vk;
+    const-string v2, "Unexpected status line: "
 
-    invoke-virtual {v0}, Lqidxisbestlol/nx;->c()Lqidxisbestlol/ve;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lqidxisbestlol/vz;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v0}, Lqidxisbestlol/vk;-><init>(Lqidxisbestlol/vz;)V
+    move-result-object v1
 
-    invoke-virtual {v4}, Lqidxisbestlol/nv;->h()Lqidxisbestlol/mz;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Lqidxisbestlol/mz;->b()Lqidxisbestlol/na;
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    check-cast v0, Ljava/lang/Throwable;
 
-    const-string v2, "Content-Encoding"
-
-    invoke-virtual {v0, v2}, Lqidxisbestlol/na;->b(Ljava/lang/String;)Lqidxisbestlol/na;
-
-    move-result-object v0
-
-    const-string v2, "Content-Length"
-
-    invoke-virtual {v0, v2}, Lqidxisbestlol/na;->b(Ljava/lang/String;)Lqidxisbestlol/na;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lqidxisbestlol/na;->b()Lqidxisbestlol/mz;
-
-    move-result-object v0
-
-    invoke-virtual {v5, v0}, Lqidxisbestlol/nw;->a(Lqidxisbestlol/mz;)Lqidxisbestlol/nw;
-
-    const-string v0, "Content-Type"
-
-    invoke-static {v4, v0, v7, v8, v7}, Lqidxisbestlol/nv;->a(Lqidxisbestlol/nv;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    new-instance v2, Lqidxisbestlol/qm;
-
-    move-object v0, v1
-
-    check-cast v0, Lqidxisbestlol/vz;
-
-    invoke-static {v0}, Lqidxisbestlol/vn;->a(Lqidxisbestlol/vz;)Lqidxisbestlol/ve;
-
-    move-result-object v0
-
-    invoke-direct {v2, v3, v10, v11, v0}, Lqidxisbestlol/qm;-><init>(Ljava/lang/String;JLqidxisbestlol/ve;)V
-
-    move-object v0, v2
-
-    check-cast v0, Lqidxisbestlol/nx;
-
-    invoke-virtual {v5, v0}, Lqidxisbestlol/nw;->a(Lqidxisbestlol/nx;)Lqidxisbestlol/nw;
+    throw v0
 
     :cond_7
-    invoke-virtual {v5}, Lqidxisbestlol/nw;->b()Lqidxisbestlol/nv;
+    add-int/lit8 v1, v1, 0x4
 
-    move-result-object v0
+    invoke-virtual {p1, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    return-object v0
+    move-result-object v1
+
+    const-string v2, "(this as java.lang.String).substring(startIndex)"
+
+    invoke-static {v1, v2}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :goto_1
+    new-instance v2, Lqidxisbestlol/qc;
+
+    invoke-direct {v2, v0, v3, v1}, Lqidxisbestlol/qc;-><init>(Lqidxisbestlol/mz;ILjava/lang/String;)V
+
+    return-object v2
 
     :cond_8
-    const-string v0, "Transfer-Encoding"
+    move-object v1, v2
 
-    const-string v1, "chunked"
-
-    invoke-virtual {v6, v0, v1}, Lqidxisbestlol/nr;->a(Ljava/lang/String;Ljava/lang/String;)Lqidxisbestlol/nr;
-
-    const-string v0, "Content-Length"
-
-    invoke-virtual {v6, v0}, Lqidxisbestlol/nr;->b(Ljava/lang/String;)Lqidxisbestlol/nr;
-
-    goto/16 :goto_0
-
-    :cond_9
-    move v2, v4
-
-    goto/16 :goto_1
+    goto :goto_1
 .end method

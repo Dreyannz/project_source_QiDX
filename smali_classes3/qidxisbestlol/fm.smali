@@ -74,7 +74,7 @@
 
     iget-object v1, p1, Lqidxisbestlol/fm;->a:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -84,7 +84,7 @@
 
     iget-object v1, p1, Lqidxisbestlol/fm;->b:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

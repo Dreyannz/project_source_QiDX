@@ -1,54 +1,212 @@
-.class final Lqidxisbestlol/ky;
-.super Lqidxisbestlol/ih;
+.class public final Lqidxisbestlol/ky;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lqidxisbestlol/hv;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/CharSequence;
+.field private a:Z
+
+.field private b:Z
+
+.field private c:I
+
+.field private d:I
+
+.field private e:I
+
+.field private f:Z
+
+.field private g:Z
+
+.field private h:Z
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/CharSequence;)V
+.method public constructor <init>()V
     .locals 1
 
-    iput-object p1, p0, Lqidxisbestlol/ky;->a:Ljava/lang/CharSequence;
+    const/4 v0, -0x1
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lqidxisbestlol/ih;-><init>(I)V
+    iput v0, p0, Lqidxisbestlol/ky;->c:I
+
+    iput v0, p0, Lqidxisbestlol/ky;->d:I
+
+    iput v0, p0, Lqidxisbestlol/ky;->e:I
 
     return-void
 .end method
 
+.method private final a(J)I
+    .locals 5
 
-# virtual methods
-.method public bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    const v0, 0x7fffffff
 
-    check-cast p1, Lqidxisbestlol/ja;
+    nop
 
-    invoke-virtual {p0, p1}, Lqidxisbestlol/ky;->a(Lqidxisbestlol/ja;)Ljava/lang/String;
+    int-to-long v2, v0
 
-    move-result-object v0
+    cmp-long v1, p1, v2
 
-    return-object v0
+    if-lez v1, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    long-to-int v0, p1
+
+    goto :goto_0
 .end method
 
-.method public final a(Lqidxisbestlol/ja;)Ljava/lang/String;
-    .locals 1
 
-    const-string v0, "it"
+# virtual methods
+.method public final a()Lqidxisbestlol/ky;
+    .locals 2
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    move-object v0, p0
 
-    iget-object v0, p0, Lqidxisbestlol/ky;->a:Ljava/lang/CharSequence;
+    check-cast v0, Lqidxisbestlol/ky;
 
-    invoke-static {v0, p1}, Lqidxisbestlol/kj;->a(Ljava/lang/CharSequence;Lqidxisbestlol/ja;)Ljava/lang/String;
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lqidxisbestlol/ky;->a:Z
+
+    nop
+
+    check-cast p0, Lqidxisbestlol/ky;
+
+    return-object p0
+.end method
+
+.method public final a(ILjava/util/concurrent/TimeUnit;)Lqidxisbestlol/ky;
+    .locals 4
+
+    const-string v0, "timeUnit"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    move-object v0, p0
+
+    check-cast v0, Lqidxisbestlol/ky;
+
+    if-ltz p1, :cond_0
+
+    const/4 v1, 0x1
+
+    :goto_0
+    if-nez v1, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "maxStale < 0: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    throw v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    int-to-long v2, p1
+
+    invoke-virtual {p2, v2, v3}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
+
+    move-result-wide v2
+
+    invoke-direct {v0, v2, v3}, Lqidxisbestlol/ky;->a(J)I
+
+    move-result v1
+
+    iput v1, v0, Lqidxisbestlol/ky;->d:I
+
+    nop
+
+    nop
+
+    check-cast p0, Lqidxisbestlol/ky;
+
+    return-object p0
+.end method
+
+.method public final b()Lqidxisbestlol/ky;
+    .locals 2
+
+    move-object v0, p0
+
+    check-cast v0, Lqidxisbestlol/ky;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lqidxisbestlol/ky;->f:Z
+
+    nop
+
+    check-cast p0, Lqidxisbestlol/ky;
+
+    return-object p0
+.end method
+
+.method public final c()Lqidxisbestlol/kx;
+    .locals 15
+
+    const/4 v13, 0x0
+
+    const/4 v5, 0x0
+
+    new-instance v0, Lqidxisbestlol/kx;
+
+    iget-boolean v1, p0, Lqidxisbestlol/ky;->a:Z
+
+    iget-boolean v2, p0, Lqidxisbestlol/ky;->b:Z
+
+    iget v3, p0, Lqidxisbestlol/ky;->c:I
+
+    const/4 v4, -0x1
+
+    iget v8, p0, Lqidxisbestlol/ky;->d:I
+
+    iget v9, p0, Lqidxisbestlol/ky;->e:I
+
+    iget-boolean v10, p0, Lqidxisbestlol/ky;->f:Z
+
+    iget-boolean v11, p0, Lqidxisbestlol/ky;->g:Z
+
+    iget-boolean v12, p0, Lqidxisbestlol/ky;->h:Z
+
+    move v6, v5
+
+    move v7, v5
+
+    move-object v14, v13
+
+    invoke-direct/range {v0 .. v14}, Lqidxisbestlol/kx;-><init>(ZZIIZZZIIZZZLjava/lang/String;Lqidxisbestlol/hy;)V
 
     return-object v0
 .end method

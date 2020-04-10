@@ -1,10 +1,38 @@
-.class public final Lqidxisbestlol/ly;
+.class public abstract Lqidxisbestlol/ly;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lqidxisbestlol/ly;
+
+.field public static final b:Lqidxisbestlol/lz;
+
+
 # direct methods
-.method private constructor <init>()V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lqidxisbestlol/lz;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lqidxisbestlol/lz;-><init>(Lqidxisbestlol/hy;)V
+
+    sput-object v0, Lqidxisbestlol/ly;->b:Lqidxisbestlol/lz;
+
+    new-instance v0, Lqidxisbestlol/ma;
+
+    invoke-direct {v0}, Lqidxisbestlol/ma;-><init>()V
+
+    check-cast v0, Lqidxisbestlol/ly;
+
+    sput-object v0, Lqidxisbestlol/ly;->a:Lqidxisbestlol/ly;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -12,233 +40,334 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
-    .locals 0
 
-    invoke-direct {p0}, Lqidxisbestlol/ly;-><init>()V
+# virtual methods
+.method public a(Lqidxisbestlol/la;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private final a(Ljava/lang/String;I)Lqidxisbestlol/lx;
-    .locals 2
-
-    new-instance v0, Lqidxisbestlol/lx;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lqidxisbestlol/lx;-><init>(Ljava/lang/String;Lqidxisbestlol/ie;)V
-
-    invoke-static {}, Lqidxisbestlol/lx;->c()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public static final synthetic a(Lqidxisbestlol/ly;Ljava/lang/String;I)Lqidxisbestlol/lx;
+.method public a(Lqidxisbestlol/la;J)V
     .locals 1
 
-    invoke-direct {p0, p1, p2}, Lqidxisbestlol/ly;->a(Ljava/lang/String;I)Lqidxisbestlol/lx;
+    const-string v0, "call"
 
-    move-result-object v0
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object v0
+    return-void
 .end method
 
-.method private final b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 5
-
-    const/4 v4, 0x0
-
-    const/4 v3, 0x4
-
-    const/4 v2, 0x2
-
-    const/4 v1, 0x0
-
-    nop
-
-    const-string v0, "TLS_"
-
-    invoke-static {p1, v0, v1, v2, v4}, Lqidxisbestlol/kj;->a(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "SSL_"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    if-nez p1, :cond_0
-
-    new-instance v0, Lqidxisbestlol/fp;
-
-    const-string v1, "null cannot be cast to non-null type java.lang.String"
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    invoke-virtual {p1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "(this as java.lang.String).substring(startIndex)"
-
-    invoke-static {v1, v2}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    :cond_1
-    :goto_0
-    return-object p1
-
-    :cond_2
-    const-string v0, "SSL_"
-
-    invoke-static {p1, v0, v1, v2, v4}, Lqidxisbestlol/kj;->a(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "TLS_"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    if-nez p1, :cond_3
-
-    new-instance v0, Lqidxisbestlol/fp;
-
-    const-string v1, "null cannot be cast to non-null type java.lang.String"
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_3
-    invoke-virtual {p1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "(this as java.lang.String).substring(startIndex)"
-
-    invoke-static {v1, v2}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/util/Comparator;
+.method public a(Lqidxisbestlol/la;Ljava/io/IOException;)V
     .locals 1
 
-    invoke-static {}, Lqidxisbestlol/lx;->b()Ljava/util/Comparator;
+    const-string v0, "call"
 
-    move-result-object v0
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object v0
+    const-string v0, "ioe"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
 .end method
 
-.method public final declared-synchronized a(Ljava/lang/String;)Lqidxisbestlol/lx;
-    .locals 3
+.method public a(Lqidxisbestlol/la;Ljava/lang/String;)V
+    .locals 1
 
-    monitor-enter p0
+    const-string v0, "call"
 
-    :try_start_0
-    const-string v1, "javaName"
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, v1}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v0, "domainName"
 
-    invoke-static {}, Lqidxisbestlol/lx;->c()Ljava/util/Map;
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v1
+    return-void
+.end method
 
-    invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.method public a(Lqidxisbestlol/la;Ljava/lang/String;Ljava/util/List;)V
+    .locals 1
 
-    move-result-object v1
+    const-string v0, "call"
 
-    check-cast v1, Lqidxisbestlol/lx;
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-nez v1, :cond_1
+    const-string v0, "domainName"
 
-    invoke-static {}, Lqidxisbestlol/lx;->c()Ljava/util/Map;
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v2
+    const-string v0, "inetAddressList"
 
-    move-object v0, p0
+    invoke-static {p3, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Lqidxisbestlol/ly;
+    return-void
+.end method
 
-    move-object v1, v0
+.method public a(Lqidxisbestlol/la;Ljava/net/InetSocketAddress;Ljava/net/Proxy;)V
+    .locals 1
 
-    invoke-direct {v1, p1}, Lqidxisbestlol/ly;->b(Ljava/lang/String;)Ljava/lang/String;
+    const-string v0, "call"
 
-    move-result-object v1
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v0, "inetSocketAddress"
 
-    move-result-object v1
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v1, Lqidxisbestlol/lx;
+    const-string v0, "proxy"
 
-    if-nez v1, :cond_0
+    invoke-static {p3, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v1, Lqidxisbestlol/lx;
+    return-void
+.end method
 
-    const/4 v2, 0x0
+.method public a(Lqidxisbestlol/la;Ljava/net/InetSocketAddress;Ljava/net/Proxy;Lqidxisbestlol/mz;)V
+    .locals 1
 
-    invoke-direct {v1, p1, v2}, Lqidxisbestlol/lx;-><init>(Ljava/lang/String;Lqidxisbestlol/ie;)V
+    const-string v0, "call"
 
-    :cond_0
-    invoke-static {}, Lqidxisbestlol/lx;->c()Ljava/util/Map;
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v2
+    const-string v0, "inetSocketAddress"
 
-    invoke-interface {v2, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    :cond_1
-    monitor-exit p0
+    const-string v0, "proxy"
 
-    return-object v1
+    invoke-static {p3, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    :catchall_0
-    move-exception v1
+    return-void
+.end method
 
-    monitor-exit p0
+.method public a(Lqidxisbestlol/la;Ljava/net/InetSocketAddress;Ljava/net/Proxy;Lqidxisbestlol/mz;Ljava/io/IOException;)V
+    .locals 1
 
-    throw v1
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "inetSocketAddress"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "proxy"
+
+    invoke-static {p3, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "ioe"
+
+    invoke-static {p5, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public a(Lqidxisbestlol/la;Lqidxisbestlol/lk;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "connection"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public a(Lqidxisbestlol/la;Lqidxisbestlol/mf;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public a(Lqidxisbestlol/la;Lqidxisbestlol/mn;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "url"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public a(Lqidxisbestlol/la;Lqidxisbestlol/mn;Ljava/util/List;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "url"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "proxies"
+
+    invoke-static {p3, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public a(Lqidxisbestlol/la;Lqidxisbestlol/nb;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "request"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public a(Lqidxisbestlol/la;Lqidxisbestlol/ng;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "response"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public b(Lqidxisbestlol/la;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public b(Lqidxisbestlol/la;J)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public b(Lqidxisbestlol/la;Ljava/io/IOException;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "ioe"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public b(Lqidxisbestlol/la;Lqidxisbestlol/lk;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "connection"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public c(Lqidxisbestlol/la;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public c(Lqidxisbestlol/la;Ljava/io/IOException;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "ioe"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public d(Lqidxisbestlol/la;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public e(Lqidxisbestlol/la;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public f(Lqidxisbestlol/la;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public g(Lqidxisbestlol/la;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public h(Lqidxisbestlol/la;)V
+    .locals 1
+
+    const-string v0, "call"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-void
 .end method

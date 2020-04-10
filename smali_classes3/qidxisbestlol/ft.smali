@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Collection;
-.implements Lqidxisbestlol/it;
+.implements Lqidxisbestlol/ik;
 
 
 # direct methods
@@ -97,7 +97,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -120,7 +120,7 @@
 
     const-string v0, "elements"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Ljava/lang/Iterable;
 
@@ -242,7 +242,7 @@
 
     check-cast p0, Ljava/util/Collection;
 
-    invoke-static {p0}, Lqidxisbestlol/id;->a(Ljava/util/Collection;)[Ljava/lang/Object;
+    invoke-static {p0}, Lqidxisbestlol/hx;->a(Ljava/util/Collection;)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -254,11 +254,11 @@
 
     const-string v0, "array"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p0, Ljava/util/Collection;
 
-    invoke-static {p0, p1}, Lqidxisbestlol/id;->a(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {p0, p1}, Lqidxisbestlol/hx;->a(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -299,7 +299,7 @@
 
     invoke-direct {v6, p0}, Lqidxisbestlol/fu;-><init>(Lqidxisbestlol/ft;)V
 
-    check-cast v6, Lqidxisbestlol/hv;
+    check-cast v6, Lqidxisbestlol/ht;
 
     const/16 v7, 0x18
 
@@ -307,7 +307,7 @@
 
     move-object v8, v5
 
-    invoke-static/range {v0 .. v8}, Lqidxisbestlol/gh;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/hv;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v0 .. v8}, Lqidxisbestlol/gh;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/ht;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

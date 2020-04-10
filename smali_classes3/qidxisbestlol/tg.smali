@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
+.method public synthetic constructor <init>(Lqidxisbestlol/hy;)V
     .locals 0
 
     invoke-direct {p0}, Lqidxisbestlol/tg;-><init>()V
@@ -22,38 +22,40 @@
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
-
-    invoke-static {}, Lqidxisbestlol/tf;->c()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final b()Lqidxisbestlol/tf;
+.method public final a(Ljavax/net/ssl/X509TrustManager;)Lqidxisbestlol/tf;
     .locals 2
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    check-cast p0, Lqidxisbestlol/tg;
+    const-string v1, "trustManager"
 
-    invoke-virtual {p0}, Lqidxisbestlol/tg;->a()Z
+    invoke-static {p1, v1}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result v0
+    nop
 
-    if-eqz v0, :cond_0
+    :try_start_0
+    new-instance v1, Landroid/net/http/X509TrustManagerExtensions;
+
+    invoke-direct {v1, p1}, Landroid/net/http/X509TrustManagerExtensions;-><init>(Ljavax/net/ssl/X509TrustManager;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    nop
+
+    if-eqz v1, :cond_0
 
     new-instance v0, Lqidxisbestlol/tf;
 
-    invoke-direct {v0, v1}, Lqidxisbestlol/tf;-><init>(Lqidxisbestlol/ie;)V
-
-    :goto_0
-    return-object v0
+    invoke-direct {v0, p1, v1}, Lqidxisbestlol/tf;-><init>(Ljavax/net/ssl/X509TrustManager;Landroid/net/http/X509TrustManagerExtensions;)V
 
     :cond_0
-    move-object v0, v1
+    return-object v0
+
+    :catch_0
+    move-exception v1
+
+    move-object v1, v0
 
     goto :goto_0
 .end method

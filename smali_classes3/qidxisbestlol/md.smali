@@ -4,495 +4,180 @@
 
 
 # instance fields
-.field private a:Z
+.field private final a:Ljava/util/List;
 
-.field private b:[Ljava/lang/String;
+.field private final b:Ljava/util/List;
 
-.field private c:[Ljava/lang/String;
-
-.field private d:Z
+.field private final c:Ljava/nio/charset/Charset;
 
 
 # direct methods
-.method public constructor <init>(Lqidxisbestlol/mc;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    const-string v0, "connectionSpec"
+    const/4 v1, 0x0
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 v0, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {p1}, Lqidxisbestlol/mc;->c()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lqidxisbestlol/md;->a:Z
-
-    invoke-static {p1}, Lqidxisbestlol/mc;->a(Lqidxisbestlol/mc;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lqidxisbestlol/md;->b:[Ljava/lang/String;
-
-    invoke-static {p1}, Lqidxisbestlol/mc;->b(Lqidxisbestlol/mc;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lqidxisbestlol/md;->c:[Ljava/lang/String;
-
-    invoke-virtual {p1}, Lqidxisbestlol/mc;->d()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lqidxisbestlol/md;->d:Z
+    invoke-direct {p0, v1, v0, v1}, Lqidxisbestlol/md;-><init>(Ljava/nio/charset/Charset;ILqidxisbestlol/hy;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Z)V
-    .locals 0
+.method public constructor <init>(Ljava/nio/charset/Charset;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lqidxisbestlol/md;->a:Z
+    iput-object p1, p0, Lqidxisbestlol/md;->c:Ljava/nio/charset/Charset;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    check-cast v0, Ljava/util/List;
+
+    iput-object v0, p0, Lqidxisbestlol/md;->a:Ljava/util/List;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    check-cast v0, Ljava/util/List;
+
+    iput-object v0, p0, Lqidxisbestlol/md;->b:Ljava/util/List;
 
     return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/nio/charset/Charset;ILqidxisbestlol/hy;)V
+    .locals 1
+
+    and-int/lit8 v0, p2, 0x1
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    check-cast v0, Ljava/nio/charset/Charset;
+
+    :goto_0
+    invoke-direct {p0, v0}, Lqidxisbestlol/md;-><init>(Ljava/nio/charset/Charset;)V
+
+    return-void
+
+    :cond_0
+    move-object v0, p1
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
 .method public final a()Lqidxisbestlol/mc;
-    .locals 5
+    .locals 3
 
     new-instance v0, Lqidxisbestlol/mc;
 
-    iget-boolean v1, p0, Lqidxisbestlol/md;->a:Z
+    iget-object v1, p0, Lqidxisbestlol/md;->a:Ljava/util/List;
 
-    iget-boolean v2, p0, Lqidxisbestlol/md;->d:Z
+    iget-object v2, p0, Lqidxisbestlol/md;->b:Ljava/util/List;
 
-    iget-object v3, p0, Lqidxisbestlol/md;->b:[Ljava/lang/String;
-
-    iget-object v4, p0, Lqidxisbestlol/md;->c:[Ljava/lang/String;
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lqidxisbestlol/mc;-><init>(ZZ[Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lqidxisbestlol/mc;-><init>(Ljava/util/List;Ljava/util/List;)V
 
     return-object v0
 .end method
 
-.method public final a(Z)Lqidxisbestlol/md;
-    .locals 2
+.method public final a(Ljava/lang/String;Ljava/lang/String;)Lqidxisbestlol/md;
+    .locals 15
 
-    move-object v0, p0
+    const-string v1, "name"
 
-    check-cast v0, Lqidxisbestlol/md;
+    move-object/from16 v0, p1
 
-    iget-boolean v1, v0, Lqidxisbestlol/md;->a:Z
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-nez v1, :cond_0
+    const-string v1, "value"
 
-    const-string v1, "no TLS extensions for cleartext connections"
+    move-object/from16 v0, p2
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-object v13, p0
 
-    move-result-object v1
+    check-cast v13, Lqidxisbestlol/md;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object v1, v13, Lqidxisbestlol/md;->a:Ljava/util/List;
 
-    check-cast v0, Ljava/lang/Throwable;
+    move-object v14, v1
 
-    throw v0
+    check-cast v14, Ljava/util/Collection;
 
-    :cond_0
-    iput-boolean p1, v0, Lqidxisbestlol/md;->d:Z
+    sget-object v1, Lqidxisbestlol/mn;->a:Lqidxisbestlol/mq;
 
-    nop
+    const/4 v3, 0x0
 
-    check-cast p0, Lqidxisbestlol/md;
+    const/4 v4, 0x0
 
-    return-object p0
-.end method
+    const-string v5, " \"\':;<=>@[]^`{}|/\\?#&!$(),~"
 
-.method public final varargs a([Ljava/lang/String;)Lqidxisbestlol/md;
-    .locals 4
+    const/4 v6, 0x0
 
-    const/4 v1, 0x1
+    const/4 v7, 0x0
 
-    const/4 v2, 0x0
+    const/4 v8, 0x1
 
-    const-string v0, "cipherSuites"
+    const/4 v9, 0x0
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v10, v13, Lqidxisbestlol/md;->c:Ljava/nio/charset/Charset;
 
-    move-object v0, p0
+    const/16 v11, 0x5b
 
-    check-cast v0, Lqidxisbestlol/md;
+    const/4 v12, 0x0
 
-    iget-boolean v3, v0, Lqidxisbestlol/md;->a:Z
+    move-object/from16 v2, p1
 
-    if-nez v3, :cond_0
-
-    const-string v1, "no cipher suites for cleartext connections"
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-static/range {v1 .. v12}, Lqidxisbestlol/mq;->a(Lqidxisbestlol/mq;Ljava/lang/String;IILjava/lang/String;ZZZZLjava/nio/charset/Charset;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-interface {v14, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    check-cast v0, Ljava/lang/Throwable;
+    iget-object v1, v13, Lqidxisbestlol/md;->b:Ljava/util/List;
 
-    throw v0
+    move-object v14, v1
 
-    :cond_0
-    array-length v3, p1
+    check-cast v14, Ljava/util/Collection;
 
-    if-nez v3, :cond_1
+    sget-object v1, Lqidxisbestlol/mn;->a:Lqidxisbestlol/mq;
 
-    move v3, v1
+    const/4 v3, 0x0
 
-    :goto_0
-    if-nez v3, :cond_2
+    const/4 v4, 0x0
 
-    :goto_1
-    if-nez v1, :cond_3
+    const-string v5, " \"\':;<=>@[]^`{}|/\\?#&!$(),~"
 
-    const-string v1, "At least one cipher suite is required"
+    const/4 v6, 0x0
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    const/4 v7, 0x0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const/4 v8, 0x1
 
-    move-result-object v1
+    const/4 v9, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object v10, v13, Lqidxisbestlol/md;->c:Ljava/nio/charset/Charset;
 
-    check-cast v0, Ljava/lang/Throwable;
+    const/16 v11, 0x5b
 
-    throw v0
+    const/4 v12, 0x0
 
-    :cond_1
-    move v3, v2
+    move-object/from16 v2, p2
 
-    goto :goto_0
-
-    :cond_2
-    move v1, v2
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p1}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static/range {v1 .. v12}, Lqidxisbestlol/mq;->a(Lqidxisbestlol/mq;Ljava/lang/String;IILjava/lang/String;ZZZZLjava/nio/charset/Charset;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    if-nez v1, :cond_4
-
-    new-instance v0, Lqidxisbestlol/fp;
-
-    const-string v1, "null cannot be cast to non-null type kotlin.Array<kotlin.String>"
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_4
-    check-cast v1, [Ljava/lang/String;
-
-    iput-object v1, v0, Lqidxisbestlol/md;->b:[Ljava/lang/String;
-
-    nop
-
-    check-cast p0, Lqidxisbestlol/md;
-
-    return-object p0
-.end method
-
-.method public final varargs a([Lqidxisbestlol/lx;)Lqidxisbestlol/md;
-    .locals 5
-
-    const/4 v2, 0x0
-
-    const-string v0, "cipherSuites"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast p0, Lqidxisbestlol/md;
-
-    iget-boolean v0, p0, Lqidxisbestlol/md;->a:Z
-
-    if-nez v0, :cond_0
-
-    const-string v1, "no cipher suites for cleartext connections"
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    array-length v1, p1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    check-cast v0, Ljava/util/Collection;
-
-    array-length v3, p1
-
-    move v1, v2
-
-    :goto_0
-    if-ge v1, v3, :cond_1
-
-    aget-object v4, p1, v1
-
-    invoke-virtual {v4}, Lqidxisbestlol/lx;->a()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast v0, Ljava/util/List;
-
-    check-cast v0, Ljava/util/Collection;
-
-    new-array v1, v2, [Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Lqidxisbestlol/fp;
-
-    const-string v1, "null cannot be cast to non-null type kotlin.Array<T>"
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    check-cast v0, [Ljava/lang/String;
-
-    array-length v1, v0
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Lqidxisbestlol/md;->a([Ljava/lang/String;)Lqidxisbestlol/md;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final varargs a([Lqidxisbestlol/ob;)Lqidxisbestlol/md;
-    .locals 5
-
-    const/4 v2, 0x0
-
-    const-string v0, "tlsVersions"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast p0, Lqidxisbestlol/md;
-
-    iget-boolean v0, p0, Lqidxisbestlol/md;->a:Z
-
-    if-nez v0, :cond_0
-
-    const-string v1, "no TLS versions for cleartext connections"
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    array-length v1, p1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    check-cast v0, Ljava/util/Collection;
-
-    array-length v3, p1
-
-    move v1, v2
-
-    :goto_0
-    if-ge v1, v3, :cond_1
-
-    aget-object v4, p1, v1
-
-    invoke-virtual {v4}, Lqidxisbestlol/ob;->a()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast v0, Ljava/util/List;
-
-    check-cast v0, Ljava/util/Collection;
-
-    new-array v1, v2, [Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Lqidxisbestlol/fp;
-
-    const-string v1, "null cannot be cast to non-null type kotlin.Array<T>"
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    check-cast v0, [Ljava/lang/String;
-
-    array-length v1, v0
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Lqidxisbestlol/md;->b([Ljava/lang/String;)Lqidxisbestlol/md;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final varargs b([Ljava/lang/String;)Lqidxisbestlol/md;
-    .locals 4
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const-string v0, "tlsVersions"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    move-object v0, p0
-
-    check-cast v0, Lqidxisbestlol/md;
-
-    iget-boolean v3, v0, Lqidxisbestlol/md;->a:Z
-
-    if-nez v3, :cond_0
-
-    const-string v1, "no TLS versions for cleartext connections"
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_0
-    array-length v3, p1
-
-    if-nez v3, :cond_1
-
-    move v3, v1
-
-    :goto_0
-    if-nez v3, :cond_2
-
-    :goto_1
-    if-nez v1, :cond_3
-
-    const-string v1, "At least one TLS version is required"
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_1
-    move v3, v2
-
-    goto :goto_0
-
-    :cond_2
-    move v1, v2
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p1}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-nez v1, :cond_4
-
-    new-instance v0, Lqidxisbestlol/fp;
-
-    const-string v1, "null cannot be cast to non-null type kotlin.Array<kotlin.String>"
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_4
-    check-cast v1, [Ljava/lang/String;
-
-    iput-object v1, v0, Lqidxisbestlol/md;->c:[Ljava/lang/String;
+    invoke-interface {v14, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     nop
 

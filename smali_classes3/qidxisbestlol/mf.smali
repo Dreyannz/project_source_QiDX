@@ -6,33 +6,15 @@
 # static fields
 .field public static final a:Lqidxisbestlol/mg;
 
-.field private static final k:Ljava/util/regex/Pattern;
-
-.field private static final l:Ljava/util/regex/Pattern;
-
-.field private static final m:Ljava/util/regex/Pattern;
-
-.field private static final n:Ljava/util/regex/Pattern;
-
 
 # instance fields
-.field private final b:Ljava/lang/String;
+.field private final b:Lqidxisbestlol/fi;
 
-.field private final c:Ljava/lang/String;
+.field private final c:Lqidxisbestlol/nm;
 
-.field private final d:J
+.field private final d:Lqidxisbestlol/lh;
 
-.field private final e:Ljava/lang/String;
-
-.field private final f:Ljava/lang/String;
-
-.field private final g:Z
-
-.field private final h:Z
-
-.field private final i:Z
-
-.field private final j:Z
+.field private final e:Ljava/util/List;
 
 
 # direct methods
@@ -43,248 +25,129 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lqidxisbestlol/mg;-><init>(Lqidxisbestlol/ie;)V
+    invoke-direct {v0, v1}, Lqidxisbestlol/mg;-><init>(Lqidxisbestlol/hy;)V
 
     sput-object v0, Lqidxisbestlol/mf;->a:Lqidxisbestlol/mg;
 
-    const-string v0, "(\\d{2,4})[^\\d]*"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lqidxisbestlol/mf;->k:Ljava/util/regex/Pattern;
-
-    const-string v0, "(?i)(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec).*"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lqidxisbestlol/mf;->l:Ljava/util/regex/Pattern;
-
-    const-string v0, "(\\d{1,2})[^\\d]*"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lqidxisbestlol/mf;->m:Ljava/util/regex/Pattern;
-
-    const-string v0, "(\\d{1,2}):(\\d{1,2}):(\\d{1,2})[^\\d]*"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lqidxisbestlol/mf;->n:Ljava/util/regex/Pattern;
-
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;ZZZZ)V
+.method public constructor <init>(Lqidxisbestlol/nm;Lqidxisbestlol/lh;Ljava/util/List;Lqidxisbestlol/hs;)V
     .locals 1
+
+    const-string v0, "tlsVersion"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "cipherSuite"
+
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "localCertificates"
+
+    invoke-static {p3, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "peerCertificatesFn"
+
+    invoke-static {p4, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqidxisbestlol/mf;->b:Ljava/lang/String;
+    iput-object p1, p0, Lqidxisbestlol/mf;->c:Lqidxisbestlol/nm;
 
-    iput-object p2, p0, Lqidxisbestlol/mf;->c:Ljava/lang/String;
+    iput-object p2, p0, Lqidxisbestlol/mf;->d:Lqidxisbestlol/lh;
 
-    iput-wide p3, p0, Lqidxisbestlol/mf;->d:J
+    iput-object p3, p0, Lqidxisbestlol/mf;->e:Ljava/util/List;
 
-    iput-object p5, p0, Lqidxisbestlol/mf;->e:Ljava/lang/String;
+    new-instance v0, Lqidxisbestlol/mj;
 
-    iput-object p6, p0, Lqidxisbestlol/mf;->f:Ljava/lang/String;
+    invoke-direct {v0, p4}, Lqidxisbestlol/mj;-><init>(Lqidxisbestlol/hs;)V
 
-    iput-boolean p7, p0, Lqidxisbestlol/mf;->g:Z
+    check-cast v0, Lqidxisbestlol/hs;
 
-    iput-boolean p8, p0, Lqidxisbestlol/mf;->h:Z
-
-    iput-boolean p9, p0, Lqidxisbestlol/mf;->i:Z
-
-    iput-boolean p10, p0, Lqidxisbestlol/mf;->j:Z
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;ZZZZLqidxisbestlol/ie;)V
-    .locals 1
-
-    invoke-direct/range {p0 .. p10}, Lqidxisbestlol/mf;-><init>(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;ZZZZ)V
-
-    return-void
-.end method
-
-.method public static final synthetic c()Ljava/util/regex/Pattern;
-    .locals 1
-
-    sget-object v0, Lqidxisbestlol/mf;->n:Ljava/util/regex/Pattern;
-
-    return-object v0
-.end method
-
-.method public static final synthetic d()Ljava/util/regex/Pattern;
-    .locals 1
-
-    sget-object v0, Lqidxisbestlol/mf;->m:Ljava/util/regex/Pattern;
-
-    return-object v0
-.end method
-
-.method public static final synthetic e()Ljava/util/regex/Pattern;
-    .locals 1
-
-    sget-object v0, Lqidxisbestlol/mf;->l:Ljava/util/regex/Pattern;
-
-    return-object v0
-.end method
-
-.method public static final synthetic f()Ljava/util/regex/Pattern;
-    .locals 1
-
-    sget-object v0, Lqidxisbestlol/mf;->k:Ljava/util/regex/Pattern;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lqidxisbestlol/mf;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final a(Z)Ljava/lang/String;
-    .locals 6
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Lqidxisbestlol/mf;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x3d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lqidxisbestlol/mf;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lqidxisbestlol/mf;->i:Z
-
-    if-eqz v1, :cond_0
-
-    iget-wide v2, p0, Lqidxisbestlol/mf;->d:J
-
-    const-wide/high16 v4, -0x8000000000000000L
-
-    cmp-long v1, v2, v4
-
-    if-nez v1, :cond_5
-
-    const-string v1, "; max-age=0"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    :goto_0
-    iget-boolean v1, p0, Lqidxisbestlol/mf;->j:Z
-
-    if-nez v1, :cond_2
-
-    const-string v1, "; domain="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz p1, :cond_1
-
-    const-string v1, "."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_1
-    iget-object v1, p0, Lqidxisbestlol/mf;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_2
-    const-string v1, "; path="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lqidxisbestlol/mf;->f:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lqidxisbestlol/mf;->g:Z
-
-    if-eqz v1, :cond_3
-
-    const-string v1, "; secure"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_3
-    iget-boolean v1, p0, Lqidxisbestlol/mf;->h:Z
-
-    if-eqz v1, :cond_4
-
-    const-string v1, "; httponly"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_4
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lqidxisbestlol/fj;->a(Lqidxisbestlol/hs;)Lqidxisbestlol/fi;
 
     move-result-object v0
 
-    const-string v1, "toString()"
+    iput-object v0, p0, Lqidxisbestlol/mf;->b:Lqidxisbestlol/fi;
 
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    return-void
+.end method
 
+.method private final a(Ljava/security/cert/Certificate;)Ljava/lang/String;
+    .locals 2
+
+    instance-of v0, p1, Ljava/security/cert/X509Certificate;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ljava/security/cert/X509Certificate;
+
+    invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
     return-object v0
 
-    :cond_5
-    const-string v1, "; expires="
+    :cond_0
+    invoke-virtual {p1}, Ljava/security/cert/Certificate;->getType()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "type"
 
-    new-instance v2, Ljava/util/Date;
-
-    iget-wide v4, p0, Lqidxisbestlol/mf;->d:J
-
-    invoke-direct {v2, v4, v5}, Ljava/util/Date;-><init>(J)V
-
-    invoke-static {v2}, Lqidxisbestlol/qf;->a(Ljava/util/Date;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public final b()Ljava/lang/String;
+
+# virtual methods
+.method public final a()Ljava/util/List;
     .locals 1
 
-    iget-object v0, p0, Lqidxisbestlol/mf;->c:Ljava/lang/String;
+    iget-object v0, p0, Lqidxisbestlol/mf;->b:Lqidxisbestlol/fi;
+
+    invoke-interface {v0}, Lqidxisbestlol/fi;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public final b()Lqidxisbestlol/nm;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/mf;->c:Lqidxisbestlol/nm;
+
+    return-object v0
+.end method
+
+.method public final c()Lqidxisbestlol/lh;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/mf;->d:Lqidxisbestlol/lh;
+
+    return-object v0
+.end method
+
+.method public final d()Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/mf;->e:Ljava/util/List;
 
     return-object v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 2
 
     instance-of v0, p1, Lqidxisbestlol/mf;
 
@@ -294,77 +157,9 @@
 
     check-cast v0, Lqidxisbestlol/mf;
 
-    iget-object v0, v0, Lqidxisbestlol/mf;->b:Ljava/lang/String;
+    iget-object v0, v0, Lqidxisbestlol/mf;->c:Lqidxisbestlol/nm;
 
-    iget-object v1, p0, Lqidxisbestlol/mf;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Lqidxisbestlol/mf;
-
-    iget-object v0, v0, Lqidxisbestlol/mf;->c:Ljava/lang/String;
-
-    iget-object v1, p0, Lqidxisbestlol/mf;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Lqidxisbestlol/mf;
-
-    iget-wide v0, v0, Lqidxisbestlol/mf;->d:J
-
-    iget-wide v2, p0, Lqidxisbestlol/mf;->d:J
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Lqidxisbestlol/mf;
-
-    iget-object v0, v0, Lqidxisbestlol/mf;->e:Ljava/lang/String;
-
-    iget-object v1, p0, Lqidxisbestlol/mf;->e:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Lqidxisbestlol/mf;
-
-    iget-object v0, v0, Lqidxisbestlol/mf;->f:Ljava/lang/String;
-
-    iget-object v1, p0, Lqidxisbestlol/mf;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Lqidxisbestlol/mf;
-
-    iget-boolean v0, v0, Lqidxisbestlol/mf;->g:Z
-
-    iget-boolean v1, p0, Lqidxisbestlol/mf;->g:Z
+    iget-object v1, p0, Lqidxisbestlol/mf;->c:Lqidxisbestlol/nm;
 
     if-ne v0, v1, :cond_0
 
@@ -372,29 +167,45 @@
 
     check-cast v0, Lqidxisbestlol/mf;
 
-    iget-boolean v0, v0, Lqidxisbestlol/mf;->h:Z
+    iget-object v0, v0, Lqidxisbestlol/mf;->d:Lqidxisbestlol/lh;
 
-    iget-boolean v1, p0, Lqidxisbestlol/mf;->h:Z
+    iget-object v1, p0, Lqidxisbestlol/mf;->d:Lqidxisbestlol/lh;
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     move-object v0, p1
 
     check-cast v0, Lqidxisbestlol/mf;
 
-    iget-boolean v0, v0, Lqidxisbestlol/mf;->i:Z
+    invoke-virtual {v0}, Lqidxisbestlol/mf;->a()Ljava/util/List;
 
-    iget-boolean v1, p0, Lqidxisbestlol/mf;->i:Z
+    move-result-object v0
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {p0}, Lqidxisbestlol/mf;->a()Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     check-cast p1, Lqidxisbestlol/mf;
 
-    iget-boolean v0, p1, Lqidxisbestlol/mf;->j:Z
+    iget-object v0, p1, Lqidxisbestlol/mf;->e:Ljava/util/List;
 
-    iget-boolean v1, p0, Lqidxisbestlol/mf;->j:Z
+    iget-object v1, p0, Lqidxisbestlol/mf;->e:Ljava/util/List;
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -408,13 +219,11 @@
 .end method
 
 .method public hashCode()I
-    .locals 4
-    .annotation build Lorg/codehaus/mojo/animal_sniffer/IgnoreJRERequirement;
-    .end annotation
+    .locals 2
 
-    iget-object v0, p0, Lqidxisbestlol/mf;->b:Ljava/lang/String;
+    iget-object v0, p0, Lqidxisbestlol/mf;->c:Lqidxisbestlol/nm;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0}, Lqidxisbestlol/nm;->hashCode()I
 
     move-result v0
 
@@ -422,19 +231,9 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lqidxisbestlol/mf;->c:Ljava/lang/String;
+    iget-object v1, p0, Lqidxisbestlol/mf;->d:Lqidxisbestlol/lh;
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v2, p0, Lqidxisbestlol/mf;->d:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v1}, Lqidxisbestlol/lh;->hashCode()I
 
     move-result v1
 
@@ -442,19 +241,11 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lqidxisbestlol/mf;->e:Ljava/lang/String;
+    invoke-virtual {p0}, Lqidxisbestlol/mf;->a()Ljava/util/List;
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    move-result-object v1
 
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lqidxisbestlol/mf;->f:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
@@ -462,39 +253,9 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-boolean v1, p0, Lqidxisbestlol/mf;->g:Z
+    iget-object v1, p0, Lqidxisbestlol/mf;->e:Ljava/util/List;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lqidxisbestlol/mf;->h:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lqidxisbestlol/mf;->i:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lqidxisbestlol/mf;->j:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
@@ -504,11 +265,175 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 5
 
-    const/4 v0, 0x0
+    const/16 v4, 0xa
 
-    invoke-virtual {p0, v0}, Lqidxisbestlol/mf;->a(Z)Ljava/lang/String;
+    const/16 v3, 0x20
+
+    invoke-virtual {p0}, Lqidxisbestlol/mf;->a()Ljava/util/List;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Iterable;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-static {v0, v4}, Lqidxisbestlol/gh;->a(Ljava/lang/Iterable;I)I
+
+    move-result v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    check-cast v1, Ljava/util/Collection;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/security/cert/Certificate;
+
+    invoke-direct {p0, v0}, Lqidxisbestlol/mf;->a(Ljava/security/cert/Certificate;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    check-cast v1, Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Handshake{"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "tlsVersion="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lqidxisbestlol/mf;->c:Lqidxisbestlol/nm;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "cipherSuite="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lqidxisbestlol/mf;->d:Lqidxisbestlol/lh;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "peerCertificates="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "localCertificates="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v0, p0, Lqidxisbestlol/mf;->e:Ljava/util/List;
+
+    check-cast v0, Ljava/lang/Iterable;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-static {v0, v4}, Lqidxisbestlol/gh;->a(Ljava/lang/Iterable;I)I
+
+    move-result v3
+
+    invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(I)V
+
+    check-cast v1, Ljava/util/Collection;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_1
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/security/cert/Certificate;
+
+    invoke-direct {p0, v0}, Lqidxisbestlol/mf;->a(Ljava/security/cert/Certificate;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_1
+    check-cast v1, Ljava/util/List;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

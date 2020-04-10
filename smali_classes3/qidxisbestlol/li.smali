@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
+.method public synthetic constructor <init>(Lqidxisbestlol/hy;)V
     .locals 0
 
     invoke-direct {p0}, Lqidxisbestlol/li;-><init>()V
@@ -20,513 +20,225 @@
     return-void
 .end method
 
-.method private final a(Lqidxisbestlol/mz;)Ljava/util/Set;
-    .locals 10
+.method private final a(Ljava/lang/String;I)Lqidxisbestlol/lh;
+    .locals 2
 
-    const/4 v5, 0x0
+    new-instance v0, Lqidxisbestlol/lh;
 
-    const/4 v9, 0x1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    invoke-direct {v0, p1, v1}, Lqidxisbestlol/lh;-><init>(Ljava/lang/String;Lqidxisbestlol/hy;)V
 
-    move-object v0, v5
-
-    check-cast v0, Ljava/util/Set;
-
-    invoke-virtual {p1}, Lqidxisbestlol/mz;->a()I
-
-    move-result v8
-
-    move v7, v2
-
-    :goto_0
-    if-ge v7, v8, :cond_2
-
-    const-string v1, "Vary"
-
-    invoke-virtual {p1, v7}, Lqidxisbestlol/mz;->a(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1, v3, v9}, Lqidxisbestlol/kj;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    :goto_1
-    add-int/lit8 v1, v7, 0x1
-
-    move v7, v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1, v7}, Lqidxisbestlol/mz;->b(I)Ljava/lang/String;
+    invoke-static {}, Lqidxisbestlol/lh;->c()Ljava/util/Map;
 
     move-result-object v1
 
-    if-nez v0, :cond_5
+    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v0, Ljava/util/TreeSet;
+    return-object v0
+.end method
 
-    sget-object v3, Lqidxisbestlol/ir;->a:Lqidxisbestlol/ir;
+.method public static final synthetic a(Lqidxisbestlol/li;Ljava/lang/String;I)Lqidxisbestlol/lh;
+    .locals 1
 
-    invoke-static {v3}, Lqidxisbestlol/kj;->a(Lqidxisbestlol/ir;)Ljava/util/Comparator;
-
-    move-result-object v3
-
-    invoke-direct {v0, v3}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
-
-    check-cast v0, Ljava/util/Set;
-
-    move-object v6, v0
-
-    :goto_2
-    move-object v0, v1
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    new-array v1, v9, [C
-
-    const/16 v3, 0x2c
-
-    aput-char v3, v1, v2
-
-    const/4 v4, 0x6
-
-    move v3, v2
-
-    invoke-static/range {v0 .. v5}, Lqidxisbestlol/kj;->b(Ljava/lang/CharSequence;[CZIILjava/lang/Object;)Ljava/util/List;
+    invoke-direct {p0, p1, p2}, Lqidxisbestlol/li;->a(Ljava/lang/String;I)Lqidxisbestlol/lh;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method private final b(Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
 
-    :goto_3
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v4, 0x0
+
+    const/4 v3, 0x4
+
+    const/4 v2, 0x2
+
+    const/4 v1, 0x0
+
+    nop
+
+    const-string v0, "TLS_"
+
+    invoke-static {p1, v0, v1, v2, v4}, Lqidxisbestlol/js;->a(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_2
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "SSL_"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
-
-    if-nez v0, :cond_1
+    if-nez p1, :cond_0
 
     new-instance v0, Lqidxisbestlol/fp;
 
-    const-string v1, "null cannot be cast to non-null type kotlin.CharSequence"
+    const-string v1, "null cannot be cast to non-null type java.lang.String"
 
     invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    :cond_1
-    check-cast v0, Ljava/lang/CharSequence;
-
-    invoke-static {v0}, Lqidxisbestlol/kj;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v6, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    goto :goto_3
-
-    :cond_2
-    if-eqz v0, :cond_3
-
-    :goto_4
-    return-object v0
-
-    :cond_3
-    invoke-static {}, Lqidxisbestlol/hd;->a()Ljava/util/Set;
-
-    move-result-object v0
-
-    goto :goto_4
-
-    :cond_4
-    move-object v0, v6
-
-    goto :goto_1
-
-    :cond_5
-    move-object v6, v0
-
-    goto :goto_2
-.end method
-
-.method private final a(Lqidxisbestlol/mz;Lqidxisbestlol/mz;)Lqidxisbestlol/mz;
-    .locals 6
-
-    check-cast p0, Lqidxisbestlol/li;
-
-    invoke-direct {p0, p2}, Lqidxisbestlol/li;->a(Lqidxisbestlol/mz;)Ljava/util/Set;
+    :cond_0
+    invoke-virtual {p1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v1}, Ljava/util/Set;->isEmpty()Z
+    const-string v2, "(this as java.lang.String).substring(startIndex)"
+
+    invoke-static {v1, v2}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    :cond_1
+    :goto_0
+    return-object p1
+
+    :cond_2
+    const-string v0, "SSL_"
+
+    invoke-static {p1, v0, v1, v2, v4}, Lqidxisbestlol/js;->a(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    sget-object v0, Lqidxisbestlol/oe;->b:Lqidxisbestlol/mz;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :goto_0
-    return-object v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    :cond_0
-    new-instance v2, Lqidxisbestlol/na;
+    const-string v1, "TLS_"
 
-    invoke-direct {v2}, Lqidxisbestlol/na;-><init>()V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1}, Lqidxisbestlol/mz;->a()I
-
-    move-result v3
-
-    :goto_1
-    if-ge v0, v3, :cond_2
-
-    invoke-virtual {p1, v0}, Lqidxisbestlol/mz;->a(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v1, v4}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    invoke-virtual {p1, v0}, Lqidxisbestlol/mz;->b(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v4, v5}, Lqidxisbestlol/na;->a(Ljava/lang/String;Ljava/lang/String;)Lqidxisbestlol/na;
-
-    :cond_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v2}, Lqidxisbestlol/na;->b()Lqidxisbestlol/mz;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
+
+    if-nez p1, :cond_3
+
+    new-instance v0, Lqidxisbestlol/fp;
+
+    const-string v1, "null cannot be cast to non-null type java.lang.String"
+
+    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_3
+    invoke-virtual {p1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "(this as java.lang.String).substring(startIndex)"
+
+    invoke-static {v1, v2}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final a(Lqidxisbestlol/ve;)I
-    .locals 8
+.method public final a()Ljava/util/Comparator;
+    .locals 1
 
-    const-string v2, "source"
-
-    invoke-static {p1, v2}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    nop
-
-    :try_start_0
-    invoke-interface {p1}, Lqidxisbestlol/ve;->n()J
-
-    move-result-wide v4
-
-    invoke-interface {p1}, Lqidxisbestlol/ve;->r()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-wide/16 v6, 0x0
-
-    cmp-long v2, v4, v6
-
-    if-ltz v2, :cond_0
-
-    const v2, 0x7fffffff
-
-    int-to-long v6, v2
-
-    cmp-long v2, v4, v6
-
-    if-gtz v2, :cond_0
-
-    move-object v0, v3
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    move-object v2, v0
-
-    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
-
-    move-result v2
-
-    if-lez v2, :cond_1
-
-    const/4 v2, 0x1
-
-    :goto_0
-    if-eqz v2, :cond_2
-
-    :cond_0
-    new-instance v2, Ljava/io/IOException;
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "expected an int but was \""
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const/16 v4, 0x22
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    check-cast v2, Ljava/lang/Throwable;
-
-    throw v2
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    move-exception v2
-
-    move-object v3, v2
-
-    new-instance v2, Ljava/io/IOException;
-
-    invoke-virtual {v3}, Ljava/lang/NumberFormatException;->getMessage()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    check-cast v2, Ljava/lang/Throwable;
-
-    throw v2
-
-    :cond_1
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_2
-    long-to-int v2, v4
-
-    return v2
-.end method
-
-.method public final a(Lqidxisbestlol/nc;)Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "url"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    sget-object v0, Lqidxisbestlol/vf;->b:Lqidxisbestlol/vg;
-
-    invoke-virtual {p1}, Lqidxisbestlol/nc;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lqidxisbestlol/vg;->a(Ljava/lang/String;)Lqidxisbestlol/vf;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lqidxisbestlol/vf;->e()Lqidxisbestlol/vf;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lqidxisbestlol/vf;->h()Ljava/lang/String;
+    invoke-static {}, Lqidxisbestlol/lh;->b()Ljava/util/Comparator;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final a(Lqidxisbestlol/nv;)Z
-    .locals 2
+.method public final declared-synchronized a(Ljava/lang/String;)Lqidxisbestlol/lh;
+    .locals 3
 
-    const-string v0, "$this$hasVaryAll"
+    monitor-enter p0
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    :try_start_0
+    const-string v1, "javaName"
 
-    check-cast p0, Lqidxisbestlol/li;
+    invoke-static {p1, v1}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lqidxisbestlol/nv;->h()Lqidxisbestlol/mz;
+    invoke-static {}, Lqidxisbestlol/lh;->c()Ljava/util/Map;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-direct {p0, v0}, Lqidxisbestlol/li;->a(Lqidxisbestlol/mz;)Ljava/util/Set;
+    invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, "*"
+    check-cast v1, Lqidxisbestlol/lh;
 
-    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    if-nez v1, :cond_1
 
-    move-result v0
+    invoke-static {}, Lqidxisbestlol/lh;->c()Ljava/util/Map;
 
-    return v0
-.end method
+    move-result-object v2
 
-.method public final a(Lqidxisbestlol/nv;Lqidxisbestlol/mz;Lqidxisbestlol/nq;)Z
-    .locals 4
+    move-object v0, p0
 
-    const/4 v2, 0x1
-
-    const-string v0, "cachedResponse"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "cachedRequest"
-
-    invoke-static {p2, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "newRequest"
-
-    invoke-static {p3, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast p0, Lqidxisbestlol/li;
-
-    invoke-virtual {p1}, Lqidxisbestlol/nv;->h()Lqidxisbestlol/mz;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lqidxisbestlol/li;->a(Lqidxisbestlol/mz;)Ljava/util/Set;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Iterable;
-
-    instance-of v1, v0, Ljava/util/Collection;
-
-    if-eqz v1, :cond_0
+    check-cast v0, Lqidxisbestlol/li;
 
     move-object v1, v0
 
-    check-cast v1, Ljava/util/Collection;
-
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    move v0, v2
-
-    :goto_0
-    return v0
-
-    :cond_0
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-direct {v1, p1}, Lqidxisbestlol/li;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
+
+    invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqidxisbestlol/lh;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lqidxisbestlol/lh;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lqidxisbestlol/lh;-><init>(Ljava/lang/String;Lqidxisbestlol/hy;)V
+
+    :cond_0
+    invoke-static {}, Lqidxisbestlol/lh;->c()Ljava/util/Map;
+
+    move-result-object v2
+
+    invoke-interface {v2, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :cond_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    monitor-exit p0
 
-    move-result v0
+    return-object v1
 
-    if-eqz v0, :cond_2
+    :catchall_0
+    move-exception v1
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    monitor-exit p0
 
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-virtual {p2, v0}, Lqidxisbestlol/mz;->b(Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-virtual {p3, v0}, Lqidxisbestlol/nq;->b(Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {v3, v0}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    xor-int/lit8 v0, v0, 0x1
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_2
-    move v0, v2
-
-    goto :goto_0
-.end method
-
-.method public final b(Lqidxisbestlol/nv;)Lqidxisbestlol/mz;
-    .locals 2
-
-    const-string v0, "$this$varyHeaders"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lqidxisbestlol/nv;->j()Lqidxisbestlol/nv;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lqidxisbestlol/ig;->a()V
-
-    :cond_0
-    invoke-virtual {v0}, Lqidxisbestlol/nv;->c()Lqidxisbestlol/nq;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lqidxisbestlol/nq;->f()Lqidxisbestlol/mz;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lqidxisbestlol/nv;->h()Lqidxisbestlol/mz;
-
-    move-result-object v1
-
-    check-cast p0, Lqidxisbestlol/li;
-
-    invoke-direct {p0, v0, v1}, Lqidxisbestlol/li;->a(Lqidxisbestlol/mz;Lqidxisbestlol/mz;)Lqidxisbestlol/mz;
-
-    move-result-object v0
-
-    return-object v0
+    throw v1
 .end method

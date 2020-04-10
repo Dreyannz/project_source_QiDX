@@ -1,77 +1,66 @@
 .class public final Lqidxisbestlol/tw;
-.super Ljava/lang/Object;
+.super Ljava/net/ProxySelector;
 .source "SourceFile"
 
 
-# direct methods
-.method private constructor <init>()V
-    .locals 0
+# static fields
+.field public static final a:Lqidxisbestlol/tw;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lqidxisbestlol/tw;
+
+    invoke-direct {v0}, Lqidxisbestlol/tw;-><init>()V
+
+    sput-object v0, Lqidxisbestlol/tw;->a:Lqidxisbestlol/tw;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
+.method private constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lqidxisbestlol/tw;-><init>()V
+    invoke-direct {p0}, Ljava/net/ProxySelector;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lqidxisbestlol/ug;
-    .locals 1
+.method public connectFailed(Ljava/net/URI;Ljava/net/SocketAddress;Ljava/io/IOException;)V
+    .locals 0
 
-    check-cast p0, Lqidxisbestlol/tw;
-
-    invoke-virtual {p0}, Lqidxisbestlol/tw;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lqidxisbestlol/tv;
-
-    invoke-direct {v0}, Lqidxisbestlol/tv;-><init>()V
-
-    check-cast v0, Lqidxisbestlol/ug;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method
 
-.method public final b()Z
+.method public select(Ljava/net/URI;)Ljava/util/List;
     .locals 2
 
-    sget-object v0, Lqidxisbestlol/tc;->a:Lqidxisbestlol/td;
+    if-nez p1, :cond_0
 
-    invoke-virtual {v0}, Lqidxisbestlol/td;->a()Z
+    const-string v1, "uri must not be null"
 
-    move-result v0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    move-result-object v1
 
-    const/16 v1, 0x1d
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    if-lt v0, v1, :cond_0
+    check-cast v0, Ljava/lang/Throwable;
 
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
+    throw v0
 
     :cond_0
-    const/4 v0, 0x0
+    sget-object v0, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
 
-    goto :goto_0
+    invoke-static {v0}, Lqidxisbestlol/gh;->a(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
 .end method

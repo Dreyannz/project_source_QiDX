@@ -1,73 +1,112 @@
-.class Lqidxisbestlol/kq;
-.super Lqidxisbestlol/kp;
+.class final Lqidxisbestlol/kq;
+.super Lqidxisbestlol/ni;
 .source "SourceFile"
 
 
+# instance fields
+.field private final b:Lqidxisbestlol/uq;
+
+.field private final c:Lqidxisbestlol/oe;
+
+.field private final d:Ljava/lang/String;
+
+.field private final e:Ljava/lang/String;
+
+
 # direct methods
-.method public static final a(Ljava/lang/Appendable;Ljava/lang/Object;Lqidxisbestlol/hv;)V
-    .locals 1
+.method public constructor <init>(Lqidxisbestlol/oe;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
 
-    const-string v0, "$this$appendElement"
+    const-string v0, "snapshot"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lqidxisbestlol/ni;-><init>()V
+
+    iput-object p1, p0, Lqidxisbestlol/kq;->c:Lqidxisbestlol/oe;
+
+    iput-object p2, p0, Lqidxisbestlol/kq;->d:Ljava/lang/String;
+
+    iput-object p3, p0, Lqidxisbestlol/kq;->e:Ljava/lang/String;
 
     nop
 
-    if-eqz p2, :cond_0
+    iget-object v0, p0, Lqidxisbestlol/kq;->c:Lqidxisbestlol/oe;
 
-    invoke-interface {p2, p1}, Lqidxisbestlol/hv;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lqidxisbestlol/oe;->a(I)Lqidxisbestlol/vn;
+
+    move-result-object v1
+
+    new-instance v0, Lqidxisbestlol/kr;
+
+    invoke-direct {v0, p0, v1, v1}, Lqidxisbestlol/kr;-><init>(Lqidxisbestlol/kq;Lqidxisbestlol/vn;Lqidxisbestlol/vn;)V
+
+    check-cast v0, Lqidxisbestlol/vn;
+
+    invoke-static {v0}, Lqidxisbestlol/uz;->a(Lqidxisbestlol/vn;)Lqidxisbestlol/uq;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/CharSequence;
+    iput-object v0, p0, Lqidxisbestlol/kq;->b:Lqidxisbestlol/uq;
 
-    invoke-interface {p0, v0}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Lqidxisbestlol/mu;
+    .locals 2
+
+    iget-object v0, p0, Lqidxisbestlol/kq;->d:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    sget-object v1, Lqidxisbestlol/mu;->a:Lqidxisbestlol/mv;
+
+    invoke-virtual {v1, v0}, Lqidxisbestlol/mv;->b(Ljava/lang/String;)Lqidxisbestlol/mu;
+
+    move-result-object v0
 
     :goto_0
-    return-void
+    return-object v0
 
     :cond_0
-    if-eqz p1, :cond_1
-
-    instance-of v0, p1, Ljava/lang/CharSequence;
-
-    :goto_1
-    if-eqz v0, :cond_2
-
-    check-cast p1, Ljava/lang/CharSequence;
-
-    invoke-interface {p0, p1}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    const/4 v0, 0x0
 
     goto :goto_0
+.end method
 
-    :cond_1
-    const/4 v0, 0x1
+.method public b()J
+    .locals 3
 
-    goto :goto_1
+    const-wide/16 v0, -0x1
 
-    :cond_2
-    instance-of v0, p1, Ljava/lang/Character;
+    iget-object v2, p0, Lqidxisbestlol/kq;->e:Ljava/lang/String;
 
-    if-eqz v0, :cond_3
+    if-eqz v2, :cond_0
 
-    check-cast p1, Ljava/lang/Character;
+    invoke-static {v2, v0, v1}, Lqidxisbestlol/np;->a(Ljava/lang/String;J)J
 
-    invoke-virtual {p1}, Ljava/lang/Character;->charValue()C
+    move-result-wide v0
 
-    move-result v0
+    :cond_0
+    return-wide v0
+.end method
 
-    invoke-interface {p0, v0}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
+.method public c()Lqidxisbestlol/uq;
+    .locals 1
 
-    goto :goto_0
+    iget-object v0, p0, Lqidxisbestlol/kq;->b:Lqidxisbestlol/uq;
 
-    :cond_3
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final d()Lqidxisbestlol/oe;
+    .locals 1
 
-    check-cast v0, Ljava/lang/CharSequence;
+    iget-object v0, p0, Lqidxisbestlol/kq;->c:Lqidxisbestlol/oe;
 
-    invoke-interface {p0, v0}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-
-    goto :goto_0
+    return-object v0
 .end method

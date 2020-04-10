@@ -1,59 +1,41 @@
 .class public final Lqidxisbestlol/ol;
-.super Ljava/lang/Object;
+.super Lqidxisbestlol/oi;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lqidxisbestlol/om;
-
-
 # instance fields
-.field private final b:Lqidxisbestlol/nq;
+.field final synthetic a:Lqidxisbestlol/hs;
 
-.field private final c:Lqidxisbestlol/nv;
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lqidxisbestlol/om;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/om;-><init>(Lqidxisbestlol/ie;)V
-
-    sput-object v0, Lqidxisbestlol/ol;->a:Lqidxisbestlol/om;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lqidxisbestlol/nq;Lqidxisbestlol/nv;)V
+.method public constructor <init>(Lqidxisbestlol/hs;Ljava/lang/String;ZLjava/lang/String;Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqidxisbestlol/ol;->a:Lqidxisbestlol/hs;
 
-    iput-object p1, p0, Lqidxisbestlol/ol;->b:Lqidxisbestlol/nq;
+    iput-object p2, p0, Lqidxisbestlol/ol;->b:Ljava/lang/String;
 
-    iput-object p2, p0, Lqidxisbestlol/ol;->c:Lqidxisbestlol/nv;
+    iput-boolean p3, p0, Lqidxisbestlol/ol;->c:Z
+
+    invoke-direct {p0, p4, p5}, Lqidxisbestlol/oi;-><init>(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lqidxisbestlol/nq;
-    .locals 1
+.method public a()J
+    .locals 2
 
-    iget-object v0, p0, Lqidxisbestlol/ol;->b:Lqidxisbestlol/nq;
+    iget-object v0, p0, Lqidxisbestlol/ol;->a:Lqidxisbestlol/hs;
 
-    return-object v0
-.end method
+    invoke-interface {v0}, Lqidxisbestlol/hs;->a()Ljava/lang/Object;
 
-.method public final b()Lqidxisbestlol/nv;
-    .locals 1
+    const-wide/16 v0, -0x1
 
-    iget-object v0, p0, Lqidxisbestlol/ol;->c:Lqidxisbestlol/nv;
-
-    return-object v0
+    return-wide v0
 .end method

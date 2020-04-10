@@ -1,353 +1,163 @@
-.class public final Lqidxisbestlol/sz;
-.super Ljava/lang/Object;
+.class public Lqidxisbestlol/sz;
+.super Lqidxisbestlol/td;
 .source "SourceFile"
 
-# interfaces
-.implements Lqidxisbestlol/sx;
+
+# static fields
+.field public static final a:Lqidxisbestlol/ta;
+
+.field private static final c:Z
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lqidxisbestlol/ta;
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    invoke-direct {v0, v1}, Lqidxisbestlol/ta;-><init>(Lqidxisbestlol/hy;)V
 
-# virtual methods
-.method public a(Ljava/io/File;)Lqidxisbestlol/vz;
-    .locals 1
-
-    const-string v0, "file"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-static {p1}, Lqidxisbestlol/vn;->b(Ljava/io/File;)Lqidxisbestlol/vz;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public a(Ljava/io/File;Ljava/io/File;)V
-    .locals 3
-
-    const-string v0, "from"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "to"
-
-    invoke-static {p2, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p0, p2}, Lqidxisbestlol/sz;->d(Ljava/io/File;)V
-
-    invoke-virtual {p1, p2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/io/IOException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "failed to rename "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " to "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_0
-    return-void
-.end method
-
-.method public b(Ljava/io/File;)Lqidxisbestlol/vx;
-    .locals 6
-
-    const/4 v5, 0x0
-
-    const/4 v4, 0x1
-
-    const/4 v3, 0x0
-
-    const-string v0, "file"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    sput-object v0, Lqidxisbestlol/sz;->a:Lqidxisbestlol/ta;
 
     nop
 
-    const/4 v0, 0x0
+    const-string v0, "java.specification.version"
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    invoke-static {p1, v0, v1, v2}, Lqidxisbestlol/vn;->a(Ljava/io/File;ZILjava/lang/Object;)Lqidxisbestlol/vx;
-    :try_end_0
-    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
-
-    invoke-static {p1, v3, v4, v5}, Lqidxisbestlol/vn;->a(Ljava/io/File;ZILjava/lang/Object;)Lqidxisbestlol/vx;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public c(Ljava/io/File;)Lqidxisbestlol/vx;
-    .locals 1
-
-    const-string v0, "file"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    nop
-
-    :try_start_0
-    invoke-static {p1}, Lqidxisbestlol/vn;->a(Ljava/io/File;)Lqidxisbestlol/vx;
-    :try_end_0
-    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
-
-    invoke-static {p1}, Lqidxisbestlol/vn;->a(Ljava/io/File;)Lqidxisbestlol/vx;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public d(Ljava/io/File;)V
-    .locals 3
-
-    const-string v0, "file"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/io/File;->delete()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/io/File;->exists()Z
-
-    move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Ljava/io/IOException;
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    :goto_0
+    const/16 v1, 0x9
 
-    const-string v2, "failed to delete "
+    if-lt v0, v1, :cond_1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    move-result-object v1
+    :goto_1
+    sput-boolean v0, Lqidxisbestlol/sz;->c:Z
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
+    return-void
 
     :cond_0
+    const/16 v0, 0x8
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_1
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lqidxisbestlol/td;-><init>()V
+
     return-void
 .end method
 
-.method public e(Ljava/io/File;)Z
+.method public static final synthetic c()Z
     .locals 1
 
-    const-string v0, "file"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/io/File;->exists()Z
-
-    move-result v0
+    sget-boolean v0, Lqidxisbestlol/sz;->c:Z
 
     return v0
 .end method
 
-.method public f(Ljava/io/File;)J
+
+# virtual methods
+.method public a(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
     .locals 2
 
-    const-string v0, "file"
+    const-string v0, "sslSocket"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Ljava/io/File;->length()J
+    invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->getApplicationProtocol()Ljava/lang/String;
 
-    move-result-wide v0
+    move-result-object v0
 
-    return-wide v0
-.end method
-
-.method public g(Ljava/io/File;)V
-    .locals 5
-
-    const-string v0, "directory"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    array-length v2, v1
-
-    const/4 v0, 0x0
+    if-nez v0, :cond_1
 
     :goto_0
-    if-ge v0, v2, :cond_3
-
-    aget-object v3, v1, v0
-
-    const-string v4, "file"
-
-    invoke-static {v3, v4}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/io/File;->isDirectory()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    invoke-virtual {p0, v3}, Lqidxisbestlol/sz;->g(Ljava/io/File;)V
+    const/4 v0, 0x0
 
     :cond_0
-    invoke-virtual {v3}, Ljava/io/File;->delete()Z
-
-    move-result v4
-
-    if-nez v4, :cond_2
-
-    new-instance v0, Ljava/io/IOException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "failed to delete "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
+    return-object v0
 
     :cond_1
-    new-instance v0, Ljava/io/IOException;
+    const-string v1, ""
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    move-result v1
 
-    const-string v2, "not a readable directory: "
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
+.end method
+
+.method public a(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 3
+
+    const-string v0, "sslSocket"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "protocols"
+
+    invoke-static {p3, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->getSSLParameters()Ljavax/net/ssl/SSLParameters;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget-object v0, Lqidxisbestlol/td;->b:Lqidxisbestlol/te;
 
-    move-result-object v1
+    invoke-virtual {v0, p3}, Lqidxisbestlol/te;->a(Ljava/util/List;)Ljava/util/List;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v2, "sslParameters"
 
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Ljava/lang/Throwable;
+    check-cast v0, Ljava/util/Collection;
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    invoke-interface {v0, v2}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lqidxisbestlol/fp;
+
+    const-string v1, "null cannot be cast to non-null type kotlin.Array<T>"
+
+    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    :cond_2
-    add-int/lit8 v0, v0, 0x1
+    :cond_0
+    check-cast v0, [Ljava/lang/String;
 
-    goto :goto_0
+    invoke-virtual {v1, v0}, Ljavax/net/ssl/SSLParameters;->setApplicationProtocols([Ljava/lang/String;)V
 
-    :cond_3
+    invoke-virtual {p1, v1}, Ljavax/net/ssl/SSLSocket;->setSSLParameters(Ljavax/net/ssl/SSLParameters;)V
+
     return-void
 .end method

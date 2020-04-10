@@ -1,41 +1,44 @@
-.class public interface abstract Lqidxisbestlol/mh;
-.super Ljava/lang/Object;
+.class final Lqidxisbestlol/mh;
+.super Lqidxisbestlol/ib;
 .source "SourceFile"
 
+# interfaces
+.implements Lqidxisbestlol/hs;
 
-# static fields
-.field public static final a:Lqidxisbestlol/mh;
 
-.field public static final b:Lqidxisbestlol/mi;
+# instance fields
+.field final synthetic a:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method constructor <init>(Ljava/util/List;)V
+    .locals 1
 
-    new-instance v0, Lqidxisbestlol/mi;
+    iput-object p1, p0, Lqidxisbestlol/mh;->a:Ljava/util/List;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Lqidxisbestlol/mi;-><init>(Lqidxisbestlol/ie;)V
-
-    sput-object v0, Lqidxisbestlol/mh;->b:Lqidxisbestlol/mi;
-
-    new-instance v0, Lqidxisbestlol/mj;
-
-    invoke-direct {v0}, Lqidxisbestlol/mj;-><init>()V
-
-    check-cast v0, Lqidxisbestlol/mh;
-
-    sput-object v0, Lqidxisbestlol/mh;->a:Lqidxisbestlol/mh;
+    invoke-direct {p0, v0}, Lqidxisbestlol/ib;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Lqidxisbestlol/nc;)Ljava/util/List;
+.method public synthetic a()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lqidxisbestlol/mh;->b()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public abstract a(Lqidxisbestlol/nc;Ljava/util/List;)V
+.method public final b()Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/mh;->a:Ljava/util/List;
+
+    return-object v0
 .end method

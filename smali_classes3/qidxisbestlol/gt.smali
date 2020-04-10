@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/ListIterator;
-.implements Lqidxisbestlol/it;
+.implements Lqidxisbestlol/ik;
 
 
 # static fields

@@ -1,31 +1,10 @@
-.class public abstract Lqidxisbestlol/nx;
+.class public final Lqidxisbestlol/nx;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Closeable;
-
-
-# static fields
-.field public static final a:Lqidxisbestlol/ny;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lqidxisbestlol/ny;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/ny;-><init>(Lqidxisbestlol/ie;)V
-
-    sput-object v0, Lqidxisbestlol/nx;->a:Lqidxisbestlol/ny;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,110 +12,124 @@
     return-void
 .end method
 
-.method private final d()Ljava/nio/charset/Charset;
-    .locals 2
+.method public synthetic constructor <init>(Lqidxisbestlol/hy;)V
+    .locals 0
 
-    invoke-virtual {p0}, Lqidxisbestlol/nx;->a()Lqidxisbestlol/nj;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lqidxisbestlol/ke;->a:Ljava/nio/charset/Charset;
-
-    invoke-virtual {v0, v1}, Lqidxisbestlol/nj;->a(Ljava/nio/charset/Charset;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    sget-object v0, Lqidxisbestlol/ke;->a:Ljava/nio/charset/Charset;
-
-    goto :goto_0
-.end method
-
-
-# virtual methods
-.method public abstract a()Lqidxisbestlol/nj;
-.end method
-
-.method public abstract b()J
-.end method
-
-.method public abstract c()Lqidxisbestlol/ve;
-.end method
-
-.method public close()V
-    .locals 1
-
-    invoke-virtual {p0}, Lqidxisbestlol/nx;->c()Lqidxisbestlol/ve;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/io/Closeable;
-
-    invoke-static {v0}, Lqidxisbestlol/oe;->a(Ljava/io/Closeable;)V
+    invoke-direct {p0}, Lqidxisbestlol/nx;-><init>()V
 
     return-void
 .end method
 
-.method public final e()Ljava/lang/String;
-    .locals 5
 
-    invoke-virtual {p0}, Lqidxisbestlol/nx;->c()Lqidxisbestlol/ve;
+# virtual methods
+.method public final a(Lqidxisbestlol/ng;Lqidxisbestlol/nb;)Z
+    .locals 4
+
+    const/4 v3, 0x0
+
+    const/4 v0, 0x0
+
+    const-string v1, "response"
+
+    invoke-static {p1, v1}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "request"
+
+    invoke-static {p2, v1}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lqidxisbestlol/ng;->f()I
+
+    move-result v1
+
+    sparse-switch v1, :sswitch_data_0
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :sswitch_0
+    const-string v1, "Expires"
+
+    const/4 v2, 0x2
+
+    invoke-static {p1, v1, v3, v2, v3}, Lqidxisbestlol/ng;->a(Lqidxisbestlol/ng;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Ljava/io/Closeable;
+    if-nez v1, :cond_1
 
-    const/4 v2, 0x0
+    invoke-virtual {p1}, Lqidxisbestlol/ng;->b()Lqidxisbestlol/kx;
 
-    check-cast v2, Ljava/lang/Throwable;
+    move-result-object v1
 
-    nop
+    invoke-virtual {v1}, Lqidxisbestlol/kx;->c()I
 
-    :try_start_0
-    move-object v0, v1
+    move-result v1
 
-    check-cast v0, Lqidxisbestlol/ve;
+    const/4 v2, -0x1
 
-    move-object v3, v0
+    if-ne v1, v2, :cond_1
 
-    invoke-direct {p0}, Lqidxisbestlol/nx;->d()Ljava/nio/charset/Charset;
+    invoke-virtual {p1}, Lqidxisbestlol/ng;->b()Lqidxisbestlol/kx;
 
-    move-result-object v4
+    move-result-object v1
 
-    invoke-static {v3, v4}, Lqidxisbestlol/oe;->a(Lqidxisbestlol/ve;Ljava/nio/charset/Charset;)Ljava/nio/charset/Charset;
+    invoke-virtual {v1}, Lqidxisbestlol/kx;->e()Z
 
-    move-result-object v4
+    move-result v1
 
-    invoke-interface {v3, v4}, Lqidxisbestlol/ve;->a(Ljava/nio/charset/Charset;)Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-nez v1, :cond_1
 
-    move-result-object v3
+    invoke-virtual {p1}, Lqidxisbestlol/ng;->b()Lqidxisbestlol/kx;
 
-    invoke-static {v1, v2}, Lqidxisbestlol/hr;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    move-result-object v1
 
-    return-object v3
+    invoke-virtual {v1}, Lqidxisbestlol/kx;->d()Z
 
-    :catch_0
-    move-exception v2
+    move-result v1
 
-    :try_start_1
-    throw v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-eqz v1, :cond_0
 
-    :catchall_0
-    move-exception v3
+    :cond_1
+    :sswitch_1
+    invoke-virtual {p1}, Lqidxisbestlol/ng;->b()Lqidxisbestlol/kx;
 
-    invoke-static {v1, v2}, Lqidxisbestlol/hr;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    move-result-object v1
 
-    throw v3
+    invoke-virtual {v1}, Lqidxisbestlol/kx;->b()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p2}, Lqidxisbestlol/nb;->c()Lqidxisbestlol/kx;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lqidxisbestlol/kx;->b()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :sswitch_data_0
+    .sparse-switch
+        0xc8 -> :sswitch_1
+        0xcb -> :sswitch_1
+        0xcc -> :sswitch_1
+        0x12c -> :sswitch_1
+        0x12d -> :sswitch_1
+        0x12e -> :sswitch_0
+        0x133 -> :sswitch_0
+        0x134 -> :sswitch_1
+        0x194 -> :sswitch_1
+        0x195 -> :sswitch_1
+        0x19a -> :sswitch_1
+        0x19e -> :sswitch_1
+        0x1f5 -> :sswitch_1
+    .end sparse-switch
 .end method

@@ -13,7 +13,7 @@
 
     const-string v1, "java.util.Collections.singleton(element)"
 
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

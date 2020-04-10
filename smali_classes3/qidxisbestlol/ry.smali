@@ -1,91 +1,87 @@
 .class public final Lqidxisbestlol/ry;
-.super Lqidxisbestlol/ox;
+.super Lqidxisbestlol/uh;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Z
-
-.field final synthetic c:Lqidxisbestlol/rj;
-
-.field final synthetic d:I
-
-.field final synthetic e:Lqidxisbestlol/rb;
+.field final synthetic a:Lqidxisbestlol/ru;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZLjava/lang/String;ZLqidxisbestlol/rj;ILqidxisbestlol/rb;)V
+.method public constructor <init>(Lqidxisbestlol/ru;)V
     .locals 0
 
-    iput-object p1, p0, Lqidxisbestlol/ry;->a:Ljava/lang/String;
+    iput-object p1, p0, Lqidxisbestlol/ry;->a:Lqidxisbestlol/ru;
 
-    iput-boolean p2, p0, Lqidxisbestlol/ry;->b:Z
-
-    iput-object p5, p0, Lqidxisbestlol/ry;->c:Lqidxisbestlol/rj;
-
-    iput p6, p0, Lqidxisbestlol/ry;->d:I
-
-    iput-object p7, p0, Lqidxisbestlol/ry;->e:Lqidxisbestlol/rb;
-
-    invoke-direct {p0, p3, p4}, Lqidxisbestlol/ox;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {p0}, Lqidxisbestlol/uh;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()J
-    .locals 3
+.method protected a(Ljava/io/IOException;)Ljava/io/IOException;
+    .locals 2
 
-    iget-object v0, p0, Lqidxisbestlol/ry;->c:Lqidxisbestlol/rj;
+    new-instance v0, Ljava/net/SocketTimeoutException;
 
-    invoke-static {v0}, Lqidxisbestlol/rj;->h(Lqidxisbestlol/rj;)Lqidxisbestlol/sr;
+    const-string v1, "timeout"
+
+    invoke-direct {v0, v1}, Ljava/net/SocketTimeoutException;-><init>(Ljava/lang/String;)V
+
+    if-eqz p1, :cond_0
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    invoke-virtual {v0, p1}, Ljava/net/SocketTimeoutException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    :cond_0
+    nop
+
+    check-cast v0, Ljava/io/IOException;
+
+    return-object v0
+.end method
+
+.method protected a()V
+    .locals 2
+
+    iget-object v0, p0, Lqidxisbestlol/ry;->a:Lqidxisbestlol/ru;
+
+    sget-object v1, Lqidxisbestlol/qn;->i:Lqidxisbestlol/qn;
+
+    invoke-virtual {v0, v1}, Lqidxisbestlol/ru;->a(Lqidxisbestlol/qn;)V
+
+    iget-object v0, p0, Lqidxisbestlol/ry;->a:Lqidxisbestlol/ru;
+
+    invoke-virtual {v0}, Lqidxisbestlol/ru;->u()Lqidxisbestlol/qv;
 
     move-result-object v0
 
-    iget v1, p0, Lqidxisbestlol/ry;->d:I
+    invoke-virtual {v0}, Lqidxisbestlol/qv;->l()V
 
-    iget-object v2, p0, Lqidxisbestlol/ry;->e:Lqidxisbestlol/rb;
+    return-void
+.end method
 
-    invoke-interface {v0, v1, v2}, Lqidxisbestlol/sr;->a(ILqidxisbestlol/rb;)V
+.method public final b()V
+    .locals 1
 
-    iget-object v1, p0, Lqidxisbestlol/ry;->c:Lqidxisbestlol/rj;
+    invoke-virtual {p0}, Lqidxisbestlol/ry;->b_()Z
 
-    monitor-enter v1
+    move-result v0
 
-    nop
+    if-eqz v0, :cond_0
 
-    :try_start_0
-    iget-object v0, p0, Lqidxisbestlol/ry;->c:Lqidxisbestlol/rj;
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lqidxisbestlol/rj;->i(Lqidxisbestlol/rj;)Ljava/util/Set;
+    invoke-virtual {p0, v0}, Lqidxisbestlol/ry;->a(Ljava/io/IOException;)Ljava/io/IOException;
 
     move-result-object v0
 
-    iget v2, p0, Lqidxisbestlol/ry;->d:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {v0, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v1
-
-    nop
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
+    check-cast v0, Ljava/lang/Throwable;
 
     throw v0
+
+    :cond_0
+    return-void
 .end method

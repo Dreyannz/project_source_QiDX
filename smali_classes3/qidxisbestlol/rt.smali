@@ -1,59 +1,35 @@
-.class public final Lqidxisbestlol/rt;
-.super Lqidxisbestlol/ox;
+.class public interface abstract Lqidxisbestlol/rt;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Z
-
-.field final synthetic c:Lqidxisbestlol/rq;
-
-.field final synthetic d:I
-
-.field final synthetic e:I
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;ZLjava/lang/String;ZLqidxisbestlol/rq;II)V
-    .locals 0
-
-    iput-object p1, p0, Lqidxisbestlol/rt;->a:Ljava/lang/String;
-
-    iput-boolean p2, p0, Lqidxisbestlol/rt;->b:Z
-
-    iput-object p5, p0, Lqidxisbestlol/rt;->c:Lqidxisbestlol/rq;
-
-    iput p6, p0, Lqidxisbestlol/rt;->d:I
-
-    iput p7, p0, Lqidxisbestlol/rt;->e:I
-
-    invoke-direct {p0, p3, p4}, Lqidxisbestlol/ox;-><init>(Ljava/lang/String;Z)V
-
-    return-void
+# virtual methods
+.method public abstract a(IIIZ)V
 .end method
 
+.method public abstract a(IILjava/util/List;)V
+.end method
 
-# virtual methods
-.method public a()J
-    .locals 4
+.method public abstract a(IJ)V
+.end method
 
-    iget-object v0, p0, Lqidxisbestlol/rt;->c:Lqidxisbestlol/rq;
+.method public abstract a(ILqidxisbestlol/qn;)V
+.end method
 
-    iget-object v0, v0, Lqidxisbestlol/rq;->a:Lqidxisbestlol/rj;
+.method public abstract a(ILqidxisbestlol/qn;Lqidxisbestlol/ur;)V
+.end method
 
-    const/4 v1, 0x1
+.method public abstract a(ZII)V
+.end method
 
-    iget v2, p0, Lqidxisbestlol/rt;->d:I
+.method public abstract a(ZIILjava/util/List;)V
+.end method
 
-    iget v3, p0, Lqidxisbestlol/rt;->e:I
+.method public abstract a(ZILqidxisbestlol/uq;I)V
+.end method
 
-    invoke-virtual {v0, v1, v2, v3}, Lqidxisbestlol/rj;->a(ZII)V
+.method public abstract a(ZLqidxisbestlol/sg;)V
+.end method
 
-    nop
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
+.method public abstract c()V
 .end method

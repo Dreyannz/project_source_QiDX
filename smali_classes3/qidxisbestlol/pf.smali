@@ -1,84 +1,108 @@
-.class public final Lqidxisbestlol/pf;
-.super Ljava/lang/Object;
+.class final Lqidxisbestlol/pf;
+.super Lqidxisbestlol/ib;
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/ng;
+.implements Lqidxisbestlol/hs;
 
 
-# static fields
-.field public static final b:Lqidxisbestlol/pf;
+# instance fields
+.field final synthetic a:Lqidxisbestlol/pb;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method constructor <init>(Lqidxisbestlol/pb;)V
     .locals 1
 
-    new-instance v0, Lqidxisbestlol/pf;
+    iput-object p1, p0, Lqidxisbestlol/pf;->a:Lqidxisbestlol/pb;
 
-    invoke-direct {v0}, Lqidxisbestlol/pf;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, Lqidxisbestlol/pf;->b:Lqidxisbestlol/pf;
-
-    return-void
-.end method
-
-.method private constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lqidxisbestlol/ib;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/nh;)Lqidxisbestlol/nv;
-    .locals 9
+.method public synthetic a()Ljava/lang/Object;
+    .locals 1
 
-    const/4 v3, 0x0
-
-    const/4 v1, 0x0
-
-    const-string v0, "chain"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    move-object v0, p1
-
-    check-cast v0, Lqidxisbestlol/ql;
-
-    invoke-virtual {v0}, Lqidxisbestlol/ql;->c()Lqidxisbestlol/pl;
-
-    move-result-object v2
-
-    check-cast p1, Lqidxisbestlol/ql;
-
-    invoke-virtual {v2, p1}, Lqidxisbestlol/pl;->a(Lqidxisbestlol/ql;)Lqidxisbestlol/ph;
-
-    move-result-object v2
-
-    const/16 v7, 0x3d
-
-    move v4, v1
-
-    move v5, v1
-
-    move v6, v1
-
-    move-object v8, v3
-
-    invoke-static/range {v0 .. v8}, Lqidxisbestlol/ql;->a(Lqidxisbestlol/ql;ILqidxisbestlol/ph;Lqidxisbestlol/nq;IIIILjava/lang/Object;)Lqidxisbestlol/ql;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lqidxisbestlol/ql;->e()Lqidxisbestlol/nq;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lqidxisbestlol/ql;->a(Lqidxisbestlol/nq;)Lqidxisbestlol/nv;
+    invoke-virtual {p0}, Lqidxisbestlol/pf;->b()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final b()Ljava/util/List;
+    .locals 3
+
+    iget-object v0, p0, Lqidxisbestlol/pf;->a:Lqidxisbestlol/pb;
+
+    invoke-static {v0}, Lqidxisbestlol/pb;->a(Lqidxisbestlol/pb;)Lqidxisbestlol/mf;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lqidxisbestlol/ia;->a()V
+
+    :cond_0
+    invoke-virtual {v0}, Lqidxisbestlol/mf;->a()Ljava/util/List;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Iterable;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    const/16 v2, 0xa
+
+    invoke-static {v0, v2}, Lqidxisbestlol/gh;->a(Ljava/lang/Iterable;I)I
+
+    move-result v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    check-cast v1, Ljava/util/Collection;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/security/cert/Certificate;
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Lqidxisbestlol/fp;
+
+    const-string v1, "null cannot be cast to non-null type java.security.cert.X509Certificate"
+
+    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    check-cast v0, Ljava/security/cert/X509Certificate;
+
+    invoke-interface {v1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_2
+    check-cast v1, Ljava/util/List;
+
+    return-object v1
 .end method

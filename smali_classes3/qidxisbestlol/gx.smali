@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Iterator;
-.implements Lqidxisbestlol/it;
+.implements Lqidxisbestlol/ik;
 
 
 # direct methods

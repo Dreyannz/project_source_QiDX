@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/lr;
+.implements Lqidxisbestlol/lb;
 
 
 # instance fields
@@ -31,7 +31,7 @@
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/lq;Ljava/io/IOException;)V
+.method public a(Lqidxisbestlol/la;Ljava/io/IOException;)V
     .locals 3
     .annotation runtime Ljava/lang/Override;
     .end annotation
@@ -53,16 +53,16 @@
     return-void
 .end method
 
-.method public a(Lqidxisbestlol/lq;Lqidxisbestlol/nv;)V
+.method public a(Lqidxisbestlol/la;Lqidxisbestlol/ng;)V
     .locals 4
     .annotation runtime Ljava/lang/Override;
     .end annotation
 
-    invoke-virtual {p2}, Lqidxisbestlol/nv;->i()Lqidxisbestlol/nx;
+    invoke-virtual {p2}, Lqidxisbestlol/ng;->i()Lqidxisbestlol/ni;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lqidxisbestlol/nx;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lqidxisbestlol/ni;->e()Ljava/lang/String;
 
     move-result-object v0
 

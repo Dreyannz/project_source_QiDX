@@ -1,2 +1,2 @@
 .class public final Lqidxisbestlol/js;
-.super Lqidxisbestlol/jx;
+.super Lqidxisbestlol/kk;

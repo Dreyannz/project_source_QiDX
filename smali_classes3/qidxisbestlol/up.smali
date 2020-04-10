@@ -1,43 +1,45 @@
-.class public final Lqidxisbestlol/up;
+.class public interface abstract Lqidxisbestlol/up;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# direct methods
-.method private constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
-    .locals 0
-
-    invoke-direct {p0}, Lqidxisbestlol/up;-><init>()V
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/nio/channels/WritableByteChannel;
+.implements Lqidxisbestlol/vl;
 
 
 # virtual methods
-.method public final a(Ljavax/net/ssl/X509TrustManager;)Lqidxisbestlol/uo;
-    .locals 1
+.method public abstract b(Ljava/lang/String;)Lqidxisbestlol/up;
+.end method
 
-    const-string v0, "trustManager"
+.method public abstract b(Lqidxisbestlol/ur;)Lqidxisbestlol/up;
+.end method
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+.method public abstract c()Lqidxisbestlol/un;
+.end method
 
-    sget-object v0, Lqidxisbestlol/tr;->b:Lqidxisbestlol/ts;
+.method public abstract c(I)Lqidxisbestlol/up;
+.end method
 
-    invoke-virtual {v0}, Lqidxisbestlol/ts;->a()Lqidxisbestlol/tr;
+.method public abstract c([B)Lqidxisbestlol/up;
+.end method
 
-    move-result-object v0
+.method public abstract c([BII)Lqidxisbestlol/up;
+.end method
 
-    invoke-virtual {v0, p1}, Lqidxisbestlol/tr;->a(Ljavax/net/ssl/X509TrustManager;)Lqidxisbestlol/uo;
+.method public abstract e()Lqidxisbestlol/up;
+.end method
 
-    move-result-object v0
+.method public abstract e(I)Lqidxisbestlol/up;
+.end method
 
-    return-object v0
+.method public abstract flush()V
+.end method
+
+.method public abstract g(I)Lqidxisbestlol/up;
+.end method
+
+.method public abstract j(J)Lqidxisbestlol/up;
+.end method
+
+.method public abstract l(J)Lqidxisbestlol/up;
 .end method

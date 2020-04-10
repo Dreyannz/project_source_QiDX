@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
+.method public synthetic constructor <init>(Lqidxisbestlol/hy;)V
     .locals 0
 
     invoke-direct {p0}, Lqidxisbestlol/ne;-><init>()V
@@ -20,296 +20,153 @@
     return-void
 .end method
 
-.method private final a(Ljava/lang/String;II)I
-    .locals 9
+.method public static synthetic a(Lqidxisbestlol/ne;[BLqidxisbestlol/mu;IIILjava/lang/Object;)Lqidxisbestlol/nd;
+    .locals 2
 
-    const/16 v8, 0x7a
+    and-int/lit8 v0, p5, 0x1
 
-    const/16 v7, 0x61
-
-    const/16 v6, 0x5a
-
-    const/16 v5, 0x41
-
-    const/4 v1, -0x1
-
-    sub-int v0, p3, p2
-
-    const/4 v2, 0x2
-
-    if-ge v0, v2, :cond_1
-
-    :cond_0
-    :goto_0
-    return v1
-
-    :cond_1
-    invoke-virtual {p1, p2}, Ljava/lang/String;->charAt(I)C
-
-    move-result v0
-
-    if-lt v0, v7, :cond_2
-
-    if-le v0, v8, :cond_3
-
-    :cond_2
-    if-lt v0, v5, :cond_0
-
-    if-gt v0, v6, :cond_0
-
-    :cond_3
-    add-int/lit8 v0, p2, 0x1
-
-    :goto_1
-    if-ge v0, p3, :cond_0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v2
-
-    if-le v7, v2, :cond_8
-
-    :cond_4
-    if-le v5, v2, :cond_9
-
-    :cond_5
-    const/16 v3, 0x39
-
-    const/16 v4, 0x30
-
-    if-le v4, v2, :cond_a
-
-    :cond_6
-    const/16 v3, 0x2b
-
-    if-ne v2, v3, :cond_b
-
-    :cond_7
-    :goto_2
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_8
-    if-lt v8, v2, :cond_4
-
-    goto :goto_2
-
-    :cond_9
-    if-lt v6, v2, :cond_5
-
-    goto :goto_2
-
-    :cond_a
-    if-lt v3, v2, :cond_6
-
-    goto :goto_2
-
-    :cond_b
-    const/16 v3, 0x2d
-
-    if-eq v2, v3, :cond_7
-
-    const/16 v3, 0x2e
-
-    if-eq v2, v3, :cond_7
-
-    const/16 v3, 0x3a
-
-    if-ne v2, v3, :cond_c
-
-    :goto_3
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_c
-    move v0, v1
-
-    goto :goto_3
-.end method
-
-.method public static final synthetic a(Lqidxisbestlol/ne;Ljava/lang/String;II)I
-    .locals 1
-
-    invoke-direct {p0, p1, p2, p3}, Lqidxisbestlol/ne;->a(Ljava/lang/String;II)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method private final b(Ljava/lang/String;II)I
-    .locals 3
+    if-eqz v0, :cond_2
 
     const/4 v0, 0x0
 
-    :goto_0
-    if-ge p2, p3, :cond_1
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    const/16 v2, 0x5c
-
-    if-eq v1, v2, :cond_0
-
-    const/16 v2, 0x2f
-
-    if-ne v1, v2, :cond_1
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    add-int/lit8 p2, p2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return v0
-.end method
-
-.method public static final synthetic b(Lqidxisbestlol/ne;Ljava/lang/String;II)I
-    .locals 1
-
-    invoke-direct {p0, p1, p2, p3}, Lqidxisbestlol/ne;->b(Ljava/lang/String;II)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method private final c(Ljava/lang/String;II)I
-    .locals 3
-
-    move v0, p2
+    check-cast v0, Lqidxisbestlol/mu;
 
     :goto_0
-    if-ge v0, p3, :cond_2
+    and-int/lit8 v1, p5, 0x2
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
+    if-eqz v1, :cond_0
 
-    move-result v1
-
-    sparse-switch v1, :sswitch_data_0
+    const/4 p3, 0x0
 
     :cond_0
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
+    and-int/lit8 v1, p5, 0x4
 
-    goto :goto_0
+    if-eqz v1, :cond_1
+
+    array-length p4, p1
 
     :cond_1
-    :sswitch_0
-    add-int/lit8 v0, v0, 0x1
-
-    if-ge v0, p3, :cond_0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    const/16 v2, 0x5d
-
-    if-ne v1, v2, :cond_1
-
-    goto :goto_1
-
-    :cond_2
-    move v0, p3
-
-    :sswitch_1
-    return v0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x3a -> :sswitch_1
-        0x5b -> :sswitch_0
-    .end sparse-switch
-.end method
-
-.method public static final synthetic c(Lqidxisbestlol/ne;Ljava/lang/String;II)I
-    .locals 1
-
-    invoke-direct {p0, p1, p2, p3}, Lqidxisbestlol/ne;->c(Ljava/lang/String;II)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method private final d(Ljava/lang/String;II)I
-    .locals 12
-
-    nop
-
-    :try_start_0
-    sget-object v0, Lqidxisbestlol/nc;->a:Lqidxisbestlol/nf;
-
-    const-string v4, ""
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/16 v10, 0xf8
-
-    const/4 v11, 0x0
-
-    move-object v1, p1
-
-    move v2, p2
-
-    move v3, p3
-
-    invoke-static/range {v0 .. v11}, Lqidxisbestlol/nf;->a(Lqidxisbestlol/nf;Ljava/lang/String;IILjava/lang/String;ZZZZLjava/nio/charset/Charset;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, p1, v0, p3, p4}, Lqidxisbestlol/ne;->a([BLqidxisbestlol/mu;II)Lqidxisbestlol/nd;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+    return-object v0
 
-    move-result v0
-
-    const v1, 0xffff
-
-    const/4 v2, 0x1
-
-    if-le v2, v0, :cond_1
-
-    :cond_0
-    const/4 v0, -0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    if-lt v1, v0, :cond_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const/4 v0, -0x1
+    :cond_2
+    move-object v0, p2
 
     goto :goto_0
 .end method
 
-.method public static final synthetic d(Lqidxisbestlol/ne;Ljava/lang/String;II)I
+
+# virtual methods
+.method public final a(Ljava/lang/String;Lqidxisbestlol/mu;)Lqidxisbestlol/nd;
+    .locals 4
+
+    const/4 v1, 0x0
+
+    const-string v0, "$this$toRequestBody"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v0, Lqidxisbestlol/jn;->a:Ljava/nio/charset/Charset;
+
+    if-eqz p2, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-static {p2, v1, v0, v1}, Lqidxisbestlol/mu;->a(Lqidxisbestlol/mu;Ljava/nio/charset/Charset;ILjava/lang/Object;)Ljava/nio/charset/Charset;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lqidxisbestlol/jn;->a:Ljava/nio/charset/Charset;
+
+    sget-object v1, Lqidxisbestlol/mu;->a:Lqidxisbestlol/mv;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, "; charset=utf-8"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lqidxisbestlol/mv;->b(Ljava/lang/String;)Lqidxisbestlol/mu;
+
+    move-result-object p2
+
+    :cond_0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v0
+
+    const-string v1, "(this as java.lang.String).getBytes(charset)"
+
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p0, Lqidxisbestlol/ne;
+
+    const/4 v1, 0x0
+
+    array-length v2, v0
+
+    invoke-virtual {p0, v0, p2, v1, v2}, Lqidxisbestlol/ne;->a([BLqidxisbestlol/mu;II)Lqidxisbestlol/nd;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final a(Lqidxisbestlol/mu;Ljava/lang/String;)Lqidxisbestlol/nd;
     .locals 1
 
-    invoke-direct {p0, p1, p2, p3}, Lqidxisbestlol/ne;->d(Ljava/lang/String;II)I
+    const-string v0, "content"
 
-    move-result v0
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return v0
+    check-cast p0, Lqidxisbestlol/ne;
+
+    invoke-virtual {p0, p2, p1}, Lqidxisbestlol/ne;->a(Ljava/lang/String;Lqidxisbestlol/mu;)Lqidxisbestlol/nd;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final a([BLqidxisbestlol/mu;II)Lqidxisbestlol/nd;
+    .locals 6
+
+    const-string v0, "$this$toRequestBody"
+
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    array-length v0, p1
+
+    int-to-long v0, v0
+
+    int-to-long v2, p3
+
+    int-to-long v4, p4
+
+    invoke-static/range {v0 .. v5}, Lqidxisbestlol/np;->a(JJJ)V
+
+    new-instance v0, Lqidxisbestlol/nf;
+
+    invoke-direct {v0, p1, p2, p4, p3}, Lqidxisbestlol/nf;-><init>([BLqidxisbestlol/mu;II)V
+
+    check-cast v0, Lqidxisbestlol/nd;
+
+    return-object v0
 .end method

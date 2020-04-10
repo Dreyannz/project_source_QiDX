@@ -1,79 +1,168 @@
 .class public final Lqidxisbestlol/vc;
-.super Ljava/io/InputStream;
+.super Lqidxisbestlol/fv;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/RandomAccess;
+
+
+# static fields
+.field public static final b:Lqidxisbestlol/vd;
 
 
 # instance fields
-.field final synthetic a:Lqidxisbestlol/vb;
+.field private final c:[Lqidxisbestlol/ur;
+
+.field private final d:[I
 
 
 # direct methods
-.method constructor <init>(Lqidxisbestlol/vb;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lqidxisbestlol/vd;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lqidxisbestlol/vd;-><init>(Lqidxisbestlol/hy;)V
+
+    sput-object v0, Lqidxisbestlol/vc;->b:Lqidxisbestlol/vd;
+
+    return-void
+.end method
+
+.method private constructor <init>([Lqidxisbestlol/ur;[I)V
     .locals 0
 
-    iput-object p1, p0, Lqidxisbestlol/vc;->a:Lqidxisbestlol/vb;
+    invoke-direct {p0}, Lqidxisbestlol/fv;-><init>()V
 
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
+    iput-object p1, p0, Lqidxisbestlol/vc;->c:[Lqidxisbestlol/ur;
+
+    iput-object p2, p0, Lqidxisbestlol/vc;->d:[I
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>([Lqidxisbestlol/ur;[ILqidxisbestlol/hy;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lqidxisbestlol/vc;-><init>([Lqidxisbestlol/ur;[I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public available()I
-    .locals 4
+.method public a()I
+    .locals 1
 
-    iget-object v0, p0, Lqidxisbestlol/vc;->a:Lqidxisbestlol/vb;
+    iget-object v0, p0, Lqidxisbestlol/vc;->c:[Lqidxisbestlol/ur;
 
-    invoke-virtual {v0}, Lqidxisbestlol/vb;->b()J
-
-    move-result-wide v0
-
-    const v2, 0x7fffffff
-
-    int-to-long v2, v2
-
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    nop
-
-    long-to-int v0, v0
+    array-length v0, v0
 
     return v0
 .end method
 
-.method public close()V
-    .locals 0
+.method public a(I)Lqidxisbestlol/ur;
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lqidxisbestlol/vc;->c:[Lqidxisbestlol/ur;
+
+    aget-object v0, v0, p1
+
+    return-object v0
 .end method
 
-.method public read()I
-    .locals 4
+.method public a(Lqidxisbestlol/ur;)Z
+    .locals 1
 
-    iget-object v0, p0, Lqidxisbestlol/vc;->a:Lqidxisbestlol/vb;
-
-    invoke-virtual {v0}, Lqidxisbestlol/vb;->b()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    iget-object v0, p0, Lqidxisbestlol/vc;->a:Lqidxisbestlol/vb;
-
-    invoke-virtual {v0}, Lqidxisbestlol/vb;->i()B
+    invoke-super {p0, p1}, Lqidxisbestlol/fv;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    const/16 v1, 0xff
+    return v0
+.end method
 
-    and-int/2addr v0, v1
+.method public b(Lqidxisbestlol/ur;)I
+    .locals 1
+
+    invoke-super {p0, p1}, Lqidxisbestlol/fv;->indexOf(Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final b()[Lqidxisbestlol/ur;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/vc;->c:[Lqidxisbestlol/ur;
+
+    return-object v0
+.end method
+
+.method public c(Lqidxisbestlol/ur;)I
+    .locals 1
+
+    invoke-super {p0, p1}, Lqidxisbestlol/fv;->lastIndexOf(Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c()[I
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/vc;->d:[I
+
+    return-object v0
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Lqidxisbestlol/ur;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lqidxisbestlol/ur;
+
+    invoke-virtual {p0, p1}, Lqidxisbestlol/vc;->a(Lqidxisbestlol/ur;)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public synthetic get(I)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lqidxisbestlol/vc;->a(I)Lqidxisbestlol/ur;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final indexOf(Ljava/lang/Object;)I
+    .locals 1
+
+    instance-of v0, p1, Lqidxisbestlol/ur;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lqidxisbestlol/ur;
+
+    invoke-virtual {p0, p1}, Lqidxisbestlol/vc;->b(Lqidxisbestlol/ur;)I
+
+    move-result v0
 
     :goto_0
     return v0
@@ -84,44 +173,24 @@
     goto :goto_0
 .end method
 
-.method public read([BII)I
+.method public final lastIndexOf(Ljava/lang/Object;)I
     .locals 1
 
-    const-string v0, "sink"
+    instance-of v0, p1, Lqidxisbestlol/ur;
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lqidxisbestlol/vc;->a:Lqidxisbestlol/vb;
+    check-cast p1, Lqidxisbestlol/ur;
 
-    invoke-virtual {v0, p1, p2, p3}, Lqidxisbestlol/vb;->a([BII)I
+    invoke-virtual {p0, p1}, Lqidxisbestlol/vc;->c(Lqidxisbestlol/ur;)I
 
     move-result v0
 
+    :goto_0
     return v0
-.end method
 
-.method public toString()Ljava/lang/String;
-    .locals 2
+    :cond_0
+    const/4 v0, -0x1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Lqidxisbestlol/vc;->a:Lqidxisbestlol/vb;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ".inputStream()"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    goto :goto_0
 .end method

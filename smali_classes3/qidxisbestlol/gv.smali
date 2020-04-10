@@ -5,7 +5,7 @@
 # interfaces
 .implements Ljava/io/Serializable;
 .implements Ljava/util/Map;
-.implements Lqidxisbestlol/it;
+.implements Lqidxisbestlol/ik;
 
 
 # static fields
@@ -56,7 +56,7 @@
 
     const-string v0, "value"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

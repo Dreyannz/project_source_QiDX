@@ -29,7 +29,7 @@
 
     const-string v0, "throwableClass.methods"
 
-    invoke-static {v5, v0}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     array-length v6, v5
 
@@ -42,7 +42,7 @@
 
     const-string v0, "it"
 
-    invoke-static {v1, v0}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -50,7 +50,7 @@
 
     const-string v7, "addSuppressed"
 
-    invoke-static {v0, v7}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v7}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -62,7 +62,7 @@
 
     const-string v7, "it.parameterTypes"
 
-    invoke-static {v0, v7}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v7}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lqidxisbestlol/gb;->b([Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -70,7 +70,7 @@
 
     check-cast v0, Ljava/lang/Class;
 
-    invoke-static {v0, v4}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v4}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

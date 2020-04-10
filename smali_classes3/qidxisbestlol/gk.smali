@@ -9,7 +9,7 @@
 
     const-string v0, "$this$collectionSizeOrDefault"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     instance-of v0, p0, Ljava/util/Collection;
 

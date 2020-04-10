@@ -1,60 +1,76 @@
-.class public abstract Lqidxisbestlol/rn;
-.super Ljava/lang/Object;
+.class public final Lqidxisbestlol/rn;
+.super Lqidxisbestlol/oi;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lqidxisbestlol/rn;
+# instance fields
+.field final synthetic a:Ljava/lang/String;
 
-.field public static final c:Lqidxisbestlol/ro;
+.field final synthetic b:Z
+
+.field final synthetic c:Lqidxisbestlol/qv;
+
+.field final synthetic d:I
+
+.field final synthetic e:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;ZLjava/lang/String;ZLqidxisbestlol/qv;IJ)V
+    .locals 1
 
-    new-instance v0, Lqidxisbestlol/ro;
+    iput-object p1, p0, Lqidxisbestlol/rn;->a:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    iput-boolean p2, p0, Lqidxisbestlol/rn;->b:Z
 
-    invoke-direct {v0, v1}, Lqidxisbestlol/ro;-><init>(Lqidxisbestlol/ie;)V
+    iput-object p5, p0, Lqidxisbestlol/rn;->c:Lqidxisbestlol/qv;
 
-    sput-object v0, Lqidxisbestlol/rn;->c:Lqidxisbestlol/ro;
+    iput p6, p0, Lqidxisbestlol/rn;->d:I
 
-    new-instance v0, Lqidxisbestlol/rp;
+    iput-wide p7, p0, Lqidxisbestlol/rn;->e:J
 
-    invoke-direct {v0}, Lqidxisbestlol/rp;-><init>()V
-
-    check-cast v0, Lqidxisbestlol/rn;
-
-    sput-object v0, Lqidxisbestlol/rn;->b:Lqidxisbestlol/rn;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p3, p4}, Lqidxisbestlol/oi;-><init>(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/rj;Lqidxisbestlol/su;)V
-    .locals 1
+.method public a()J
+    .locals 4
 
-    const-string v0, "connection"
+    nop
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    :try_start_0
+    iget-object v0, p0, Lqidxisbestlol/rn;->c:Lqidxisbestlol/qv;
 
-    const-string v0, "settings"
+    invoke-virtual {v0}, Lqidxisbestlol/qv;->j()Lqidxisbestlol/rz;
 
-    invoke-static {p2, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v0
 
-    return-void
-.end method
+    iget v1, p0, Lqidxisbestlol/rn;->d:I
 
-.method public abstract a(Lqidxisbestlol/si;)V
+    iget-wide v2, p0, Lqidxisbestlol/rn;->e:J
+
+    invoke-virtual {v0, v1, v2, v3}, Lqidxisbestlol/rz;->a(IJ)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    nop
+
+    nop
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+
+    :catch_0
+    move-exception v0
+
+    iget-object v1, p0, Lqidxisbestlol/rn;->c:Lqidxisbestlol/qv;
+
+    invoke-static {v1, v0}, Lqidxisbestlol/qv;->a(Lqidxisbestlol/qv;Ljava/io/IOException;)V
+
+    goto :goto_0
 .end method

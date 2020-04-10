@@ -1,9 +1,8 @@
 - Changelogs:
 
-• Updated AAPT (Only OBF, normal don't added yet)
-• Updated Android, Android Support & AndroidX template (All errors is fixed yeeee xD, use proguard pls)
-• Updated Android SDK to Android R DP2
+• Try to fix aapt error in armv8 & armv7 and others
+• Nothing in general, just update this please xD
 
-- Build: QCS083.230320.R01
+- Build: QBSF100.090420.R01
 - Build-by: Mijotchi
-- Build-type: Canary Stable
+- Build-type: Beta Stable Final (QBSF)

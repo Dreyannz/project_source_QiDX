@@ -4,32 +4,32 @@
 
 
 # direct methods
-.method public static final a(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/hv;)Ljava/lang/Appendable;
+.method public static final a(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/ht;)Ljava/lang/Appendable;
     .locals 4
 
     const-string v0, "$this$joinTo"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "buffer"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "separator"
 
-    invoke-static {p2, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "prefix"
 
-    invoke-static {p3, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "postfix"
 
-    invoke-static {p4, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "truncated"
 
-    invoke-static {p6, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p6, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1, p3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
@@ -64,7 +64,7 @@
     if-gt v0, p5, :cond_2
 
     :cond_1
-    invoke-static {p1, v2, p7}, Lqidxisbestlol/kj;->a(Ljava/lang/Appendable;Ljava/lang/Object;Lqidxisbestlol/hv;)V
+    invoke-static {p1, v2, p7}, Lqidxisbestlol/js;->a(Ljava/lang/Appendable;Ljava/lang/Object;Lqidxisbestlol/ht;)V
 
     goto :goto_0
 
@@ -81,7 +81,7 @@
     return-object p1
 .end method
 
-.method public static synthetic a(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/hv;ILjava/lang/Object;)Ljava/lang/Appendable;
+.method public static synthetic a(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/ht;ILjava/lang/Object;)Ljava/lang/Appendable;
     .locals 8
 
     and-int/lit8 v0, p8, 0x2
@@ -141,7 +141,7 @@
 
     const/4 v0, 0x0
 
-    check-cast v0, Lqidxisbestlol/hv;
+    check-cast v0, Lqidxisbestlol/ht;
 
     move-object v7, v0
 
@@ -150,7 +150,7 @@
 
     move-object v1, p1
 
-    invoke-static/range {v0 .. v7}, Lqidxisbestlol/gh;->a(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/hv;)Ljava/lang/Appendable;
+    invoke-static/range {v0 .. v7}, Lqidxisbestlol/gh;->a(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/ht;)Ljava/lang/Appendable;
 
     move-result-object v0
 
@@ -192,7 +192,7 @@
 
     const-string v0, "$this$single"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     instance-of v0, p0, Ljava/util/List;
 
@@ -250,28 +250,28 @@
     throw v0
 .end method
 
-.method public static final a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/hv;)Ljava/lang/String;
+.method public static final a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/ht;)Ljava/lang/String;
     .locals 8
 
     const-string v0, "$this$joinToString"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "separator"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "prefix"
 
-    invoke-static {p2, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "postfix"
 
-    invoke-static {p3, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "truncated"
 
-    invoke-static {p5, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p5, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -293,7 +293,7 @@
 
     move-object v7, p6
 
-    invoke-static/range {v0 .. v7}, Lqidxisbestlol/gh;->a(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/hv;)Ljava/lang/Appendable;
+    invoke-static/range {v0 .. v7}, Lqidxisbestlol/gh;->a(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/ht;)Ljava/lang/Appendable;
 
     move-result-object v0
 
@@ -305,12 +305,12 @@
 
     const-string v1, "joinTo(StringBuilder(), \u2026ed, transform).toString()"
 
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public static synthetic a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/hv;ILjava/lang/Object;)Ljava/lang/String;
+.method public static synthetic a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/ht;ILjava/lang/Object;)Ljava/lang/String;
     .locals 7
 
     and-int/lit8 v0, p7, 0x1
@@ -370,14 +370,14 @@
 
     const/4 v0, 0x0
 
-    check-cast v0, Lqidxisbestlol/hv;
+    check-cast v0, Lqidxisbestlol/ht;
 
     move-object v6, v0
 
     :goto_5
     move-object v0, p0
 
-    invoke-static/range {v0 .. v6}, Lqidxisbestlol/gh;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/hv;)Ljava/lang/String;
+    invoke-static/range {v0 .. v6}, Lqidxisbestlol/gh;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lqidxisbestlol/ht;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -419,11 +419,11 @@
 
     const-string v0, "$this$toCollection"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "destination"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -453,11 +453,37 @@
 
     const-string v0, "$this$toMutableList"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    check-cast v0, Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public static final a(Ljava/util/Collection;Ljava/lang/Object;)Ljava/util/List;
+    .locals 2
+
+    const-string v0, "$this$plus"
+
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     check-cast v0, Ljava/util/List;
 
@@ -469,7 +495,7 @@
 
     const-string v0, "$this$toList"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     instance-of v0, p0, Ljava/util/Collection;
 
@@ -557,11 +583,11 @@
 
     const-string v0, "$this$plus"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "elements"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     instance-of v0, p1, Ljava/util/Collection;
 
@@ -621,7 +647,7 @@
 
     const-string v0, "$this$toMutableList"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     instance-of v0, p0, Ljava/util/Collection;
 
@@ -657,7 +683,7 @@
 
     const-string v0, "$this$single"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -707,7 +733,7 @@
 
     const-string v0, "$this$toSet"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     instance-of v0, p0, Ljava/util/Collection;
 
@@ -818,18 +844,18 @@
     .end packed-switch
 .end method
 
-.method public static final e(Ljava/lang/Iterable;)Lqidxisbestlol/jr;
+.method public static final e(Ljava/lang/Iterable;)Lqidxisbestlol/ja;
     .locals 1
 
     const-string v0, "$this$asSequence"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lqidxisbestlol/gs;
 
     invoke-direct {v0, p0}, Lqidxisbestlol/gs;-><init>(Ljava/lang/Iterable;)V
 
-    check-cast v0, Lqidxisbestlol/jr;
+    check-cast v0, Lqidxisbestlol/ja;
 
     return-object v0
 .end method

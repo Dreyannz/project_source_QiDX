@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/ListIterator;
-.implements Lqidxisbestlol/it;
+.implements Lqidxisbestlol/ik;
 
 
 # instance fields
@@ -18,6 +18,8 @@
     iput-object p1, p0, Lqidxisbestlol/fy;->b:Lqidxisbestlol/fv;
 
     invoke-direct {p0, p1}, Lqidxisbestlol/fx;-><init>(Lqidxisbestlol/fv;)V
+
+    nop
 
     sget-object v0, Lqidxisbestlol/fv;->a:Lqidxisbestlol/fw;
 

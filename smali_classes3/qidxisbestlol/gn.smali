@@ -9,7 +9,7 @@
 
     const-string v0, "$this$sort"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p0}, Ljava/util/List;->size()I
 

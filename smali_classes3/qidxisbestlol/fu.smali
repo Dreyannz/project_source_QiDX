@@ -1,9 +1,9 @@
 .class final Lqidxisbestlol/fu;
-.super Lqidxisbestlol/ih;
+.super Lqidxisbestlol/ib;
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/hv;
+.implements Lqidxisbestlol/ht;
 
 
 # instance fields
@@ -18,7 +18,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lqidxisbestlol/ih;-><init>(I)V
+    invoke-direct {p0, v0}, Lqidxisbestlol/ib;-><init>(I)V
 
     return-void
 .end method

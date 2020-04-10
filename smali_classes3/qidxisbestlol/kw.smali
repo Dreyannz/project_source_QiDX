@@ -1,100 +1,92 @@
-.class final Lqidxisbestlol/kw;
-.super Lqidxisbestlol/ih;
+.class public final Lqidxisbestlol/kw;
+.super Lqidxisbestlol/ut;
 .source "SourceFile"
-
-# interfaces
-.implements Lqidxisbestlol/hw;
 
 
 # instance fields
-.field final synthetic a:Ljava/util/List;
-
-.field final synthetic b:Z
+.field final synthetic a:Lqidxisbestlol/kv;
 
 
 # direct methods
-.method constructor <init>(Ljava/util/List;Z)V
-    .locals 1
+.method constructor <init>(Lqidxisbestlol/kv;Lqidxisbestlol/vl;)V
+    .locals 0
 
-    iput-object p1, p0, Lqidxisbestlol/kw;->a:Ljava/util/List;
+    iput-object p1, p0, Lqidxisbestlol/kw;->a:Lqidxisbestlol/kv;
 
-    iput-boolean p2, p0, Lqidxisbestlol/kw;->b:Z
-
-    const/4 v0, 0x2
-
-    invoke-direct {p0, v0}, Lqidxisbestlol/ih;-><init>(I)V
+    invoke-direct {p0, p2}, Lqidxisbestlol/ut;-><init>(Lqidxisbestlol/vl;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p1, Ljava/lang/CharSequence;
-
-    check-cast p2, Ljava/lang/Number;
-
-    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
-
-    move-result v0
-
-    invoke-virtual {p0, p1, v0}, Lqidxisbestlol/kw;->a(Ljava/lang/CharSequence;I)Lqidxisbestlol/fm;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final a(Ljava/lang/CharSequence;I)Lqidxisbestlol/fm;
+.method public close()V
     .locals 3
 
-    const-string v0, "$receiver"
+    iget-object v0, p0, Lqidxisbestlol/kw;->a:Lqidxisbestlol/kv;
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v1, v0, Lqidxisbestlol/kv;->a:Lqidxisbestlol/kp;
 
-    iget-object v0, p0, Lqidxisbestlol/kw;->a:Ljava/util/List;
+    monitor-enter v1
 
-    check-cast v0, Ljava/util/Collection;
+    nop
 
-    iget-boolean v1, p0, Lqidxisbestlol/kw;->b:Z
+    :try_start_0
+    iget-object v0, p0, Lqidxisbestlol/kw;->a:Lqidxisbestlol/kv;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0}, Lqidxisbestlol/kv;->a()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {p1, v0, p2, v1, v2}, Lqidxisbestlol/ku;->a(Ljava/lang/CharSequence;Ljava/util/Collection;IZZ)Lqidxisbestlol/fm;
-
-    move-result-object v0
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lqidxisbestlol/fm;->a()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lqidxisbestlol/fm;->b()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lqidxisbestlol/fo;->a(Ljava/lang/Object;Ljava/lang/Object;)Lqidxisbestlol/fm;
-
-    move-result-object v0
+    monitor-exit v1
 
     :goto_0
-    return-object v0
+    return-void
 
     :cond_0
-    const/4 v0, 0x0
+    :try_start_1
+    iget-object v0, p0, Lqidxisbestlol/kw;->a:Lqidxisbestlol/kv;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Lqidxisbestlol/kv;->a(Z)V
+
+    iget-object v0, p0, Lqidxisbestlol/kw;->a:Lqidxisbestlol/kv;
+
+    iget-object v0, v0, Lqidxisbestlol/kv;->a:Lqidxisbestlol/kp;
+
+    invoke-virtual {v0}, Lqidxisbestlol/kp;->a()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    invoke-virtual {v0, v2}, Lqidxisbestlol/kp;->a(I)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit v1
+
+    invoke-super {p0}, Lqidxisbestlol/ut;->close()V
+
+    iget-object v0, p0, Lqidxisbestlol/kw;->a:Lqidxisbestlol/kv;
+
+    invoke-static {v0}, Lqidxisbestlol/kv;->a(Lqidxisbestlol/kv;)Lqidxisbestlol/ob;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lqidxisbestlol/ob;->c()V
 
     goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+
+    throw v0
 .end method

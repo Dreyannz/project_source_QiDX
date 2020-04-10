@@ -1,8 +1,21 @@
-.class public interface abstract Lqidxisbestlol/jr;
+.class public final Lqidxisbestlol/jr;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/util/Iterator;
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lqidxisbestlol/hy;)V
+    .locals 0
+
+    invoke-direct {p0}, Lqidxisbestlol/jr;-><init>()V
+
+    return-void
 .end method

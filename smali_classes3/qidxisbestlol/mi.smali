@@ -1,21 +1,44 @@
-.class public final Lqidxisbestlol/mi;
-.super Ljava/lang/Object;
+.class final Lqidxisbestlol/mi;
+.super Lqidxisbestlol/ib;
 .source "SourceFile"
+
+# interfaces
+.implements Lqidxisbestlol/hs;
+
+
+# instance fields
+.field final synthetic a:Ljava/util/List;
 
 
 # direct methods
-.method private constructor <init>()V
-    .locals 0
+.method constructor <init>(Ljava/util/List;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqidxisbestlol/mi;->a:Ljava/util/List;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lqidxisbestlol/ib;-><init>(I)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
-    .locals 0
 
-    invoke-direct {p0}, Lqidxisbestlol/mi;-><init>()V
+# virtual methods
+.method public synthetic a()Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    invoke-virtual {p0}, Lqidxisbestlol/mi;->b()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final b()Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/mi;->a:Ljava/util/List;
+
+    return-object v0
 .end method

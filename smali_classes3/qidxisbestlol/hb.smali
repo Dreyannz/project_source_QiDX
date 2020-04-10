@@ -4,35 +4,6 @@
 
 
 # direct methods
-.method public static final a(I)I
-    .locals 1
-
-    const/4 v0, 0x3
-
-    if-ge p0, v0, :cond_0
-
-    add-int/lit8 v0, p0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/high16 v0, 0x40000000    # 2.0f
-
-    if-ge p0, v0, :cond_1
-
-    div-int/lit8 v0, p0, 0x3
-
-    add-int/2addr v0, p0
-
-    goto :goto_0
-
-    :cond_1
-    const v0, 0x7fffffff
-
-    goto :goto_0
-.end method
-
 .method public static final a()Ljava/util/Map;
     .locals 2
 
@@ -59,7 +30,7 @@
 
     const-string v0, "$this$toMutableMap"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Ljava/util/LinkedHashMap;
 

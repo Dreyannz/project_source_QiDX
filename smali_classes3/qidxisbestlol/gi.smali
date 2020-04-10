@@ -13,7 +13,7 @@
 
     const-string v1, "java.util.Collections.singletonList(element)"
 
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -23,7 +23,7 @@
 
     const-string v0, "$this$copyToArrayOfAny"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
@@ -33,7 +33,7 @@
 
     const-class v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -53,7 +53,7 @@
 
     const-string v0, "java.util.Arrays.copyOf(\u2026 Array<Any?>::class.java)"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -1,46 +1,65 @@
 .class final Lqidxisbestlol/mj;
-.super Ljava/lang/Object;
+.super Lqidxisbestlol/ib;
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/mh;
+.implements Lqidxisbestlol/hs;
+
+
+# instance fields
+.field final synthetic a:Lqidxisbestlol/hs;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method constructor <init>(Lqidxisbestlol/hs;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqidxisbestlol/mj;->a:Lqidxisbestlol/hs;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lqidxisbestlol/ib;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lqidxisbestlol/nc;)Ljava/util/List;
+.method public synthetic a()Ljava/lang/Object;
     .locals 1
 
-    const-string v0, "url"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-static {}, Lqidxisbestlol/gh;->a()Ljava/util/List;
+    invoke-virtual {p0}, Lqidxisbestlol/mj;->b()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public a(Lqidxisbestlol/nc;Ljava/util/List;)V
+.method public final b()Ljava/util/List;
     .locals 1
 
-    const-string v0, "url"
+    nop
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    :try_start_0
+    iget-object v0, p0, Lqidxisbestlol/mj;->a:Lqidxisbestlol/hs;
 
-    const-string v0, "cookies"
+    invoke-interface {v0}, Lqidxisbestlol/hs;->a()Ljava/lang/Object;
 
-    invoke-static {p2, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v0
 
-    return-void
+    check-cast v0, Ljava/util/List;
+    :try_end_0
+    .catch Ljavax/net/ssl/SSLPeerUnverifiedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    invoke-static {}, Lqidxisbestlol/gh;->a()Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

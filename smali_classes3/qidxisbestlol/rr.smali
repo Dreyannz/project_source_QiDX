@@ -1,79 +1,87 @@
 .class public final Lqidxisbestlol/rr;
-.super Lqidxisbestlol/ox;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Z
-
-.field final synthetic c:Lqidxisbestlol/rq;
-
-.field final synthetic d:Z
-
-.field final synthetic e:Lqidxisbestlol/io;
-
-.field final synthetic f:Lqidxisbestlol/su;
-
-.field final synthetic g:Lqidxisbestlol/in;
-
-.field final synthetic h:Lqidxisbestlol/io;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZLjava/lang/String;ZLqidxisbestlol/rq;ZLqidxisbestlol/io;Lqidxisbestlol/su;Lqidxisbestlol/in;Lqidxisbestlol/io;)V
+.method private constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lqidxisbestlol/rr;->a:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Lqidxisbestlol/rr;->b:Z
+    return-void
+.end method
 
-    iput-object p5, p0, Lqidxisbestlol/rr;->c:Lqidxisbestlol/rq;
+.method public synthetic constructor <init>(Lqidxisbestlol/hy;)V
+    .locals 0
 
-    iput-boolean p6, p0, Lqidxisbestlol/rr;->d:Z
-
-    iput-object p7, p0, Lqidxisbestlol/rr;->e:Lqidxisbestlol/io;
-
-    iput-object p8, p0, Lqidxisbestlol/rr;->f:Lqidxisbestlol/su;
-
-    iput-object p9, p0, Lqidxisbestlol/rr;->g:Lqidxisbestlol/in;
-
-    iput-object p10, p0, Lqidxisbestlol/rr;->h:Lqidxisbestlol/io;
-
-    invoke-direct {p0, p3, p4}, Lqidxisbestlol/ox;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {p0}, Lqidxisbestlol/rr;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()J
+.method public final a(III)I
     .locals 3
 
-    iget-object v0, p0, Lqidxisbestlol/rr;->c:Lqidxisbestlol/rq;
+    and-int/lit8 v0, p2, 0x8
 
-    iget-object v0, v0, Lqidxisbestlol/rq;->a:Lqidxisbestlol/rj;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lqidxisbestlol/rj;->b()Lqidxisbestlol/rn;
+    add-int/lit8 p1, p1, -0x1
+
+    :cond_0
+    if-le p3, p1, :cond_1
+
+    new-instance v0, Ljava/io/IOException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "PROTOCOL_ERROR padding "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    iget-object v0, p0, Lqidxisbestlol/rr;->c:Lqidxisbestlol/rq;
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lqidxisbestlol/rq;->a:Lqidxisbestlol/rj;
+    move-result-object v1
 
-    iget-object v0, p0, Lqidxisbestlol/rr;->e:Lqidxisbestlol/io;
+    const-string v2, " > remaining length "
 
-    iget-object v0, v0, Lqidxisbestlol/io;->a:Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lqidxisbestlol/su;
+    move-result-object v1
 
-    invoke-virtual {v1, v2, v0}, Lqidxisbestlol/rn;->a(Lqidxisbestlol/rj;Lqidxisbestlol/su;)V
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    nop
+    move-result-object v1
 
-    const-wide/16 v0, -0x1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-wide v0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    throw v0
+
+    :cond_1
+    sub-int v0, p1, p3
+
+    return v0
+.end method
+
+.method public final a()Ljava/util/logging/Logger;
+    .locals 1
+
+    invoke-static {}, Lqidxisbestlol/rq;->a()Ljava/util/logging/Logger;
+
+    move-result-object v0
+
+    return-object v0
 .end method

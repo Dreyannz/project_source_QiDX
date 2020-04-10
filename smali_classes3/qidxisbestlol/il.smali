@@ -1,3 +1,5 @@
-.class public Lqidxisbestlol/il;
+.class public interface abstract Lqidxisbestlol/il;
 .super Ljava/lang/Object;
-.source "SourceFile"
+
+# interfaces
+.implements Lqidxisbestlol/im;

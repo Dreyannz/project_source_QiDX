@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
+.method public synthetic constructor <init>(Lqidxisbestlol/hy;)V
     .locals 0
 
     invoke-direct {p0}, Lqidxisbestlol/nn;-><init>()V
@@ -20,96 +20,120 @@
     return-void
 .end method
 
-.method private final a(Ljavax/net/ssl/X509TrustManager;)Ljavax/net/ssl/SSLSocketFactory;
-    .locals 4
 
-    nop
+# virtual methods
+.method public final a(Ljava/lang/String;)Lqidxisbestlol/nm;
+    .locals 3
 
-    :try_start_0
-    sget-object v0, Lqidxisbestlol/tr;->b:Lqidxisbestlol/ts;
+    const-string v0, "javaName"
 
-    invoke-virtual {v0}, Lqidxisbestlol/ts;->a()Lqidxisbestlol/tr;
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-    invoke-virtual {v0}, Lqidxisbestlol/tr;->g_()Ljavax/net/ssl/SSLContext;
+    move-result v0
 
-    move-result-object v0
+    sparse-switch v0, :sswitch_data_0
 
-    const/4 v1, 0x0
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const/4 v2, 0x1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-array v2, v2, [Ljavax/net/ssl/TrustManager;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v3, 0x0
+    const-string v2, "Unexpected TLS version: "
 
-    check-cast p1, Ljavax/net/ssl/TrustManager;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aput-object p1, v2, v3
+    move-result-object v1
 
-    const/4 v3, 0x0
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1, v2, v3}, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, "sslContext.socketFactory"
-
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/security/GeneralSecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/AssertionError;
-
-    const-string v2, "No System TLS"
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    move-object v0, v1
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     check-cast v0, Ljava/lang/Throwable;
 
     throw v0
-.end method
 
-.method public static final synthetic a(Lqidxisbestlol/nn;Ljavax/net/ssl/X509TrustManager;)Ljavax/net/ssl/SSLSocketFactory;
-    .locals 1
+    :sswitch_0
+    const-string v0, "SSLv3"
 
-    invoke-direct {p0, p1}, Lqidxisbestlol/nn;->a(Ljavax/net/ssl/X509TrustManager;)Ljavax/net/ssl/SSLSocketFactory;
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v0
 
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lqidxisbestlol/nm;->e:Lqidxisbestlol/nm;
+
+    :goto_0
     return-object v0
-.end method
 
+    :sswitch_1
+    const-string v0, "TLSv1"
 
-# virtual methods
-.method public final a()Ljava/util/List;
-    .locals 1
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {}, Lqidxisbestlol/nl;->B()Ljava/util/List;
+    move-result v0
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    return-object v0
-.end method
+    sget-object v0, Lqidxisbestlol/nm;->d:Lqidxisbestlol/nm;
 
-.method public final b()Ljava/util/List;
-    .locals 1
+    goto :goto_0
 
-    invoke-static {}, Lqidxisbestlol/nl;->C()Ljava/util/List;
+    :sswitch_2
+    const-string v0, "TLSv1.3"
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lqidxisbestlol/nm;->a:Lqidxisbestlol/nm;
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "TLSv1.2"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lqidxisbestlol/nm;->b:Lqidxisbestlol/nm;
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v0, "TLSv1.1"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lqidxisbestlol/nm;->c:Lqidxisbestlol/nm;
+
+    goto :goto_0
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x1dfc3f27 -> :sswitch_4
+        -0x1dfc3f26 -> :sswitch_3
+        -0x1dfc3f25 -> :sswitch_2
+        0x4b88569 -> :sswitch_0
+        0x4c38896 -> :sswitch_1
+    .end sparse-switch
 .end method

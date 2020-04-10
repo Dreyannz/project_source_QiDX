@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lqidxisbestlol/ie;)V
+.method public synthetic constructor <init>(Lqidxisbestlol/hy;)V
     .locals 0
 
     invoke-direct {p0}, Lqidxisbestlol/ti;-><init>()V
@@ -22,85 +22,12 @@
 
 
 # virtual methods
-.method public final a()Z
+.method public final a()Lqidxisbestlol/ts;
     .locals 1
-
-    invoke-static {}, Lqidxisbestlol/th;->c()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final a(III)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-static {}, Lorg/conscrypt/Conscrypt;->version()Lorg/conscrypt/Conscrypt$Version;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lorg/conscrypt/Conscrypt$Version;->major()I
-
-    move-result v3
-
-    if-eq v3, p1, :cond_2
-
-    invoke-virtual {v2}, Lorg/conscrypt/Conscrypt$Version;->major()I
-
-    move-result v2
-
-    if-le v2, p1, :cond_1
-
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v2}, Lorg/conscrypt/Conscrypt$Version;->minor()I
-
-    move-result v3
-
-    if-eq v3, p2, :cond_3
-
-    invoke-virtual {v2}, Lorg/conscrypt/Conscrypt$Version;->minor()I
-
-    move-result v2
-
-    if-gt v2, p2, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {v2}, Lorg/conscrypt/Conscrypt$Version;->patch()I
-
-    move-result v2
-
-    if-ge v2, p3, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
-.end method
-
-.method public final b()Lqidxisbestlol/th;
-    .locals 2
-
-    const/4 v1, 0x0
 
     check-cast p0, Lqidxisbestlol/ti;
 
-    invoke-virtual {p0}, Lqidxisbestlol/ti;->a()Z
+    invoke-virtual {p0}, Lqidxisbestlol/ti;->b()Z
 
     move-result v0
 
@@ -108,13 +35,43 @@
 
     new-instance v0, Lqidxisbestlol/th;
 
-    invoke-direct {v0, v1}, Lqidxisbestlol/th;-><init>(Lqidxisbestlol/ie;)V
+    invoke-direct {v0}, Lqidxisbestlol/th;-><init>()V
+
+    check-cast v0, Lqidxisbestlol/ts;
 
     :goto_0
     return-object v0
 
     :cond_0
-    move-object v0, v1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final b()Z
+    .locals 2
+
+    sget-object v0, Lqidxisbestlol/so;->a:Lqidxisbestlol/sp;
+
+    invoke-virtual {v0}, Lqidxisbestlol/sp;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

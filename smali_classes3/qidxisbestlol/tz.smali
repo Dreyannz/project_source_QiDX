@@ -1,369 +1,216 @@
-.class public Lqidxisbestlol/tz;
+.class public final Lqidxisbestlol/tz;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqidxisbestlol/ug;
-
-
-# static fields
-.field public static final a:Lqidxisbestlol/ua;
+.implements Lqidxisbestlol/ud;
 
 
 # instance fields
-.field private final b:Ljava/lang/reflect/Method;
-
-.field private final c:Ljava/lang/reflect/Method;
-
-.field private final d:Ljava/lang/reflect/Method;
-
-.field private final e:Ljava/lang/reflect/Method;
-
-.field private final f:Ljava/lang/Class;
+.field private final a:Ljava/util/Map;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lqidxisbestlol/ua;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/ua;-><init>(Lqidxisbestlol/ie;)V
-
-    sput-object v0, Lqidxisbestlol/tz;->a:Lqidxisbestlol/ua;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Class;)V
+.method public varargs constructor <init>([Ljava/security/cert/X509Certificate;)V
     .locals 6
 
-    const/4 v5, 0x1
+    const-string v0, "caCerts"
 
-    const/4 v4, 0x0
-
-    const-string v0, "sslSocketClass"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqidxisbestlol/tz;->f:Ljava/lang/Class;
+    nop
 
-    iget-object v0, p0, Lqidxisbestlol/tz;->f:Ljava/lang/Class;
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    const-string v1, "setUseSessionTickets"
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    new-array v2, v5, [Ljava/lang/Class;
+    check-cast v0, Ljava/util/Map;
 
-    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+    array-length v3, p1
 
-    aput-object v3, v2, v4
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    move v2, v1
 
-    move-result-object v0
+    :goto_0
+    if-ge v2, v3, :cond_1
 
-    const-string v1, "sslSocketClass.getDeclar\u2026:class.javaPrimitiveType)"
+    aget-object v4, p1, v2
 
-    invoke-static {v0, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v4}, Ljava/security/cert/X509Certificate;->getSubjectX500Principal()Ljavax/security/auth/x500/X500Principal;
 
-    iput-object v0, p0, Lqidxisbestlol/tz;->b:Ljava/lang/reflect/Method;
+    move-result-object v5
 
-    iget-object v0, p0, Lqidxisbestlol/tz;->f:Ljava/lang/Class;
+    const-string v1, "caCert.subjectX500Principal"
 
-    const-string v1, "setHostname"
+    invoke-static {v5, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-array v2, v5, [Ljava/lang/Class;
+    invoke-interface {v0, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-class v3, Ljava/lang/String;
+    move-result-object v1
 
-    aput-object v3, v2, v4
+    if-nez v1, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    new-instance v1, Ljava/util/LinkedHashSet;
 
-    move-result-object v0
+    invoke-direct {v1}, Ljava/util/LinkedHashSet;-><init>()V
 
-    iput-object v0, p0, Lqidxisbestlol/tz;->c:Ljava/lang/reflect/Method;
+    check-cast v1, Ljava/util/Set;
 
-    iget-object v0, p0, Lqidxisbestlol/tz;->f:Ljava/lang/Class;
+    invoke-interface {v0, v5, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "getAlpnSelectedProtocol"
+    :cond_0
+    check-cast v1, Ljava/util/Set;
 
-    new-array v2, v4, [Ljava/lang/Class;
+    invoke-interface {v1, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    add-int/lit8 v1, v2, 0x1
 
-    move-result-object v0
+    move v2, v1
 
-    iput-object v0, p0, Lqidxisbestlol/tz;->d:Ljava/lang/reflect/Method;
+    goto :goto_0
 
-    iget-object v0, p0, Lqidxisbestlol/tz;->f:Ljava/lang/Class;
-
-    const-string v1, "setAlpnProtocols"
-
-    new-array v2, v5, [Ljava/lang/Class;
-
-    const-class v3, [B
-
-    aput-object v3, v2, v4
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lqidxisbestlol/tz;->e:Ljava/lang/reflect/Method;
+    :cond_1
+    iput-object v0, p0, Lqidxisbestlol/tz;->a:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
-    .locals 4
-
-    const-string v0, "sslSocket"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "protocols"
-
-    invoke-static {p3, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Lqidxisbestlol/tz;->a(Ljavax/net/ssl/SSLSocket;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    nop
-
-    :try_start_0
-    iget-object v0, p0, Lqidxisbestlol/tz;->b:Ljava/lang/reflect/Method;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    if-eqz p2, :cond_0
-
-    iget-object v0, p0, Lqidxisbestlol/tz;->c:Ljava/lang/reflect/Method;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    aput-object p2, v1, v2
-
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    iget-object v0, p0, Lqidxisbestlol/tz;->e:Ljava/lang/reflect/Method;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    sget-object v3, Lqidxisbestlol/tr;->b:Lqidxisbestlol/ts;
-
-    invoke-virtual {v3, p3}, Lqidxisbestlol/ts;->b(Ljava/util/List;)[B
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
-
-    :cond_1
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    move-object v1, v0
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-
-    :catch_1
-    move-exception v0
-
-    move-object v1, v0
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
-.end method
-
-.method public a()Z
-    .locals 1
-
-    sget-object v0, Lqidxisbestlol/tc;->a:Lqidxisbestlol/td;
-
-    invoke-virtual {v0}, Lqidxisbestlol/td;->b()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public a(Ljavax/net/ssl/SSLSocket;)Z
-    .locals 1
-
-    const-string v0, "sslSocket"
-
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lqidxisbestlol/tz;->f:Ljava/lang/Class;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public b(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+.method public a(Ljava/security/cert/X509Certificate;)Ljava/security/cert/X509Certificate;
     .locals 4
 
     const/4 v2, 0x0
 
-    const-string v0, "sslSocket"
+    const-string v0, "cert"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lqidxisbestlol/tz;->a(Ljavax/net/ssl/SSLSocket;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return-object v2
-
-    :cond_0
-    nop
-
-    :try_start_0
-    iget-object v0, p0, Lqidxisbestlol/tz;->d:Ljava/lang/reflect/Method;
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getIssuerX500Principal()Ljavax/security/auth/x500/X500Principal;
 
     move-result-object v0
 
-    check-cast v0, [B
+    iget-object v1, p0, Lqidxisbestlol/tz;->a:Ljava/util/Map;
+
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Set;
 
     if-eqz v0, :cond_1
 
-    sget-object v3, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+    check-cast v0, Ljava/lang/Iterable;
 
-    const-string v1, "StandardCharsets.UTF_8"
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    invoke-static {v3, v1}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v3
 
-    new-instance v1, Ljava/lang/String;
+    :cond_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-direct {v1, v0, v3}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v0, v1
+
+    check-cast v0, Ljava/security/cert/X509Certificate;
+
+    nop
+
+    :try_start_0
+    invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getPublicKey()Ljava/security/PublicKey;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/security/cert/X509Certificate;->verify(Ljava/security/PublicKey;)V
     :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    if-eqz v0, :cond_0
 
     move-object v0, v1
 
     :goto_1
-    move-object v2, v0
+    check-cast v0, Ljava/security/cert/X509Certificate;
 
-    goto :goto_0
+    :goto_2
+    return-object v0
 
     :cond_1
     move-object v0, v2
 
-    goto :goto_1
+    goto :goto_2
 
     :catch_0
     move-exception v0
 
-    nop
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/NullPointerException;->getMessage()Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object v1
-
-    const-string v3, "ssl == null"
-
-    invoke-static {v1, v3}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
+    :cond_2
     move-object v0, v2
 
     goto :goto_1
+.end method
 
-    :cond_2
-    check-cast v0, Ljava/lang/Throwable;
+.method public equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    throw v0
+    move-object v0, p0
 
-    :catch_1
-    move-exception v0
+    check-cast v0, Lqidxisbestlol/tz;
 
-    move-object v1, v0
+    if-eq p1, v0, :cond_0
 
-    new-instance v0, Ljava/lang/AssertionError;
+    instance-of v0, p1, Lqidxisbestlol/tz;
 
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    if-eqz v0, :cond_1
 
-    check-cast v0, Ljava/lang/Throwable;
+    check-cast p1, Lqidxisbestlol/tz;
 
-    throw v0
+    iget-object v0, p1, Lqidxisbestlol/tz;->a:Ljava/util/Map;
 
-    :catch_2
-    move-exception v0
+    iget-object v1, p0, Lqidxisbestlol/tz;->a:Ljava/util/Map;
 
-    move-object v1, v0
+    invoke-static {v0, v1}, Lqidxisbestlol/ia;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance v0, Ljava/lang/AssertionError;
+    move-result v0
 
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    if-eqz v0, :cond_1
 
-    check-cast v0, Ljava/lang/Throwable;
+    :cond_0
+    const/4 v0, 0x1
 
-    throw v0
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lqidxisbestlol/tz;->a:Ljava/util/Map;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

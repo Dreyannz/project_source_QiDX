@@ -1,144 +1,105 @@
-.class public final Lqidxisbestlol/uj;
-.super Ljava/lang/Object;
+.class final Lqidxisbestlol/uj;
+.super Ljava/lang/Thread;
 .source "SourceFile"
 
 
 # direct methods
-.method public static final a(ILjava/lang/String;Ljava/lang/Throwable;)V
-    .locals 9
+.method public constructor <init>()V
+    .locals 1
 
-    const/4 v3, 0x0
+    const-string v0, "Okio Watchdog"
 
-    const-string v0, "message"
+    invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    nop
 
-    packed-switch p0, :pswitch_data_0
+    const/4 v0, 0x1
 
-    const/4 v0, 0x3
+    invoke-virtual {p0, v0}, Lqidxisbestlol/uj;->setDaemon(Z)V
 
-    move v8, v0
+    return-void
+.end method
 
-    :goto_0
-    if-eqz p2, :cond_4
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-static {p2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    :goto_1
-    invoke-virtual {v6}, Ljava/lang/String;->length()I
-
-    move-result v7
-
-    move v2, v3
-
-    :goto_2
-    if-ge v2, v7, :cond_2
-
-    move-object v0, v6
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    const/16 v1, 0xa
-
-    const/4 v4, 0x4
-
-    const/4 v5, 0x0
-
-    invoke-static/range {v0 .. v5}, Lqidxisbestlol/kj;->a(Ljava/lang/CharSequence;CIZILjava/lang/Object;)I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    :goto_3
-    add-int/lit16 v1, v2, 0xfa0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    const-string v4, "OkHttp"
-
-    if-nez v6, :cond_1
-
-    new-instance v0, Lqidxisbestlol/fp;
-
-    const-string v1, "null cannot be cast to non-null type java.lang.String"
-
-    invoke-direct {v0, v1}, Lqidxisbestlol/fp;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_0
-    const/4 v0, 0x5
-
-    move v8, v0
-
-    goto :goto_0
+# virtual methods
+.method public run()V
+    .locals 3
 
     :cond_0
-    move v0, v7
+    :goto_0
+    nop
 
-    goto :goto_3
+    nop
 
-    :cond_1
-    invoke-virtual {v6, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    const/4 v0, 0x0
+
+    :try_start_0
+    check-cast v0, Lqidxisbestlol/uh;
+
+    const-class v1, Lqidxisbestlol/uh;
+
+    monitor-enter v1
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    nop
+
+    :try_start_1
+    sget-object v0, Lqidxisbestlol/uh;->b:Lqidxisbestlol/ui;
+
+    invoke-virtual {v0}, Lqidxisbestlol/ui;->a()Lqidxisbestlol/uh;
+
+    move-result-object v0
+
+    invoke-static {}, Lqidxisbestlol/uh;->e()Lqidxisbestlol/uh;
 
     move-result-object v2
 
-    const-string v5, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
+    if-ne v0, v2, :cond_1
 
-    invoke-static {v2, v5}, Lqidxisbestlol/ig;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    invoke-static {v8, v4, v2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+    check-cast v0, Lqidxisbestlol/uh;
 
-    if-lt v1, v0, :cond_3
+    invoke-static {v0}, Lqidxisbestlol/uh;->a(Lqidxisbestlol/uh;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    add-int/lit8 v2, v1, 0x1
+    :try_start_2
+    monitor-exit v1
+    :try_end_2
+    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
 
-    goto :goto_2
-
-    :cond_2
     return-void
 
-    :cond_3
-    move v2, v1
+    :cond_1
+    nop
 
-    goto :goto_3
+    :try_start_3
+    sget-object v2, Lqidxisbestlol/fs;->a:Lqidxisbestlol/fs;
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    :cond_4
-    move-object v6, p1
+    :try_start_4
+    monitor-exit v1
 
-    goto :goto_1
+    if-eqz v0, :cond_0
 
-    :pswitch_data_0
-    .packed-switch 0x5
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0}, Lqidxisbestlol/uh;->a()V
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+
+    throw v0
+    :try_end_4
+    .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_0
 .end method

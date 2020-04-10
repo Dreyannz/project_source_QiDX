@@ -9,7 +9,7 @@
 
     const-string v0, "$this$lastIndex"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -25,7 +25,7 @@
 
     const-string v0, "$this$binarySearch"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -117,7 +117,7 @@
 
     const-string v0, "$this$asCollection"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lqidxisbestlol/ga;
 
@@ -278,7 +278,7 @@
 
     const-string v0, "$this$optimizeReadOnlyList"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -321,7 +321,7 @@
 
     const-string v0, "elements"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     array-length v0, p0
 
@@ -375,7 +375,7 @@
 
     const-string v0, "elements"
 
-    invoke-static {p0, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p0}, Lqidxisbestlol/gb;->c([Ljava/lang/Object;)Ljava/util/List;
 

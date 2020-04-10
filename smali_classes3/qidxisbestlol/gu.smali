@@ -6,7 +6,7 @@
 .implements Ljava/io/Serializable;
 .implements Ljava/util/List;
 .implements Ljava/util/RandomAccess;
-.implements Lqidxisbestlol/it;
+.implements Lqidxisbestlol/ik;
 
 
 # static fields
@@ -85,7 +85,7 @@
 
     const-string v0, "element"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -145,7 +145,7 @@
 
     const-string v0, "element"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, -0x1
 
@@ -157,7 +157,7 @@
 
     const-string v0, "element"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, -0x1
 
@@ -203,7 +203,7 @@
 
     const-string v0, "elements"
 
-    invoke-static {p1, v0}, Lqidxisbestlol/ig;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lqidxisbestlol/ia;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
@@ -489,7 +489,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p0}, Lqidxisbestlol/id;->a(Ljava/util/Collection;)[Ljava/lang/Object;
+    invoke-static {p0}, Lqidxisbestlol/hx;->a(Ljava/util/Collection;)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -499,7 +499,7 @@
 .method public toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p0, p1}, Lqidxisbestlol/id;->a(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {p0, p1}, Lqidxisbestlol/hx;->a(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
