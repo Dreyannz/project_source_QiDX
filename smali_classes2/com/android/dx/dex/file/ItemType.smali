@@ -19,7 +19,7 @@
 
 
 # static fields
-.field private static final synthetic ENUM$VALUES:[Lcom/android/dx/dex/file/ItemType;
+.field private static final synthetic $VALUES:[Lcom/android/dx/dex/file/ItemType;
 
 .field public static final enum TYPE_ANNOTATIONS_DIRECTORY_ITEM:Lcom/android/dx/dex/file/ItemType;
 
@@ -80,8 +80,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 10
+    .registers 10
 
+    .prologue
     const/4 v9, 0x3
 
     const/4 v8, 0x2
@@ -92,6 +93,7 @@
 
     const/4 v5, -0x1
 
+    .line 25
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_HEADER_ITEM"
@@ -102,6 +104,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_HEADER_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 26
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_STRING_ID_ITEM"
@@ -112,6 +115,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_STRING_ID_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 27
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_TYPE_ID_ITEM"
@@ -122,6 +126,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_TYPE_ID_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 28
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_PROTO_ID_ITEM"
@@ -132,6 +137,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_PROTO_ID_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 29
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_FIELD_ID_ITEM"
@@ -146,6 +152,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_FIELD_ID_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 30
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_METHOD_ID_ITEM"
@@ -160,6 +167,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_METHOD_ID_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 31
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_CLASS_DEF_ITEM"
@@ -174,6 +182,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_CLASS_DEF_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 32
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_CALL_SITE_ID_ITEM"
@@ -188,6 +197,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_CALL_SITE_ID_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 33
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_METHOD_HANDLE_ITEM"
@@ -202,6 +212,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_METHOD_HANDLE_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 34
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_MAP_LIST"
@@ -216,6 +227,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_MAP_LIST:Lcom/android/dx/dex/file/ItemType;
 
+    .line 35
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_TYPE_LIST"
@@ -230,6 +242,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_TYPE_LIST:Lcom/android/dx/dex/file/ItemType;
 
+    .line 36
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_ANNOTATION_SET_REF_LIST"
@@ -244,6 +257,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_ANNOTATION_SET_REF_LIST:Lcom/android/dx/dex/file/ItemType;
 
+    .line 37
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_ANNOTATION_SET_ITEM"
@@ -258,6 +272,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_ANNOTATION_SET_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 38
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_CLASS_DATA_ITEM"
@@ -272,6 +287,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_CLASS_DATA_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 39
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_CODE_ITEM"
@@ -286,6 +302,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_CODE_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 40
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_STRING_DATA_ITEM"
@@ -300,6 +317,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_STRING_DATA_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 41
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_DEBUG_INFO_ITEM"
@@ -314,6 +332,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_DEBUG_INFO_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 42
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_ANNOTATION_ITEM"
@@ -328,6 +347,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_ANNOTATION_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 43
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_ENCODED_ARRAY_ITEM"
@@ -342,6 +362,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_ENCODED_ARRAY_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 44
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_ANNOTATIONS_DIRECTORY_ITEM"
@@ -356,6 +377,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_ANNOTATIONS_DIRECTORY_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 45
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_MAP_ITEM"
@@ -368,6 +390,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_MAP_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 46
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_TYPE_ITEM"
@@ -380,6 +403,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_TYPE_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 47
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_EXCEPTION_HANDLER_ITEM"
@@ -392,6 +416,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_EXCEPTION_HANDLER_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 48
     new-instance v0, Lcom/android/dx/dex/file/ItemType;
 
     const-string v1, "TYPE_ANNOTATION_SET_REF_ITEM"
@@ -404,6 +429,7 @@
 
     sput-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_ANNOTATION_SET_REF_ITEM:Lcom/android/dx/dex/file/ItemType;
 
+    .line 24
     const/16 v0, 0x18
 
     new-array v0, v0, [Lcom/android/dx/dex/file/ItemType;
@@ -544,30 +570,47 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/dx/dex/file/ItemType;->ENUM$VALUES:[Lcom/android/dx/dex/file/ItemType;
+    sput-object v0, Lcom/android/dx/dex/file/ItemType;->$VALUES:[Lcom/android/dx/dex/file/ItemType;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 3
+    .registers 8
+    .param p3, "mapValue"    # I
+    .param p4, "typeName"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 
+    .prologue
+    .line 65
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 66
     iput p3, p0, Lcom/android/dx/dex/file/ItemType;->mapValue:I
 
+    .line 67
     iput-object p4, p0, Lcom/android/dx/dex/file/ItemType;->typeName:Ljava/lang/String;
 
+    .line 70
     move-object v0, p4
 
+    .line 71
+    .local v0, "human":Ljava/lang/String;
     const-string v1, "_item"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1b
 
+    .line 72
     const/4 v1, 0x0
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -580,7 +623,8 @@
 
     move-result-object v0
 
-    :cond_0
+    .line 74
+    :cond_1b
     const/16 v1, 0x5f
 
     const/16 v2, 0x20
@@ -591,12 +635,16 @@
 
     iput-object v1, p0, Lcom/android/dx/dex/file/ItemType;->humanName:Ljava/lang/String;
 
+    .line 75
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/dx/dex/file/ItemType;
-    .locals 1
+    .registers 2
+    .param p0, "name"    # Ljava/lang/String;
 
+    .prologue
+    .line 24
     const-class v0, Lcom/android/dx/dex/file/ItemType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -609,42 +657,48 @@
 .end method
 
 .method public static values()[Lcom/android/dx/dex/file/ItemType;
-    .locals 4
+    .registers 1
 
-    const/4 v3, 0x0
+    .prologue
+    .line 24
+    sget-object v0, Lcom/android/dx/dex/file/ItemType;->$VALUES:[Lcom/android/dx/dex/file/ItemType;
 
-    sget-object v0, Lcom/android/dx/dex/file/ItemType;->ENUM$VALUES:[Lcom/android/dx/dex/file/ItemType;
+    invoke-virtual {v0}, [Lcom/android/dx/dex/file/ItemType;->clone()Ljava/lang/Object;
 
-    array-length v1, v0
+    move-result-object v0
 
-    new-array v2, v1, [Lcom/android/dx/dex/file/ItemType;
+    check-cast v0, [Lcom/android/dx/dex/file/ItemType;
 
-    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return-object v2
+    return-object v0
 .end method
 
 
 # virtual methods
 .method public getMapValue()I
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 83
     iget v0, p0, Lcom/android/dx/dex/file/ItemType;->mapValue:I
 
     return v0
 .end method
 
 .method public getTypeName()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 92
     iget-object v0, p0, Lcom/android/dx/dex/file/ItemType;->typeName:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method public toHuman()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 98
     iget-object v0, p0, Lcom/android/dx/dex/file/ItemType;->humanName:Ljava/lang/String;
 
     return-object v0

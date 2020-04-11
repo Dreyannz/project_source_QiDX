@@ -19,8 +19,10 @@
 
 # direct methods
 .method constructor <init>()V
-    .locals 0
+    .registers 1
 
+    .prologue
+    .line 428
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,8 +31,11 @@
 
 # virtual methods
 .method public getIndex(Lcom/android/dx/rop/cst/Constant;)I
-    .locals 1
+    .registers 3
+    .param p1, "cst"    # Lcom/android/dx/rop/cst/Constant;
 
+    .prologue
+    .line 432
     const/4 v0, 0x0
 
     return v0

@@ -5,18 +5,28 @@
 
 # direct methods
 .method private constructor <init>(Lcom/android/dx/rop/cst/CstArray$List;)V
-    .locals 0
+    .registers 2
+    .param p1, "list"    # Lcom/android/dx/rop/cst/CstArray$List;
 
+    .prologue
+    .line 62
     invoke-direct {p0, p1}, Lcom/android/dx/rop/cst/CstArray;-><init>(Lcom/android/dx/rop/cst/CstArray$List;)V
 
+    .line 63
     return-void
 .end method
 
 .method public static make(Lcom/android/dx/rop/cst/CstMethodHandle;Lcom/android/dx/rop/cst/CstNat;Lcom/android/dx/cf/code/BootstrapMethodArgumentsList;)Lcom/android/dx/rop/cst/CstCallSite;
-    .locals 5
+    .registers 8
+    .param p0, "bootstrapHandle"    # Lcom/android/dx/rop/cst/CstMethodHandle;
+    .param p1, "nat"    # Lcom/android/dx/rop/cst/CstNat;
+    .param p2, "optionalArguments"    # Lcom/android/dx/cf/code/BootstrapMethodArgumentsList;
 
-    if-nez p0, :cond_0
+    .prologue
+    .line 37
+    if-nez p0, :cond_a
 
+    .line 38
     new-instance v2, Ljava/lang/NullPointerException;
 
     const-string v3, "bootstrapMethodHandle == null"
@@ -25,9 +35,11 @@
 
     throw v2
 
-    :cond_0
-    if-nez p1, :cond_1
+    .line 39
+    :cond_a
+    if-nez p1, :cond_14
 
+    .line 40
     new-instance v2, Ljava/lang/NullPointerException;
 
     const-string v3, "nat == null"
@@ -36,7 +48,8 @@
 
     throw v2
 
-    :cond_1
+    .line 43
+    :cond_14
     new-instance v1, Lcom/android/dx/rop/cst/CstArray$List;
 
     invoke-virtual {p2}, Lcom/android/dx/cf/code/BootstrapMethodArgumentsList;->size()I
@@ -47,10 +60,13 @@
 
     invoke-direct {v1, v2}, Lcom/android/dx/rop/cst/CstArray$List;-><init>(I)V
 
+    .line 44
+    .local v1, "list":Lcom/android/dx/rop/cst/CstArray$List;
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2, p0}, Lcom/android/dx/rop/cst/CstArray$List;->set(ILcom/android/dx/rop/cst/Constant;)V
 
+    .line 45
     const/4 v2, 0x1
 
     invoke-virtual {p1}, Lcom/android/dx/rop/cst/CstNat;->getName()Lcom/android/dx/rop/cst/CstString;
@@ -59,6 +75,7 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/dx/rop/cst/CstArray$List;->set(ILcom/android/dx/rop/cst/Constant;)V
 
+    .line 46
     const/4 v2, 0x2
 
     new-instance v3, Lcom/android/dx/rop/cst/CstProtoRef;
@@ -79,27 +96,21 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/dx/rop/cst/CstArray$List;->set(ILcom/android/dx/rop/cst/Constant;)V
 
-    if-eqz p2, :cond_2
+    .line 47
+    if-eqz p2, :cond_55
 
+    .line 48
     const/4 v0, 0x0
 
-    :goto_0
+    .local v0, "i":I
+    :goto_43
     invoke-virtual {p2}, Lcom/android/dx/cf/code/BootstrapMethodArgumentsList;->size()I
 
     move-result v2
 
-    if-lt v0, v2, :cond_3
+    if-ge v0, v2, :cond_55
 
-    :cond_2
-    invoke-virtual {v1}, Lcom/android/dx/rop/cst/CstArray$List;->setImmutable()V
-
-    new-instance v2, Lcom/android/dx/rop/cst/CstCallSite;
-
-    invoke-direct {v2, v1}, Lcom/android/dx/rop/cst/CstCallSite;-><init>(Lcom/android/dx/rop/cst/CstArray$List;)V
-
-    return-object v2
-
-    :cond_3
+    .line 49
     add-int/lit8 v2, v0, 0x3
 
     invoke-virtual {p2, v0}, Lcom/android/dx/cf/code/BootstrapMethodArgumentsList;->get(I)Lcom/android/dx/rop/cst/Constant;
@@ -108,22 +119,39 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/dx/rop/cst/CstArray$List;->set(ILcom/android/dx/rop/cst/Constant;)V
 
+    .line 48
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_0
+    goto :goto_43
+
+    .line 52
+    .end local v0    # "i":I
+    :cond_55
+    invoke-virtual {v1}, Lcom/android/dx/rop/cst/CstArray$List;->setImmutable()V
+
+    .line 53
+    new-instance v2, Lcom/android/dx/rop/cst/CstCallSite;
+
+    invoke-direct {v2, v1}, Lcom/android/dx/rop/cst/CstCallSite;-><init>(Lcom/android/dx/rop/cst/CstArray$List;)V
+
+    return-object v2
 .end method
 
 
 # virtual methods
 .method protected compareTo0(Lcom/android/dx/rop/cst/Constant;)I
-    .locals 2
+    .registers 4
+    .param p1, "other"    # Lcom/android/dx/rop/cst/Constant;
 
+    .prologue
+    .line 84
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstCallSite;->getList()Lcom/android/dx/rop/cst/CstArray$List;
 
     move-result-object v0
 
     check-cast p1, Lcom/android/dx/rop/cst/CstCallSite;
 
+    .end local p1    # "other":Lcom/android/dx/rop/cst/Constant;
     invoke-virtual {p1}, Lcom/android/dx/rop/cst/CstCallSite;->getList()Lcom/android/dx/rop/cst/CstArray$List;
 
     move-result-object v1
@@ -136,18 +164,23 @@
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 2
+    .registers 4
+    .param p1, "other"    # Ljava/lang/Object;
 
+    .prologue
+    .line 68
     instance-of v0, p1, Lcom/android/dx/rop/cst/CstCallSite;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_13
 
+    .line 69
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstCallSite;->getList()Lcom/android/dx/rop/cst/CstArray$List;
 
     move-result-object v0
 
     check-cast p1, Lcom/android/dx/rop/cst/CstCallSite;
 
+    .end local p1    # "other":Ljava/lang/Object;
     invoke-virtual {p1}, Lcom/android/dx/rop/cst/CstCallSite;->getList()Lcom/android/dx/rop/cst/CstArray$List;
 
     move-result-object v1
@@ -156,18 +189,22 @@
 
     move-result v0
 
-    :goto_0
+    .line 71
+    :goto_12
     return v0
 
-    :cond_0
+    .restart local p1    # "other":Ljava/lang/Object;
+    :cond_13
     const/4 v0, 0x0
 
-    goto :goto_0
+    goto :goto_12
 .end method
 
 .method public hashCode()I
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 78
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstCallSite;->getList()Lcom/android/dx/rop/cst/CstArray$List;
 
     move-result-object v0
@@ -180,16 +217,20 @@
 .end method
 
 .method public isCategory2()Z
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 102
     const/4 v0, 0x0
 
     return v0
 .end method
 
 .method public toHuman()Ljava/lang/String;
-    .locals 4
+    .registers 5
 
+    .prologue
+    .line 108
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstCallSite;->getList()Lcom/android/dx/rop/cst/CstArray$List;
 
     move-result-object v0
@@ -208,8 +249,10 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 4
+    .registers 5
 
+    .prologue
+    .line 90
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstCallSite;->getList()Lcom/android/dx/rop/cst/CstArray$List;
 
     move-result-object v0
@@ -228,8 +271,10 @@
 .end method
 
 .method public typeName()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 96
     const-string v0, "call site"
 
     return-object v0

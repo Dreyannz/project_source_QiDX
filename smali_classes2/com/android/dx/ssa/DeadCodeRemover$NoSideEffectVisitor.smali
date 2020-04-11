@@ -23,26 +23,36 @@
 
 # direct methods
 .method public constructor <init>(Ljava/util/BitSet;)V
-    .locals 0
+    .registers 2
+    .param p1, "noSideEffectRegs"    # Ljava/util/BitSet;
 
+    .prologue
+    .line 240
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 241
     iput-object p1, p0, Lcom/android/dx/ssa/DeadCodeRemover$NoSideEffectVisitor;->noSideEffectRegs:Ljava/util/BitSet;
 
+    .line 242
     return-void
 .end method
 
 
 # virtual methods
 .method public visitMoveInsn(Lcom/android/dx/ssa/NormalSsaInsn;)V
-    .locals 2
+    .registers 4
+    .param p1, "insn"    # Lcom/android/dx/ssa/NormalSsaInsn;
 
-    invoke-static {p1}, Lcom/android/dx/ssa/DeadCodeRemover;->access$0(Lcom/android/dx/ssa/SsaInsn;)Z
+    .prologue
+    .line 248
+    # invokes: Lcom/android/dx/ssa/DeadCodeRemover;->hasSideEffect(Lcom/android/dx/ssa/SsaInsn;)Z
+    invoke-static {p1}, Lcom/android/dx/ssa/DeadCodeRemover;->access$000(Lcom/android/dx/ssa/SsaInsn;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_13
 
+    .line 249
     iget-object v0, p0, Lcom/android/dx/ssa/DeadCodeRemover$NoSideEffectVisitor;->noSideEffectRegs:Ljava/util/BitSet;
 
     invoke-virtual {p1}, Lcom/android/dx/ssa/NormalSsaInsn;->getResult()Lcom/android/dx/rop/code/RegisterSpec;
@@ -55,25 +65,33 @@
 
     invoke-virtual {v0, v1}, Ljava/util/BitSet;->set(I)V
 
-    :cond_0
+    .line 251
+    :cond_13
     return-void
 .end method
 
 .method public visitNonMoveInsn(Lcom/android/dx/ssa/NormalSsaInsn;)V
-    .locals 3
+    .registers 5
+    .param p1, "insn"    # Lcom/android/dx/ssa/NormalSsaInsn;
 
+    .prologue
+    .line 265
     invoke-virtual {p1}, Lcom/android/dx/ssa/NormalSsaInsn;->getResult()Lcom/android/dx/rop/code/RegisterSpec;
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/android/dx/ssa/DeadCodeRemover;->access$0(Lcom/android/dx/ssa/SsaInsn;)Z
+    .line 266
+    .local v0, "result":Lcom/android/dx/rop/code/RegisterSpec;
+    # invokes: Lcom/android/dx/ssa/DeadCodeRemover;->hasSideEffect(Lcom/android/dx/ssa/SsaInsn;)Z
+    invoke-static {p1}, Lcom/android/dx/ssa/DeadCodeRemover;->access$000(Lcom/android/dx/ssa/SsaInsn;)Z
 
     move-result v1
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_15
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_15
 
+    .line 267
     iget-object v1, p0, Lcom/android/dx/ssa/DeadCodeRemover$NoSideEffectVisitor;->noSideEffectRegs:Ljava/util/BitSet;
 
     invoke-virtual {v0}, Lcom/android/dx/rop/code/RegisterSpec;->getReg()I
@@ -82,19 +100,25 @@
 
     invoke-virtual {v1, v2}, Ljava/util/BitSet;->set(I)V
 
-    :cond_0
+    .line 269
+    :cond_15
     return-void
 .end method
 
 .method public visitPhiInsn(Lcom/android/dx/ssa/PhiInsn;)V
-    .locals 2
+    .registers 4
+    .param p1, "phi"    # Lcom/android/dx/ssa/PhiInsn;
 
-    invoke-static {p1}, Lcom/android/dx/ssa/DeadCodeRemover;->access$0(Lcom/android/dx/ssa/SsaInsn;)Z
+    .prologue
+    .line 257
+    # invokes: Lcom/android/dx/ssa/DeadCodeRemover;->hasSideEffect(Lcom/android/dx/ssa/SsaInsn;)Z
+    invoke-static {p1}, Lcom/android/dx/ssa/DeadCodeRemover;->access$000(Lcom/android/dx/ssa/SsaInsn;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_13
 
+    .line 258
     iget-object v0, p0, Lcom/android/dx/ssa/DeadCodeRemover$NoSideEffectVisitor;->noSideEffectRegs:Ljava/util/BitSet;
 
     invoke-virtual {p1}, Lcom/android/dx/ssa/PhiInsn;->getResult()Lcom/android/dx/rop/code/RegisterSpec;
@@ -107,6 +131,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/BitSet;->set(I)V
 
-    :cond_0
+    .line 260
+    :cond_13
     return-void
 .end method

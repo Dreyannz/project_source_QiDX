@@ -1,4 +1,4 @@
-.class enum Lcom/android/dx/io/instructions/InstructionCodec$8;
+.class final enum Lcom/android/dx/io/instructions/InstructionCodec$8;
 .super Lcom/android/dx/io/instructions/InstructionCodec;
 .source "InstructionCodec.java"
 
@@ -9,18 +9,102 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x4000
+    accessFlags = 0x4010
     name = null
 .end annotation
 
 
 # direct methods
 .method constructor <init>(Ljava/lang/String;I)V
-    .locals 1
+    .registers 4
 
+    .prologue
+    .line 163
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/dx/io/instructions/InstructionCodec;-><init>(Ljava/lang/String;ILcom/android/dx/io/instructions/InstructionCodec;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/dx/io/instructions/InstructionCodec;-><init>(Ljava/lang/String;ILcom/android/dx/io/instructions/InstructionCodec$1;)V
 
+    return-void
+.end method
+
+
+# virtual methods
+.method public decode(ILcom/android/dx/io/instructions/CodeInput;)Lcom/android/dx/io/instructions/DecodedInstruction;
+    .registers 12
+    .param p1, "opcodeUnit"    # I
+    .param p2, "in"    # Lcom/android/dx/io/instructions/CodeInput;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/EOFException;
+        }
+    .end annotation
+
+    .prologue
+    .line 168
+    # invokes: Lcom/android/dx/io/instructions/InstructionCodec;->byte0(I)I
+    invoke-static {p1}, Lcom/android/dx/io/instructions/InstructionCodec;->access$100(I)I
+
+    move-result v2
+
+    .line 169
+    .local v2, "opcode":I
+    # invokes: Lcom/android/dx/io/instructions/InstructionCodec;->byte1(I)I
+    invoke-static {p1}, Lcom/android/dx/io/instructions/InstructionCodec;->access$200(I)I
+
+    move-result v8
+
+    .line 170
+    .local v8, "literal":I
+    invoke-interface {p2}, Lcom/android/dx/io/instructions/CodeInput;->read()I
+
+    move-result v3
+
+    .line 171
+    .local v3, "index":I
+    new-instance v0, Lcom/android/dx/io/instructions/ZeroRegisterDecodedInstruction;
+
+    sget-object v4, Lcom/android/dx/io/IndexType;->VARIES:Lcom/android/dx/io/IndexType;
+
+    const/4 v5, 0x0
+
+    int-to-long v6, v8
+
+    move-object v1, p0
+
+    invoke-direct/range {v0 .. v7}, Lcom/android/dx/io/instructions/ZeroRegisterDecodedInstruction;-><init>(Lcom/android/dx/io/instructions/InstructionCodec;IILcom/android/dx/io/IndexType;IJ)V
+
+    return-object v0
+.end method
+
+.method public encode(Lcom/android/dx/io/instructions/DecodedInstruction;Lcom/android/dx/io/instructions/CodeOutput;)V
+    .registers 5
+    .param p1, "insn"    # Lcom/android/dx/io/instructions/DecodedInstruction;
+    .param p2, "out"    # Lcom/android/dx/io/instructions/CodeOutput;
+
+    .prologue
+    .line 178
+    .line 179
+    invoke-virtual {p1}, Lcom/android/dx/io/instructions/DecodedInstruction;->getOpcode()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Lcom/android/dx/io/instructions/DecodedInstruction;->getLiteralByte()I
+
+    move-result v1
+
+    # invokes: Lcom/android/dx/io/instructions/InstructionCodec;->codeUnit(II)S
+    invoke-static {v0, v1}, Lcom/android/dx/io/instructions/InstructionCodec;->access$600(II)S
+
+    move-result v0
+
+    .line 180
+    invoke-virtual {p1}, Lcom/android/dx/io/instructions/DecodedInstruction;->getIndexUnit()S
+
+    move-result v1
+
+    .line 178
+    invoke-interface {p2, v0, v1}, Lcom/android/dx/io/instructions/CodeOutput;->write(SS)V
+
+    .line 181
     return-void
 .end method

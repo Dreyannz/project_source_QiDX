@@ -5,18 +5,25 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/dx/rop/cst/CstType;)V
-    .locals 0
+    .registers 2
+    .param p1, "type"    # Lcom/android/dx/rop/cst/CstType;
 
+    .prologue
+    .line 35
     invoke-direct {p0, p1}, Lcom/android/dx/dex/file/IdItem;-><init>(Lcom/android/dx/rop/cst/CstType;)V
 
+    .line 36
     return-void
 .end method
 
 
 # virtual methods
 .method public addContents(Lcom/android/dx/dex/file/DexFile;)V
-    .locals 2
+    .registers 4
+    .param p1, "file"    # Lcom/android/dx/dex/file/DexFile;
 
+    .prologue
+    .line 53
     invoke-virtual {p1}, Lcom/android/dx/dex/file/DexFile;->getStringIds()Lcom/android/dx/dex/file/StringIdsSection;
 
     move-result-object v0
@@ -31,36 +38,49 @@
 
     invoke-virtual {v0, v1}, Lcom/android/dx/dex/file/StringIdsSection;->intern(Lcom/android/dx/rop/cst/CstString;)Lcom/android/dx/dex/file/StringIdItem;
 
+    .line 54
     return-void
 .end method
 
 .method public itemType()Lcom/android/dx/dex/file/ItemType;
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 41
     sget-object v0, Lcom/android/dx/dex/file/ItemType;->TYPE_TYPE_ID_ITEM:Lcom/android/dx/dex/file/ItemType;
 
     return-object v0
 .end method
 
 .method public writeSize()I
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 47
     const/4 v0, 0x4
 
     return v0
 .end method
 
 .method public writeTo(Lcom/android/dx/dex/file/DexFile;Lcom/android/dx/util/AnnotatedOutput;)V
-    .locals 6
+    .registers 9
+    .param p1, "file"    # Lcom/android/dx/dex/file/DexFile;
+    .param p2, "out"    # Lcom/android/dx/util/AnnotatedOutput;
 
+    .prologue
+    .line 59
     invoke-virtual {p0}, Lcom/android/dx/dex/file/TypeIdItem;->getDefiningClass()Lcom/android/dx/rop/cst/CstType;
 
     move-result-object v2
 
+    .line 60
+    .local v2, "type":Lcom/android/dx/rop/cst/CstType;
     invoke-virtual {v2}, Lcom/android/dx/rop/cst/CstType;->getDescriptor()Lcom/android/dx/rop/cst/CstString;
 
     move-result-object v0
 
+    .line 61
+    .local v0, "descriptor":Lcom/android/dx/rop/cst/CstString;
     invoke-virtual {p1}, Lcom/android/dx/dex/file/DexFile;->getStringIds()Lcom/android/dx/dex/file/StringIdsSection;
 
     move-result-object v3
@@ -69,25 +89,28 @@
 
     move-result v1
 
+    .line 63
+    .local v1, "idx":I
     invoke-interface {p2}, Lcom/android/dx/util/AnnotatedOutput;->annotates()Z
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_54
 
+    .line 64
     const/4 v3, 0x0
 
     new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {p0}, Lcom/android/dx/dex/file/TypeIdItem;->indexString()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v4
 
     const/16 v5, 0x20
 
@@ -109,13 +132,18 @@
 
     invoke-interface {p2, v3, v4}, Lcom/android/dx/util/AnnotatedOutput;->annotate(ILjava/lang/String;)V
 
+    .line 65
     const/4 v3, 0x4
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "  descriptor_idx: "
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-static {v1}, Lcom/android/dx/util/Hex;->u4(I)Ljava/lang/String;
 
@@ -131,8 +159,10 @@
 
     invoke-interface {p2, v3, v4}, Lcom/android/dx/util/AnnotatedOutput;->annotate(ILjava/lang/String;)V
 
-    :cond_0
+    .line 68
+    :cond_54
     invoke-interface {p2, v1}, Lcom/android/dx/util/AnnotatedOutput;->writeInt(I)V
 
+    .line 69
     return-void
 .end method

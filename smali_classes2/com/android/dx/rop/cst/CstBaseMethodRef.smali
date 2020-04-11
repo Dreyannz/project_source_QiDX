@@ -11,10 +11,15 @@
 
 # direct methods
 .method constructor <init>(Lcom/android/dx/rop/cst/CstType;Lcom/android/dx/rop/cst/CstNat;)V
-    .locals 2
+    .registers 5
+    .param p1, "definingClass"    # Lcom/android/dx/rop/cst/CstType;
+    .param p2, "nat"    # Lcom/android/dx/rop/cst/CstNat;
 
+    .prologue
+    .line 47
     invoke-direct {p0, p1, p2}, Lcom/android/dx/rop/cst/CstMemberRef;-><init>(Lcom/android/dx/rop/cst/CstType;Lcom/android/dx/rop/cst/CstNat;)V
 
+    .line 49
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstBaseMethodRef;->getNat()Lcom/android/dx/rop/cst/CstNat;
 
     move-result-object v1
@@ -27,54 +32,71 @@
 
     move-result-object v0
 
+    .line 50
+    .local v0, "descriptor":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstBaseMethodRef;->isSignaturePolymorphic()Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1f
 
+    .line 56
     invoke-static {v0}, Lcom/android/dx/rop/type/Prototype;->fromDescriptor(Ljava/lang/String;)Lcom/android/dx/rop/type/Prototype;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/dx/rop/cst/CstBaseMethodRef;->prototype:Lcom/android/dx/rop/type/Prototype;
 
-    :goto_0
+    .line 60
+    :goto_1b
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/dx/rop/cst/CstBaseMethodRef;->instancePrototype:Lcom/android/dx/rop/type/Prototype;
 
+    .line 61
     return-void
 
-    :cond_0
+    .line 58
+    :cond_1f
     invoke-static {v0}, Lcom/android/dx/rop/type/Prototype;->intern(Ljava/lang/String;)Lcom/android/dx/rop/type/Prototype;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/dx/rop/cst/CstBaseMethodRef;->prototype:Lcom/android/dx/rop/type/Prototype;
 
-    goto :goto_0
+    goto :goto_1b
 .end method
 
 
 # virtual methods
 .method protected final compareTo0(Lcom/android/dx/rop/cst/Constant;)I
-    .locals 4
+    .registers 6
+    .param p1, "other"    # Lcom/android/dx/rop/cst/Constant;
 
+    .prologue
+    .line 99
     invoke-super {p0, p1}, Lcom/android/dx/rop/cst/CstMemberRef;->compareTo0(Lcom/android/dx/rop/cst/Constant;)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    .line 101
+    .local v0, "cmp":I
+    if-eqz v0, :cond_7
 
-    :goto_0
+    .line 106
+    .end local v0    # "cmp":I
+    :goto_6
     return v0
 
-    :cond_0
+    .restart local v0    # "cmp":I
+    :cond_7
     move-object v1, p1
 
+    .line 105
     check-cast v1, Lcom/android/dx/rop/cst/CstBaseMethodRef;
 
+    .line 106
+    .local v1, "otherMethod":Lcom/android/dx/rop/cst/CstBaseMethodRef;
     iget-object v2, p0, Lcom/android/dx/rop/cst/CstBaseMethodRef;->prototype:Lcom/android/dx/rop/type/Prototype;
 
     iget-object v3, v1, Lcom/android/dx/rop/cst/CstBaseMethodRef;->prototype:Lcom/android/dx/rop/type/Prototype;
@@ -83,12 +105,15 @@
 
     move-result v0
 
-    goto :goto_0
+    goto :goto_6
 .end method
 
 .method public final getParameterWordCount(Z)I
-    .locals 1
+    .registers 3
+    .param p1, "isStatic"    # Z
 
+    .prologue
+    .line 135
     invoke-virtual {p0, p1}, Lcom/android/dx/rop/cst/CstBaseMethodRef;->getPrototype(Z)Lcom/android/dx/rop/type/Prototype;
 
     move-result-object v0
@@ -105,28 +130,37 @@
 .end method
 
 .method public final getPrototype()Lcom/android/dx/rop/type/Prototype;
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 70
     iget-object v0, p0, Lcom/android/dx/rop/cst/CstBaseMethodRef;->prototype:Lcom/android/dx/rop/type/Prototype;
 
     return-object v0
 .end method
 
 .method public final getPrototype(Z)Lcom/android/dx/rop/type/Prototype;
-    .locals 2
+    .registers 4
+    .param p1, "isStatic"    # Z
 
-    if-eqz p1, :cond_0
+    .prologue
+    .line 85
+    if-eqz p1, :cond_5
 
+    .line 86
     iget-object v1, p0, Lcom/android/dx/rop/cst/CstBaseMethodRef;->prototype:Lcom/android/dx/rop/type/Prototype;
 
-    :goto_0
+    .line 92
+    :goto_4
     return-object v1
 
-    :cond_0
+    .line 88
+    :cond_5
     iget-object v1, p0, Lcom/android/dx/rop/cst/CstBaseMethodRef;->instancePrototype:Lcom/android/dx/rop/type/Prototype;
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_19
 
+    .line 89
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstBaseMethodRef;->getDefiningClass()Lcom/android/dx/rop/cst/CstType;
 
     move-result-object v1
@@ -135,6 +169,8 @@
 
     move-result-object v0
 
+    .line 90
+    .local v0, "thisType":Lcom/android/dx/rop/type/Type;
     iget-object v1, p0, Lcom/android/dx/rop/cst/CstBaseMethodRef;->prototype:Lcom/android/dx/rop/type/Prototype;
 
     invoke-virtual {v1, v0}, Lcom/android/dx/rop/type/Prototype;->withFirstParameter(Lcom/android/dx/rop/type/Type;)Lcom/android/dx/rop/type/Prototype;
@@ -143,15 +179,19 @@
 
     iput-object v1, p0, Lcom/android/dx/rop/cst/CstBaseMethodRef;->instancePrototype:Lcom/android/dx/rop/type/Prototype;
 
-    :cond_1
+    .line 92
+    .end local v0    # "thisType":Lcom/android/dx/rop/type/Type;
+    :cond_19
     iget-object v1, p0, Lcom/android/dx/rop/cst/CstBaseMethodRef;->instancePrototype:Lcom/android/dx/rop/type/Prototype;
 
-    goto :goto_0
+    goto :goto_4
 .end method
 
 .method public final getType()Lcom/android/dx/rop/type/Type;
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 118
     iget-object v0, p0, Lcom/android/dx/rop/cst/CstBaseMethodRef;->prototype:Lcom/android/dx/rop/type/Prototype;
 
     invoke-virtual {v0}, Lcom/android/dx/rop/type/Prototype;->getReturnType()Lcom/android/dx/rop/type/Type;
@@ -162,8 +202,10 @@
 .end method
 
 .method public final isClassInit()Z
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 159
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstBaseMethodRef;->getNat()Lcom/android/dx/rop/cst/CstNat;
 
     move-result-object v0
@@ -176,8 +218,10 @@
 .end method
 
 .method public final isInstanceInit()Z
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 147
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstBaseMethodRef;->getNat()Lcom/android/dx/rop/cst/CstNat;
 
     move-result-object v0
@@ -190,479 +234,607 @@
 .end method
 
 .method public final isSignaturePolymorphic()Z
-    .locals 4
+    .registers 7
+
+    .prologue
+    const/4 v3, -0x1
+
+    const/4 v2, 0x0
 
     const/4 v1, 0x1
 
+    .line 171
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstBaseMethodRef;->getDefiningClass()Lcom/android/dx/rop/cst/CstType;
 
     move-result-object v0
 
-    sget-object v2, Lcom/android/dx/rop/cst/CstType;->METHOD_HANDLE:Lcom/android/dx/rop/cst/CstType;
+    .line 172
+    .local v0, "definingClass":Lcom/android/dx/rop/cst/CstType;
+    sget-object v4, Lcom/android/dx/rop/cst/CstType;->METHOD_HANDLE:Lcom/android/dx/rop/cst/CstType;
 
-    invoke-virtual {v0, v2}, Lcom/android/dx/rop/cst/CstType;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Lcom/android/dx/rop/cst/CstType;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_2
+    if-eqz v4, :cond_3b
 
+    .line 173
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstBaseMethodRef;->getNat()Lcom/android/dx/rop/cst/CstNat;
 
-    move-result-object v2
+    move-result-object v4
 
-    invoke-virtual {v2}, Lcom/android/dx/rop/cst/CstNat;->getName()Lcom/android/dx/rop/cst/CstString;
+    invoke-virtual {v4}, Lcom/android/dx/rop/cst/CstNat;->getName()Lcom/android/dx/rop/cst/CstString;
 
-    move-result-object v2
+    move-result-object v4
 
-    invoke-virtual {v2}, Lcom/android/dx/rop/cst/CstString;->getString()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/android/dx/rop/cst/CstString;->getString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v4
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
 
-    move-result v3
+    move-result v5
 
-    sparse-switch v3, :sswitch_data_0
+    sparse-switch v5, :sswitch_data_1ba
 
-    :cond_0
-    :goto_0
-    const/4 v1, 0x0
+    :cond_22
+    :goto_22
+    packed-switch v3, :pswitch_data_1c4
 
-    :cond_1
+    :cond_25
+    :goto_25
+    move v1, v2
+
+    .line 214
+    :pswitch_26
     return v1
 
-    :sswitch_0
-    const-string v3, "invoke"
+    .line 173
+    :sswitch_27
+    const-string v5, "invoke"
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v4
 
-    if-nez v2, :cond_1
+    if-eqz v4, :cond_22
 
-    goto :goto_0
+    move v3, v2
 
-    :sswitch_1
-    const-string v3, "invokeExact"
+    goto :goto_22
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_31
+    const-string v5, "invokeExact"
 
-    move-result v2
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v2, :cond_1
+    move-result v4
 
-    goto :goto_0
+    if-eqz v4, :cond_22
 
-    :cond_2
-    sget-object v2, Lcom/android/dx/rop/cst/CstType;->VAR_HANDLE:Lcom/android/dx/rop/cst/CstType;
+    move v3, v1
 
-    invoke-virtual {v0, v2}, Lcom/android/dx/rop/cst/CstType;->equals(Ljava/lang/Object;)Z
+    goto :goto_22
 
-    move-result v2
+    .line 178
+    :cond_3b
+    sget-object v4, Lcom/android/dx/rop/cst/CstType;->VAR_HANDLE:Lcom/android/dx/rop/cst/CstType;
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v0, v4}, Lcom/android/dx/rop/cst/CstType;->equals(Ljava/lang/Object;)Z
 
+    move-result v4
+
+    if-eqz v4, :cond_25
+
+    .line 179
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstBaseMethodRef;->getNat()Lcom/android/dx/rop/cst/CstNat;
 
-    move-result-object v2
+    move-result-object v4
 
-    invoke-virtual {v2}, Lcom/android/dx/rop/cst/CstNat;->getName()Lcom/android/dx/rop/cst/CstString;
+    invoke-virtual {v4}, Lcom/android/dx/rop/cst/CstNat;->getName()Lcom/android/dx/rop/cst/CstString;
 
-    move-result-object v2
+    move-result-object v4
 
-    invoke-virtual {v2}, Lcom/android/dx/rop/cst/CstString;->getString()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/android/dx/rop/cst/CstString;->getString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v4
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
 
-    move-result v3
+    move-result v5
 
-    sparse-switch v3, :sswitch_data_1
+    sparse-switch v5, :sswitch_data_1cc
 
-    goto :goto_0
+    :cond_56
+    :goto_56
+    packed-switch v3, :pswitch_data_24a
 
-    :sswitch_2
-    const-string v3, "getAndBitwiseOrRelease"
+    goto :goto_25
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_5a
+    const-string v5, "compareAndExchange"
 
-    move-result v2
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v2, :cond_1
+    move-result v4
 
-    goto :goto_0
+    if-eqz v4, :cond_56
 
-    :sswitch_3
-    const-string v3, "getAndBitwiseAndRelease"
+    move v3, v2
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto :goto_56
 
-    move-result v2
+    :sswitch_64
+    const-string v5, "compareAndExchangeAcquire"
 
-    if-nez v2, :cond_1
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v4
 
-    :sswitch_4
-    const-string v3, "compareAndSet"
+    if-eqz v4, :cond_56
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move v3, v1
 
-    move-result v2
+    goto :goto_56
 
-    if-nez v2, :cond_1
+    :sswitch_6e
+    const-string v5, "compareAndExchangeRelease"
 
-    goto :goto_0
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :sswitch_5
-    const-string v3, "compareAndExchangeRelease"
+    move-result v4
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v4, :cond_56
 
-    move-result v2
+    const/4 v3, 0x2
 
-    if-nez v2, :cond_1
+    goto :goto_56
 
-    goto :goto_0
+    :sswitch_78
+    const-string v5, "compareAndSet"
 
-    :sswitch_6
-    const-string v3, "weakCompareAndSet"
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v4
 
-    move-result v2
+    if-eqz v4, :cond_56
 
-    if-nez v2, :cond_1
+    const/4 v3, 0x3
 
-    goto :goto_0
+    goto :goto_56
 
-    :sswitch_7
-    const-string v3, "getAndAddRelease"
+    :sswitch_82
+    const-string v5, "get"
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v4
 
-    if-nez v2, :cond_1
+    if-eqz v4, :cond_56
 
-    goto :goto_0
+    const/4 v3, 0x4
 
-    :sswitch_8
-    const-string v3, "getAndBitwiseAnd"
+    goto :goto_56
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_8c
+    const-string v5, "getAcquire"
 
-    move-result v2
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v2, :cond_1
+    move-result v4
 
-    goto :goto_0
+    if-eqz v4, :cond_56
 
-    :sswitch_9
-    const-string v3, "getAndBitwiseXor"
+    const/4 v3, 0x5
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto :goto_56
 
-    move-result v2
+    :sswitch_96
+    const-string v5, "getAndAdd"
 
-    if-nez v2, :cond_1
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v4
 
-    :sswitch_a
-    const-string v3, "getAndBitwiseXorRelease"
+    if-eqz v4, :cond_56
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/4 v3, 0x6
 
-    move-result v2
+    goto :goto_56
 
-    if-nez v2, :cond_1
+    :sswitch_a0
+    const-string v5, "getAndAddAcquire"
 
-    goto :goto_0
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :sswitch_b
-    const-string v3, "weakCompareAndSetPlain"
+    move-result v4
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v4, :cond_56
 
-    move-result v2
+    const/4 v3, 0x7
 
-    if-nez v2, :cond_1
+    goto :goto_56
 
-    goto/16 :goto_0
+    :sswitch_aa
+    const-string v5, "getAndAddRelease"
 
-    :sswitch_c
-    const-string v3, "weakCompareAndSetAcquire"
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v4
 
-    move-result v2
+    if-eqz v4, :cond_56
 
-    if-nez v2, :cond_1
+    const/16 v3, 0x8
 
-    goto/16 :goto_0
+    goto :goto_56
 
-    :sswitch_d
-    const-string v3, "setRelease"
+    :sswitch_b5
+    const-string v5, "getAndBitwiseAnd"
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v4
 
-    if-nez v2, :cond_1
+    if-eqz v4, :cond_56
 
-    goto/16 :goto_0
+    const/16 v3, 0x9
 
-    :sswitch_e
-    const-string v3, "getAcquire"
+    goto :goto_56
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_c0
+    const-string v5, "getAndBitwiseAndAcquire"
 
-    move-result v2
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v2, :cond_1
+    move-result v4
 
-    goto/16 :goto_0
+    if-eqz v4, :cond_56
 
-    :sswitch_f
-    const-string v3, "getAndSetRelease"
+    const/16 v3, 0xa
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto :goto_56
 
-    move-result v2
+    :sswitch_cb
+    const-string v5, "getAndBitwiseAndRelease"
 
-    if-nez v2, :cond_1
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    goto/16 :goto_0
+    move-result v4
 
-    :sswitch_10
-    const-string v3, "get"
+    if-eqz v4, :cond_56
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/16 v3, 0xb
 
-    move-result v2
+    goto :goto_56
 
-    if-nez v2, :cond_1
+    :sswitch_d6
+    const-string v5, "getAndBitwiseOr"
 
-    goto/16 :goto_0
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :sswitch_11
-    const-string v3, "set"
+    move-result v4
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v4, :cond_56
 
-    move-result v2
+    const/16 v3, 0xc
 
-    if-nez v2, :cond_1
+    goto/16 :goto_56
 
-    goto/16 :goto_0
+    :sswitch_e2
+    const-string v5, "getAndBitwiseOrAcquire"
 
-    :sswitch_12
-    const-string v3, "getAndBitwiseOrAcquire"
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v4
 
-    move-result v2
+    if-eqz v4, :cond_56
 
-    if-nez v2, :cond_1
+    const/16 v3, 0xd
 
-    goto/16 :goto_0
+    goto/16 :goto_56
 
-    :sswitch_13
-    const-string v3, "setVolatile"
+    :sswitch_ee
+    const-string v5, "getAndBitwiseOrRelease"
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v4
 
-    if-nez v2, :cond_1
+    if-eqz v4, :cond_56
 
-    goto/16 :goto_0
+    const/16 v3, 0xe
 
-    :sswitch_14
-    const-string v3, "getVolatile"
+    goto/16 :goto_56
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_fa
+    const-string v5, "getAndBitwiseXor"
 
-    move-result v2
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v2, :cond_1
+    move-result v4
 
-    goto/16 :goto_0
+    if-eqz v4, :cond_56
 
-    :sswitch_15
-    const-string v3, "getAndAdd"
+    const/16 v3, 0xf
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_56
 
-    move-result v2
+    :sswitch_106
+    const-string v5, "getAndBitwiseXorAcquire"
 
-    if-nez v2, :cond_1
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    goto/16 :goto_0
+    move-result v4
 
-    :sswitch_16
-    const-string v3, "getAndSet"
+    if-eqz v4, :cond_56
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/16 v3, 0x10
 
-    move-result v2
+    goto/16 :goto_56
 
-    if-nez v2, :cond_1
+    :sswitch_112
+    const-string v5, "getAndBitwiseXorRelease"
 
-    goto/16 :goto_0
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :sswitch_17
-    const-string v3, "getAndBitwiseAndAcquire"
+    move-result v4
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v4, :cond_56
 
-    move-result v2
+    const/16 v3, 0x11
 
-    if-nez v2, :cond_1
+    goto/16 :goto_56
 
-    goto/16 :goto_0
+    :sswitch_11e
+    const-string v5, "getAndSet"
 
-    :sswitch_18
-    const-string v3, "setOpaque"
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v4
 
-    move-result v2
+    if-eqz v4, :cond_56
 
-    if-nez v2, :cond_1
+    const/16 v3, 0x12
 
-    goto/16 :goto_0
+    goto/16 :goto_56
 
-    :sswitch_19
-    const-string v3, "getOpaque"
+    :sswitch_12a
+    const-string v5, "getAndSetAcquire"
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v4
 
-    if-nez v2, :cond_1
+    if-eqz v4, :cond_56
 
-    goto/16 :goto_0
+    const/16 v3, 0x13
 
-    :sswitch_1a
-    const-string v3, "compareAndExchangeAcquire"
+    goto/16 :goto_56
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_136
+    const-string v5, "getAndSetRelease"
 
-    move-result v2
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v2, :cond_1
+    move-result v4
 
-    goto/16 :goto_0
+    if-eqz v4, :cond_56
 
-    :sswitch_1b
-    const-string v3, "getAndAddAcquire"
+    const/16 v3, 0x14
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    goto/16 :goto_56
 
-    move-result v2
+    :sswitch_142
+    const-string v5, "getOpaque"
 
-    if-nez v2, :cond_1
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    goto/16 :goto_0
+    move-result v4
 
-    :sswitch_1c
-    const-string v3, "getAndBitwiseXorAcquire"
+    if-eqz v4, :cond_56
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/16 v3, 0x15
 
-    move-result v2
+    goto/16 :goto_56
 
-    if-nez v2, :cond_1
+    :sswitch_14e
+    const-string v5, "getVolatile"
 
-    goto/16 :goto_0
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :sswitch_1d
-    const-string v3, "getAndBitwiseOr"
+    move-result v4
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v4, :cond_56
 
-    move-result v2
+    const/16 v3, 0x16
 
-    if-nez v2, :cond_1
+    goto/16 :goto_56
 
-    goto/16 :goto_0
+    :sswitch_15a
+    const-string v5, "set"
 
-    :sswitch_1e
-    const-string v3, "compareAndExchange"
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v4
 
-    move-result v2
+    if-eqz v4, :cond_56
 
-    if-nez v2, :cond_1
+    const/16 v3, 0x17
 
-    goto/16 :goto_0
+    goto/16 :goto_56
 
-    :sswitch_1f
-    const-string v3, "getAndSetAcquire"
+    :sswitch_166
+    const-string v5, "setOpaque"
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v4
 
-    if-nez v2, :cond_1
+    if-eqz v4, :cond_56
 
-    goto/16 :goto_0
+    const/16 v3, 0x18
 
-    :sswitch_20
-    const-string v3, "weakCompareAndSetRelease"
+    goto/16 :goto_56
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :sswitch_172
+    const-string v5, "setRelease"
 
-    move-result v2
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v2, :cond_1
+    move-result v4
 
-    goto/16 :goto_0
+    if-eqz v4, :cond_56
 
-    nop
+    const/16 v3, 0x19
 
-    :sswitch_data_0
+    goto/16 :goto_56
+
+    :sswitch_17e
+    const-string v5, "setVolatile"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_56
+
+    const/16 v3, 0x1a
+
+    goto/16 :goto_56
+
+    :sswitch_18a
+    const-string v5, "weakCompareAndSet"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_56
+
+    const/16 v3, 0x1b
+
+    goto/16 :goto_56
+
+    :sswitch_196
+    const-string v5, "weakCompareAndSetAcquire"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_56
+
+    const/16 v3, 0x1c
+
+    goto/16 :goto_56
+
+    :sswitch_1a2
+    const-string v5, "weakCompareAndSetPlain"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_56
+
+    const/16 v3, 0x1d
+
+    goto/16 :goto_56
+
+    :sswitch_1ae
+    const-string v5, "weakCompareAndSetRelease"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_56
+
+    const/16 v3, 0x1e
+
+    goto/16 :goto_56
+
+    .line 173
+    :sswitch_data_1ba
     .sparse-switch
-        -0x468dbb88 -> :sswitch_0
-        0x38222167 -> :sswitch_1
+        -0x468dbb88 -> :sswitch_27
+        0x38222167 -> :sswitch_31
     .end sparse-switch
 
-    :sswitch_data_1
+    :pswitch_data_1c4
+    .packed-switch 0x0
+        :pswitch_26
+        :pswitch_26
+    .end packed-switch
+
+    .line 179
+    :sswitch_data_1cc
     .sparse-switch
-        -0x74054ecc -> :sswitch_2
-        -0x64896c60 -> :sswitch_3
-        -0x639aefb0 -> :sswitch_4
-        -0x4d038cae -> :sswitch_5
-        -0x42a27c48 -> :sswitch_6
-        -0x41bf8e59 -> :sswitch_7
-        -0x3d910599 -> :sswitch_8
-        -0x3d90af15 -> :sswitch_9
-        -0x2f5b5f64 -> :sswitch_a
-        -0x21ce070e -> :sswitch_b
-        -0xe5aaa02 -> :sswitch_c
-        -0xdc04ebb -> :sswitch_d
-        -0x7976360 -> :sswitch_e
-        -0x23e5d3a -> :sswitch_f
-        0x18f56 -> :sswitch_10
-        0x1bc62 -> :sswitch_11
-        0x594ea03 -> :sswitch_12
-        0x6099c1e -> :sswitch_13
-        0xb513b12 -> :sswitch_14
-        0x10d9c640 -> :sswitch_15
-        0x10da0a01 -> :sswitch_16
-        0x1510cc6f -> :sswitch_17
-        0x1c0e5b23 -> :sswitch_18
-        0x28d92717 -> :sswitch_19
-        0x2c96ac21 -> :sswitch_1a
-        0x37daaa76 -> :sswitch_1b
-        0x4a3ed96b -> :sswitch_1c
-        0x50983b53 -> :sswitch_1d
-        0x58737ef5 -> :sswitch_1e
-        0x775bdb95 -> :sswitch_1f
-        0x780b1d2f -> :sswitch_20
+        -0x74054ecc -> :sswitch_ee
+        -0x64896c60 -> :sswitch_cb
+        -0x639aefb0 -> :sswitch_78
+        -0x4d038cae -> :sswitch_6e
+        -0x42a27c48 -> :sswitch_18a
+        -0x41bf8e59 -> :sswitch_aa
+        -0x3d910599 -> :sswitch_b5
+        -0x3d90af15 -> :sswitch_fa
+        -0x2f5b5f64 -> :sswitch_112
+        -0x21ce070e -> :sswitch_1a2
+        -0xe5aaa02 -> :sswitch_196
+        -0xdc04ebb -> :sswitch_172
+        -0x7976360 -> :sswitch_8c
+        -0x23e5d3a -> :sswitch_136
+        0x18f56 -> :sswitch_82
+        0x1bc62 -> :sswitch_15a
+        0x594ea03 -> :sswitch_e2
+        0x6099c1e -> :sswitch_17e
+        0xb513b12 -> :sswitch_14e
+        0x10d9c640 -> :sswitch_96
+        0x10da0a01 -> :sswitch_11e
+        0x1510cc6f -> :sswitch_c0
+        0x1c0e5b23 -> :sswitch_166
+        0x28d92717 -> :sswitch_142
+        0x2c96ac21 -> :sswitch_64
+        0x37daaa76 -> :sswitch_a0
+        0x4a3ed96b -> :sswitch_106
+        0x50983b53 -> :sswitch_d6
+        0x58737ef5 -> :sswitch_5a
+        0x775bdb95 -> :sswitch_12a
+        0x780b1d2f -> :sswitch_1ae
     .end sparse-switch
+
+    :pswitch_data_24a
+    .packed-switch 0x0
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+        :pswitch_26
+    .end packed-switch
 .end method

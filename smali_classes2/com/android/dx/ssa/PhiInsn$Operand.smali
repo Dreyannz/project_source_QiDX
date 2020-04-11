@@ -24,15 +24,24 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/dx/rop/code/RegisterSpec;II)V
-    .locals 0
+    .registers 4
+    .param p1, "regSpec"    # Lcom/android/dx/rop/code/RegisterSpec;
+    .param p2, "blockIndex"    # I
+    .param p3, "ropLabel"    # I
 
+    .prologue
+    .line 390
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 391
     iput-object p1, p0, Lcom/android/dx/ssa/PhiInsn$Operand;->regSpec:Lcom/android/dx/rop/code/RegisterSpec;
 
+    .line 392
     iput p2, p0, Lcom/android/dx/ssa/PhiInsn$Operand;->blockIndex:I
 
+    .line 393
     iput p3, p0, Lcom/android/dx/ssa/PhiInsn$Operand;->ropLabel:I
 
+    .line 394
     return-void
 .end method

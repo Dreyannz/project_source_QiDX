@@ -20,8 +20,11 @@
 
 # direct methods
 .method constructor <init>(Lcom/android/dx/command/dexer/DxContext;)V
-    .locals 0
+    .registers 2
+    .param p1, "this$0"    # Lcom/android/dx/command/dexer/DxContext;
 
+    .prologue
+    .line 19
     iput-object p1, p0, Lcom/android/dx/command/dexer/DxContext$1;->this$0:Lcom/android/dx/command/dexer/DxContext;
 
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
@@ -32,12 +35,15 @@
 
 # virtual methods
 .method public write(I)V
-    .locals 0
+    .registers 2
+    .param p1, "b"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
+    .prologue
+    .line 23
     return-void
 .end method

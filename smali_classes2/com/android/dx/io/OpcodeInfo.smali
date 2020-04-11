@@ -473,8 +473,10 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .registers 5
 
+    .prologue
+    .line 40
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/4 v1, -0x1
@@ -489,6 +491,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SPECIAL_FORMAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 46
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x100
@@ -503,6 +506,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->PACKED_SWITCH_PAYLOAD:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 51
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x200
@@ -517,6 +521,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SPARSE_SWITCH_PAYLOAD:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 56
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x300
@@ -531,6 +536,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->FILL_ARRAY_DATA_PAYLOAD:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 62
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/4 v1, 0x0
@@ -545,6 +551,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->NOP:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 66
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/4 v1, 0x1
@@ -559,6 +566,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 70
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/4 v1, 0x2
@@ -573,6 +581,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_FROM16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 74
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/4 v1, 0x3
@@ -587,6 +596,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 78
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/4 v1, 0x4
@@ -601,6 +611,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 82
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/4 v1, 0x5
@@ -615,6 +626,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_WIDE_FROM16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 86
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/4 v1, 0x6
@@ -629,6 +641,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_WIDE_16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 90
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/4 v1, 0x7
@@ -643,6 +656,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 94
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x8
@@ -657,6 +671,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_OBJECT_FROM16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 98
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x9
@@ -671,6 +686,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_OBJECT_16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 102
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xa
@@ -685,6 +701,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_RESULT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 106
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xb
@@ -699,6 +716,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_RESULT_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 110
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xc
@@ -713,6 +731,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_RESULT_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 114
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xd
@@ -727,6 +746,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_EXCEPTION:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 118
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xe
@@ -741,6 +761,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->RETURN_VOID:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 122
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xf
@@ -755,6 +776,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->RETURN:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 126
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x10
@@ -769,6 +791,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->RETURN_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 130
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x11
@@ -783,6 +806,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->RETURN_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 134
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x12
@@ -797,6 +821,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_4:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 138
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x13
@@ -811,6 +836,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 142
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x14
@@ -825,6 +851,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 146
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x15
@@ -839,6 +866,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_HIGH16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 150
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x16
@@ -853,6 +881,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_WIDE_16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 154
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x17
@@ -867,6 +896,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_WIDE_32:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 158
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x18
@@ -881,6 +911,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 162
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x19
@@ -895,6 +926,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_WIDE_HIGH16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 166
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x1a
@@ -909,6 +941,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_STRING:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 170
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x1b
@@ -923,6 +956,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_STRING_JUMBO:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 174
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x1c
@@ -937,6 +971,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_CLASS:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 178
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x1d
@@ -951,6 +986,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MONITOR_ENTER:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 182
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x1e
@@ -965,6 +1001,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MONITOR_EXIT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 186
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x1f
@@ -979,6 +1016,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CHECK_CAST:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 190
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x20
@@ -993,6 +1031,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INSTANCE_OF:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 194
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x21
@@ -1007,6 +1046,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->ARRAY_LENGTH:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 198
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x22
@@ -1021,6 +1061,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->NEW_INSTANCE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 202
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x23
@@ -1035,6 +1076,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->NEW_ARRAY:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 206
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x24
@@ -1049,6 +1091,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->FILLED_NEW_ARRAY:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 210
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x25
@@ -1063,6 +1106,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->FILLED_NEW_ARRAY_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 214
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x26
@@ -1077,6 +1121,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->FILL_ARRAY_DATA:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 218
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x27
@@ -1091,6 +1136,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->THROW:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 222
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x28
@@ -1105,6 +1151,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->GOTO:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 226
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x29
@@ -1119,6 +1166,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->GOTO_16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 230
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x2a
@@ -1133,6 +1181,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->GOTO_32:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 234
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x2b
@@ -1147,6 +1196,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->PACKED_SWITCH:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 238
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x2c
@@ -1161,6 +1211,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SPARSE_SWITCH:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 242
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x2d
@@ -1175,6 +1226,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CMPL_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 246
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x2e
@@ -1189,6 +1241,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CMPG_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 250
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x2f
@@ -1203,6 +1256,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CMPL_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 254
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x30
@@ -1217,6 +1271,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CMPG_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 258
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x31
@@ -1231,6 +1286,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CMP_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 262
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x32
@@ -1245,6 +1301,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_EQ:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 266
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x33
@@ -1259,6 +1316,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_NE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 270
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x34
@@ -1273,6 +1331,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_LT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 274
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x35
@@ -1287,6 +1346,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_GE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 278
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x36
@@ -1301,6 +1361,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_GT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 282
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x37
@@ -1315,6 +1376,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_LE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 286
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x38
@@ -1329,6 +1391,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_EQZ:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 290
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x39
@@ -1343,6 +1406,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_NEZ:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 294
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x3a
@@ -1357,6 +1421,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_LTZ:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 298
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x3b
@@ -1371,6 +1436,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_GEZ:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 302
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x3c
@@ -1385,6 +1451,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_GTZ:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 306
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x3d
@@ -1399,6 +1466,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_LEZ:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 310
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x44
@@ -1413,6 +1481,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 314
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x45
@@ -1427,6 +1496,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 318
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x46
@@ -1441,6 +1511,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 322
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x47
@@ -1455,6 +1526,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET_BOOLEAN:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 326
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x48
@@ -1469,6 +1541,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 330
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x49
@@ -1483,6 +1556,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 334
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x4a
@@ -1497,6 +1571,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 338
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x4b
@@ -1511,6 +1586,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 342
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x4c
@@ -1525,6 +1601,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 346
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x4d
@@ -1539,6 +1616,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 350
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x4e
@@ -1553,6 +1631,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT_BOOLEAN:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 354
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x4f
@@ -1567,6 +1646,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 358
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x50
@@ -1581,6 +1661,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 362
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x51
@@ -1595,6 +1676,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 366
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x52
@@ -1609,6 +1691,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 370
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x53
@@ -1623,6 +1706,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 374
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x54
@@ -1637,6 +1721,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 378
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x55
@@ -1651,6 +1736,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET_BOOLEAN:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 382
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x56
@@ -1665,6 +1751,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 386
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x57
@@ -1679,6 +1766,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 390
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x58
@@ -1693,6 +1781,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 394
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x59
@@ -1707,6 +1796,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 398
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x5a
@@ -1721,6 +1811,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 402
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x5b
@@ -1735,6 +1826,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 406
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x5c
@@ -1749,6 +1841,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT_BOOLEAN:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 410
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x5d
@@ -1763,6 +1856,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 414
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x5e
@@ -1777,6 +1871,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 418
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x5f
@@ -1791,6 +1886,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 422
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x60
@@ -1805,6 +1901,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 426
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x61
@@ -1819,6 +1916,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 430
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x62
@@ -1833,6 +1931,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 434
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x63
@@ -1847,6 +1946,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET_BOOLEAN:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 438
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x64
@@ -1861,6 +1961,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 442
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x65
@@ -1875,6 +1976,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 446
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x66
@@ -1889,6 +1991,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 450
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x67
@@ -1903,6 +2006,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 454
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x68
@@ -1917,6 +2021,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 458
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x69
@@ -1931,6 +2036,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 462
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x6a
@@ -1945,6 +2051,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT_BOOLEAN:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 466
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x6b
@@ -1959,6 +2066,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 470
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x6c
@@ -1973,6 +2081,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 474
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x6d
@@ -1987,6 +2096,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 478
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x6e
@@ -2001,6 +2111,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_VIRTUAL:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 482
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x6f
@@ -2015,6 +2126,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_SUPER:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 486
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x70
@@ -2029,6 +2141,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_DIRECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 490
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x71
@@ -2043,6 +2156,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_STATIC:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 494
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x72
@@ -2057,6 +2171,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_INTERFACE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 498
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x74
@@ -2071,6 +2186,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_VIRTUAL_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 502
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x75
@@ -2085,6 +2201,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_SUPER_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 506
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x76
@@ -2099,6 +2216,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_DIRECT_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 510
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x77
@@ -2113,6 +2231,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_STATIC_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 514
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x78
@@ -2127,6 +2246,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_INTERFACE_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 518
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x7b
@@ -2141,6 +2261,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->NEG_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 522
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x7c
@@ -2155,6 +2276,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->NOT_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 526
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x7d
@@ -2169,6 +2291,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->NEG_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 530
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x7e
@@ -2183,6 +2306,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->NOT_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 534
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x7f
@@ -2197,6 +2321,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->NEG_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 538
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x80
@@ -2211,6 +2336,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->NEG_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 542
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x81
@@ -2225,6 +2351,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INT_TO_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 546
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x82
@@ -2239,6 +2366,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INT_TO_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 550
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x83
@@ -2253,6 +2381,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INT_TO_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 554
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x84
@@ -2267,6 +2396,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->LONG_TO_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 558
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x85
@@ -2281,6 +2411,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->LONG_TO_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 562
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x86
@@ -2295,6 +2426,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->LONG_TO_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 566
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x87
@@ -2309,6 +2441,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->FLOAT_TO_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 570
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x88
@@ -2323,6 +2456,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->FLOAT_TO_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 574
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x89
@@ -2337,6 +2471,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->FLOAT_TO_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 578
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x8a
@@ -2351,6 +2486,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->DOUBLE_TO_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 582
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x8b
@@ -2365,6 +2501,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->DOUBLE_TO_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 586
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x8c
@@ -2379,6 +2516,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->DOUBLE_TO_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 590
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x8d
@@ -2393,6 +2531,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INT_TO_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 594
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x8e
@@ -2407,6 +2546,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INT_TO_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 598
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x8f
@@ -2421,6 +2561,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INT_TO_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 602
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x90
@@ -2435,6 +2576,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 606
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x91
@@ -2449,6 +2591,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 610
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x92
@@ -2463,6 +2606,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 614
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x93
@@ -2477,6 +2621,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 618
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x94
@@ -2491,6 +2636,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 622
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x95
@@ -2505,6 +2651,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->AND_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 626
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x96
@@ -2519,6 +2666,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->OR_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 630
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x97
@@ -2533,6 +2681,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->XOR_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 634
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x98
@@ -2547,6 +2696,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SHL_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 638
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x99
@@ -2561,6 +2711,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SHR_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 642
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x9a
@@ -2575,6 +2726,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->USHR_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 646
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x9b
@@ -2589,6 +2741,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 650
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x9c
@@ -2603,6 +2756,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 654
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x9d
@@ -2617,6 +2771,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 658
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x9e
@@ -2631,6 +2786,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 662
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0x9f
@@ -2645,6 +2801,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 666
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xa0
@@ -2659,6 +2816,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->AND_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 670
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xa1
@@ -2673,6 +2831,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->OR_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 674
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xa2
@@ -2687,6 +2846,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->XOR_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 678
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xa3
@@ -2701,6 +2861,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SHL_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 682
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xa4
@@ -2715,6 +2876,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SHR_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 686
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xa5
@@ -2729,6 +2891,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->USHR_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 690
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xa6
@@ -2743,6 +2906,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 694
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xa7
@@ -2757,6 +2921,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 698
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xa8
@@ -2771,6 +2936,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 702
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xa9
@@ -2785,6 +2951,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 706
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xaa
@@ -2799,6 +2966,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 710
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xab
@@ -2813,6 +2981,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 714
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xac
@@ -2827,6 +2996,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 718
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xad
@@ -2841,6 +3011,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 722
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xae
@@ -2855,6 +3026,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 726
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xaf
@@ -2869,6 +3041,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 730
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xb0
@@ -2883,6 +3056,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 734
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xb1
@@ -2897,6 +3071,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 738
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xb2
@@ -2911,6 +3086,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 742
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xb3
@@ -2925,6 +3101,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 746
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xb4
@@ -2939,6 +3116,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 750
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xb5
@@ -2953,6 +3131,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->AND_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 754
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xb6
@@ -2967,6 +3146,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->OR_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 758
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xb7
@@ -2981,6 +3161,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->XOR_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 762
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xb8
@@ -2995,6 +3176,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SHL_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 766
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xb9
@@ -3009,6 +3191,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SHR_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 770
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xba
@@ -3023,6 +3206,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->USHR_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 774
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xbb
@@ -3037,6 +3221,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 778
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xbc
@@ -3051,6 +3236,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 782
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xbd
@@ -3065,6 +3251,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 786
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xbe
@@ -3079,6 +3266,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 790
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xbf
@@ -3093,6 +3281,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 794
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xc0
@@ -3107,6 +3296,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->AND_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 798
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xc1
@@ -3121,6 +3311,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->OR_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 802
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xc2
@@ -3135,6 +3326,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->XOR_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 806
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xc3
@@ -3149,6 +3341,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SHL_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 810
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xc4
@@ -3163,6 +3356,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SHR_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 814
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xc5
@@ -3177,6 +3371,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->USHR_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 818
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xc6
@@ -3191,6 +3386,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_FLOAT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 822
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xc7
@@ -3205,6 +3401,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_FLOAT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 826
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xc8
@@ -3219,6 +3416,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_FLOAT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 830
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xc9
@@ -3233,6 +3431,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_FLOAT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 834
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xca
@@ -3247,6 +3446,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_FLOAT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 838
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xcb
@@ -3261,6 +3461,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_DOUBLE_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 842
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xcc
@@ -3275,6 +3476,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_DOUBLE_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 846
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xcd
@@ -3289,6 +3491,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_DOUBLE_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 850
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xce
@@ -3303,6 +3506,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_DOUBLE_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 854
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xcf
@@ -3317,6 +3521,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_DOUBLE_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 858
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xd0
@@ -3331,6 +3536,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 862
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xd1
@@ -3345,6 +3551,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->RSUB_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 866
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xd2
@@ -3359,6 +3566,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 870
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xd3
@@ -3373,6 +3581,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 874
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xd4
@@ -3387,6 +3596,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 878
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xd5
@@ -3401,6 +3611,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->AND_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 882
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xd6
@@ -3415,6 +3626,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->OR_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 886
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xd7
@@ -3429,6 +3641,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->XOR_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 890
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xd8
@@ -3443,6 +3656,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 894
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xd9
@@ -3457,6 +3671,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->RSUB_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 898
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xda
@@ -3471,6 +3686,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 902
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xdb
@@ -3485,6 +3701,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 906
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xdc
@@ -3499,6 +3716,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 910
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xdd
@@ -3513,6 +3731,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->AND_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 914
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xde
@@ -3527,6 +3746,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->OR_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 918
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xdf
@@ -3541,6 +3761,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->XOR_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 922
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xe0
@@ -3555,6 +3776,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SHL_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 926
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xe1
@@ -3569,6 +3791,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->SHR_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 930
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xe2
@@ -3583,6 +3806,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->USHR_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 934
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xfa
@@ -3597,6 +3821,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_POLYMORPHIC:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 938
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xfb
@@ -3611,6 +3836,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_POLYMORPHIC_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 942
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xfc
@@ -3625,6 +3851,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_CUSTOM:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 946
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xfd
@@ -3639,6 +3866,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_CUSTOM_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 950
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xfe
@@ -3653,6 +3881,7 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_METHOD_HANDLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 954
     new-instance v0, Lcom/android/dx/io/OpcodeInfo$Info;
 
     const/16 v1, 0xff
@@ -3667,955 +3896,1212 @@
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_METHOD_TYPE:Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 962
     const v0, 0x10001
 
     new-array v0, v0, [Lcom/android/dx/io/OpcodeInfo$Info;
 
     sput-object v0, Lcom/android/dx/io/OpcodeInfo;->INFO:[Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .line 965
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SPECIAL_FORMAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 968
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->PACKED_SWITCH_PAYLOAD:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 969
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SPARSE_SWITCH_PAYLOAD:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 970
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->FILL_ARRAY_DATA_PAYLOAD:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 973
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->NOP:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 974
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 975
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_FROM16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 976
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 977
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 978
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_WIDE_FROM16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 979
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_WIDE_16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 980
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 981
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_OBJECT_FROM16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 982
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_OBJECT_16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 983
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_RESULT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 984
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_RESULT_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 985
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_RESULT_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 986
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MOVE_EXCEPTION:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 987
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->RETURN_VOID:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 988
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->RETURN:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 989
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->RETURN_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 990
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->RETURN_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 991
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_4:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 992
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 993
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 994
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_HIGH16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 995
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_WIDE_16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 996
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_WIDE_32:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 997
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 998
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_WIDE_HIGH16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 999
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_STRING:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1000
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_STRING_JUMBO:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1001
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_CLASS:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1002
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MONITOR_ENTER:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1003
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MONITOR_EXIT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1004
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CHECK_CAST:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1005
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INSTANCE_OF:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1006
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->ARRAY_LENGTH:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1007
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->NEW_INSTANCE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1008
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->NEW_ARRAY:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1009
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->FILLED_NEW_ARRAY:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1010
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->FILLED_NEW_ARRAY_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1011
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->FILL_ARRAY_DATA:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1012
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->THROW:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1013
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->GOTO:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1014
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->GOTO_16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1015
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->GOTO_32:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1016
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->PACKED_SWITCH:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1017
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SPARSE_SWITCH:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1018
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CMPL_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1019
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CMPG_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1020
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CMPL_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1021
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CMPG_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1022
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CMP_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1023
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_EQ:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1024
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_NE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1025
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_LT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1026
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_GE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1027
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_GT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1028
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_LE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1029
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_EQZ:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1030
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_NEZ:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1031
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_LTZ:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1032
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_GEZ:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1033
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_GTZ:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1034
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IF_LEZ:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1035
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1036
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1037
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1038
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET_BOOLEAN:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1039
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1040
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1041
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->AGET_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1042
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1043
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1044
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1045
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT_BOOLEAN:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1046
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1047
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1048
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->APUT_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1049
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1050
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1051
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1052
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET_BOOLEAN:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1053
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1054
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1055
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IGET_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1056
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1057
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1058
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1059
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT_BOOLEAN:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1060
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1061
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1062
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->IPUT_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1063
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1064
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1065
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1066
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET_BOOLEAN:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1067
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1068
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1069
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SGET_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1070
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1071
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT_WIDE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1072
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT_OBJECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1073
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT_BOOLEAN:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1074
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1075
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1076
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SPUT_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1077
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_VIRTUAL:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1078
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_SUPER:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1079
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_DIRECT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1080
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_STATIC:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1081
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_INTERFACE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1082
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_VIRTUAL_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1083
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_SUPER_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1084
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_DIRECT_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1085
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_STATIC_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1086
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_INTERFACE_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1087
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->NEG_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1088
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->NOT_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1089
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->NEG_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1090
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->NOT_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1091
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->NEG_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1092
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->NEG_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1093
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INT_TO_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1094
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INT_TO_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1095
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INT_TO_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1096
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->LONG_TO_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1097
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->LONG_TO_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1098
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->LONG_TO_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1099
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->FLOAT_TO_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1100
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->FLOAT_TO_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1101
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->FLOAT_TO_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1102
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->DOUBLE_TO_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1103
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->DOUBLE_TO_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1104
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->DOUBLE_TO_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1105
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INT_TO_BYTE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1106
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INT_TO_CHAR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1107
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INT_TO_SHORT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1108
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1109
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1110
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1111
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1112
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1113
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->AND_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1114
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->OR_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1115
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->XOR_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1116
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SHL_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1117
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SHR_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1118
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->USHR_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1119
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1120
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1121
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1122
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1123
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1124
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->AND_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1125
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->OR_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1126
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->XOR_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1127
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SHL_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1128
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SHR_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1129
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->USHR_LONG:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1130
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1131
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1132
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1133
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1134
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_FLOAT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1135
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1136
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1137
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1138
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1139
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_DOUBLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1140
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1141
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1142
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1143
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1144
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1145
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->AND_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1146
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->OR_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1147
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->XOR_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1148
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SHL_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1149
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SHR_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1150
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->USHR_INT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1151
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1152
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1153
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1154
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1155
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1156
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->AND_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1157
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->OR_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1158
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->XOR_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1159
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SHL_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1160
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SHR_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1161
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->USHR_LONG_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1162
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_FLOAT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1163
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_FLOAT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1164
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_FLOAT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1165
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_FLOAT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1166
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_FLOAT_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1167
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_DOUBLE_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1168
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SUB_DOUBLE_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1169
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_DOUBLE_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1170
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_DOUBLE_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1171
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_DOUBLE_2ADDR:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1172
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1173
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->RSUB_INT:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1174
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1175
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1176
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1177
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->AND_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1178
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->OR_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1179
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->XOR_INT_LIT16:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1180
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->ADD_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1181
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->RSUB_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1182
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->MUL_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1183
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->DIV_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1184
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->REM_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1185
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->AND_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1186
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->OR_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1187
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->XOR_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1188
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SHL_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1189
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->SHR_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1190
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->USHR_INT_LIT8:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1191
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_POLYMORPHIC:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1192
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_POLYMORPHIC_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1193
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_CUSTOM:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1194
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->INVOKE_CUSTOM_RANGE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1195
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_METHOD_HANDLE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1196
     sget-object v0, Lcom/android/dx/io/OpcodeInfo;->CONST_METHOD_TYPE:Lcom/android/dx/io/OpcodeInfo$Info;
 
     invoke-static {v0}, Lcom/android/dx/io/OpcodeInfo;->set(Lcom/android/dx/io/OpcodeInfo$Info;)V
 
+    .line 1198
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .registers 1
+
+    .prologue
+    .line 1203
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1205
     return-void
 .end method
 
 .method public static get(I)Lcom/android/dx/io/OpcodeInfo$Info;
-    .locals 5
+    .registers 6
+    .param p0, "opcode"    # I
 
+    .prologue
+    .line 1215
     add-int/lit8 v0, p0, 0x1
 
-    :try_start_0
+    .line 1218
+    .local v0, "idx":I
+    :try_start_2
     sget-object v2, Lcom/android/dx/io/OpcodeInfo;->INFO:[Lcom/android/dx/io/OpcodeInfo$Info;
 
     aget-object v1, v2, v0
-    :try_end_0
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_6
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_2 .. :try_end_6} :catch_9
 
-    if-eqz v1, :cond_0
+    .line 1219
+    .local v1, "result":Lcom/android/dx/io/OpcodeInfo$Info;
+    if-eqz v1, :cond_a
 
+    .line 1220
     return-object v1
 
-    :catch_0
+    .line 1222
+    .end local v1    # "result":Lcom/android/dx/io/OpcodeInfo$Info;
+    :catch_9
     move-exception v2
 
-    :cond_0
+    .line 1226
+    :cond_a
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "bogus opcode: "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    move-result-object v3
+
+    .line 1227
     invoke-static {p0}, Lcom/android/dx/util/Hex;->u2or4(I)Ljava/lang/String;
 
     move-result-object v4
@@ -4633,9 +5119,46 @@
     throw v2
 .end method
 
-.method public static getName(I)Ljava/lang/String;
-    .locals 1
+.method public static getFormat(I)Lcom/android/dx/io/instructions/InstructionCodec;
+    .registers 2
+    .param p0, "opcode"    # I
 
+    .prologue
+    .line 1242
+    invoke-static {p0}, Lcom/android/dx/io/OpcodeInfo;->get(I)Lcom/android/dx/io/OpcodeInfo$Info;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/dx/io/OpcodeInfo$Info;->getFormat()Lcom/android/dx/io/instructions/InstructionCodec;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static getIndexType(I)Lcom/android/dx/io/IndexType;
+    .registers 2
+    .param p0, "opcode"    # I
+
+    .prologue
+    .line 1249
+    invoke-static {p0}, Lcom/android/dx/io/OpcodeInfo;->get(I)Lcom/android/dx/io/OpcodeInfo$Info;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/dx/io/OpcodeInfo$Info;->getIndexType()Lcom/android/dx/io/IndexType;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static getName(I)Ljava/lang/String;
+    .registers 2
+    .param p0, "opcode"    # I
+
+    .prologue
+    .line 1234
     invoke-static {p0}, Lcom/android/dx/io/OpcodeInfo;->get(I)Lcom/android/dx/io/OpcodeInfo$Info;
 
     move-result-object v0
@@ -4648,17 +5171,23 @@
 .end method
 
 .method private static set(Lcom/android/dx/io/OpcodeInfo$Info;)V
-    .locals 2
+    .registers 3
+    .param p0, "opcode"    # Lcom/android/dx/io/OpcodeInfo$Info;
 
+    .prologue
+    .line 1258
     invoke-virtual {p0}, Lcom/android/dx/io/OpcodeInfo$Info;->getOpcode()I
 
     move-result v1
 
     add-int/lit8 v0, v1, 0x1
 
+    .line 1259
+    .local v0, "idx":I
     sget-object v1, Lcom/android/dx/io/OpcodeInfo;->INFO:[Lcom/android/dx/io/OpcodeInfo$Info;
 
     aput-object p0, v1, v0
 
+    .line 1260
     return-void
 .end method

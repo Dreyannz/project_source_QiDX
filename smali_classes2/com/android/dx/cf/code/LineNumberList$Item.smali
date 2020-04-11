@@ -22,12 +22,18 @@
 
 # direct methods
 .method public constructor <init>(II)V
-    .locals 2
+    .registers 5
+    .param p1, "startPc"    # I
+    .param p2, "lineNumber"    # I
 
+    .prologue
+    .line 153
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-gez p1, :cond_0
+    .line 154
+    if-gez p1, :cond_d
 
+    .line 155
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "startPc < 0"
@@ -36,9 +42,11 @@
 
     throw v0
 
-    :cond_0
-    if-gez p2, :cond_1
+    .line 158
+    :cond_d
+    if-gez p2, :cond_17
 
+    .line 159
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "lineNumber < 0"
@@ -47,27 +55,34 @@
 
     throw v0
 
-    :cond_1
+    .line 162
+    :cond_17
     iput p1, p0, Lcom/android/dx/cf/code/LineNumberList$Item;->startPc:I
 
+    .line 163
     iput p2, p0, Lcom/android/dx/cf/code/LineNumberList$Item;->lineNumber:I
 
+    .line 164
     return-void
 .end method
 
 
 # virtual methods
 .method public getLineNumber()I
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 181
     iget v0, p0, Lcom/android/dx/cf/code/LineNumberList$Item;->lineNumber:I
 
     return v0
 .end method
 
 .method public getStartPc()I
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 172
     iget v0, p0, Lcom/android/dx/cf/code/LineNumberList$Item;->startPc:I
 
     return v0

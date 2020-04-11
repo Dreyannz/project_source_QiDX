@@ -28,32 +28,47 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/dx/dex/file/Item;Ljava/lang/String;)V
-    .locals 2
+    .registers 5
+    .param p1, "item"    # Lcom/android/dx/dex/file/Item;
+    .param p2, "name"    # Ljava/lang/String;
 
+    .prologue
+    .line 132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 133
     invoke-virtual {p1}, Lcom/android/dx/dex/file/Item;->writeSize()I
 
     move-result v0
 
+    .line 135
+    .local v0, "size":I
     iput-object p2, p0, Lcom/android/dx/dex/file/Statistics$Data;->name:Ljava/lang/String;
 
+    .line 136
     const/4 v1, 0x1
 
     iput v1, p0, Lcom/android/dx/dex/file/Statistics$Data;->count:I
 
+    .line 137
     iput v0, p0, Lcom/android/dx/dex/file/Statistics$Data;->totalSize:I
 
+    .line 138
     iput v0, p0, Lcom/android/dx/dex/file/Statistics$Data;->largestSize:I
 
+    .line 139
     iput v0, p0, Lcom/android/dx/dex/file/Statistics$Data;->smallestSize:I
 
+    .line 140
     return-void
 .end method
 
-.method static synthetic access$0(Lcom/android/dx/dex/file/Statistics$Data;)Ljava/lang/String;
-    .locals 1
+.method static synthetic access$000(Lcom/android/dx/dex/file/Statistics$Data;)Ljava/lang/String;
+    .registers 2
+    .param p0, "x0"    # Lcom/android/dx/dex/file/Statistics$Data;
 
+    .prologue
+    .line 110
     iget-object v0, p0, Lcom/android/dx/dex/file/Statistics$Data;->name:Ljava/lang/String;
 
     return-object v0
@@ -62,53 +77,72 @@
 
 # virtual methods
 .method public add(Lcom/android/dx/dex/file/Item;)V
-    .locals 2
+    .registers 4
+    .param p1, "item"    # Lcom/android/dx/dex/file/Item;
 
+    .prologue
+    .line 148
     invoke-virtual {p1}, Lcom/android/dx/dex/file/Item;->writeSize()I
 
     move-result v0
 
+    .line 150
+    .local v0, "size":I
     iget v1, p0, Lcom/android/dx/dex/file/Statistics$Data;->count:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/android/dx/dex/file/Statistics$Data;->count:I
 
+    .line 151
     iget v1, p0, Lcom/android/dx/dex/file/Statistics$Data;->totalSize:I
 
     add-int/2addr v1, v0
 
     iput v1, p0, Lcom/android/dx/dex/file/Statistics$Data;->totalSize:I
 
+    .line 153
     iget v1, p0, Lcom/android/dx/dex/file/Statistics$Data;->largestSize:I
 
-    if-le v0, v1, :cond_0
+    if-le v0, v1, :cond_15
 
+    .line 154
     iput v0, p0, Lcom/android/dx/dex/file/Statistics$Data;->largestSize:I
 
-    :cond_0
+    .line 157
+    :cond_15
     iget v1, p0, Lcom/android/dx/dex/file/Statistics$Data;->smallestSize:I
 
-    if-ge v0, v1, :cond_1
+    if-ge v0, v1, :cond_1b
 
+    .line 158
     iput v0, p0, Lcom/android/dx/dex/file/Statistics$Data;->smallestSize:I
 
-    :cond_1
+    .line 160
+    :cond_1b
     return-void
 .end method
 
 .method public toHuman()Ljava/lang/String;
-    .locals 5
+    .registers 6
 
+    .prologue
+    .line 177
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 179
+    .local v1, "sb":Ljava/lang/StringBuilder;
     new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "  "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget-object v3, p0, Lcom/android/dx/dex/file/Statistics$Data;->name:Ljava/lang/String;
 
@@ -134,15 +168,16 @@
 
     move-result-object v3
 
+    .line 180
     iget v2, p0, Lcom/android/dx/dex/file/Statistics$Data;->count:I
 
     const/4 v4, 0x1
 
-    if-ne v2, v4, :cond_0
+    if-ne v2, v4, :cond_75
 
     const-string v2, ""
 
-    :goto_0
+    :goto_2f
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -169,19 +204,26 @@
 
     move-result-object v2
 
+    .line 179
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 183
     iget v2, p0, Lcom/android/dx/dex/file/Statistics$Data;->smallestSize:I
 
     iget v3, p0, Lcom/android/dx/dex/file/Statistics$Data;->largestSize:I
 
-    if-ne v2, v3, :cond_1
+    if-ne v2, v3, :cond_78
 
+    .line 184
     new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "    "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget v3, p0, Lcom/android/dx/dex/file/Statistics$Data;->smallestSize:I
 
@@ -201,30 +243,39 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_1
+    .line 191
+    :goto_70
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     return-object v2
 
-    :cond_0
+    .line 180
+    :cond_75
     const-string v2, "s"
 
-    goto :goto_0
+    goto :goto_2f
 
-    :cond_1
+    .line 186
+    :cond_78
     iget v2, p0, Lcom/android/dx/dex/file/Statistics$Data;->totalSize:I
 
     iget v3, p0, Lcom/android/dx/dex/file/Statistics$Data;->count:I
 
     div-int v0, v2, v3
 
+    .line 187
+    .local v0, "average":I
     new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "    "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget v3, p0, Lcom/android/dx/dex/file/Statistics$Data;->smallestSize:I
 
@@ -266,17 +317,21 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    goto :goto_70
 .end method
 
 .method public writeAnnotation(Lcom/android/dx/util/AnnotatedOutput;)V
-    .locals 1
+    .registers 3
+    .param p1, "out"    # Lcom/android/dx/util/AnnotatedOutput;
 
+    .prologue
+    .line 168
     invoke-virtual {p0}, Lcom/android/dx/dex/file/Statistics$Data;->toHuman()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {p1, v0}, Lcom/android/dx/util/AnnotatedOutput;->annotate(Ljava/lang/String;)V
 
+    .line 169
     return-void
 .end method

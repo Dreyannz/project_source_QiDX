@@ -7,6 +7,9 @@
 .method public abstract getType(I)Lcom/android/dx/rop/type/Type;
 .end method
 
+.method public abstract getWordCount()I
+.end method
+
 .method public abstract isMutable()Z
 .end method
 

@@ -23,8 +23,11 @@
 
 # direct methods
 .method constructor <init>(Lcom/android/dx/ssa/SsaRenamer;)V
-    .locals 0
+    .registers 2
+    .param p1, "this$0"    # Lcom/android/dx/ssa/SsaRenamer;
 
+    .prologue
+    .line 164
     iput-object p1, p0, Lcom/android/dx/ssa/SsaRenamer$1;->this$0:Lcom/android/dx/ssa/SsaRenamer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,8 +38,12 @@
 
 # virtual methods
 .method public visitBlock(Lcom/android/dx/ssa/SsaBasicBlock;Lcom/android/dx/ssa/SsaBasicBlock;)V
-    .locals 2
+    .registers 5
+    .param p1, "block"    # Lcom/android/dx/ssa/SsaBasicBlock;
+    .param p2, "unused"    # Lcom/android/dx/ssa/SsaBasicBlock;
 
+    .prologue
+    .line 168
     new-instance v0, Lcom/android/dx/ssa/SsaRenamer$BlockRenamer;
 
     iget-object v1, p0, Lcom/android/dx/ssa/SsaRenamer$1;->this$0:Lcom/android/dx/ssa/SsaRenamer;
@@ -45,5 +52,6 @@
 
     invoke-virtual {v0}, Lcom/android/dx/ssa/SsaRenamer$BlockRenamer;->process()V
 
+    .line 169
     return-void
 .end method

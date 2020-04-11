@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "Member.java"
 
+# interfaces
+.implements Lcom/android/dx/cf/iface/HasAttribute;
+
 
 # virtual methods
 .method public abstract getAccessFlags()I

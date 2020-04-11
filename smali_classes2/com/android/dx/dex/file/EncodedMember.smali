@@ -12,24 +12,40 @@
 
 # direct methods
 .method public constructor <init>(I)V
-    .locals 0
+    .registers 2
+    .param p1, "accessFlags"    # I
 
+    .prologue
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 38
     iput p1, p0, Lcom/android/dx/dex/file/EncodedMember;->accessFlags:I
 
+    .line 39
     return-void
 .end method
 
 
 # virtual methods
+.method public abstract addContents(Lcom/android/dx/dex/file/DexFile;)V
+.end method
+
+.method public abstract debugPrint(Ljava/io/PrintWriter;Z)V
+.end method
+
 .method public abstract encode(Lcom/android/dx/dex/file/DexFile;Lcom/android/dx/util/AnnotatedOutput;II)I
 .end method
 
 .method public final getAccessFlags()I
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 47
     iget v0, p0, Lcom/android/dx/dex/file/EncodedMember;->accessFlags:I
 
     return v0
+.end method
+
+.method public abstract getName()Lcom/android/dx/rop/cst/CstString;
 .end method

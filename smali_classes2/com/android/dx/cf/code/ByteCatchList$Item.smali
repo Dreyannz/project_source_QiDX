@@ -26,12 +26,20 @@
 
 # direct methods
 .method public constructor <init>(IIILcom/android/dx/rop/cst/CstType;)V
-    .locals 2
+    .registers 7
+    .param p1, "startPc"    # I
+    .param p2, "endPc"    # I
+    .param p3, "handlerPc"    # I
+    .param p4, "exceptionClass"    # Lcom/android/dx/rop/cst/CstType;
 
+    .prologue
+    .line 249
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-gez p1, :cond_0
+    .line 250
+    if-gez p1, :cond_d
 
+    .line 251
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "startPc < 0"
@@ -40,9 +48,11 @@
 
     throw v0
 
-    :cond_0
-    if-ge p2, p1, :cond_1
+    .line 254
+    :cond_d
+    if-ge p2, p1, :cond_17
 
+    .line 255
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "endPc < startPc"
@@ -51,9 +61,11 @@
 
     throw v0
 
-    :cond_1
-    if-gez p3, :cond_2
+    .line 258
+    :cond_17
+    if-gez p3, :cond_21
 
+    .line 259
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "handlerPc < 0"
@@ -62,79 +74,98 @@
 
     throw v0
 
-    :cond_2
+    .line 262
+    :cond_21
     iput p1, p0, Lcom/android/dx/cf/code/ByteCatchList$Item;->startPc:I
 
+    .line 263
     iput p2, p0, Lcom/android/dx/cf/code/ByteCatchList$Item;->endPc:I
 
+    .line 264
     iput p3, p0, Lcom/android/dx/cf/code/ByteCatchList$Item;->handlerPc:I
 
+    .line 265
     iput-object p4, p0, Lcom/android/dx/cf/code/ByteCatchList$Item;->exceptionClass:Lcom/android/dx/rop/cst/CstType;
 
+    .line 266
     return-void
 .end method
 
 
 # virtual methods
 .method public covers(I)Z
-    .locals 1
+    .registers 3
+    .param p1, "pc"    # I
 
+    .prologue
+    .line 314
     iget v0, p0, Lcom/android/dx/cf/code/ByteCatchList$Item;->startPc:I
 
-    if-lt p1, v0, :cond_0
+    if-lt p1, v0, :cond_a
 
     iget v0, p0, Lcom/android/dx/cf/code/ByteCatchList$Item;->endPc:I
 
-    if-ge p1, v0, :cond_0
+    if-ge p1, v0, :cond_a
 
     const/4 v0, 0x1
 
-    :goto_0
+    :goto_9
     return v0
 
-    :cond_0
+    :cond_a
     const/4 v0, 0x0
 
-    goto :goto_0
+    goto :goto_9
 .end method
 
 .method public getEndPc()I
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 284
     iget v0, p0, Lcom/android/dx/cf/code/ByteCatchList$Item;->endPc:I
 
     return v0
 .end method
 
 .method public getExceptionClass()Lcom/android/dx/rop/cst/CstType;
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 303
     iget-object v0, p0, Lcom/android/dx/cf/code/ByteCatchList$Item;->exceptionClass:Lcom/android/dx/rop/cst/CstType;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_7
 
+    .line 304
     iget-object v0, p0, Lcom/android/dx/cf/code/ByteCatchList$Item;->exceptionClass:Lcom/android/dx/rop/cst/CstType;
 
-    :goto_0
+    .line 303
+    :goto_6
     return-object v0
 
-    :cond_0
+    .line 304
+    :cond_7
     sget-object v0, Lcom/android/dx/rop/cst/CstType;->OBJECT:Lcom/android/dx/rop/cst/CstType;
 
-    goto :goto_0
+    goto :goto_6
 .end method
 
 .method public getHandlerPc()I
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 293
     iget v0, p0, Lcom/android/dx/cf/code/ByteCatchList$Item;->handlerPc:I
 
     return v0
 .end method
 
 .method public getStartPc()I
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 274
     iget v0, p0, Lcom/android/dx/cf/code/ByteCatchList$Item;->startPc:I
 
     return v0

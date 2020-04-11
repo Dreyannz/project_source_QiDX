@@ -20,11 +20,16 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/dx/util/ByteArray$MyInputStream;)V
-    .locals 0
+    .registers 2
+    .param p1, "wrapped"    # Lcom/android/dx/util/ByteArray$MyInputStream;
 
+    .prologue
+    .line 359
     invoke-direct {p0, p1}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
+    .line 361
     iput-object p1, p0, Lcom/android/dx/util/ByteArray$MyDataInputStream;->wrapped:Lcom/android/dx/util/ByteArray$MyInputStream;
 
+    .line 362
     return-void
 .end method

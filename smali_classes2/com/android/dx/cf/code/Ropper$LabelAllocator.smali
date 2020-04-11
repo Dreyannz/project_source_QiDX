@@ -20,20 +20,27 @@
 
 # direct methods
 .method constructor <init>(I)V
-    .locals 0
+    .registers 2
+    .param p1, "startLabel"    # I
 
+    .prologue
+    .line 1441
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1442
     iput p1, p0, Lcom/android/dx/cf/code/Ropper$LabelAllocator;->nextAvailableLabel:I
 
+    .line 1443
     return-void
 .end method
 
 
 # virtual methods
 .method getNextLabel()I
-    .locals 2
+    .registers 3
 
+    .prologue
+    .line 1449
     iget v0, p0, Lcom/android/dx/cf/code/Ropper$LabelAllocator;->nextAvailableLabel:I
 
     add-int/lit8 v1, v0, 0x1

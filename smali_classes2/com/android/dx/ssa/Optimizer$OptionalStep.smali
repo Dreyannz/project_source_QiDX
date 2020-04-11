@@ -24,9 +24,9 @@
 
 
 # static fields
-.field public static final enum CONST_COLLECTOR:Lcom/android/dx/ssa/Optimizer$OptionalStep;
+.field private static final synthetic $VALUES:[Lcom/android/dx/ssa/Optimizer$OptionalStep;
 
-.field private static final synthetic ENUM$VALUES:[Lcom/android/dx/ssa/Optimizer$OptionalStep;
+.field public static final enum CONST_COLLECTOR:Lcom/android/dx/ssa/Optimizer$OptionalStep;
 
 .field public static final enum ESCAPE_ANALYSIS:Lcom/android/dx/ssa/Optimizer$OptionalStep;
 
@@ -39,8 +39,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .registers 7
 
+    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -51,6 +52,7 @@
 
     const/4 v2, 0x0
 
+    .line 36
     new-instance v0, Lcom/android/dx/ssa/Optimizer$OptionalStep;
 
     const-string v1, "MOVE_PARAM_COMBINER"
@@ -83,6 +85,7 @@
 
     sput-object v0, Lcom/android/dx/ssa/Optimizer$OptionalStep;->CONST_COLLECTOR:Lcom/android/dx/ssa/Optimizer$OptionalStep;
 
+    .line 37
     new-instance v0, Lcom/android/dx/ssa/Optimizer$OptionalStep;
 
     const-string v1, "ESCAPE_ANALYSIS"
@@ -91,6 +94,7 @@
 
     sput-object v0, Lcom/android/dx/ssa/Optimizer$OptionalStep;->ESCAPE_ANALYSIS:Lcom/android/dx/ssa/Optimizer$OptionalStep;
 
+    .line 35
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/dx/ssa/Optimizer$OptionalStep;
@@ -115,22 +119,32 @@
 
     aput-object v1, v0, v6
 
-    sput-object v0, Lcom/android/dx/ssa/Optimizer$OptionalStep;->ENUM$VALUES:[Lcom/android/dx/ssa/Optimizer$OptionalStep;
+    sput-object v0, Lcom/android/dx/ssa/Optimizer$OptionalStep;->$VALUES:[Lcom/android/dx/ssa/Optimizer$OptionalStep;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
+    .prologue
+    .line 35
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/dx/ssa/Optimizer$OptionalStep;
-    .locals 1
+    .registers 2
+    .param p0, "name"    # Ljava/lang/String;
 
+    .prologue
+    .line 35
     const-class v0, Lcom/android/dx/ssa/Optimizer$OptionalStep;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -143,17 +157,17 @@
 .end method
 
 .method public static values()[Lcom/android/dx/ssa/Optimizer$OptionalStep;
-    .locals 4
+    .registers 1
 
-    const/4 v3, 0x0
+    .prologue
+    .line 35
+    sget-object v0, Lcom/android/dx/ssa/Optimizer$OptionalStep;->$VALUES:[Lcom/android/dx/ssa/Optimizer$OptionalStep;
 
-    sget-object v0, Lcom/android/dx/ssa/Optimizer$OptionalStep;->ENUM$VALUES:[Lcom/android/dx/ssa/Optimizer$OptionalStep;
+    invoke-virtual {v0}, [Lcom/android/dx/ssa/Optimizer$OptionalStep;->clone()Ljava/lang/Object;
 
-    array-length v1, v0
+    move-result-object v0
 
-    new-array v2, v1, [Lcom/android/dx/ssa/Optimizer$OptionalStep;
+    check-cast v0, [Lcom/android/dx/ssa/Optimizer$OptionalStep;
 
-    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return-object v2
+    return-object v0
 .end method

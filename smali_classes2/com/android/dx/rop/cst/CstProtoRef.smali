@@ -9,18 +9,26 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/dx/rop/type/Prototype;)V
-    .locals 0
+    .registers 2
+    .param p1, "prototype"    # Lcom/android/dx/rop/type/Prototype;
 
+    .prologue
+    .line 29
     invoke-direct {p0}, Lcom/android/dx/rop/cst/TypedConstant;-><init>()V
 
+    .line 30
     iput-object p1, p0, Lcom/android/dx/rop/cst/CstProtoRef;->prototype:Lcom/android/dx/rop/type/Prototype;
 
+    .line 31
     return-void
 .end method
 
 .method public static make(Lcom/android/dx/rop/cst/CstString;)Lcom/android/dx/rop/cst/CstProtoRef;
-    .locals 2
+    .registers 3
+    .param p0, "descriptor"    # Lcom/android/dx/rop/cst/CstString;
 
+    .prologue
+    .line 41
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstString;->getString()Ljava/lang/String;
 
     move-result-object v1
@@ -29,6 +37,8 @@
 
     move-result-object v0
 
+    .line 42
+    .local v0, "prototype":Lcom/android/dx/rop/type/Prototype;
     new-instance v1, Lcom/android/dx/rop/cst/CstProtoRef;
 
     invoke-direct {v1, v0}, Lcom/android/dx/rop/cst/CstProtoRef;-><init>(Lcom/android/dx/rop/type/Prototype;)V
@@ -39,12 +49,17 @@
 
 # virtual methods
 .method protected compareTo0(Lcom/android/dx/rop/cst/Constant;)I
-    .locals 3
+    .registers 5
+    .param p1, "other"    # Lcom/android/dx/rop/cst/Constant;
 
+    .prologue
+    .line 75
     move-object v0, p1
 
     check-cast v0, Lcom/android/dx/rop/cst/CstProtoRef;
 
+    .line 76
+    .local v0, "otherCstProtoRef":Lcom/android/dx/rop/cst/CstProtoRef;
     iget-object v1, p0, Lcom/android/dx/rop/cst/CstProtoRef;->prototype:Lcom/android/dx/rop/type/Prototype;
 
     invoke-virtual {v0}, Lcom/android/dx/rop/cst/CstProtoRef;->getPrototype()Lcom/android/dx/rop/type/Prototype;
@@ -59,22 +74,30 @@
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 3
+    .registers 5
+    .param p1, "other"    # Ljava/lang/Object;
 
+    .prologue
+    .line 48
     instance-of v1, p1, Lcom/android/dx/rop/cst/CstProtoRef;
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_6
 
+    .line 49
     const/4 v1, 0x0
 
-    :goto_0
+    .line 52
+    :goto_5
     return v1
 
-    :cond_0
+    :cond_6
     move-object v0, p1
 
+    .line 51
     check-cast v0, Lcom/android/dx/rop/cst/CstProtoRef;
 
+    .line 52
+    .local v0, "otherCstProtoRef":Lcom/android/dx/rop/cst/CstProtoRef;
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstProtoRef;->getPrototype()Lcom/android/dx/rop/type/Prototype;
 
     move-result-object v1
@@ -87,28 +110,34 @@
 
     move-result v1
 
-    goto :goto_0
+    goto :goto_5
 .end method
 
 .method public getPrototype()Lcom/android/dx/rop/type/Prototype;
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 92
     iget-object v0, p0, Lcom/android/dx/rop/cst/CstProtoRef;->prototype:Lcom/android/dx/rop/type/Prototype;
 
     return-object v0
 .end method
 
 .method public getType()Lcom/android/dx/rop/type/Type;
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 97
     sget-object v0, Lcom/android/dx/rop/type/Type;->METHOD_TYPE:Lcom/android/dx/rop/type/Type;
 
     return-object v0
 .end method
 
 .method public hashCode()I
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 57
     iget-object v0, p0, Lcom/android/dx/rop/cst/CstProtoRef;->prototype:Lcom/android/dx/rop/type/Prototype;
 
     invoke-virtual {v0}, Lcom/android/dx/rop/type/Prototype;->hashCode()I
@@ -119,16 +148,20 @@
 .end method
 
 .method public isCategory2()Z
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 63
     const/4 v0, 0x0
 
     return v0
 .end method
 
 .method public toHuman()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 82
     iget-object v0, p0, Lcom/android/dx/rop/cst/CstProtoRef;->prototype:Lcom/android/dx/rop/type/Prototype;
 
     invoke-virtual {v0}, Lcom/android/dx/rop/type/Prototype;->getDescriptor()Ljava/lang/String;
@@ -139,19 +172,21 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .registers 3
 
+    .prologue
+    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstProtoRef;->typeName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, "{"
 
@@ -181,8 +216,10 @@
 .end method
 
 .method public typeName()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 69
     const-string v0, "proto"
 
     return-object v0

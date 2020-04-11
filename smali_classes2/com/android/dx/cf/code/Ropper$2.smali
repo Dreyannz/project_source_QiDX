@@ -20,13 +20,16 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/dx/cf/code/Ropper;
 
-.field private final synthetic val$reachableLabels:Lcom/android/dx/util/IntList;
+.field final synthetic val$reachableLabels:Lcom/android/dx/util/IntList;
 
 
 # direct methods
 .method constructor <init>(Lcom/android/dx/cf/code/Ropper;Lcom/android/dx/util/IntList;)V
-    .locals 0
+    .registers 3
+    .param p1, "this$0"    # Lcom/android/dx/cf/code/Ropper;
 
+    .prologue
+    .line 1412
     iput-object p1, p0, Lcom/android/dx/cf/code/Ropper$2;->this$0:Lcom/android/dx/cf/code/Ropper;
 
     iput-object p2, p0, Lcom/android/dx/cf/code/Ropper$2;->val$reachableLabels:Lcom/android/dx/util/IntList;
@@ -39,8 +42,11 @@
 
 # virtual methods
 .method public visitBlock(Lcom/android/dx/rop/code/BasicBlock;)V
-    .locals 2
+    .registers 4
+    .param p1, "b"    # Lcom/android/dx/rop/code/BasicBlock;
 
+    .prologue
+    .line 1416
     iget-object v0, p0, Lcom/android/dx/cf/code/Ropper$2;->val$reachableLabels:Lcom/android/dx/util/IntList;
 
     invoke-virtual {p1}, Lcom/android/dx/rop/code/BasicBlock;->getLabel()I
@@ -49,5 +55,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/dx/util/IntList;->add(I)V
 
+    .line 1417
     return-void
 .end method

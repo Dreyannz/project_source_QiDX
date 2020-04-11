@@ -9,8 +9,10 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .registers 1
 
+    .prologue
+    .line 28
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/android/dx/rop/cst/CstByte;->make(B)Lcom/android/dx/rop/cst/CstByte;
@@ -23,16 +25,23 @@
 .end method
 
 .method private constructor <init>(B)V
-    .locals 0
+    .registers 2
+    .param p1, "value"    # B
 
+    .prologue
+    .line 65
     invoke-direct {p0, p1}, Lcom/android/dx/rop/cst/CstLiteral32;-><init>(I)V
 
+    .line 66
     return-void
 .end method
 
 .method public static make(B)Lcom/android/dx/rop/cst/CstByte;
-    .locals 1
+    .registers 2
+    .param p0, "value"    # B
 
+    .prologue
+    .line 37
     new-instance v0, Lcom/android/dx/rop/cst/CstByte;
 
     invoke-direct {v0, p0}, Lcom/android/dx/rop/cst/CstByte;-><init>(B)V
@@ -41,19 +50,29 @@
 .end method
 
 .method public static make(I)Lcom/android/dx/rop/cst/CstByte;
-    .locals 4
+    .registers 5
+    .param p0, "value"    # I
 
+    .prologue
+    .line 49
     int-to-byte v0, p0
 
-    if-eq v0, p0, :cond_0
+    .line 51
+    .local v0, "cast":B
+    if-eq v0, p0, :cond_1c
 
+    .line 52
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "bogus byte value: "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -67,7 +86,8 @@
 
     throw v1
 
-    :cond_0
+    .line 56
+    :cond_1c
     invoke-static {v0}, Lcom/android/dx/rop/cst/CstByte;->make(B)Lcom/android/dx/rop/cst/CstByte;
 
     move-result-object v1
@@ -78,16 +98,34 @@
 
 # virtual methods
 .method public getType()Lcom/android/dx/rop/type/Type;
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 78
     sget-object v0, Lcom/android/dx/rop/type/Type;->BYTE:Lcom/android/dx/rop/type/Type;
 
     return-object v0
 .end method
 
-.method public toHuman()Ljava/lang/String;
-    .locals 1
+.method public getValue()B
+    .registers 2
 
+    .prologue
+    .line 99
+    invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstByte;->getIntBits()I
+
+    move-result v0
+
+    int-to-byte v0, v0
+
+    return v0
+.end method
+
+.method public toHuman()Ljava/lang/String;
+    .registers 2
+
+    .prologue
+    .line 90
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstByte;->getIntBits()I
 
     move-result v0
@@ -100,17 +138,25 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .registers 4
 
+    .prologue
+    .line 71
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstByte;->getIntBits()I
 
     move-result v0
 
+    .line 72
+    .local v0, "value":I
     new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "byte{0x"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-static {v0}, Lcom/android/dx/util/Hex;->u1(I)Ljava/lang/String;
 
@@ -144,8 +190,10 @@
 .end method
 
 .method public typeName()Ljava/lang/String;
-    .locals 1
+    .registers 2
 
+    .prologue
+    .line 84
     const-string v0, "byte"
 
     return-object v0

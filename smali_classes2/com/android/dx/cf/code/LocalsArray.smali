@@ -8,10 +8,14 @@
 
 # direct methods
 .method protected constructor <init>(Z)V
-    .locals 0
+    .registers 2
+    .param p1, "mutable"    # Z
 
+    .prologue
+    .line 41
     invoke-direct {p0, p1}, Lcom/android/dx/util/MutabilityControl;-><init>(Z)V
 
+    .line 42
     return-void
 .end method
 
@@ -26,7 +30,22 @@
 .method public abstract get(I)Lcom/android/dx/rop/type/TypeBearer;
 .end method
 
+.method public abstract getCategory1(I)Lcom/android/dx/rop/type/TypeBearer;
+.end method
+
+.method public abstract getCategory2(I)Lcom/android/dx/rop/type/TypeBearer;
+.end method
+
+.method public abstract getMaxLocals()I
+.end method
+
+.method public abstract getOrNull(I)Lcom/android/dx/rop/type/TypeBearer;
+.end method
+
 .method protected abstract getPrimary()Lcom/android/dx/cf/code/OneLocalsArray;
+.end method
+
+.method public abstract invalidate(I)V
 .end method
 
 .method public abstract makeInitialized(Lcom/android/dx/rop/type/Type;)V

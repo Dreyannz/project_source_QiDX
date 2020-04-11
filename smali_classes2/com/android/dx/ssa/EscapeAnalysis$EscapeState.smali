@@ -24,7 +24,7 @@
 
 
 # static fields
-.field private static final synthetic ENUM$VALUES:[Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
+.field private static final synthetic $VALUES:[Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
 
 .field public static final enum GLOBAL:Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
 
@@ -39,8 +39,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .registers 7
 
+    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -51,6 +52,7 @@
 
     const/4 v2, 0x0
 
+    .line 96
     new-instance v0, Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
 
     const-string v1, "TOP"
@@ -91,6 +93,7 @@
 
     sput-object v0, Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;->GLOBAL:Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
 
+    .line 95
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
@@ -115,22 +118,32 @@
 
     aput-object v1, v0, v6
 
-    sput-object v0, Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;->ENUM$VALUES:[Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
+    sput-object v0, Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;->$VALUES:[Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
+    .prologue
+    .line 95
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
-    .locals 1
+    .registers 2
+    .param p0, "name"    # Ljava/lang/String;
 
+    .prologue
+    .line 95
     const-class v0, Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -143,17 +156,17 @@
 .end method
 
 .method public static values()[Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
-    .locals 4
+    .registers 1
 
-    const/4 v3, 0x0
+    .prologue
+    .line 95
+    sget-object v0, Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;->$VALUES:[Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
 
-    sget-object v0, Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;->ENUM$VALUES:[Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
+    invoke-virtual {v0}, [Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;->clone()Ljava/lang/Object;
 
-    array-length v1, v0
+    move-result-object v0
 
-    new-array v2, v1, [Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
+    check-cast v0, [Lcom/android/dx/ssa/EscapeAnalysis$EscapeState;
 
-    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return-object v2
+    return-object v0
 .end method
