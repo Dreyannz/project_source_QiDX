@@ -2063,7 +2063,7 @@ The APK has been signed with your key in %2$s. Make sure to keep this file for f
     <string name="preference_summary_keep_ssh">Keep SSH session information such as the decrypted private key in memory</string>
     <string name="preference_title_repo">Create Repo</string>
     <string name="preference_summary_create_repo">Create Git repository for new projects</string>
-    <string name="activity_help">AIDE Help</string>
+    <string name="activity_help">QiDX Help</string>
     <string name="activity_my_android_app">My Android App</string>
     <string name="activity_git_commit">Git commit</string>
     <string name="activity_get_access">Get access</string>
@@ -2105,14 +2105,6 @@ The APK has been signed with your key in %2$s. Make sure to keep this file for f
     <string name="proguard_summary">Enable proguard. This will make the Apps smaller but cause longer build times.</string>
     <string name="4455jkjh_permissions_title">Edit Permissions</string>
     <string name="4455jkjh_permissions_dialog">Permissions</string>
-    <string name="pref_use_adrt">"This function helps you have your application's Logcat if you need it."</string>
-    <string name="pref_use_todo">To create a new method or other, will appear within the parameters: \"TODO: Implement this method\"</string>
-    <string name="pref_use_gradle">Allows you to use existing AndroidX suggestions in Gradle</string>
-    <string name="preference_advanced_settings">Advanced Settings</string>
-    <string name="preference_summary_advanced_settings">Be careful as it is in beta and is at risk of failure</string>
-    <string name="ndk_title_install">NDK Support</string>
-    <string name="ndk_title_end_install">End of installation</string>
-    <string name="ndk_message_fail_install">The installation was not completed, probably due to incompatibility</string>
     <item type="string" name="APKTOOL_DUMMY_83b">false</item>
     <item type="string" name="APKTOOL_DUMMY_83c">false</item>
     <item type="string" name="APKTOOL_DUMMY_83d">false</item>
@@ -2122,4 +2114,12 @@ The APK has been signed with your key in %2$s. Make sure to keep this file for f
     <item type="string" name="APKTOOL_DUMMY_841">false</item>
     <item type="string" name="APKTOOL_DUMMY_842">false</item>
     <item type="string" name="APKTOOL_DUMMY_843">false</item>
+    <string name="pref_use_adrt">"This function helps you have your application's Logcat if you need it."</string>
+    <string name="pref_use_todo">To create a new method or other, will appear within the parameters: \"TODO: Implement this method\"</string>
+    <string name="pref_use_gradle">Allows you to use existing AndroidX suggestions in Gradle</string>
+    <string name="preference_advanced_settings">Advanced Settings</string>
+    <string name="preference_summary_advanced_settings">Be careful as it is in beta and is at risk of failure</string>
+    <string name="ndk_title_install">NDK Support</string>
+    <string name="ndk_title_end_install">End of installation</string>
+    <string name="ndk_message_fail_install">The installation was not completed, probably due to incompatibility</string>
 </resources>

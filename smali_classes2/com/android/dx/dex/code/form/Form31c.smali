@@ -9,10 +9,8 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 1
+    .locals 1
 
-    .prologue
-    .line 37
     new-instance v0, Lcom/android/dx/dex/code/form/Form31c;
 
     invoke-direct {v0}, Lcom/android/dx/dex/code/form/Form31c;-><init>()V
@@ -23,56 +21,42 @@
 .end method
 
 .method private constructor <init>()V
-    .registers 1
+    .locals 0
 
-    .prologue
-    .line 43
     invoke-direct {p0}, Lcom/android/dx/dex/code/InsnFormat;-><init>()V
 
-    .line 45
     return-void
 .end method
 
 
 # virtual methods
 .method public codeSize()I
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 67
     const/4 v0, 0x3
 
     return v0
 .end method
 
 .method public compatibleRegs(Lcom/android/dx/dex/code/DalvInsn;)Ljava/util/BitSet;
-    .registers 10
-    .param p1, "insn"    # Lcom/android/dx/dex/code/DalvInsn;
+    .locals 8
 
-    .prologue
     const/4 v7, 0x1
 
     const/4 v6, 0x0
 
-    .line 116
     invoke-virtual {p1}, Lcom/android/dx/dex/code/DalvInsn;->getRegisters()Lcom/android/dx/rop/code/RegisterSpecList;
 
     move-result-object v2
 
-    .line 117
-    .local v2, "regs":Lcom/android/dx/rop/code/RegisterSpecList;
     invoke-virtual {v2}, Lcom/android/dx/rop/code/RegisterSpecList;->size()I
 
     move-result v3
 
-    .line 118
-    .local v3, "sz":I
     new-instance v0, Ljava/util/BitSet;
 
     invoke-direct {v0, v3}, Ljava/util/BitSet;-><init>(I)V
 
-    .line 119
-    .local v0, "bits":Ljava/util/BitSet;
     invoke-virtual {v2, v6}, Lcom/android/dx/rop/code/RegisterSpecList;->get(I)Lcom/android/dx/rop/code/RegisterSpec;
 
     move-result-object v4
@@ -85,20 +69,15 @@
 
     move-result v1
 
-    .line 121
-    .local v1, "compat":Z
-    if-ne v3, v7, :cond_21
+    if-ne v3, v7, :cond_1
 
-    .line 122
     invoke-virtual {v0, v6, v1}, Ljava/util/BitSet;->set(IZ)V
 
-    .line 130
-    :cond_20
-    :goto_20
+    :cond_0
+    :goto_0
     return-object v0
 
-    .line 124
-    :cond_21
+    :cond_1
     invoke-virtual {v2, v6}, Lcom/android/dx/rop/code/RegisterSpecList;->get(I)Lcom/android/dx/rop/code/RegisterSpec;
 
     move-result-object v4
@@ -115,32 +94,23 @@
 
     move-result v5
 
-    if-ne v4, v5, :cond_20
+    if-ne v4, v5, :cond_0
 
-    .line 125
     invoke-virtual {v0, v6, v1}, Ljava/util/BitSet;->set(IZ)V
 
-    .line 126
     invoke-virtual {v0, v7, v1}, Ljava/util/BitSet;->set(IZ)V
 
-    goto :goto_20
+    goto :goto_0
 .end method
 
 .method public insnArgString(Lcom/android/dx/dex/code/DalvInsn;)Ljava/lang/String;
-    .registers 5
-    .param p1, "insn"    # Lcom/android/dx/dex/code/DalvInsn;
+    .locals 3
 
-    .prologue
-    .line 50
     invoke-virtual {p1}, Lcom/android/dx/dex/code/DalvInsn;->getRegisters()Lcom/android/dx/rop/code/RegisterSpecList;
 
     move-result-object v0
 
-    .line 51
-    .local v0, "regs":Lcom/android/dx/rop/code/RegisterSpecList;
     new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v2, 0x0
 
@@ -152,9 +122,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v2, ", "
 
@@ -178,73 +150,57 @@
 .end method
 
 .method public insnCommentString(Lcom/android/dx/dex/code/DalvInsn;Z)Ljava/lang/String;
-    .registers 4
-    .param p1, "insn"    # Lcom/android/dx/dex/code/DalvInsn;
-    .param p2, "noteIndices"    # Z
+    .locals 1
 
-    .prologue
-    .line 57
-    if-eqz p2, :cond_7
+    if-eqz p2, :cond_0
 
-    .line 58
     invoke-virtual {p1}, Lcom/android/dx/dex/code/DalvInsn;->cstComment()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 60
-    :goto_6
+    :goto_0
     return-object v0
 
-    :cond_7
+    :cond_0
     const-string v0, ""
 
-    goto :goto_6
+    goto :goto_0
 .end method
 
 .method public isCompatible(Lcom/android/dx/dex/code/DalvInsn;)Z
-    .registers 10
-    .param p1, "insn"    # Lcom/android/dx/dex/code/DalvInsn;
+    .locals 8
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 73
     instance-of v6, p1, Lcom/android/dx/dex/code/CstInsn;
 
-    if-nez v6, :cond_7
+    if-nez v6, :cond_1
 
-    .line 108
-    :cond_6
-    :goto_6
+    :cond_0
+    :goto_0
     return v4
 
-    .line 77
-    :cond_7
+    :cond_1
     invoke-virtual {p1}, Lcom/android/dx/dex/code/DalvInsn;->getRegisters()Lcom/android/dx/rop/code/RegisterSpecList;
 
     move-result-object v3
 
-    .line 80
-    .local v3, "regs":Lcom/android/dx/rop/code/RegisterSpecList;
     invoke-virtual {v3}, Lcom/android/dx/rop/code/RegisterSpecList;->size()I
 
     move-result v6
 
-    packed-switch v6, :pswitch_data_4a
+    packed-switch v6, :pswitch_data_0
 
-    goto :goto_6
+    goto :goto_0
 
-    .line 82
-    :pswitch_13
+    :pswitch_0
     invoke-virtual {v3, v4}, Lcom/android/dx/rop/code/RegisterSpecList;->get(I)Lcom/android/dx/rop/code/RegisterSpec;
 
     move-result-object v2
 
-    .line 101
-    .local v2, "reg":Lcom/android/dx/rop/code/RegisterSpec;
-    :cond_17
+    :cond_2
     invoke-virtual {v2}, Lcom/android/dx/rop/code/RegisterSpec;->getReg()I
 
     move-result v6
@@ -253,49 +209,38 @@
 
     move-result v6
 
-    if-eqz v6, :cond_6
+    if-eqz v6, :cond_0
 
     move-object v0, p1
 
-    .line 105
     check-cast v0, Lcom/android/dx/dex/code/CstInsn;
 
-    .line 106
-    .local v0, "ci":Lcom/android/dx/dex/code/CstInsn;
     invoke-virtual {v0}, Lcom/android/dx/dex/code/CstInsn;->getConstant()Lcom/android/dx/rop/cst/Constant;
 
     move-result-object v1
 
-    .line 108
-    .local v1, "cst":Lcom/android/dx/rop/cst/Constant;
     instance-of v6, v1, Lcom/android/dx/rop/cst/CstType;
 
-    if-nez v6, :cond_34
+    if-nez v6, :cond_3
 
     instance-of v6, v1, Lcom/android/dx/rop/cst/CstFieldRef;
 
-    if-nez v6, :cond_34
+    if-nez v6, :cond_3
 
     instance-of v6, v1, Lcom/android/dx/rop/cst/CstString;
 
-    if-eqz v6, :cond_6
+    if-eqz v6, :cond_0
 
-    :cond_34
+    :cond_3
     move v4, v5
 
-    goto :goto_6
+    goto :goto_0
 
-    .line 90
-    .end local v0    # "ci":Lcom/android/dx/dex/code/CstInsn;
-    .end local v1    # "cst":Lcom/android/dx/rop/cst/Constant;
-    .end local v2    # "reg":Lcom/android/dx/rop/code/RegisterSpec;
-    :pswitch_36
+    :pswitch_1
     invoke-virtual {v3, v4}, Lcom/android/dx/rop/code/RegisterSpecList;->get(I)Lcom/android/dx/rop/code/RegisterSpec;
 
     move-result-object v2
 
-    .line 91
-    .restart local v2    # "reg":Lcom/android/dx/rop/code/RegisterSpec;
     invoke-virtual {v2}, Lcom/android/dx/rop/code/RegisterSpec;->getReg()I
 
     move-result v6
@@ -308,43 +253,34 @@
 
     move-result v7
 
-    if-eq v6, v7, :cond_17
+    if-eq v6, v7, :cond_2
 
-    goto :goto_6
+    goto :goto_0
 
-    .line 80
     nop
 
-    :pswitch_data_4a
+    :pswitch_data_0
     .packed-switch 0x1
-        :pswitch_13
-        :pswitch_36
+        :pswitch_0
+        :pswitch_1
     .end packed-switch
 .end method
 
 .method public writeTo(Lcom/android/dx/util/AnnotatedOutput;Lcom/android/dx/dex/code/DalvInsn;)V
-    .registers 6
-    .param p1, "out"    # Lcom/android/dx/util/AnnotatedOutput;
-    .param p2, "insn"    # Lcom/android/dx/dex/code/DalvInsn;
+    .locals 3
 
-    .prologue
-    .line 136
     invoke-virtual {p2}, Lcom/android/dx/dex/code/DalvInsn;->getRegisters()Lcom/android/dx/rop/code/RegisterSpecList;
 
     move-result-object v1
 
-    .local v1, "regs":Lcom/android/dx/rop/code/RegisterSpecList;
     move-object v2, p2
 
-    .line 137
     check-cast v2, Lcom/android/dx/dex/code/CstInsn;
 
     invoke-virtual {v2}, Lcom/android/dx/dex/code/CstInsn;->getIndex()I
 
     move-result v0
 
-    .line 139
-    .local v0, "cpi":I
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/android/dx/rop/code/RegisterSpecList;->get(I)Lcom/android/dx/rop/code/RegisterSpec;
@@ -361,6 +297,5 @@
 
     invoke-static {p1, v2, v0}, Lcom/android/dx/dex/code/form/Form31c;->write(Lcom/android/dx/util/AnnotatedOutput;SI)V
 
-    .line 140
     return-void
 .end method

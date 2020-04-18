@@ -1506,7 +1506,7 @@ This app lets users show or hide the status bar and navigation bar with a swipe.
     <string name="dialog_save_files_message">Deseja salvar os arquivos modificados?</string>
     <string name="dialog_save_files_title">Salvar arquivos</string>
     <string name="dialog_search_message">Procurar por:</string>
-    <string name="dialog_set_breakpoint_message">O QiDX vai mudar a variante (Tipo de compilação/build) para a %1$s para habilitar a depuração com o AiDE.</string>
+    <string name="dialog_set_breakpoint_message">QiDX vai mudar a variante (Tipo de compilação/build) para a %1$s para habilitar a depuração com o ADRT</string>
     <string name="dialog_set_breakpoint_title">Definir breakpoint</string>
     <string name="dialog_variants_title">Tipos de variantes (Compilação)</string>
     <string name="dialog_whats_new_skip">Continuar</string>
@@ -1666,7 +1666,7 @@ This app lets users show or hide the status bar and navigation bar with a swipe.
     <string name="course_android_action_bar_18_task">"Congratulations! You've learned about the App Manifest. Play with it on your own a bit. Change the application label as well. Then learn to start activities with intents in the next lesson."</string>
     <string name="preference_head_title_build">Compilar &amp; Executar</string>
     <string name="preference_summary_versus">\"%1$s\" / \"%2$s\"</string>
-    <string name="notify_title_new_aide">Nova versão do AiDE foi instalada</string>
+    <string name="notify_title_new_aide">Nova versão do AIDE Web foi instalada</string>
     <string name="notify_text_new_ver">Veja as novidades!</string>
     <string name="notify_title_new_aide_web">Nova versão do AiDE Web foi instalada</string>
     <string name="dialog_bt_export">Exportar</string>
@@ -2126,5 +2126,5 @@ O APK foi assinado com a chave %2$s. Guarde esse arquivo para futuras atualizaç
     <item type="string" name="APKTOOL_DUMMY_4e8">false</item>
     <item type="string" name="APKTOOL_DUMMY_50e">false</item>
     <item type="string" name="APKTOOL_DUMMY_62a">false</item>
-    <string name="dx_app_name">AiDE</string>
+    <string name="dx_app_name">QiDX</string>
 </resources>

@@ -5,36 +5,28 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/dx/rop/code/SourcePosition;)V
-    .registers 3
-    .param p1, "position"    # Lcom/android/dx/rop/code/SourcePosition;
+    .locals 1
 
-    .prologue
-    .line 38
     sget-object v0, Lcom/android/dx/rop/code/RegisterSpecList;->EMPTY:Lcom/android/dx/rop/code/RegisterSpecList;
 
     invoke-direct {p0, p1, v0}, Lcom/android/dx/dex/code/VariableSizeInsn;-><init>(Lcom/android/dx/rop/code/SourcePosition;Lcom/android/dx/rop/code/RegisterSpecList;)V
 
-    .line 39
     return-void
 .end method
 
 
 # virtual methods
 .method protected argString()Ljava/lang/String;
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 64
     const/4 v0, 0x0
 
     return-object v0
 .end method
 
 .method public codeSize()I
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 44
     invoke-virtual {p0}, Lcom/android/dx/dex/code/OddSpacer;->getAddress()I
 
     move-result v0
@@ -45,36 +37,28 @@
 .end method
 
 .method protected listingString0(Z)Ljava/lang/String;
-    .registers 3
-    .param p1, "noteIndices"    # Z
+    .locals 1
 
-    .prologue
-    .line 70
     invoke-virtual {p0}, Lcom/android/dx/dex/code/OddSpacer;->codeSize()I
 
     move-result v0
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_0
 
-    .line 71
     const/4 v0, 0x0
 
-    .line 74
-    :goto_7
+    :goto_0
     return-object v0
 
-    :cond_8
+    :cond_0
     const-string v0, "nop // spacer"
 
-    goto :goto_7
+    goto :goto_0
 .end method
 
 .method public withRegisters(Lcom/android/dx/rop/code/RegisterSpecList;)Lcom/android/dx/dex/code/DalvInsn;
-    .registers 4
-    .param p1, "registers"    # Lcom/android/dx/rop/code/RegisterSpecList;
+    .locals 2
 
-    .prologue
-    .line 58
     new-instance v0, Lcom/android/dx/dex/code/OddSpacer;
 
     invoke-virtual {p0}, Lcom/android/dx/dex/code/OddSpacer;->getPosition()Lcom/android/dx/rop/code/SourcePosition;
@@ -87,27 +71,22 @@
 .end method
 
 .method public writeTo(Lcom/android/dx/util/AnnotatedOutput;)V
-    .registers 4
-    .param p1, "out"    # Lcom/android/dx/util/AnnotatedOutput;
+    .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 50
     invoke-virtual {p0}, Lcom/android/dx/dex/code/OddSpacer;->codeSize()I
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_0
 
-    .line 51
     invoke-static {v1, v1}, Lcom/android/dx/dex/code/InsnFormat;->codeUnit(II)S
 
     move-result v0
 
     invoke-interface {p1, v0}, Lcom/android/dx/util/AnnotatedOutput;->writeShort(I)V
 
-    .line 53
-    :cond_e
+    :cond_0
     return-void
 .end method

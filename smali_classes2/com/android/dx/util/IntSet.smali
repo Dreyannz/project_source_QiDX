@@ -18,6 +18,3 @@
 
 .method public abstract merge(Lcom/android/dx/util/IntSet;)V
 .end method
-
-.method public abstract remove(I)V
-.end method

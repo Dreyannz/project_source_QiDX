@@ -22,28 +22,21 @@
 
 # direct methods
 .method constructor <init>(Lcom/android/dx/cf/code/Ropper;)V
-    .registers 4
+    .locals 2
 
-    .prologue
-    .line 1459
     iput-object p1, p0, Lcom/android/dx/cf/code/Ropper$ExceptionSetupLabelAllocator;->this$0:Lcom/android/dx/cf/code/Ropper;
 
-    .line 1460
-    # getter for: Lcom/android/dx/cf/code/Ropper;->maxLabel:I
-    invoke-static {p1}, Lcom/android/dx/cf/code/Ropper;->access$100(Lcom/android/dx/cf/code/Ropper;)I
+    invoke-static {p1}, Lcom/android/dx/cf/code/Ropper;->access$1(Lcom/android/dx/cf/code/Ropper;)I
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/android/dx/cf/code/Ropper$LabelAllocator;-><init>(I)V
 
-    .line 1461
-    # getter for: Lcom/android/dx/cf/code/Ropper;->maxLabel:I
-    invoke-static {p1}, Lcom/android/dx/cf/code/Ropper;->access$100(Lcom/android/dx/cf/code/Ropper;)I
+    invoke-static {p1}, Lcom/android/dx/cf/code/Ropper;->access$1(Lcom/android/dx/cf/code/Ropper;)I
 
     move-result v0
 
-    # getter for: Lcom/android/dx/cf/code/Ropper;->method:Lcom/android/dx/cf/code/ConcreteMethod;
-    invoke-static {p1}, Lcom/android/dx/cf/code/Ropper;->access$700(Lcom/android/dx/cf/code/Ropper;)Lcom/android/dx/cf/code/ConcreteMethod;
+    invoke-static {p1}, Lcom/android/dx/cf/code/Ropper;->access$5(Lcom/android/dx/cf/code/Ropper;)Lcom/android/dx/cf/code/ConcreteMethod;
 
     move-result-object v1
 
@@ -59,32 +52,27 @@
 
     iput v0, p0, Lcom/android/dx/cf/code/Ropper$ExceptionSetupLabelAllocator;->maxSetupLabel:I
 
-    .line 1462
     return-void
 .end method
 
 
 # virtual methods
 .method getNextLabel()I
-    .registers 3
+    .locals 2
 
-    .prologue
-    .line 1466
     iget v0, p0, Lcom/android/dx/cf/code/Ropper$ExceptionSetupLabelAllocator;->nextAvailableLabel:I
 
     iget v1, p0, Lcom/android/dx/cf/code/Ropper$ExceptionSetupLabelAllocator;->maxSetupLabel:I
 
-    if-lt v0, v1, :cond_c
+    if-lt v0, v1, :cond_0
 
-    .line 1467
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
     invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
     throw v0
 
-    .line 1469
-    :cond_c
+    :cond_0
     iget v0, p0, Lcom/android/dx/cf/code/Ropper$ExceptionSetupLabelAllocator;->nextAvailableLabel:I
 
     add-int/lit8 v1, v0, 0x1

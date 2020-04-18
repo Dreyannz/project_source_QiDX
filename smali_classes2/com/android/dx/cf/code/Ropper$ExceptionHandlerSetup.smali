@@ -22,41 +22,30 @@
 
 # direct methods
 .method constructor <init>(Lcom/android/dx/rop/type/Type;I)V
-    .registers 3
-    .param p1, "caughtType"    # Lcom/android/dx/rop/type/Type;
-    .param p2, "label"    # I
+    .locals 0
 
-    .prologue
-    .line 198
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 199
     iput-object p1, p0, Lcom/android/dx/cf/code/Ropper$ExceptionHandlerSetup;->caughtType:Lcom/android/dx/rop/type/Type;
 
-    .line 200
     iput p2, p0, Lcom/android/dx/cf/code/Ropper$ExceptionHandlerSetup;->label:I
 
-    .line 201
     return-void
 .end method
 
 
 # virtual methods
 .method getCaughtType()Lcom/android/dx/rop/type/Type;
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 207
     iget-object v0, p0, Lcom/android/dx/cf/code/Ropper$ExceptionHandlerSetup;->caughtType:Lcom/android/dx/rop/type/Type;
 
     return-object v0
 .end method
 
 .method public getLabel()I
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 214
     iget v0, p0, Lcom/android/dx/cf/code/Ropper$ExceptionHandlerSetup;->label:I
 
     return v0

@@ -23,11 +23,8 @@
 
 # direct methods
 .method constructor <init>(Lcom/android/dx/ssa/SsaMethod;)V
-    .registers 2
-    .param p1, "this$0"    # Lcom/android/dx/ssa/SsaMethod;
+    .locals 0
 
-    .prologue
-    .line 431
     iput-object p1, p0, Lcom/android/dx/ssa/SsaMethod$2;->this$0:Lcom/android/dx/ssa/SsaMethod;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,34 +33,27 @@
 .end method
 
 .method private addToUses(Lcom/android/dx/ssa/SsaInsn;)V
-    .registers 7
-    .param p1, "insn"    # Lcom/android/dx/ssa/SsaInsn;
+    .locals 5
 
-    .prologue
-    .line 452
     invoke-virtual {p1}, Lcom/android/dx/ssa/SsaInsn;->getSources()Lcom/android/dx/rop/code/RegisterSpecList;
 
     move-result-object v1
 
-    .line 453
-    .local v1, "rl":Lcom/android/dx/rop/code/RegisterSpecList;
     invoke-virtual {v1}, Lcom/android/dx/rop/code/RegisterSpecList;->size()I
 
     move-result v2
 
-    .line 455
-    .local v2, "sz":I
     const/4 v0, 0x0
 
-    .local v0, "i":I
-    :goto_9
-    if-ge v0, v2, :cond_21
+    :goto_0
+    if-lt v0, v2, :cond_0
 
-    .line 456
+    return-void
+
+    :cond_0
     iget-object v3, p0, Lcom/android/dx/ssa/SsaMethod$2;->this$0:Lcom/android/dx/ssa/SsaMethod;
 
-    # getter for: Lcom/android/dx/ssa/SsaMethod;->useList:[Ljava/util/ArrayList;
-    invoke-static {v3}, Lcom/android/dx/ssa/SsaMethod;->access$100(Lcom/android/dx/ssa/SsaMethod;)[Ljava/util/ArrayList;
+    invoke-static {v3}, Lcom/android/dx/ssa/SsaMethod;->access$1(Lcom/android/dx/ssa/SsaMethod;)[Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -79,50 +69,33 @@
 
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 455
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_9
-
-    .line 458
-    :cond_21
-    return-void
+    goto :goto_0
 .end method
 
 
 # virtual methods
 .method public visitMoveInsn(Lcom/android/dx/ssa/NormalSsaInsn;)V
-    .registers 2
-    .param p1, "insn"    # Lcom/android/dx/ssa/NormalSsaInsn;
+    .locals 0
 
-    .prologue
-    .line 435
     invoke-direct {p0, p1}, Lcom/android/dx/ssa/SsaMethod$2;->addToUses(Lcom/android/dx/ssa/SsaInsn;)V
 
-    .line 436
     return-void
 .end method
 
 .method public visitNonMoveInsn(Lcom/android/dx/ssa/NormalSsaInsn;)V
-    .registers 2
-    .param p1, "insn"    # Lcom/android/dx/ssa/NormalSsaInsn;
+    .locals 0
 
-    .prologue
-    .line 445
     invoke-direct {p0, p1}, Lcom/android/dx/ssa/SsaMethod$2;->addToUses(Lcom/android/dx/ssa/SsaInsn;)V
 
-    .line 446
     return-void
 .end method
 
 .method public visitPhiInsn(Lcom/android/dx/ssa/PhiInsn;)V
-    .registers 2
-    .param p1, "phi"    # Lcom/android/dx/ssa/PhiInsn;
+    .locals 0
 
-    .prologue
-    .line 440
     invoke-direct {p0, p1}, Lcom/android/dx/ssa/SsaMethod$2;->addToUses(Lcom/android/dx/ssa/SsaInsn;)V
 
-    .line 441
     return-void
 .end method

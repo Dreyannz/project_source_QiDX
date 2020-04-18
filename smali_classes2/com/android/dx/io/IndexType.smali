@@ -15,9 +15,9 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/android/dx/io/IndexType;
-
 .field public static final enum CALL_SITE_REF:Lcom/android/dx/io/IndexType;
+
+.field private static final synthetic ENUM$VALUES:[Lcom/android/dx/io/IndexType;
 
 .field public static final enum FIELD_OFFSET:Lcom/android/dx/io/IndexType;
 
@@ -48,9 +48,8 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 8
+    .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -61,7 +60,6 @@
 
     const/4 v3, 0x0
 
-    .line 24
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "UNKNOWN"
@@ -70,7 +68,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->UNKNOWN:Lcom/android/dx/io/IndexType;
 
-    .line 27
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "NONE"
@@ -79,7 +76,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->NONE:Lcom/android/dx/io/IndexType;
 
-    .line 30
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "VARIES"
@@ -88,7 +84,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->VARIES:Lcom/android/dx/io/IndexType;
 
-    .line 33
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "TYPE_REF"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->TYPE_REF:Lcom/android/dx/io/IndexType;
 
-    .line 36
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "STRING_REF"
@@ -106,7 +100,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->STRING_REF:Lcom/android/dx/io/IndexType;
 
-    .line 39
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "METHOD_REF"
@@ -117,7 +110,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->METHOD_REF:Lcom/android/dx/io/IndexType;
 
-    .line 42
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "FIELD_REF"
@@ -128,7 +120,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->FIELD_REF:Lcom/android/dx/io/IndexType;
 
-    .line 45
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "METHOD_AND_PROTO_REF"
@@ -139,7 +130,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->METHOD_AND_PROTO_REF:Lcom/android/dx/io/IndexType;
 
-    .line 48
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "CALL_SITE_REF"
@@ -150,7 +140,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->CALL_SITE_REF:Lcom/android/dx/io/IndexType;
 
-    .line 51
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "INLINE_METHOD"
@@ -161,7 +150,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->INLINE_METHOD:Lcom/android/dx/io/IndexType;
 
-    .line 54
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "VTABLE_OFFSET"
@@ -172,7 +160,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->VTABLE_OFFSET:Lcom/android/dx/io/IndexType;
 
-    .line 57
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "FIELD_OFFSET"
@@ -183,7 +170,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->FIELD_OFFSET:Lcom/android/dx/io/IndexType;
 
-    .line 60
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "METHOD_HANDLE_REF"
@@ -194,7 +180,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->METHOD_HANDLE_REF:Lcom/android/dx/io/IndexType;
 
-    .line 63
     new-instance v0, Lcom/android/dx/io/IndexType;
 
     const-string v1, "PROTO_REF"
@@ -205,7 +190,6 @@
 
     sput-object v0, Lcom/android/dx/io/IndexType;->PROTO_REF:Lcom/android/dx/io/IndexType;
 
-    .line 22
     const/16 v0, 0xe
 
     new-array v0, v0, [Lcom/android/dx/io/IndexType;
@@ -284,32 +268,22 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/dx/io/IndexType;->$VALUES:[Lcom/android/dx/io/IndexType;
+    sput-object v0, Lcom/android/dx/io/IndexType;->ENUM$VALUES:[Lcom/android/dx/io/IndexType;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
-    .registers 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
+    .locals 0
 
-    .prologue
-    .line 22
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/dx/io/IndexType;
-    .registers 2
-    .param p0, "name"    # Ljava/lang/String;
+    .locals 1
 
-    .prologue
-    .line 22
     const-class v0, Lcom/android/dx/io/IndexType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -322,17 +296,17 @@
 .end method
 
 .method public static values()[Lcom/android/dx/io/IndexType;
-    .registers 1
+    .locals 4
 
-    .prologue
-    .line 22
-    sget-object v0, Lcom/android/dx/io/IndexType;->$VALUES:[Lcom/android/dx/io/IndexType;
+    const/4 v3, 0x0
 
-    invoke-virtual {v0}, [Lcom/android/dx/io/IndexType;->clone()Ljava/lang/Object;
+    sget-object v0, Lcom/android/dx/io/IndexType;->ENUM$VALUES:[Lcom/android/dx/io/IndexType;
 
-    move-result-object v0
+    array-length v1, v0
 
-    check-cast v0, [Lcom/android/dx/io/IndexType;
+    new-array v2, v1, [Lcom/android/dx/io/IndexType;
 
-    return-object v0
+    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    return-object v2
 .end method

@@ -24,8 +24,6 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/android/dx/dex/code/LocalList$Disposition;
-
 .field public static final enum END_CLOBBERED_BY_NEXT:Lcom/android/dx/dex/code/LocalList$Disposition;
 
 .field public static final enum END_CLOBBERED_BY_PREV:Lcom/android/dx/dex/code/LocalList$Disposition;
@@ -36,14 +34,15 @@
 
 .field public static final enum END_SIMPLY:Lcom/android/dx/dex/code/LocalList$Disposition;
 
+.field private static final synthetic ENUM$VALUES:[Lcom/android/dx/dex/code/LocalList$Disposition;
+
 .field public static final enum START:Lcom/android/dx/dex/code/LocalList$Disposition;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 8
+    .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -54,7 +53,6 @@
 
     const/4 v3, 0x0
 
-    .line 92
     new-instance v0, Lcom/android/dx/dex/code/LocalList$Disposition;
 
     const-string v1, "START"
@@ -63,7 +61,6 @@
 
     sput-object v0, Lcom/android/dx/dex/code/LocalList$Disposition;->START:Lcom/android/dx/dex/code/LocalList$Disposition;
 
-    .line 95
     new-instance v0, Lcom/android/dx/dex/code/LocalList$Disposition;
 
     const-string v1, "END_SIMPLY"
@@ -72,7 +69,6 @@
 
     sput-object v0, Lcom/android/dx/dex/code/LocalList$Disposition;->END_SIMPLY:Lcom/android/dx/dex/code/LocalList$Disposition;
 
-    .line 98
     new-instance v0, Lcom/android/dx/dex/code/LocalList$Disposition;
 
     const-string v1, "END_REPLACED"
@@ -81,7 +77,6 @@
 
     sput-object v0, Lcom/android/dx/dex/code/LocalList$Disposition;->END_REPLACED:Lcom/android/dx/dex/code/LocalList$Disposition;
 
-    .line 101
     new-instance v0, Lcom/android/dx/dex/code/LocalList$Disposition;
 
     const-string v1, "END_MOVED"
@@ -90,7 +85,6 @@
 
     sput-object v0, Lcom/android/dx/dex/code/LocalList$Disposition;->END_MOVED:Lcom/android/dx/dex/code/LocalList$Disposition;
 
-    .line 107
     new-instance v0, Lcom/android/dx/dex/code/LocalList$Disposition;
 
     const-string v1, "END_CLOBBERED_BY_PREV"
@@ -99,7 +93,6 @@
 
     sput-object v0, Lcom/android/dx/dex/code/LocalList$Disposition;->END_CLOBBERED_BY_PREV:Lcom/android/dx/dex/code/LocalList$Disposition;
 
-    .line 113
     new-instance v0, Lcom/android/dx/dex/code/LocalList$Disposition;
 
     const-string v1, "END_CLOBBERED_BY_NEXT"
@@ -110,7 +103,6 @@
 
     sput-object v0, Lcom/android/dx/dex/code/LocalList$Disposition;->END_CLOBBERED_BY_NEXT:Lcom/android/dx/dex/code/LocalList$Disposition;
 
-    .line 90
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/dx/dex/code/LocalList$Disposition;
@@ -141,32 +133,22 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/dx/dex/code/LocalList$Disposition;->$VALUES:[Lcom/android/dx/dex/code/LocalList$Disposition;
+    sput-object v0, Lcom/android/dx/dex/code/LocalList$Disposition;->ENUM$VALUES:[Lcom/android/dx/dex/code/LocalList$Disposition;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
-    .registers 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
+    .locals 0
 
-    .prologue
-    .line 90
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/dx/dex/code/LocalList$Disposition;
-    .registers 2
-    .param p0, "name"    # Ljava/lang/String;
+    .locals 1
 
-    .prologue
-    .line 90
     const-class v0, Lcom/android/dx/dex/code/LocalList$Disposition;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -179,17 +161,17 @@
 .end method
 
 .method public static values()[Lcom/android/dx/dex/code/LocalList$Disposition;
-    .registers 1
+    .locals 4
 
-    .prologue
-    .line 90
-    sget-object v0, Lcom/android/dx/dex/code/LocalList$Disposition;->$VALUES:[Lcom/android/dx/dex/code/LocalList$Disposition;
+    const/4 v3, 0x0
 
-    invoke-virtual {v0}, [Lcom/android/dx/dex/code/LocalList$Disposition;->clone()Ljava/lang/Object;
+    sget-object v0, Lcom/android/dx/dex/code/LocalList$Disposition;->ENUM$VALUES:[Lcom/android/dx/dex/code/LocalList$Disposition;
 
-    move-result-object v0
+    array-length v1, v0
 
-    check-cast v0, [Lcom/android/dx/dex/code/LocalList$Disposition;
+    new-array v2, v1, [Lcom/android/dx/dex/code/LocalList$Disposition;
 
-    return-object v0
+    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    return-object v2
 .end method

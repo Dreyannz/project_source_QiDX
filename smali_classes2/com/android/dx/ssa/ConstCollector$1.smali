@@ -30,16 +30,13 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/dx/ssa/ConstCollector;
 
-.field final synthetic val$countUses:Ljava/util/HashMap;
+.field private final synthetic val$countUses:Ljava/util/HashMap;
 
 
 # direct methods
 .method constructor <init>(Lcom/android/dx/ssa/ConstCollector;Ljava/util/HashMap;)V
-    .registers 3
-    .param p1, "this$0"    # Lcom/android/dx/ssa/ConstCollector;
+    .locals 0
 
-    .prologue
-    .line 242
     iput-object p1, p0, Lcom/android/dx/ssa/ConstCollector$1;->this$0:Lcom/android/dx/ssa/ConstCollector;
 
     iput-object p2, p0, Lcom/android/dx/ssa/ConstCollector$1;->val$countUses:Ljava/util/HashMap;
@@ -52,12 +49,8 @@
 
 # virtual methods
 .method public compare(Lcom/android/dx/rop/cst/Constant;Lcom/android/dx/rop/cst/Constant;)I
-    .registers 6
-    .param p1, "a"    # Lcom/android/dx/rop/cst/Constant;
-    .param p2, "b"    # Lcom/android/dx/rop/cst/Constant;
+    .locals 3
 
-    .prologue
-    .line 246
     iget-object v1, p0, Lcom/android/dx/ssa/ConstCollector$1;->val$countUses:Ljava/util/HashMap;
 
     invoke-virtual {v1, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -84,25 +77,19 @@
 
     sub-int v0, v2, v1
 
-    .line 248
-    .local v0, "ret":I
-    if-nez v0, :cond_20
+    if-nez v0, :cond_0
 
-    .line 253
     invoke-virtual {p1, p2}, Lcom/android/dx/rop/cst/Constant;->compareTo(Lcom/android/dx/rop/cst/Constant;)I
 
     move-result v0
 
-    .line 256
-    :cond_20
+    :cond_0
     return v0
 .end method
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .registers 4
+    .locals 1
 
-    .prologue
-    .line 242
     check-cast p1, Lcom/android/dx/rop/cst/Constant;
 
     check-cast p2, Lcom/android/dx/rop/cst/Constant;
@@ -115,20 +102,17 @@
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .registers 3
-    .param p1, "obj"    # Ljava/lang/Object;
+    .locals 1
 
-    .prologue
-    .line 261
-    if-ne p1, p0, :cond_4
+    if-ne p1, p0, :cond_0
 
     const/4 v0, 0x1
 
-    :goto_3
+    :goto_0
     return v0
 
-    :cond_4
+    :cond_0
     const/4 v0, 0x0
 
-    goto :goto_3
+    goto :goto_0
 .end method

@@ -9,63 +9,49 @@
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Lcom/android/dx/cf/code/LocalVariableList;)V
-    .registers 6
-    .param p1, "name"    # Ljava/lang/String;
-    .param p2, "localVariables"    # Lcom/android/dx/cf/code/LocalVariableList;
+    .locals 2
 
-    .prologue
-    .line 38
     invoke-direct {p0, p1}, Lcom/android/dx/cf/attrib/BaseAttribute;-><init>(Ljava/lang/String;)V
 
-    .line 41
-    :try_start_3
+    :try_start_0
     invoke-virtual {p2}, Lcom/android/dx/cf/code/LocalVariableList;->isMutable()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_1a
+    if-eqz v0, :cond_0
 
-    .line 42
-    new-instance v1, Lcom/android/dx/util/MutabilityException;
+    new-instance v0, Lcom/android/dx/util/MutabilityException;
 
-    const-string v2, "localVariables.isMutable()"
+    const-string v1, "localVariables.isMutable()"
 
-    invoke-direct {v1, v2}, Lcom/android/dx/util/MutabilityException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/dx/util/MutabilityException;-><init>(Ljava/lang/String;)V
 
-    throw v1
-    :try_end_11
-    .catch Ljava/lang/NullPointerException; {:try_start_3 .. :try_end_11} :catch_11
+    throw v0
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 44
-    :catch_11
+    :catch_0
     move-exception v0
 
-    .line 46
-    .local v0, "ex":Ljava/lang/NullPointerException;
-    new-instance v1, Ljava/lang/NullPointerException;
+    new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string v2, "localVariables == null"
+    const-string v1, "localVariables == null"
 
-    invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw v0
 
-    .line 49
-    .end local v0    # "ex":Ljava/lang/NullPointerException;
-    :cond_1a
+    :cond_0
     iput-object p2, p0, Lcom/android/dx/cf/attrib/BaseLocalVariables;->localVariables:Lcom/android/dx/cf/code/LocalVariableList;
 
-    .line 50
     return-void
 .end method
 
 
 # virtual methods
 .method public final byteLength()I
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 55
     iget-object v0, p0, Lcom/android/dx/cf/attrib/BaseLocalVariables;->localVariables:Lcom/android/dx/cf/code/LocalVariableList;
 
     invoke-virtual {v0}, Lcom/android/dx/cf/code/LocalVariableList;->size()I
@@ -80,10 +66,8 @@
 .end method
 
 .method public final getLocalVariables()Lcom/android/dx/cf/code/LocalVariableList;
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/dx/cf/attrib/BaseLocalVariables;->localVariables:Lcom/android/dx/cf/code/LocalVariableList;
 
     return-object v0

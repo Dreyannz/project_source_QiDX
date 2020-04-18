@@ -33,11 +33,8 @@
 
 # direct methods
 .method constructor <init>(Lcom/android/dx/dex/file/DebugInfoEncoder;)V
-    .registers 2
-    .param p1, "this$0"    # Lcom/android/dx/dex/file/DebugInfoEncoder;
+    .locals 0
 
-    .prologue
-    .line 503
     iput-object p1, p0, Lcom/android/dx/dex/file/DebugInfoEncoder$1;->this$0:Lcom/android/dx/dex/file/DebugInfoEncoder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,12 +45,8 @@
 
 # virtual methods
 .method public compare(Lcom/android/dx/dex/code/PositionList$Entry;Lcom/android/dx/dex/code/PositionList$Entry;)I
-    .registers 5
-    .param p1, "a"    # Lcom/android/dx/dex/code/PositionList$Entry;
-    .param p2, "b"    # Lcom/android/dx/dex/code/PositionList$Entry;
+    .locals 2
 
-    .prologue
-    .line 506
     invoke-virtual {p1}, Lcom/android/dx/dex/code/PositionList$Entry;->getAddress()I
 
     move-result v0
@@ -68,10 +61,8 @@
 .end method
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .registers 4
+    .locals 1
 
-    .prologue
-    .line 503
     check-cast p1, Lcom/android/dx/dex/code/PositionList$Entry;
 
     check-cast p2, Lcom/android/dx/dex/code/PositionList$Entry;
@@ -84,20 +75,17 @@
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .registers 3
-    .param p1, "obj"    # Ljava/lang/Object;
+    .locals 1
 
-    .prologue
-    .line 511
-    if-ne p1, p0, :cond_4
+    if-ne p1, p0, :cond_0
 
     const/4 v0, 0x1
 
-    :goto_3
+    :goto_0
     return v0
 
-    :cond_4
+    :cond_0
     const/4 v0, 0x0
 
-    goto :goto_3
+    goto :goto_0
 .end method

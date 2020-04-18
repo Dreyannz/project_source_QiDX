@@ -9,35 +9,26 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/dx/rop/cst/CstType;Lcom/android/dx/rop/cst/CstNat;)V
-    .registers 4
-    .param p1, "definingClass"    # Lcom/android/dx/rop/cst/CstType;
-    .param p2, "nat"    # Lcom/android/dx/rop/cst/CstNat;
+    .locals 1
 
-    .prologue
-    .line 37
     invoke-direct {p0, p1, p2}, Lcom/android/dx/rop/cst/CstBaseMethodRef;-><init>(Lcom/android/dx/rop/cst/CstType;Lcom/android/dx/rop/cst/CstNat;)V
 
-    .line 38
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/dx/rop/cst/CstInterfaceMethodRef;->methodRef:Lcom/android/dx/rop/cst/CstMethodRef;
 
-    .line 39
     return-void
 .end method
 
 
 # virtual methods
 .method public toMethodRef()Lcom/android/dx/rop/cst/CstMethodRef;
-    .registers 4
+    .locals 3
 
-    .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/dx/rop/cst/CstInterfaceMethodRef;->methodRef:Lcom/android/dx/rop/cst/CstMethodRef;
 
-    if-nez v0, :cond_13
+    if-nez v0, :cond_0
 
-    .line 55
     new-instance v0, Lcom/android/dx/rop/cst/CstMethodRef;
 
     invoke-virtual {p0}, Lcom/android/dx/rop/cst/CstInterfaceMethodRef;->getDefiningClass()Lcom/android/dx/rop/cst/CstType;
@@ -52,18 +43,15 @@
 
     iput-object v0, p0, Lcom/android/dx/rop/cst/CstInterfaceMethodRef;->methodRef:Lcom/android/dx/rop/cst/CstMethodRef;
 
-    .line 58
-    :cond_13
+    :cond_0
     iget-object v0, p0, Lcom/android/dx/rop/cst/CstInterfaceMethodRef;->methodRef:Lcom/android/dx/rop/cst/CstMethodRef;
 
     return-object v0
 .end method
 
 .method public typeName()Ljava/lang/String;
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 44
     const-string v0, "ifaceMethod"
 
     return-object v0

@@ -24,7 +24,7 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/android/dx/dex/file/MixedItemSection$SortType;
+.field private static final synthetic ENUM$VALUES:[Lcom/android/dx/dex/file/MixedItemSection$SortType;
 
 .field public static final enum INSTANCE:Lcom/android/dx/dex/file/MixedItemSection$SortType;
 
@@ -35,16 +35,14 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 5
+    .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 43
     new-instance v0, Lcom/android/dx/dex/file/MixedItemSection$SortType;
 
     const-string v1, "NONE"
@@ -53,7 +51,6 @@
 
     sput-object v0, Lcom/android/dx/dex/file/MixedItemSection$SortType;->NONE:Lcom/android/dx/dex/file/MixedItemSection$SortType;
 
-    .line 46
     new-instance v0, Lcom/android/dx/dex/file/MixedItemSection$SortType;
 
     const-string v1, "TYPE"
@@ -62,7 +59,6 @@
 
     sput-object v0, Lcom/android/dx/dex/file/MixedItemSection$SortType;->TYPE:Lcom/android/dx/dex/file/MixedItemSection$SortType;
 
-    .line 49
     new-instance v0, Lcom/android/dx/dex/file/MixedItemSection$SortType;
 
     const-string v1, "INSTANCE"
@@ -71,7 +67,6 @@
 
     sput-object v0, Lcom/android/dx/dex/file/MixedItemSection$SortType;->INSTANCE:Lcom/android/dx/dex/file/MixedItemSection$SortType;
 
-    .line 41
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/dx/dex/file/MixedItemSection$SortType;
@@ -88,32 +83,22 @@
 
     aput-object v1, v0, v4
 
-    sput-object v0, Lcom/android/dx/dex/file/MixedItemSection$SortType;->$VALUES:[Lcom/android/dx/dex/file/MixedItemSection$SortType;
+    sput-object v0, Lcom/android/dx/dex/file/MixedItemSection$SortType;->ENUM$VALUES:[Lcom/android/dx/dex/file/MixedItemSection$SortType;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
-    .registers 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
+    .locals 0
 
-    .prologue
-    .line 41
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/dx/dex/file/MixedItemSection$SortType;
-    .registers 2
-    .param p0, "name"    # Ljava/lang/String;
+    .locals 1
 
-    .prologue
-    .line 41
     const-class v0, Lcom/android/dx/dex/file/MixedItemSection$SortType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -126,17 +111,17 @@
 .end method
 
 .method public static values()[Lcom/android/dx/dex/file/MixedItemSection$SortType;
-    .registers 1
+    .locals 4
 
-    .prologue
-    .line 41
-    sget-object v0, Lcom/android/dx/dex/file/MixedItemSection$SortType;->$VALUES:[Lcom/android/dx/dex/file/MixedItemSection$SortType;
+    const/4 v3, 0x0
 
-    invoke-virtual {v0}, [Lcom/android/dx/dex/file/MixedItemSection$SortType;->clone()Ljava/lang/Object;
+    sget-object v0, Lcom/android/dx/dex/file/MixedItemSection$SortType;->ENUM$VALUES:[Lcom/android/dx/dex/file/MixedItemSection$SortType;
 
-    move-result-object v0
+    array-length v1, v0
 
-    check-cast v0, [Lcom/android/dx/dex/file/MixedItemSection$SortType;
+    new-array v2, v1, [Lcom/android/dx/dex/file/MixedItemSection$SortType;
 
-    return-object v0
+    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    return-object v2
 .end method

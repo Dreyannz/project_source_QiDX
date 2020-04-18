@@ -9,20 +9,12 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/dx/dex/code/Dop;Lcom/android/dx/rop/code/SourcePosition;Lcom/android/dx/rop/code/RegisterSpecList;Lcom/android/dx/dex/code/CodeAddress;)V
-    .registers 7
-    .param p1, "opcode"    # Lcom/android/dx/dex/code/Dop;
-    .param p2, "position"    # Lcom/android/dx/rop/code/SourcePosition;
-    .param p3, "registers"    # Lcom/android/dx/rop/code/RegisterSpecList;
-    .param p4, "target"    # Lcom/android/dx/dex/code/CodeAddress;
+    .locals 2
 
-    .prologue
-    .line 43
     invoke-direct {p0, p1, p2, p3}, Lcom/android/dx/dex/code/FixedSizeInsn;-><init>(Lcom/android/dx/dex/code/Dop;Lcom/android/dx/rop/code/SourcePosition;Lcom/android/dx/rop/code/RegisterSpecList;)V
 
-    .line 45
-    if-nez p4, :cond_d
+    if-nez p4, :cond_0
 
-    .line 46
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "target == null"
@@ -31,57 +23,47 @@
 
     throw v0
 
-    .line 49
-    :cond_d
+    :cond_0
     iput-object p4, p0, Lcom/android/dx/dex/code/TargetInsn;->target:Lcom/android/dx/dex/code/CodeAddress;
 
-    .line 50
     return-void
 .end method
 
 
 # virtual methods
 .method protected argString()Ljava/lang/String;
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 126
     iget-object v0, p0, Lcom/android/dx/dex/code/TargetInsn;->target:Lcom/android/dx/dex/code/CodeAddress;
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_0
 
-    .line 127
     const-string v0, "????"
 
-    .line 130
-    :goto_6
+    :goto_0
     return-object v0
 
-    :cond_7
+    :cond_0
     iget-object v0, p0, Lcom/android/dx/dex/code/TargetInsn;->target:Lcom/android/dx/dex/code/CodeAddress;
 
     invoke-virtual {v0}, Lcom/android/dx/dex/code/CodeAddress;->identifierString()Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_6
+    goto :goto_0
 .end method
 
 .method public getTarget()Lcom/android/dx/dex/code/CodeAddress;
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/dx/dex/code/TargetInsn;->target:Lcom/android/dx/dex/code/CodeAddress;
 
     return-object v0
 .end method
 
 .method public getTargetAddress()I
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 98
     iget-object v0, p0, Lcom/android/dx/dex/code/TargetInsn;->target:Lcom/android/dx/dex/code/CodeAddress;
 
     invoke-virtual {v0}, Lcom/android/dx/dex/code/CodeAddress;->getAddress()I
@@ -92,10 +74,8 @@
 .end method
 
 .method public getTargetOffset()I
-    .registers 3
+    .locals 2
 
-    .prologue
-    .line 110
     iget-object v0, p0, Lcom/android/dx/dex/code/TargetInsn;->target:Lcom/android/dx/dex/code/CodeAddress;
 
     invoke-virtual {v0}, Lcom/android/dx/dex/code/CodeAddress;->getAddress()I
@@ -112,15 +92,13 @@
 .end method
 
 .method public hasTargetOffset()Z
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 120
     invoke-virtual {p0}, Lcom/android/dx/dex/code/TargetInsn;->hasAddress()Z
 
     move-result v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/android/dx/dex/code/TargetInsn;->target:Lcom/android/dx/dex/code/CodeAddress;
 
@@ -128,25 +106,22 @@
 
     move-result v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
-    :goto_f
+    :goto_0
     return v0
 
-    :cond_10
+    :cond_0
     const/4 v0, 0x0
 
-    goto :goto_f
+    goto :goto_0
 .end method
 
 .method public withNewTargetAndReversed(Lcom/android/dx/dex/code/CodeAddress;)Lcom/android/dx/dex/code/TargetInsn;
-    .registers 6
-    .param p1, "target"    # Lcom/android/dx/dex/code/CodeAddress;
+    .locals 4
 
-    .prologue
-    .line 75
     invoke-virtual {p0}, Lcom/android/dx/dex/code/TargetInsn;->getOpcode()Lcom/android/dx/dex/code/Dop;
 
     move-result-object v1
@@ -155,8 +130,6 @@
 
     move-result-object v0
 
-    .line 77
-    .local v0, "opcode":Lcom/android/dx/dex/code/Dop;
     new-instance v1, Lcom/android/dx/dex/code/TargetInsn;
 
     invoke-virtual {p0}, Lcom/android/dx/dex/code/TargetInsn;->getPosition()Lcom/android/dx/rop/code/SourcePosition;
@@ -173,11 +146,8 @@
 .end method
 
 .method public withOpcode(Lcom/android/dx/dex/code/Dop;)Lcom/android/dx/dex/code/DalvInsn;
-    .registers 6
-    .param p1, "opcode"    # Lcom/android/dx/dex/code/Dop;
+    .locals 4
 
-    .prologue
-    .line 55
     new-instance v0, Lcom/android/dx/dex/code/TargetInsn;
 
     invoke-virtual {p0}, Lcom/android/dx/dex/code/TargetInsn;->getPosition()Lcom/android/dx/rop/code/SourcePosition;
@@ -196,11 +166,8 @@
 .end method
 
 .method public withRegisters(Lcom/android/dx/rop/code/RegisterSpecList;)Lcom/android/dx/dex/code/DalvInsn;
-    .registers 6
-    .param p1, "registers"    # Lcom/android/dx/rop/code/RegisterSpecList;
+    .locals 4
 
-    .prologue
-    .line 61
     new-instance v0, Lcom/android/dx/dex/code/TargetInsn;
 
     invoke-virtual {p0}, Lcom/android/dx/dex/code/TargetInsn;->getOpcode()Lcom/android/dx/dex/code/Dop;

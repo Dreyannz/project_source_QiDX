@@ -26,18 +26,12 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/dx/rop/cst/CstString;Lcom/android/dx/rop/cst/Constant;)V
-    .registers 5
-    .param p1, "name"    # Lcom/android/dx/rop/cst/CstString;
-    .param p2, "value"    # Lcom/android/dx/rop/cst/Constant;
+    .locals 2
 
-    .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
-    if-nez p1, :cond_d
+    if-nez p1, :cond_0
 
-    .line 40
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "name == null"
@@ -46,11 +40,9 @@
 
     throw v0
 
-    .line 43
-    :cond_d
-    if-nez p2, :cond_17
+    :cond_0
+    if-nez p2, :cond_1
 
-    .line 44
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "value == null"
@@ -59,25 +51,19 @@
 
     throw v0
 
-    .line 47
-    :cond_17
+    :cond_1
     iput-object p1, p0, Lcom/android/dx/rop/annotation/NameValuePair;->name:Lcom/android/dx/rop/cst/CstString;
 
-    .line 48
     iput-object p2, p0, Lcom/android/dx/rop/annotation/NameValuePair;->value:Lcom/android/dx/rop/cst/Constant;
 
-    .line 49
     return-void
 .end method
 
 
 # virtual methods
 .method public compareTo(Lcom/android/dx/rop/annotation/NameValuePair;)I
-    .registers 5
-    .param p1, "other"    # Lcom/android/dx/rop/annotation/NameValuePair;
+    .locals 3
 
-    .prologue
-    .line 84
     iget-object v1, p0, Lcom/android/dx/rop/annotation/NameValuePair;->name:Lcom/android/dx/rop/cst/CstString;
 
     iget-object v2, p1, Lcom/android/dx/rop/annotation/NameValuePair;->name:Lcom/android/dx/rop/cst/CstString;
@@ -86,17 +72,12 @@
 
     move-result v0
 
-    .line 86
-    .local v0, "result":I
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_0
 
-    .line 90
-    .end local v0    # "result":I
-    :goto_a
+    :goto_0
     return v0
 
-    .restart local v0    # "result":I
-    :cond_b
+    :cond_0
     iget-object v1, p0, Lcom/android/dx/rop/annotation/NameValuePair;->value:Lcom/android/dx/rop/cst/Constant;
 
     iget-object v2, p1, Lcom/android/dx/rop/annotation/NameValuePair;->value:Lcom/android/dx/rop/cst/Constant;
@@ -105,14 +86,12 @@
 
     move-result v0
 
-    goto :goto_a
+    goto :goto_0
 .end method
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
-    .registers 3
+    .locals 1
 
-    .prologue
-    .line 25
     check-cast p1, Lcom/android/dx/rop/annotation/NameValuePair;
 
     invoke-virtual {p0, p1}, Lcom/android/dx/rop/annotation/NameValuePair;->compareTo(Lcom/android/dx/rop/annotation/NameValuePair;)I
@@ -123,30 +102,23 @@
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .registers 6
-    .param p1, "other"    # Ljava/lang/Object;
+    .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 66
     instance-of v2, p1, Lcom/android/dx/rop/annotation/NameValuePair;
 
-    if-nez v2, :cond_6
+    if-nez v2, :cond_1
 
-    .line 72
-    :cond_5
-    :goto_5
+    :cond_0
+    :goto_0
     return v1
 
-    :cond_6
+    :cond_1
     move-object v0, p1
 
-    .line 70
     check-cast v0, Lcom/android/dx/rop/annotation/NameValuePair;
 
-    .line 72
-    .local v0, "otherPair":Lcom/android/dx/rop/annotation/NameValuePair;
     iget-object v2, p0, Lcom/android/dx/rop/annotation/NameValuePair;->name:Lcom/android/dx/rop/cst/CstString;
 
     iget-object v3, v0, Lcom/android/dx/rop/annotation/NameValuePair;->name:Lcom/android/dx/rop/cst/CstString;
@@ -155,49 +127,42 @@
 
     move-result v2
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_0
 
     iget-object v2, p0, Lcom/android/dx/rop/annotation/NameValuePair;->value:Lcom/android/dx/rop/cst/Constant;
 
     iget-object v3, v0, Lcom/android/dx/rop/annotation/NameValuePair;->value:Lcom/android/dx/rop/cst/Constant;
 
-    .line 73
     invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_0
 
     const/4 v1, 0x1
 
-    goto :goto_5
+    goto :goto_0
 .end method
 
 .method public getName()Lcom/android/dx/rop/cst/CstString;
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 99
     iget-object v0, p0, Lcom/android/dx/rop/annotation/NameValuePair;->name:Lcom/android/dx/rop/cst/CstString;
 
     return-object v0
 .end method
 
 .method public getValue()Lcom/android/dx/rop/cst/Constant;
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 108
     iget-object v0, p0, Lcom/android/dx/rop/annotation/NameValuePair;->value:Lcom/android/dx/rop/cst/Constant;
 
     return-object v0
 .end method
 
 .method public hashCode()I
-    .registers 3
+    .locals 2
 
-    .prologue
-    .line 60
     iget-object v0, p0, Lcom/android/dx/rop/annotation/NameValuePair;->name:Lcom/android/dx/rop/cst/CstString;
 
     invoke-virtual {v0}, Lcom/android/dx/rop/cst/CstString;->hashCode()I
@@ -218,13 +183,9 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .registers 3
+    .locals 2
 
-    .prologue
-    .line 54
     new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iget-object v1, p0, Lcom/android/dx/rop/annotation/NameValuePair;->name:Lcom/android/dx/rop/cst/CstString;
 
@@ -232,9 +193,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v1, ":"
 

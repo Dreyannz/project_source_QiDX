@@ -12,17 +12,12 @@
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
-    .registers 4
-    .param p1, "name"    # Ljava/lang/String;
+    .locals 2
 
-    .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
-    if-nez p1, :cond_d
+    if-nez p1, :cond_0
 
-    .line 36
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "name == null"
@@ -31,21 +26,17 @@
 
     throw v0
 
-    .line 39
-    :cond_d
+    :cond_0
     iput-object p1, p0, Lcom/android/dx/cf/attrib/BaseAttribute;->name:Ljava/lang/String;
 
-    .line 40
     return-void
 .end method
 
 
 # virtual methods
 .method public getName()Ljava/lang/String;
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/android/dx/cf/attrib/BaseAttribute;->name:Ljava/lang/String;
 
     return-object v0

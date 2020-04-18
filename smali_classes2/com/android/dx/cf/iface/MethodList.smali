@@ -7,8 +7,5 @@
 .method public abstract get(I)Lcom/android/dx/cf/iface/Method;
 .end method
 
-.method public abstract isMutable()Z
-.end method
-
 .method public abstract size()I
 .end method

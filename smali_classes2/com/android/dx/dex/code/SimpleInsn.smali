@@ -5,37 +5,26 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/dx/dex/code/Dop;Lcom/android/dx/rop/code/SourcePosition;Lcom/android/dx/rop/code/RegisterSpecList;)V
-    .registers 4
-    .param p1, "opcode"    # Lcom/android/dx/dex/code/Dop;
-    .param p2, "position"    # Lcom/android/dx/rop/code/SourcePosition;
-    .param p3, "registers"    # Lcom/android/dx/rop/code/RegisterSpecList;
+    .locals 0
 
-    .prologue
-    .line 39
     invoke-direct {p0, p1, p2, p3}, Lcom/android/dx/dex/code/FixedSizeInsn;-><init>(Lcom/android/dx/dex/code/Dop;Lcom/android/dx/rop/code/SourcePosition;Lcom/android/dx/rop/code/RegisterSpecList;)V
 
-    .line 40
     return-void
 .end method
 
 
 # virtual methods
 .method protected argString()Ljava/lang/String;
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 57
     const/4 v0, 0x0
 
     return-object v0
 .end method
 
 .method public withOpcode(Lcom/android/dx/dex/code/Dop;)Lcom/android/dx/dex/code/DalvInsn;
-    .registers 5
-    .param p1, "opcode"    # Lcom/android/dx/dex/code/Dop;
+    .locals 3
 
-    .prologue
-    .line 45
     new-instance v0, Lcom/android/dx/dex/code/SimpleInsn;
 
     invoke-virtual {p0}, Lcom/android/dx/dex/code/SimpleInsn;->getPosition()Lcom/android/dx/rop/code/SourcePosition;
@@ -52,11 +41,8 @@
 .end method
 
 .method public withRegisters(Lcom/android/dx/rop/code/RegisterSpecList;)Lcom/android/dx/dex/code/DalvInsn;
-    .registers 5
-    .param p1, "registers"    # Lcom/android/dx/rop/code/RegisterSpecList;
+    .locals 3
 
-    .prologue
-    .line 51
     new-instance v0, Lcom/android/dx/dex/code/SimpleInsn;
 
     invoke-virtual {p0}, Lcom/android/dx/dex/code/SimpleInsn;->getOpcode()Lcom/android/dx/dex/code/Dop;

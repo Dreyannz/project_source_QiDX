@@ -33,7 +33,7 @@
 
     sput-object v0, Lqidxisbestlol/ev;->b:Ljava/lang/String;
 
-    const-string v0, "10"
+    const-string v0, "18"
 
     sput-object v0, Lqidxisbestlol/ev;->c:Ljava/lang/String;
 

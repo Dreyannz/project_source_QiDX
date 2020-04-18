@@ -23,11 +23,8 @@
 
 # direct methods
 .method constructor <init>(Lcom/android/dx/ssa/EscapeAnalysis$2;)V
-    .registers 2
-    .param p1, "this$1"    # Lcom/android/dx/ssa/EscapeAnalysis$2;
+    .locals 0
 
-    .prologue
-    .line 695
     iput-object p1, p0, Lcom/android/dx/ssa/EscapeAnalysis$2$1;->this$1:Lcom/android/dx/ssa/EscapeAnalysis$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,36 +35,27 @@
 
 # virtual methods
 .method public visitMoveInsn(Lcom/android/dx/ssa/NormalSsaInsn;)V
-    .registers 2
-    .param p1, "insn"    # Lcom/android/dx/ssa/NormalSsaInsn;
+    .locals 0
 
-    .prologue
-    .line 699
     return-void
 .end method
 
 .method public visitNonMoveInsn(Lcom/android/dx/ssa/NormalSsaInsn;)V
-    .registers 3
-    .param p1, "insn"    # Lcom/android/dx/ssa/NormalSsaInsn;
+    .locals 1
 
-    .prologue
-    .line 708
     iget-object v0, p0, Lcom/android/dx/ssa/EscapeAnalysis$2$1;->this$1:Lcom/android/dx/ssa/EscapeAnalysis$2;
 
-    iget-object v0, v0, Lcom/android/dx/ssa/EscapeAnalysis$2;->this$0:Lcom/android/dx/ssa/EscapeAnalysis;
+    invoke-static {v0}, Lcom/android/dx/ssa/EscapeAnalysis$2;->access$0(Lcom/android/dx/ssa/EscapeAnalysis$2;)Lcom/android/dx/ssa/EscapeAnalysis;
 
-    # invokes: Lcom/android/dx/ssa/EscapeAnalysis;->processInsn(Lcom/android/dx/ssa/SsaInsn;)V
-    invoke-static {v0, p1}, Lcom/android/dx/ssa/EscapeAnalysis;->access$100(Lcom/android/dx/ssa/EscapeAnalysis;Lcom/android/dx/ssa/SsaInsn;)V
+    move-result-object v0
 
-    .line 709
+    invoke-static {v0, p1}, Lcom/android/dx/ssa/EscapeAnalysis;->access$1(Lcom/android/dx/ssa/EscapeAnalysis;Lcom/android/dx/ssa/SsaInsn;)V
+
     return-void
 .end method
 
 .method public visitPhiInsn(Lcom/android/dx/ssa/PhiInsn;)V
-    .registers 2
-    .param p1, "insn"    # Lcom/android/dx/ssa/PhiInsn;
+    .locals 0
 
-    .prologue
-    .line 704
     return-void
 .end method

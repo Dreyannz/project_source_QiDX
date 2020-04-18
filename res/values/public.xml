@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <public type="anim" name="fade_in" id="0x7f010000" />
-    <public type="anim" name="fade_out" id="0x7f010004" />
     <public type="anim" name="APKTOOL_DUMMY_1" id="0x7f010001" />
     <public type="anim" name="APKTOOL_DUMMY_2" id="0x7f010002" />
     <public type="anim" name="APKTOOL_DUMMY_3" id="0x7f010003" />
+    <public type="anim" name="fade_out" id="0x7f010004" />
     <public type="array" name="pref_autosave_entries" id="0x7f020000" />
     <public type="array" name="pref_autosave_values" id="0x7f020001" />
     <public type="array" name="pref_language_entries" id="0x7f020002" />
@@ -3373,14 +3373,6 @@
     <public type="string" name="proguard_summary" id="0x7f0d0838" />
     <public type="string" name="4455jkjh_permissions_title" id="0x7f0d0839" />
     <public type="string" name="4455jkjh_permissions_dialog" id="0x7f0d083a" />
-    <public type="string" name="pref_use_adrt" id="0x7f0d0845" />
-    <public type="string" name="pref_use_todo" id="0x7f0d0846" />
-    <public type="string" name="pref_use_gradle" id="0x7f0d0847" />
-    <public type="string" name="preference_advanced_settings" id="0x7f0d0848" />
-    <public type="string" name="preference_summary_advanced_settings" id="0x7f0d0849" />
-    <public type="string" name="ndk_title_install" id="0x7f0d084a" />
-    <public type="string" name="ndk_title_end_install" id="0x7f0d084b" />
-    <public type="string" name="ndk_message_fail_install" id="0x7f0d084c" />
     <public type="string" name="APKTOOL_DUMMY_83b" id="0x7f0d083b" />
     <public type="string" name="APKTOOL_DUMMY_83c" id="0x7f0d083c" />
     <public type="string" name="APKTOOL_DUMMY_83d" id="0x7f0d083d" />
@@ -3390,6 +3382,14 @@
     <public type="string" name="APKTOOL_DUMMY_841" id="0x7f0d0841" />
     <public type="string" name="APKTOOL_DUMMY_842" id="0x7f0d0842" />
     <public type="string" name="APKTOOL_DUMMY_843" id="0x7f0d0843" />
+    <public type="string" name="pref_use_adrt" id="0x7f0d0845" />
+    <public type="string" name="pref_use_todo" id="0x7f0d0846" />
+    <public type="string" name="pref_use_gradle" id="0x7f0d0847" />
+    <public type="string" name="preference_advanced_settings" id="0x7f0d0848" />
+    <public type="string" name="preference_summary_advanced_settings" id="0x7f0d0849" />
+    <public type="string" name="ndk_title_install" id="0x7f0d084a" />
+    <public type="string" name="ndk_title_end_install" id="0x7f0d084b" />
+    <public type="string" name="ndk_message_fail_install" id="0x7f0d084c" />
     <public type="string" name="APKTOOL_DUMMY_e4" id="0x7f0d00e4" />
     <public type="string" name="APKTOOL_DUMMY_165" id="0x7f0d0165" />
     <public type="string" name="APKTOOL_DUMMY_18f" id="0x7f0d018f" />

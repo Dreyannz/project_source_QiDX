@@ -22,9 +22,6 @@
 .method public abstract write([B)V
 .end method
 
-.method public abstract write([BII)V
-.end method
-
 .method public abstract writeByte(I)V
 .end method
 
@@ -35,9 +32,6 @@
 .end method
 
 .method public abstract writeShort(I)V
-.end method
-
-.method public abstract writeSleb128(I)I
 .end method
 
 .method public abstract writeUleb128(I)I

@@ -19,10 +19,8 @@
 
 # direct methods
 .method public constructor <init>()V
-    .registers 1
+    .locals 0
 
-    .prologue
-    .line 433
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,64 +29,43 @@
 
 # virtual methods
 .method public visitFillArrayDataInsn(Lcom/android/dx/rop/code/FillArrayDataInsn;)V
-    .registers 2
-    .param p1, "insn"    # Lcom/android/dx/rop/code/FillArrayDataInsn;
+    .locals 0
 
-    .prologue
-    .line 468
     return-void
 .end method
 
 .method public visitInvokePolymorphicInsn(Lcom/android/dx/rop/code/InvokePolymorphicInsn;)V
-    .registers 2
-    .param p1, "insn"    # Lcom/android/dx/rop/code/InvokePolymorphicInsn;
+    .locals 0
 
-    .prologue
-    .line 474
     return-void
 .end method
 
 .method public visitPlainCstInsn(Lcom/android/dx/rop/code/PlainCstInsn;)V
-    .registers 2
-    .param p1, "insn"    # Lcom/android/dx/rop/code/PlainCstInsn;
+    .locals 0
 
-    .prologue
-    .line 444
     return-void
 .end method
 
 .method public visitPlainInsn(Lcom/android/dx/rop/code/PlainInsn;)V
-    .registers 2
-    .param p1, "insn"    # Lcom/android/dx/rop/code/PlainInsn;
+    .locals 0
 
-    .prologue
-    .line 438
     return-void
 .end method
 
 .method public visitSwitchInsn(Lcom/android/dx/rop/code/SwitchInsn;)V
-    .registers 2
-    .param p1, "insn"    # Lcom/android/dx/rop/code/SwitchInsn;
+    .locals 0
 
-    .prologue
-    .line 450
     return-void
 .end method
 
 .method public visitThrowingCstInsn(Lcom/android/dx/rop/code/ThrowingCstInsn;)V
-    .registers 2
-    .param p1, "insn"    # Lcom/android/dx/rop/code/ThrowingCstInsn;
+    .locals 0
 
-    .prologue
-    .line 456
     return-void
 .end method
 
 .method public visitThrowingInsn(Lcom/android/dx/rop/code/ThrowingInsn;)V
-    .registers 2
-    .param p1, "insn"    # Lcom/android/dx/rop/code/ThrowingInsn;
+    .locals 0
 
-    .prologue
-    .line 462
     return-void
 .end method

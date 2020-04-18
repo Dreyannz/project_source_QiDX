@@ -25,19 +25,13 @@
 
 # direct methods
 .method constructor <init>(Lcom/android/dx/util/BitIntSet;)V
-    .registers 4
-    .param p1, "this$0"    # Lcom/android/dx/util/BitIntSet;
+    .locals 2
 
-    .prologue
-    .line 107
     iput-object p1, p0, Lcom/android/dx/util/BitIntSet$1;->this$0:Lcom/android/dx/util/BitIntSet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 108
-    iget-object v0, p0, Lcom/android/dx/util/BitIntSet$1;->this$0:Lcom/android/dx/util/BitIntSet;
-
-    iget-object v0, v0, Lcom/android/dx/util/BitIntSet;->bits:[I
+    iget-object v0, p1, Lcom/android/dx/util/BitIntSet;->bits:[I
 
     const/4 v1, 0x0
 
@@ -53,49 +47,41 @@
 
 # virtual methods
 .method public hasNext()Z
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 113
     iget v0, p0, Lcom/android/dx/util/BitIntSet$1;->idx:I
 
-    if-ltz v0, :cond_6
+    if-ltz v0, :cond_0
 
     const/4 v0, 0x1
 
-    :goto_5
+    :goto_0
     return v0
 
-    :cond_6
+    :cond_0
     const/4 v0, 0x0
 
-    goto :goto_5
+    goto :goto_0
 .end method
 
 .method public next()I
-    .registers 4
+    .locals 3
 
-    .prologue
-    .line 119
     invoke-virtual {p0}, Lcom/android/dx/util/BitIntSet$1;->hasNext()Z
 
     move-result v1
 
-    if-nez v1, :cond_c
+    if-nez v1, :cond_0
 
-    .line 120
     new-instance v1, Ljava/util/NoSuchElementException;
 
     invoke-direct {v1}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw v1
 
-    .line 123
-    :cond_c
+    :cond_0
     iget v0, p0, Lcom/android/dx/util/BitIntSet$1;->idx:I
 
-    .line 125
-    .local v0, "ret":I
     iget-object v1, p0, Lcom/android/dx/util/BitIntSet$1;->this$0:Lcom/android/dx/util/BitIntSet;
 
     iget-object v1, v1, Lcom/android/dx/util/BitIntSet;->bits:[I
@@ -110,6 +96,5 @@
 
     iput v1, p0, Lcom/android/dx/util/BitIntSet$1;->idx:I
 
-    .line 127
     return v0
 .end method

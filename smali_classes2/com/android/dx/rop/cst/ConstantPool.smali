@@ -10,9 +10,6 @@
 .method public abstract get0Ok(I)Lcom/android/dx/rop/cst/Constant;
 .end method
 
-.method public abstract getEntries()[Lcom/android/dx/rop/cst/Constant;
-.end method
-
 .method public abstract getOrNull(I)Lcom/android/dx/rop/cst/Constant;
 .end method
 

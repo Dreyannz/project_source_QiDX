@@ -9,18 +9,12 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/dx/rop/code/SourcePosition;Lcom/android/dx/rop/code/RegisterSpec;)V
-    .registers 5
-    .param p1, "position"    # Lcom/android/dx/rop/code/SourcePosition;
-    .param p2, "local"    # Lcom/android/dx/rop/code/RegisterSpec;
+    .locals 2
 
-    .prologue
-    .line 57
     invoke-direct {p0, p1}, Lcom/android/dx/dex/code/ZeroSizeInsn;-><init>(Lcom/android/dx/rop/code/SourcePosition;)V
 
-    .line 59
-    if-nez p2, :cond_d
+    if-nez p2, :cond_0
 
-    .line 60
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "local == null"
@@ -29,31 +23,26 @@
 
     throw v0
 
-    .line 63
-    :cond_d
+    :cond_0
     iput-object p2, p0, Lcom/android/dx/dex/code/LocalStart;->local:Lcom/android/dx/rop/code/RegisterSpec;
 
-    .line 64
     return-void
 .end method
 
 .method public static localString(Lcom/android/dx/rop/code/RegisterSpec;)Ljava/lang/String;
-    .registers 3
-    .param p0, "spec"    # Lcom/android/dx/rop/code/RegisterSpec;
+    .locals 2
 
-    .prologue
-    .line 44
     new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {p0}, Lcom/android/dx/rop/code/RegisterSpec;->regString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const/16 v1, 0x20
 
@@ -79,7 +68,6 @@
 
     move-result-object v0
 
-    .line 45
     invoke-virtual {p0}, Lcom/android/dx/rop/code/RegisterSpec;->getTypeBearer()Lcom/android/dx/rop/type/TypeBearer;
 
     move-result-object v1
@@ -96,17 +84,14 @@
 
     move-result-object v0
 
-    .line 44
     return-object v0
 .end method
 
 
 # virtual methods
 .method protected argString()Ljava/lang/String;
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 91
     iget-object v0, p0, Lcom/android/dx/dex/code/LocalStart;->local:Lcom/android/dx/rop/code/RegisterSpec;
 
     invoke-virtual {v0}, Lcom/android/dx/rop/code/RegisterSpec;->toString()Ljava/lang/String;
@@ -117,30 +102,21 @@
 .end method
 
 .method public getLocal()Lcom/android/dx/rop/code/RegisterSpec;
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 85
     iget-object v0, p0, Lcom/android/dx/dex/code/LocalStart;->local:Lcom/android/dx/rop/code/RegisterSpec;
 
     return-object v0
 .end method
 
 .method protected listingString0(Z)Ljava/lang/String;
-    .registers 4
-    .param p1, "noteIndices"    # Z
+    .locals 2
 
-    .prologue
-    .line 97
     new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "local-start "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/android/dx/dex/code/LocalStart;->local:Lcom/android/dx/rop/code/RegisterSpec;
 
@@ -160,11 +136,8 @@
 .end method
 
 .method public withMapper(Lcom/android/dx/ssa/RegisterMapper;)Lcom/android/dx/dex/code/DalvInsn;
-    .registers 5
-    .param p1, "mapper"    # Lcom/android/dx/ssa/RegisterMapper;
+    .locals 3
 
-    .prologue
-    .line 103
     new-instance v0, Lcom/android/dx/dex/code/LocalStart;
 
     invoke-virtual {p0}, Lcom/android/dx/dex/code/LocalStart;->getPosition()Lcom/android/dx/rop/code/SourcePosition;
@@ -183,11 +156,8 @@
 .end method
 
 .method public withRegisterOffset(I)Lcom/android/dx/dex/code/DalvInsn;
-    .registers 5
-    .param p1, "delta"    # I
+    .locals 3
 
-    .prologue
-    .line 69
     new-instance v0, Lcom/android/dx/dex/code/LocalStart;
 
     invoke-virtual {p0}, Lcom/android/dx/dex/code/LocalStart;->getPosition()Lcom/android/dx/rop/code/SourcePosition;
@@ -206,11 +176,8 @@
 .end method
 
 .method public withRegisters(Lcom/android/dx/rop/code/RegisterSpecList;)Lcom/android/dx/dex/code/DalvInsn;
-    .registers 5
-    .param p1, "registers"    # Lcom/android/dx/rop/code/RegisterSpecList;
+    .locals 3
 
-    .prologue
-    .line 75
     new-instance v0, Lcom/android/dx/dex/code/LocalStart;
 
     invoke-virtual {p0}, Lcom/android/dx/dex/code/LocalStart;->getPosition()Lcom/android/dx/rop/code/SourcePosition;

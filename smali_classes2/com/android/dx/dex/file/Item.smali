@@ -5,13 +5,10 @@
 
 # direct methods
 .method public constructor <init>()V
-    .registers 1
+    .locals 0
 
-    .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     return-void
 .end method
 
@@ -24,10 +21,8 @@
 .end method
 
 .method public final typeName()Ljava/lang/String;
-    .registers 2
+    .locals 1
 
-    .prologue
-    .line 47
     invoke-virtual {p0}, Lcom/android/dx/dex/file/Item;->itemType()Lcom/android/dx/dex/file/ItemType;
 
     move-result-object v0

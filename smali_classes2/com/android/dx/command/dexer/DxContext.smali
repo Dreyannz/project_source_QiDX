@@ -17,44 +17,34 @@
 
 # direct methods
 .method public constructor <init>()V
-    .registers 3
+    .locals 2
 
-    .prologue
-    .line 32
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     sget-object v1, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     invoke-direct {p0, v0, v1}, Lcom/android/dx/command/dexer/DxContext;-><init>(Ljava/io/OutputStream;Ljava/io/OutputStream;)V
 
-    .line 33
     return-void
 .end method
 
 .method public constructor <init>(Ljava/io/OutputStream;Ljava/io/OutputStream;)V
-    .registers 5
-    .param p1, "out"    # Ljava/io/OutputStream;
-    .param p2, "err"    # Ljava/io/OutputStream;
+    .locals 2
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     new-instance v0, Lcom/android/dx/dex/cf/CodeStatistics;
 
     invoke-direct {v0}, Lcom/android/dx/dex/cf/CodeStatistics;-><init>()V
 
     iput-object v0, p0, Lcom/android/dx/command/dexer/DxContext;->codeStatistics:Lcom/android/dx/dex/cf/CodeStatistics;
 
-    .line 14
     new-instance v0, Lcom/android/dx/dex/cf/OptimizerOptions;
 
     invoke-direct {v0}, Lcom/android/dx/dex/cf/OptimizerOptions;-><init>()V
 
     iput-object v0, p0, Lcom/android/dx/command/dexer/DxContext;->optimizerOptions:Lcom/android/dx/dex/cf/OptimizerOptions;
 
-    .line 18
     new-instance v0, Ljava/io/PrintStream;
 
     new-instance v1, Lcom/android/dx/command/dexer/DxContext$1;
@@ -65,20 +55,17 @@
 
     iput-object v0, p0, Lcom/android/dx/command/dexer/DxContext;->noop:Ljava/io/PrintStream;
 
-    .line 27
     new-instance v0, Ljava/io/PrintStream;
 
     invoke-direct {v0, p1}, Ljava/io/PrintStream;-><init>(Ljava/io/OutputStream;)V
 
     iput-object v0, p0, Lcom/android/dx/command/dexer/DxContext;->out:Ljava/io/PrintStream;
 
-    .line 28
     new-instance v0, Ljava/io/PrintStream;
 
     invoke-direct {v0, p2}, Ljava/io/PrintStream;-><init>(Ljava/io/OutputStream;)V
 
     iput-object v0, p0, Lcom/android/dx/command/dexer/DxContext;->err:Ljava/io/PrintStream;
 
-    .line 29
     return-void
 .end method

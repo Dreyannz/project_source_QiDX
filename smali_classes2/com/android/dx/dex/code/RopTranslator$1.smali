@@ -15,19 +15,17 @@
 
 
 # instance fields
-.field final synthetic val$initialRegCount:I
+.field private final synthetic val$initialRegCount:I
 
-.field final synthetic val$paramSize:I
+.field private final synthetic val$paramSize:I
 
-.field final synthetic val$paramsAreInOrder:[Z
+.field private final synthetic val$paramsAreInOrder:[Z
 
 
 # direct methods
 .method constructor <init>([ZII)V
-    .registers 4
+    .locals 0
 
-    .prologue
-    .line 189
     iput-object p1, p0, Lcom/android/dx/dex/code/RopTranslator$1;->val$paramsAreInOrder:[Z
 
     iput p2, p0, Lcom/android/dx/dex/code/RopTranslator$1;->val$initialRegCount:I
@@ -42,13 +40,10 @@
 
 # virtual methods
 .method public visitPlainCstInsn(Lcom/android/dx/rop/code/PlainCstInsn;)V
-    .registers 7
-    .param p1, "insn"    # Lcom/android/dx/rop/code/PlainCstInsn;
+    .locals 5
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 192
     invoke-virtual {p1}, Lcom/android/dx/rop/code/PlainCstInsn;->getOpcode()Lcom/android/dx/rop/code/Rop;
 
     move-result-object v1
@@ -59,9 +54,8 @@
 
     const/4 v3, 0x3
 
-    if-ne v1, v3, :cond_31
+    if-ne v1, v3, :cond_0
 
-    .line 194
     invoke-virtual {p1}, Lcom/android/dx/rop/code/PlainCstInsn;->getConstant()Lcom/android/dx/rop/cst/Constant;
 
     move-result-object v1
@@ -72,15 +66,13 @@
 
     move-result v0
 
-    .line 196
-    .local v0, "param":I
     iget-object v3, p0, Lcom/android/dx/dex/code/RopTranslator$1;->val$paramsAreInOrder:[Z
 
     iget-object v1, p0, Lcom/android/dx/dex/code/RopTranslator$1;->val$paramsAreInOrder:[Z
 
     aget-boolean v1, v1, v2
 
-    if-eqz v1, :cond_32
+    if-eqz v1, :cond_1
 
     iget v1, p0, Lcom/android/dx/dex/code/RopTranslator$1;->val$initialRegCount:I
 
@@ -90,7 +82,6 @@
 
     add-int/2addr v1, v0
 
-    .line 198
     invoke-virtual {p1}, Lcom/android/dx/rop/code/PlainCstInsn;->getResult()Lcom/android/dx/rop/code/RegisterSpec;
 
     move-result-object v4
@@ -99,22 +90,18 @@
 
     move-result v4
 
-    if-ne v1, v4, :cond_32
+    if-ne v1, v4, :cond_1
 
     const/4 v1, 0x1
 
-    :goto_2f
+    :goto_0
     aput-boolean v1, v3, v2
 
-    .line 200
-    .end local v0    # "param":I
-    :cond_31
+    :cond_0
     return-void
 
-    .restart local v0    # "param":I
-    :cond_32
+    :cond_1
     move v1, v2
 
-    .line 198
-    goto :goto_2f
+    goto :goto_0
 .end method
